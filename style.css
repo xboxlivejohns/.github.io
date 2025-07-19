@@ -1,0 +1,327 @@
+/* --- Polished & Pristine - Main Stylesheet --- */
+
+/* --- Google Font Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* --- General Body & Typography --- */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 20px;
+}
+
+h1, h2, h3 {
+    color: #222c35; /* Dark Charcoal */
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background: #222c35; /* Dark Charcoal */
+    color: #fff;
+    padding: 1rem 0;
+    border-bottom: 3px solid #007BFF; /* Action Blue */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+header #branding h1 {
+    margin: 0;
+    color: #fff;
+}
+
+header nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav a:hover, header nav .current a {
+    color: #007BFF; /* Action Blue */
+    font-weight: bold;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: url('https://placehold.co/1500x600/222c35/FFFFFF?text=Stunning+Finished+Car') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+
+/* --- Call to Action Button --- */
+.button {
+    display: inline-block;
+    background: #007BFF; /* Action Blue */
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #0056b3;
+}
+
+/* --- Sections --- */
+.section {
+    padding: 40px 0;
+}
+
+.section-light {
+    background: #fff;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* --- Service Packages Layout --- */
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 2rem;
+}
+
+.package-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.package-card h3 {
+    color: #007BFF;
+    border-bottom: 2px solid #f4f4f4;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.package-card .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.package-card ul {
+    list-style: none;
+    padding: 0;
+    flex-grow: 1; /* Makes the list grow to fill space */
+}
+
+.package-card ul li {
+    padding: 8px 0;
+    border-bottom: 1px dotted #ccc;
+}
+
+.package-card ul li:before {
+    content: '✔';
+    color: #28a745; /* Green Tick */
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* --- Gallery Styles --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* --- Original Contact Form Styles --- */
+.contact-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Important for padding */
+}
+
+
+/* --- Styles for FormSubmit.co Integration --- */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Creates space between the input fields */
+}
+
+.col {
+    flex: 1; /* Allows columns to grow equally */
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding doesn't break layout */
+    margin-bottom: 20px; /* Matches our original form-group margin */
+}
+
+textarea.form-control {
+    height: auto; /* Allows textarea to respect rows attribute */
+}
+
+.btn {
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-lg {
+    padding: 15px 30px;
+    font-size: 1.25rem;
+}
+
+.btn-dark {
+    color: #fff;
+    background-color: #222c35; /* Our Dark Charcoal */
+    border-color: #222c35;
+}
+
+.btn-dark:hover {
+    background-color: #007BFF; /* Our Action Blue on hover */
+    border-color: #007BFF;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+
+/* --- Footer --- */
+footer {
+    background: #222c35; /* Dark Charcoal */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* --- Responsive Styles --- */
+@media(max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    header #branding {
+        margin-bottom: 10px;
+    }
+
+    header nav ul li {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
