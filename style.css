@@ -190,7 +190,7 @@ header nav a:hover, header nav .current a {
     gap: 15px;
 }
 
-.gallery-item img {
+.gallery-item img, .gallery-item video {
     width: 100%;
     height: auto;
     display: block;
