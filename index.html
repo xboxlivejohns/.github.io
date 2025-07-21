@@ -62,8 +62,25 @@
             </ul>
         </div>
     </section>
-    
+
+    <!-- Before & After Slider Section -->
     <section class="section">
+        <div class="container">
+            <h2 style="text-align: center;">SEE THE TRANSFORMATION</h2>
+            <p style="text-align: center;">Drag the slider to see the power of our interior deep clean in action.</p>
+            <div class="ba-slider">
+                <div class="ba-image ba-before">
+                    <img src="images/before.jpg" alt="Dirty car interior before detailing">
+                </div>
+                <div class="ba-image ba-after">
+                    <img src="images/after.jpg" alt="Clean car interior after detailing">
+                </div>
+                <div class="ba-handle"></div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section section-light">
          <div class="container">
             <h2>Our Most Popular Service: The Silver Package</h2>
             <p>This is the package that has built our reputation. A comprehensive deep clean inside and out that provides fantastic, photo-worthy results and durable protection. It's the perfect choice for bringing your vehicle back to its best.</p>
@@ -74,5 +91,45 @@
     <footer>
         <p>Polished & Pristine &copy; 2025 | Professional Detailing in Darlington</p>
     </footer>
+
+    <script>
+        // Before & After Slider Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.querySelector('.ba-slider');
+            if (slider) {
+                const handle = slider.querySelector('.ba-handle');
+                const afterImage = slider.querySelector('.ba-after');
+                let isDragging = false;
+
+                const startDrag = () => isDragging = true;
+                const stopDrag = () => isDragging = false;
+
+                const onDrag = (e) => {
+                    if (!isDragging) return;
+                    
+                    // Get position relative to the slider container
+                    const rect = slider.getBoundingClientRect();
+                    let x = (e.clientX || e.touches[0].clientX) - rect.left;
+
+                    // Constrain x within the slider bounds
+                    x = Math.max(0, Math.min(x, rect.width));
+                    
+                    const percent = (x / rect.width) * 100;
+
+                    handle.style.left = percent + '%';
+                    afterImage.style.clipPath = `inset(0 0 0 ${percent}%)`;
+                };
+
+                handle.addEventListener('mousedown', startDrag);
+                handle.addEventListener('touchstart', startDrag);
+
+                window.addEventListener('mouseup', stopDrag);
+                window.addEventListener('touchend', stopDrag);
+                
+                window.addEventListener('mousemove', onDrag);
+                window.addEventListener('touchmove', onDrag);
+            }
+        });
+    </script>
 </body>
 </html>
