@@ -1,4 +1,4 @@
-/* --- Polished & Pristine - Professional Theme Stylesheet v2.3 --- */
+/* --- Polished & Pristine - Professional Theme Stylesheet v2.4 --- */
 
 /* --- Google Font Import --- */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@500;700&display=swap');
@@ -341,6 +341,66 @@ header nav a:hover, header nav .current a {
 .tip-article li {
     margin-bottom: 0.5rem;
 }
+
+/* --- NEW FAQ ACCORDION STYLES --- */
+.faq-container {
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.faq-item {
+    background: #fff;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    background: #fff;
+    border: none;
+    padding: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1a1a1a;
+}
+
+.faq-question:hover {
+    background: #f9f9f9;
+}
+
+.faq-item.active .faq-question {
+    color: #007BFF;
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    padding: 0 20px;
+}
+
+.faq-answer p, .faq-answer ul {
+    margin: 1rem 0;
+}
+
+.faq-answer p:last-child {
+    padding-bottom: 20px;
+}
+
 
 /* --- Footer --- */
 footer {
