@@ -132,8 +132,13 @@
                 };
                 
                 // Functions to start and stop dragging
-                const startDrag = () => { isDragging = true; };
-                const stopDrag = () => { isDragging = false; };
+                const startDrag = (e) => { 
+                    e.preventDefault();
+                    isDragging = true; 
+                };
+                const stopDrag = () => { 
+                    isDragging = false; 
+                };
 
                 // Event listeners for mouse interaction
                 handle.addEventListener('mousedown', startDrag);
@@ -141,7 +146,7 @@
                 document.addEventListener('mouseup', stopDrag);
                 
                 // Event listeners for touch interaction
-                handle.addEventListener('touchstart', startDrag, { passive: true });
+                handle.addEventListener('touchstart', startDrag);
                 document.addEventListener('touchmove', onDrag);
                 document.addEventListener('touchend', stopDrag);
             };
