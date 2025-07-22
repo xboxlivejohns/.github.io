@@ -63,18 +63,17 @@
         </div>
     </section>
 
-    <!-- NEW Before & After Slider Section -->
+    <!-- NEW, RELIABLE Before & After Slider Section -->
     <section class="section">
         <div class="container">
             <h2 style="text-align: center;">SEE THE TRANSFORMATION</h2>
             <p style="text-align: center;">Drag the slider to see the power of our interior deep clean in action.</p>
             
-            <div class="image-comparison-slider">
-                <img src="images/before.jpg" alt="Dirty car interior before detailing">
-                <div class="img-wrapper">
-                    <img src="images/after.jpg" alt="Clean car interior after detailing">
-                </div>
-                <span class="handle"></span>
+            <div class="comparison-container">
+                <figure class="comparison-figure">
+                    <div id="comparison-image"></div>
+                </figure>
+                <input type="range" min="0" max="100" value="50" id="comparison-slider" aria-label="Percentage of before photo shown" />
             </div>
 
         </div>
@@ -95,50 +94,13 @@
     <script>
         // NEW, RELIABLE Before & After Slider Logic
         document.addEventListener('DOMContentLoaded', () => {
-            const slider = document.querySelector('.image-comparison-slider');
-            if (slider) {
-                const handle = slider.querySelector('.handle');
-                const afterImageWrapper = slider.querySelector('.img-wrapper');
+            const slider = document.getElementById('comparison-slider');
+            const image = document.getElementById('comparison-image');
 
-                let isDragging = false;
-
-                const move = (x) => {
-                    const rect = slider.getBoundingClientRect();
-                    let newX = x - rect.left;
-
-                    if (newX < 0) newX = 0;
-                    if (newX > rect.width) newX = rect.width;
-
-                    handle.style.left = newX + 'px';
-                    afterImageWrapper.style.width = newX + 'px';
-                };
-
-                handle.addEventListener('mousedown', () => {
-                    isDragging = true;
-                });
-
-                document.addEventListener('mouseup', () => {
-                    isDragging = false;
-                });
-
-                document.addEventListener('mousemove', (e) => {
-                    if (isDragging) {
-                        move(e.clientX);
-                    }
-                });
-
-                handle.addEventListener('touchstart', () => {
-                    isDragging = true;
-                });
-
-                document.addEventListener('touchend', () => {
-                    isDragging = false;
-                });
-
-                document.addEventListener('touchmove', (e) => {
-                    if (isDragging) {
-                        move(e.touches[0].clientX);
-                    }
+            if (slider && image) {
+                slider.addEventListener('input', (e) => {
+                    // Update the CSS variable based on the slider's value
+                    image.style.setProperty('--slider-pos', `${e.target.value}%`);
                 });
             }
         });
