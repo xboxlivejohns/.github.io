@@ -1,4 +1,4 @@
-/* --- Polished & Pristine - Professional Theme Stylesheet v2.5 --- */
+/* --- Polished & Pristine - Professional Theme Stylesheet v2.6 --- */
 
 /* --- Google Font Import --- */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@500;700&display=swap');
@@ -401,43 +401,43 @@ header nav a:hover, header nav .current a {
     padding-bottom: 20px;
 }
 
-/* --- BEFORE & AFTER SLIDER STYLES --- */
-.ba-slider {
+/* --- NEW BEFORE & AFTER SLIDER STYLES --- */
+.image-comparison-slider {
     position: relative;
     width: 100%;
-    max-width: 800px; /* Adjust as needed */
+    max-width: 800px;
     margin: 2rem auto;
-    overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    font-size: 0; /* Removes whitespace gap under images */
+    cursor: col-resize;
 }
 
-.ba-image {
-    position: absolute;
-    top: 0;
-    left: 0;
+.image-comparison-slider > img {
     width: 100%;
-    height: 100%;
-    pointer-events: none; /* Allows clicks to pass through */
-}
-
-.ba-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     display: block;
 }
 
-.ba-before {
-    z-index: 1;
+.image-comparison-slider .img-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
 }
 
-.ba-after {
-    z-index: 2;
-    clip-path: inset(0 0 0 50%); /* Initially shows 50% of the after image */
+.image-comparison-slider .img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
-.ba-handle {
+.image-comparison-slider .handle {
     position: absolute;
     top: 0;
     left: 50%;
@@ -445,35 +445,21 @@ header nav a:hover, header nav .current a {
     width: 4px;
     height: 100%;
     background: #fff;
-    cursor: ew-resize;
-    z-index: 3;
+    z-index: 10;
 }
 
-.ba-handle::before, .ba-handle::after {
+.image-comparison-slider .handle::before {
     content: '';
     position: absolute;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     width: 40px;
     height: 40px;
     background: #fff;
-    border: 2px solid #007BFF;
+    border: 3px solid #007BFF;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.ba-handle::before {
-    top: calc(50% - 20px);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23007BFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='15 18 9 12 15 6'%3E%3C/polyline%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.ba-handle::after {
-    bottom: calc(50% - 20px);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23007BFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23007BFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M17 5L7 12L17 19M7 5L17 12L7 19'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: center;
 }

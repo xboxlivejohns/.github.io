@@ -63,20 +63,20 @@
         </div>
     </section>
 
-    <!-- Before & After Slider Section -->
+    <!-- NEW Before & After Slider Section -->
     <section class="section">
         <div class="container">
             <h2 style="text-align: center;">SEE THE TRANSFORMATION</h2>
             <p style="text-align: center;">Drag the slider to see the power of our interior deep clean in action.</p>
-            <div class="ba-slider">
-                <div class="ba-image ba-before">
-                    <img src="images/before.jpg" alt="Dirty car interior before detailing">
-                </div>
-                <div class="ba-image ba-after">
+            
+            <div class="image-comparison-slider">
+                <img src="images/before.jpg" alt="Dirty car interior before detailing">
+                <div class="img-wrapper">
                     <img src="images/after.jpg" alt="Clean car interior after detailing">
                 </div>
-                <div class="ba-handle"></div>
+                <span class="handle"></span>
             </div>
+
         </div>
     </section>
     
@@ -93,71 +93,55 @@
     </footer>
 
     <script>
-        // Self-executing function to avoid polluting the global scope
-        (function() {
-            // Function to initialize the slider
-            const initSlider = () => {
-                const slider = document.querySelector('.ba-slider');
-                // If there's no slider on the page, exit the function
-                if (!slider) return;
+        // NEW, RELIABLE Before & After Slider Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const slider = document.querySelector('.image-comparison-slider');
+            if (slider) {
+                const handle = slider.querySelector('.handle');
+                const afterImageWrapper = slider.querySelector('.img-wrapper');
 
-                const handle = slider.querySelector('.ba-handle');
-                const afterImage = slider.querySelector('.ba-after');
                 let isDragging = false;
 
-                // Function to move the slider based on cursor/touch position
-                const moveSlider = (clientX) => {
+                const move = (x) => {
                     const rect = slider.getBoundingClientRect();
-                    // Calculate position of the cursor within the slider element
-                    let x = clientX - rect.left;
-                    // Constrain the position to be within the slider's bounds
-                    x = Math.max(0, Math.min(x, rect.width));
-                    const percent = (x / rect.width) * 100;
+                    let newX = x - rect.left;
 
-                    // Move the handle and adjust the clipping of the 'after' image
-                    handle.style.left = percent + '%';
-                    afterImage.style.clipPath = `inset(0 0 0 ${percent}%)`;
+                    if (newX < 0) newX = 0;
+                    if (newX > rect.width) newX = rect.width;
+
+                    handle.style.left = newX + 'px';
+                    afterImageWrapper.style.width = newX + 'px';
                 };
 
-                // Main drag event handler
-                const onDrag = (e) => {
-                    if (!isDragging) return;
-                    // Prevent default actions like text selection or scrolling on mobile
-                    e.preventDefault();
-                    // Get the horizontal position from either a mouse or touch event
-                    const clientX = e.clientX || (e.touches && e.touches[0] ? e.touches[0].clientX : 0);
-                    if (clientX) {
-                        moveSlider(clientX);
+                handle.addEventListener('mousedown', () => {
+                    isDragging = true;
+                });
+
+                document.addEventListener('mouseup', () => {
+                    isDragging = false;
+                });
+
+                document.addEventListener('mousemove', (e) => {
+                    if (isDragging) {
+                        move(e.clientX);
                     }
-                };
-                
-                // Functions to start and stop dragging
-                const startDrag = (e) => { 
-                    e.preventDefault();
-                    isDragging = true; 
-                };
-                const stopDrag = () => { 
-                    isDragging = false; 
-                };
+                });
 
-                // Event listeners for mouse interaction
-                handle.addEventListener('mousedown', startDrag);
-                document.addEventListener('mousemove', onDrag);
-                document.addEventListener('mouseup', stopDrag);
-                
-                // Event listeners for touch interaction
-                handle.addEventListener('touchstart', startDrag);
-                document.addEventListener('touchmove', onDrag);
-                document.addEventListener('touchend', stopDrag);
-            };
+                handle.addEventListener('touchstart', () => {
+                    isDragging = true;
+                });
 
-            // Initialize the slider when the page content is loaded
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', initSlider);
-            } else {
-                initSlider(); // Or initialize immediately if already loaded
+                document.addEventListener('touchend', () => {
+                    isDragging = false;
+                });
+
+                document.addEventListener('touchmove', (e) => {
+                    if (isDragging) {
+                        move(e.touches[0].clientX);
+                    }
+                });
             }
-        })();
+        });
     </script>
 </body>
 </html>
