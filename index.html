@@ -1,109 +1,138 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polished & Pristine | Professional Car Detailing in Darlington</title>
-    <meta name="description" content="Welcome to Polished & Pristine, Darlington's specialist in professional car detailing, valeting, and ceramic coatings. We use steam and hot water extraction for a truly hygienic clean.">
-    <link rel="stylesheet" href="/style.css">
-    <!-- Corrected Favicon Links -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="shortcut icon" href="/images/favicon.ico">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Paint Correction & Ceramic Coatings Darlington — Polished & Pristine</title>
+  <meta name="description" content="Specialist paint correction, ceramic coatings and paint protection in Darlington. Restore gloss, remove defects and protect your vehicle with professional, long-lasting finishes." />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- JSON-LD LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Polished and Pristine",
+    "image": "https://polishedandpristine.co.uk/images/logo.jpg",
+    "@id": "https://polishedandpristine.co.uk",
+    "url": "https://polishedandpristine.co.uk",
+    "telephone": "07468286651",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3 Appleby Close",
+      "addressLocality": "Darlington",
+      "postalCode": "DL1 4AJ",
+      "addressCountry": "GB"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 54.5230, "longitude": -1.5536 },
+    "openingHours": "Mo,Tu,We,Th,Fr 08:00-18:00",
+    "priceRange": "££",
+    "sameAs": []
+  }
+  </script>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <div id="branding">
-                <h1><a href="/index.html">Polished <span style="color: #007BFF;">&</span> Pristine</a></h1>
-            </div>
-            <nav>
-                <ul>
-                    <li class="current"><a href="/index.html">Home</a></li>
-                    <li><a href="/services.html">Services</a></li>
-                    <li><a href="/gallery.html">Gallery</a></li>
-                    <li><a href="/tips.html">Expert Advice</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                </ul>
-            </nav>
+<body class="bg-slate-50 text-slate-900 antialiased">
+  <header class="bg-white shadow">
+    <div class="max-w-6xl mx-auto p-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3">
+        <img src="/images/logo.jpg" alt="Polished & Pristine logo" class="w-14 h-14 object-contain rounded" />
+        <div>
+          <div class="font-bold text-lg">Polished & Pristine</div>
+          <div class="text-sm text-slate-500">Paint correction • Ceramic coatings • PPF — Darlington</div>
         </div>
-    </header>
+      </a>
+      <nav class="hidden md:flex gap-6 text-sm items-center">
+        <a href="/services.html" class="hover:underline">Services</a>
+        <a href="/gallery.html" class="hover:underline">Gallery</a>
+        <a href="/contact.html" class="px-3 py-1 bg-slate-900 text-white rounded">Book</a>
+      </nav>
+    </div>
+  </header>
 
-    <section class="hero">
-        <!-- Background Video - now plays once -->
-        <video autoplay muted playsinline poster="images/hero-poster.jpg" class="hero-video">
-            <source src="videos/hero-video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        
-        <div class="hero-content">
-            <h1>Showroom Shine &amp; Hygienic Deep Cleaning</h1>
-            <p>Professional detailing in Darlington that protects your investment.</p>
-            <a href="/services.html" class="button">View Our Packages</a>
+  <main class="max-w-6xl mx-auto p-6">
+    <!-- Hero -->
+    <section class="grid md:grid-cols-2 gap-6 items-center">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">Transform your paint — showroom finishes, long-lasting protection.</h1>
+        <p class="mb-6 text-lg text-slate-700">Specialist paint correction, ceramic coatings and paint protection film (PPF). We reclaim gloss, remove defects and protect your vehicle — all from our Darlington workshop. Serving a ~25-mile radius.</p>
+        <div class="flex gap-3">
+          <a href="/contact.html#book" class="inline-block bg-slate-900 text-white px-6 py-3 rounded">Book a Paint Consultation</a>
+          <a href="/gallery.html" class="inline-block px-6 py-3 rounded border">See before & after</a>
         </div>
+        <ul class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-3 text-sm text-slate-600">
+          <li>• Multi-stage paint correction</li>
+          <li>• Long-life ceramic coatings</li>
+          <li>• PPF for high-impact areas</li>
+        </ul>
+      </div>
+      <div>
+        <img src="/images/hero-before-after.jpg" alt="Before and after paint correction" class="rounded shadow-lg w-full object-cover h-72 md:h-96" />
+      </div>
     </section>
 
-    <section class="section">
-        <div class="container">
-            <h2>Why Settle For a Basic Clean? We Deliver Perfection.</h2>
-            <p>We are not a splash-and-dash car wash. We are detailing professionals dedicated to restoring and protecting your vehicle. Our methods are based on delivering quality and value, ensuring your car doesn't just look clean, but is hygienically sanitised and protected from the elements.</p>
+    <!-- Why choose us -->
+    <section class="mt-12 bg-white p-6 rounded shadow">
+      <h2 class="text-2xl font-semibold mb-4">Why choose Polished & Pristine?</h2>
+      <div class="grid md:grid-cols-3 gap-6 text-slate-700">
+        <div>
+          <h3 class="font-semibold">Expert paint restoration</h3>
+          <p class="text-sm">Multi-stage correction backed by years of hands-on detailing experience — not a quick polish.</p>
         </div>
+        <div>
+          <h3 class="font-semibold">Pro-grade protection</h3>
+          <p class="text-sm">Ceramic coatings and PPF installed to manufacturer best practice for long-term results.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold">Local & trusted</h3>
+          <p class="text-sm">Based in Darlington, covering surrounding towns. Clear pricing & honest advice.</p>
+        </div>
+      </div>
     </section>
 
-    <section class="section section-light">
-        <div class="container">
-             <h2>Our Key Services - The Professional Difference</h2>
-            <ul>
-                <li><strong>Steam Sanitation:</strong> We use high-temperature steam to clean and sanitize surfaces, killing 99.9% of germs and bacteria. This is ideal for families and anyone wanting a truly hygienic interior.</li>
-                <li><strong>Hot Water Extraction:</strong> Our professional machines flush out embedded dirt, grime, and odours from deep within your car's seats and carpets, not just cleaning the surface.</li>
-                <li><strong>Paint Decontamination & Protection:</strong> We perform a full chemical decontamination to remove bonded contaminants before applying durable waxes or sealants for long-term paint protection.</li>
-            </ul>
-        </div>
+    <!-- Services teaser -->
+    <section id="services" class="mt-8">
+      <h2 class="text-2xl font-semibold mb-4">Featured services</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="bg-white p-4 rounded shadow">
+          <h3 class="font-semibold">Paint Correction</h3>
+          <p class="text-sm text-slate-600">Remove swirls, light scratches and oxidation with multi-stage machine polishing.</p>
+          <a class="mt-3 inline-block text-sm text-slate-900" href="/services.html#correction">More</a>
+        </article>
+        <article class="bg-white p-4 rounded shadow">
+          <h3 class="font-semibold">Ceramic Coatings</h3>
+          <p class="text-sm text-slate-600">Hydrophobic protection, easier maintenance and UV defence — packages for every budget.</p>
+          <a class="mt-3 inline-block text-sm text-slate-900" href="/services.html#coatings">More</a>
+        </article>
+        <article class="bg-white p-4 rounded shadow">
+          <h3 class="font-semibold">Paint Protection Film (PPF)</h3>
+          <p class="text-sm text-slate-600">Invisible, high-impact protection for bumpers, sills and vulnerable areas.</p>
+          <a class="mt-3 inline-block text-sm text-slate-900" href="/services.html#ppf">More</a>
+        </article>
+      </div>
     </section>
 
-    <!-- NEW, RELIABLE Before & After Slider Section -->
-    <section class="section">
-        <div class="container">
-            <h2 style="text-align: center;">SEE THE TRANSFORMATION</h2>
-            <p style="text-align: center;">Drag the slider to see the power of our interior deep clean in action.</p>
-            
-            <div class="comparison-container">
-                <figure class="comparison-figure">
-                    <div id="comparison-image"></div>
-                </figure>
-                <input type="range" min="0" max="100" value="50" id="comparison-slider" aria-label="Percentage of before photo shown" />
-            </div>
-
-        </div>
-    </section>
-    
-    <section class="section section-light">
-         <div class="container">
-            <h2>Our Most Popular Service: The Silver Package</h2>
-            <p>This is the package that has built our reputation. A comprehensive deep clean inside and out that provides fantastic, photo-worthy results and durable protection. It's the perfect choice for bringing your vehicle back to its best.</p>
-             <a href="/services.html#silver" class="button">Learn More & Book Now</a>
-        </div>
+    <!-- Valeting teaser (updated) -->
+    <section class="mt-10 bg-white p-6 rounded shadow">
+      <h2 class="text-xl font-semibold">Valeting & Interior</h2>
+      <p class="text-slate-700">
+        We still offer a range of valeting services, including our Interior Deep Clean using steam sanitisation and stain removal — typically 3–5 hours.  
+        Perfect for anyone wanting a professional interior refresh alongside or independent of paint enhancements.
+      </p>
+      <a href="/contact.html#book" class="inline-block mt-4 bg-slate-900 text-white px-4 py-2 rounded">Book a valet</a>
     </section>
 
-    <footer>
-        <p>Polished & Pristine &copy; 2025 | Professional Detailing in Darlington</p>
-    </footer>
+    <!-- Mini-contact form preview -->
+    <section class="mt-10 bg-white p-6 rounded shadow">
+      <h2 class="text-xl font-semibold mb-3">Quick enquire</h2>
+      <p class="text-sm text-slate-600 mb-3">Prefer a quick message? Use the booking page for full details.</p>
+      <a href="/contact.html#book" class="inline-block bg-slate-900 text-white px-4 py-2 rounded">Open booking form</a>
+    </section>
 
-    <script>
-        // NEW, RELIABLE Before & After Slider Logic
-        document.addEventListener('DOMContentLoaded', () => {
-            const slider = document.getElementById('comparison-slider');
-            const image = document.getElementById('comparison-image');
+  </main>
 
-            if (slider && image) {
-                slider.addEventListener('input', (e) => {
-                    // Update the CSS variable based on the slider's value
-                    image.style.setProperty('--slider-pos', `${e.target.value}%`);
-                });
-            }
-        });
-    </script>
+  <footer class="mt-12 border-t py-6 text-sm text-center text-slate-600">
+    Polished & Pristine — 3 Appleby Close, Darlington — DL1 4AJ — <a href="tel:07468286651" class="text-slate-900">07468 286651</a>
+    <div class="mt-2">Serving approx. 25-mile radius | Proudly local</div>
+  </footer>
 </body>
 </html>
