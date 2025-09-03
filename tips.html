@@ -4,163 +4,159 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Detailing Tips & Advice | Polished & Pristine Darlington</title>
-    <link rel="stylesheet" href="/style.css">
-    <!-- Corrected Favicon Links -->
+    <meta name="description" content="Expert car detailing tips, FAQ, and advice from Polished & Pristine in Darlington. Learn about paint correction, ceramic coatings, and keeping your car in showroom condition.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.3/dist/tailwind.min.css" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="shortcut icon" href="/images/favicon.ico">
 </head>
-<body>
-    <header>
-        <div class="container">
-            <div id="branding">
-                <h1><a href="/index.html">Polished <span style="color: #007BFF;">&</span> Pristine</a></h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/services.html">Services</a></li>
-                    <li><a href="/gallery.html">Gallery</a></li>
-                    <li class="current"><a href="/tips.html">Expert Advice</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<body class="bg-gray-50 text-gray-800 font-sans">
 
-    <section class="section">
-        <div class="container">
-            <h2 class="page-title">Frequently Asked Questions</h2>
-            <p style="text-align: center;">Your questions, answered by the experts. Click on any question below to reveal the answer.</p>
-            
-            <div class="faq-container">
-                <!-- Question 1 -->
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What’s the real difference between a car wash, a valet, and a detail?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>This is one of the most common questions we get, and the difference is significant.</p>
-                        <p>A <strong>basic car wash</strong> (like an automated one) is simply about surface-level cleaning. It often uses harsh brushes and chemicals that can strip existing protection and even inflict fine scratches, or "swirl marks," on your paintwork.</p>
-                        <p>A <strong>professional valet</strong> is about thoroughness and using the correct, safe techniques. Our <strong>Bronze Package</strong> is a perfect example of a high-quality maintenance valet. We use a two-bucket safe wash method, clean the wheels and door shuts properly, and provide a basic level of protection.</p>
-                        <p><strong>Detailing</strong> goes much deeper. Our <strong>Silver and Gold Packages</strong> are where we move into detailing. The key difference is decontamination and restoration. With our Silver Package, we perform a full chemical decontamination to remove embedded iron and tar that washing can't. We also deep clean and sanitize the interior with professional-grade steam and hot water extraction for a hygienic, as-new finish. Our Gold Package takes this even further with machine polishing to restore gloss and remove light paint defects.</p>
-                        <p>In short, valeting cleans, while detailing restores, protects, and perfects.</p>
-                    </div>
+<header class="bg-white shadow">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <h1 class="text-2xl font-bold text-blue-600"><a href="/index.html">Polished <span class="text-black">&</span> Pristine</a></h1>
+        <nav>
+            <ul class="flex space-x-6">
+                <li><a href="/index.html" class="hover:text-blue-600">Home</a></li>
+                <li><a href="/services.html" class="hover:text-blue-600">Services</a></li>
+                <li><a href="/gallery.html" class="hover:text-blue-600">Gallery</a></li>
+                <li><a href="/tips.html" class="text-blue-600 font-semibold">Expert Advice</a></li>
+                <li><a href="/contact.html" class="hover:text-blue-600">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container mx-auto py-10 px-6">
+    <h2 class="text-3xl font-bold text-center mb-6">Car Detailing Tips & Frequently Asked Questions</h2>
+    <p class="text-center mb-8">Learn from the experts at Polished & Pristine. Find answers to your car care questions, discover best practices, and explore premium detailing services.</p>
+
+    <!-- Search -->
+    <div class="mb-6 text-center">
+        <input id="faqSearch" type="text" placeholder="Search FAQs..." class="w-full md:w-1/2 px-4 py-2 border rounded shadow focus:outline-none focus:ring-2 focus:ring-blue-500">
+    </div>
+
+    <!-- FAQ Container -->
+    <div id="faqContainer" class="space-y-4">
+        <!-- Individual FAQ items will be injected by JS -->
+    </div>
+
+    <!-- SEO Images -->
+    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <img src="/images/detailing1.jpg" alt="Professional car detailing close-up" class="rounded shadow">
+        <img src="/images/detailing2.jpg" alt="Ceramic coating application on car hood" class="rounded shadow">
+        <img src="/images/detailing3.jpg" alt="Paint correction showing before and after" class="rounded shadow">
+        <img src="/images/detailing4.jpg" alt="Interior deep clean of car seats" class="rounded shadow">
+        <img src="/images/detailing5.jpg" alt="Luxury car polished to mirror shine" class="rounded shadow">
+        <img src="/images/detailing6.jpg" alt="Wheel and rim cleaning detail" class="rounded shadow">
+    </div>
+
+    <!-- TikTok Widget -->
+    <div class="mt-12">
+        <h3 class="text-2xl font-semibold mb-4 text-center">Watch Our Work in Action</h3>
+        <p class="text-center mb-6">Our gallery is updated automatically with our latest transformations from TikTok!</p>
+        <script src="https://static.elfsight.com/platform/platform.js" async></script>
+        <div class="elfsight-app-c1dcfc2c-362b-4a17-9ce8-a8ed5283ac9b" data-elfsight-app-lazy></div>
+    </div>
+</main>
+
+<footer class="bg-white mt-12 py-6 text-center shadow">
+    <p>Polished & Pristine &copy; 2025 | Professional Detailing in Darlington</p>
+</footer>
+
+<!-- JS for FAQ and Search -->
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+<script>
+    const faqData = [
+        {q: "What’s the real difference between a car wash, a valet, and a detail?", a: "A car wash cleans surfaces. A valet cleans thoroughly with safe methods. Detailing restores, protects, and perfects paint and interiors."},
+        {q: "My car's interior has seen better days thanks to kids and a dog! What can you do?", a: "Our specialist steam and extraction methods clean deeply, sanitize, and restore interiors, perfect for families and pet owners."},
+        {q: "Is a machine polish the same as T-cutting or removing scratches?", a: "Machine polishing removes light swirl marks with a professional machine safely, while T-cut is an abrasive applied by hand and can damage paint."},
+        {q: "I've heard about fallout and decontamination. Is that really necessary?", a: "Yes. Chemical decontamination removes bonded iron, tar, and contaminants ensuring coatings and waxes bond correctly and last longer."},
+        {q: "What is a ceramic coating, and is it better than waxing?", a: "Ceramic coatings provide years of chemical and UV resistance, water repellency, and durability far beyond traditional waxes."},
+        {q: "How often should I have my car polished or corrected?", a: "New cars: 12–18 months if coated. Older cars: 6–12 months depending on condition and exposure."},
+        {q: "Is ceramic coating worth it on my daily driver?", a: "Yes, it protects against UV, bird droppings, and chemicals, reduces wash frequency, and maintains showroom gloss."},
+        {q: "Can I put a paint protection film (PPF) on my car myself?", a: "DIY is risky. Professional installation ensures invisible, bubble-free coverage, especially on bumpers and edges."},
+        {q: "How do I safely remove contaminants like iron fallout or tar?", a: "Professional chemical decontamination safely removes particles without scratching paint."},
+        {q: "Do tinted windows need special care during detailing?", a: "Yes. Use pH-neutral cleaners and soft cloths to avoid lifting tint or scratching protective films."},
+        {q: "Can I wash my car in the winter without damaging it?", a: "Yes, with safe water temperatures, proper drying, and pH-neutral shampoo. Avoid freezing conditions without precautions."},
+        {q: "What’s the best way to maintain leather and interior surfaces?", a: "Condition leather every 3–6 months, use pH-neutral cleaners, and steam sanitize to kill bacteria."},
+        {q: "How can I make my car stand out at shows or meets?", a: "Paint enhancement, engine bay detailing, clean wheels, and spotless interiors impress judges and enthusiasts."},
+        {q: "How do I prevent swirl marks when washing my car?", a: "Use two-bucket method, grit catchers, microfiber mitts, and proper drying cloths."},
+        {q: "How do I maintain gloss on dark-colored cars?", a: "Regular clay barring, polishing, and coating maintain depth. Avoid automatic brush washes."},
+        {q: "Can I apply wax over ceramic coating?", a: "Yes, but not necessary. Maintenance sprays are usually sufficient."},
+        {q: "How often should I decontaminate my paint?", a: "Every 6–12 months depending on environmental exposure."},
+        {q: "Why is paint correction important before coating?", a: "Coatings bond to the paint surface. Correcting defects first ensures a perfect finish."},
+        {q: "Are matte finishes treated differently?", a: "Yes, matte requires special cleaners to avoid glossy streaks."},
+        {q: "Can I leave my car outside after ceramic coating?", a: "Yes, coatings protect against UV and chemicals, but clean off bird droppings promptly."},
+        {q: "Is machine polishing safe on thin paint?", a: "Professionals use paint depth gauges and proper pads to prevent clear coat thinning."},
+        {q: "How do I care for carbon fiber or alloy parts?", a: "Use mild cleaners and microfiber cloths. Protect with sealants or coatings safe for composites."},
+        {q: "How do I remove water spots safely?", a: "Use pH-neutral water spot removers or professional deionised treatments."},
+        {q: "What is hydrophobic treatment and why is it good?", a: "It makes surfaces water-repellent, reducing dirt adhesion and making washes easier."},
+        {q: "Can detailing help resale value?", a: "Yes, a clean, protected car shows care and increases buyer confidence."},
+        {q: "How do I maintain matte black interiors?", a: "Use non-gloss cleaners, avoid silicone-based products, and steam clean fabrics and plastics."},
+        {q: "How do I keep wheels clean and protected?", a: "Use dedicated cleaners, brushes, and sealants; wash regularly to prevent brake dust buildup."},
+        {q: "Do pets affect detailing frequency?", a: "Yes — pet hair, scratches, and odors require more frequent interior deep cleaning."},
+        {q: "How do I protect convertible tops?", a: "Clean with fabric-specific cleaners, protect with UV-safe sprays, and avoid harsh brushes."},
+        {q: "Are eco-friendly car shampoos as effective?", a: "Yes, modern eco-friendly shampoos clean effectively without harsh chemicals."}
+    ];
+
+    const faqContainer = document.getElementById('faqContainer');
+    const faqSearchInput = document.getElementById('faqSearch');
+
+    // Create FAQ HTML
+    function renderFAQs(data) {
+        faqContainer.innerHTML = '';
+        data.forEach(item => {
+            const faqItem = document.createElement('div');
+            faqItem.classList.add('bg-white', 'p-4', 'rounded', 'shadow');
+            faqItem.innerHTML = `
+                <button class="w-full text-left font-semibold text-lg flex justify-between items-center faq-btn">
+                    <span>${item.q}</span>
+                    <span class="faq-icon text-blue-600">+</span>
+                </button>
+                <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 mt-2">
+                    <p>${item.a}</p>
                 </div>
+            `;
+            faqContainer.appendChild(faqItem);
+        });
+        attachFAQToggle();
+    }
 
-                <!-- Question 2 -->
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>My car's interior has seen better days thanks to kids and a dog! What can you do?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>You've come to the right place! This is a situation where our specialist equipment truly shines and makes a world of difference. For a car that needs a complete interior reset, we would strongly recommend our <strong>Silver Package</strong>.</p>
-                        <p>Here’s why it’s the perfect solution:</p>
-                        <ul>
-                            <li><strong>It’s more than a wipe-down:</strong> We don’t just clean the surfaces you can see. We use professional-grade steam to sanitize all hard surfaces, including plastics, dashboards, and tricky areas like air vents. This process kills 99.9% of germs and bacteria, which is a major benefit for families.</li>
-                            <li><strong>We remove deep-seated dirt:</strong> For seats, carpets, and mats, we use a hot water shampoo and extraction process. This machine flushes out the embedded dirt, spills, and odours that a vacuum simply can't reach, leaving the fabric genuinely clean and fresh.</li>
-                        </ul>
-                        <p>If the exterior of your car is in good shape and you only need this intensive interior work, our standalone <strong>Interior Deep Clean</strong> service (starting from £80) is the ideal choice.</p>
-                    </div>
-                </div>
+    // Toggle FAQ answers
+    function attachFAQToggle() {
+        const buttons = document.querySelectorAll('.faq-btn');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const parent = btn.parentElement;
+                const answer = parent.querySelector('.faq-answer');
+                const icon = btn.querySelector('.faq-icon');
+                const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
 
-                <!-- Question 3 -->
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Is a machine polish the same as "T-cutting" or removing scratches?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>This is an important distinction. While both aim to improve the paint's appearance, they are worlds apart in terms of process and results.</p>
-                        <p><strong>"T-cut"</strong> is a brand of abrasive compound often applied by hand. It can be very aggressive and, if used incorrectly, can leave the paint looking hazy or instill its own fine scratches.</p>
-                        <p><strong>Professional machine polishing</strong>, as included in our <strong>Gold Package</strong>, is a highly skilled process. We use a professional machine polisher with specific pads and polishes to carefully level the top layer of your car's clear coat. This process removes a microscopic layer, which is how we safely remove light swirl marks and defects, dramatically enhancing gloss and clarity. For deeper scratches, we offer <strong>Multi-Stage Paint Correction</strong>, a more intensive process that can achieve 85-95%+ defect removal.</p>
-                        <p>Crucially, as professionals, we may use a paint depth gauge to measure the paint thickness before starting any correction work, ensuring the process is performed safely.</p>
-                    </div>
-                </div>
+                document.querySelectorAll('.faq-answer').forEach(ans => ans.style.maxHeight = '0');
+                document.querySelectorAll('.faq-icon').forEach(ic => ic.textContent = '+');
 
-                <!-- Question 4 -->
-                 <div class="faq-item">
-                    <button class="faq-question">
-                        <span>I've heard about "fallout" and "decontamination." Is that really necessary?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Absolutely. Chemical decontamination is a cornerstone of a proper detail and a key feature of our <strong>Silver and Gold Packages</strong>.</p>
-                        <p>Your car is constantly bombarded with contaminants that bond to the paint and cannot be removed by washing alone. The two main types are:</p>
-                        <ul>
-                            <li><strong>Iron Fallout:</strong> These are tiny metal particles from brake dust and industrial sources. They embed in your paint and can cause rust spots. Our fallout removers contain a chemical that reacts with these particles, turning purple and safely dissolving them so they can be rinsed away.</li>
-                            <li><strong>Tar & Glue:</strong> These are sticky deposits from the road surface that cling to the lower parts of your car.</li>
-                        </ul>
-                        <p>Without removing these bonded contaminants, the paint surface will never be truly clean, and any wax, sealant, or coating you apply won't bond properly or last as long. It’s a critical step for achieving a smooth, durable finish.</p>
-                    </div>
-                </div>
-
-                <!-- Question 5 -->
-                 <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What is a ceramic coating, and is it better than waxing?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>A ceramic coating is the ultimate in paint protection, offering a significant upgrade over traditional waxes.</p>
-                        <p>A <strong>wax</strong>, like the durable hand wax we apply in our <strong>Silver Package</strong>, is an organic or synthetic layer that sits on top of the paint. It provides great gloss and protection, typically for up to 6 months.</p>
-                        <p>A <strong>ceramic coating</strong> (containing SiO2, or silica dioxide) is a liquid polymer that forms a semi-permanent, chemical bond with your car's paint. This creates a hard, glassy layer of protection.</p>
-                        <p>The key benefits are:</p>
-                        <ul>
-                            <li><strong>Durability:</strong> Our coatings last for years, not months. We offer 2-Year and 5-Year options.</li>
-                            <li><strong>Chemical Resistance:</strong> They are far more resistant to harsh chemicals, bird droppings, and UV fading than waxes.</li>
-                            <li><strong>Ease of Cleaning:</strong> The surface becomes extremely hydrophobic (water-repellent), so dirt and grime have a much harder time sticking to it, making maintenance washes faster and easier.</li>
-                        </ul>
-                        <p>While a wax offers fantastic value and shine, a ceramic coating is a long-term investment in protecting your vehicle, and we believe it’s one of the best you can make. It's the ultimate specialist service we provide.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>Polished & Pristine &copy; 2025 | Professional Detailing in Darlington</p>
-    </footer>
-
-    <script>
-        // This ensures the script runs only after the entire page is loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            const faqQuestions = document.querySelectorAll('.faq-question');
-
-            faqQuestions.forEach(question => {
-                question.addEventListener('click', () => {
-                    const currentItem = question.parentElement;
-                    const answer = currentItem.querySelector('.faq-answer');
-                    const icon = currentItem.querySelector('.faq-icon');
-                    const isActive = currentItem.classList.contains('active');
-
-                    // Close all other open items
-                    document.querySelectorAll('.faq-item.active').forEach(openItem => {
-                        if (openItem !== currentItem) {
-                            openItem.classList.remove('active');
-                            openItem.querySelector('.faq-answer').style.maxHeight = '0';
-                            openItem.querySelector('.faq-icon').textContent = '+';
-                        }
-                    });
-
-                    // Toggle the clicked item
-                    currentItem.classList.toggle('active');
-                    if (!isActive) {
-                        answer.style.maxHeight = answer.scrollHeight + 'px';
-                        icon.textContent = '-';
-                    } else {
-                        answer.style.maxHeight = '0';
-                        icon.textContent = '+';
-                    }
-                });
+                if (!isOpen) {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    icon.textContent = '-';
+                }
             });
         });
-    </script>
+    }
+
+    renderFAQs(faqData);
+
+    // Fuse.js search
+    const fuse = new Fuse(faqData, { keys: ['q', 'a'], threshold: 0.4 });
+
+    faqSearchInput.addEventListener('input', e => {
+        const query = e.target.value;
+        const results = query ? fuse.search(query).map(r => r.item) : faqData;
+        renderFAQs(results);
+    });
+</script>
 
 </body>
 </html>
