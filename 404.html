@@ -6,22 +6,7 @@
   <title>404 — Page not found | Polished & Pristine</title>
   <meta name="description" content="Page not found — Polished & Pristine detailing in Darlington. Return home or use the menu to find what you need." />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brandBlue: "#1e3a8a",
-            brandGold: "#facc15",
-            brandDark: "#0f172a"
-          },
-          fontFamily: {
-            sans: ["Inter", "system-ui", "sans-serif"]
-          }
-        }
-      }
-    }
-  </script>
+  <script src="/assets/tailwind-init.js"></script>
 </head>
 <body class="bg-slate-50 text-slate-900 antialiased">
 
@@ -50,7 +35,7 @@
 
       <!-- Mobile toggle -->
       <div class="md:hidden">
-        <button id="mobileMenuBtn404" class="p-2 rounded bg-slate-100" aria-label="Open menu">
+        <button id="mobileMenuBtn" class="p-2 rounded bg-slate-100" aria-label="Open menu">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
           </svg>
@@ -59,7 +44,7 @@
     </div>
 
     <!-- Mobile menu -->
-    <div id="mobileMenu404" class="hidden md:hidden border-t">
+    <div id="mobileMenu" class="hidden md:hidden border-t">
       <div class="px-4 py-3 space-y-2">
         <a href="/index.html" class="block">Home</a>
         <a href="/services.html" class="block">Services</a>
@@ -99,12 +84,7 @@
     <div class="mt-2">Serving approx. 25-mile radius | Proudly local</div>
   </footer>
 
-<script>
-  // Mobile menu toggle for 404
-  document.getElementById('mobileMenuBtn404').addEventListener('click', () => {
-    document.getElementById('mobileMenu404').classList.toggle('hidden');
-  });
-</script>
 
+  <script src="/assets/menu.js" defer></script>
 </body>
 </html>

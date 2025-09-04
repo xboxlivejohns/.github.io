@@ -6,22 +6,7 @@
   <title>Paint Correction & Ceramic Coatings Darlington — Polished & Pristine</title>
   <meta name="description" content="Specialist paint correction, ceramic coatings and paint protection in Darlington. Restore gloss, remove defects and protect your vehicle with professional, long-lasting finishes." />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brandBlue: "#1e3a8a",
-            brandGold: "#facc15",
-            brandDark: "#0f172a"
-          },
-          fontFamily: {
-            sans: ["Inter", "system-ui", "sans-serif"]
-          }
-        }
-      }
-    }
-  </script>
+  <script src="/assets/tailwind-init.js"></script>
   <!-- JSON-LD LocalBusiness -->
   <script type="application/ld+json">
   {
@@ -180,13 +165,7 @@
     <div class="mt-2">Serving approx. 25-mile radius | Proudly local</div>
   </footer>
 
-<script>
-  // Mobile menu toggle
-  document.getElementById('mobileMenuBtn').addEventListener('click', () => {
-    const m = document.getElementById('mobileMenu');
-    m.classList.toggle('hidden');
-  });
-</script>
 
+  <script src="/assets/menu.js" defer></script>
 </body>
 </html>
