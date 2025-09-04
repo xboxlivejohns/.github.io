@@ -1,90 +1,233 @@
 <!doctype html>
 <html lang="en-GB">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ceramic Coatings — Polished & Pristine Darlington</title>
-  <meta name="description" content="Ceramic coatings in Darlington— durable hydrophobic protection, UV defence, and long-lasting gloss." />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = { theme: { extend: { colors: { brandBlue: "#1e3a8a", brandGold: "#facc15", brandDark: "#0f172a" }}}}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ceramic Coatings Darlington — Long-Life Paint Protection | Polished & Pristine</title>
+  <meta name="description" content="Professional ceramic coatings in Darlington. Hydrophobic, UV-resistant protection with 1, 3 and 5+ year options. Ideal after paint correction for lasting gloss.">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ceramic Coatings Darlington — Polished & Pristine">
+  <meta property="og:description" content="Durable, hydrophobic protection with 1, 3 and 5+ year options. Easier cleaning, deeper gloss. Based in Darlington.">
+  <meta property="og:image" content="https://polishedandpristine.co.uk/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Service JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"Ceramic Coating",
+    "provider":{
+      "@type":"LocalBusiness",
+      "name":"Polished & Pristine",
+      "telephone":"07468286651",
+      "address":{
+        "@type":"PostalAddress",
+        "streetAddress":"3 Appleby Close",
+        "addressLocality":"Darlington",
+        "postalCode":"DL1 4AJ",
+        "addressCountry":"GB"
+      }
+    },
+    "areaServed":{
+      "@type":"AdministrativeArea",
+      "name":"Darlington and surrounding towns (~25 miles)"
+    },
+    "description":"Durable, hydrophobic ceramic coatings with strong chemical and UV resistance. Available in 1, 3 and 5+ year options.",
+    "offers":{
+      "@type":"Offer",
+      "priceCurrency":"GBP",
+      "description":"Express from £120. Professional packages from £450+ when paired with correction."
+    }
+  }
   </script>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased">
+<body class="site-body">
 
-  <!-- header/nav (same as other pages) -->
-  <header class="bg-white shadow">
-    <div class="max-w-6xl mx-auto p-4 flex items-center justify-between">
-      <a href="/index.html" class="flex items-center gap-3">
-        <img src="/images/logo.jpg" alt="Polished & Pristine logo" class="w-12 h-12 object-contain rounded" />
-        <div>
-          <div class="font-bold text-lg">Polished & Pristine</div>
-          <div class="text-sm text-slate-500">Paint correction • Ceramic coatings • PPF — Darlington</div>
+  <!-- HEADER / NAV -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/index.html" aria-label="Polished & Pristine home">
+        <img src="/images/logo.jpg" alt="Polished & Pristine logo" class="brand-logo">
+        <div class="brand-text">
+          <div class="brand-name">Polished &amp; Pristine</div>
+          <div class="brand-tag">Paint correction • Ceramic coatings • PPF — Darlington</div>
         </div>
       </a>
-      <nav class="hidden md:flex gap-6 text-sm items-center">
-        <a href="/index.html" class="hover:text-brandGold">Home</a>
-        <a href="/services.html" class="hover:text-brandGold">Services</a>
-        <a href="/paint-correction.html" class="hover:text-brandGold">Paint Correction</a>
-        <a href="/ceramic-coatings.html" class="hover:text-brandGold font-semibold">Ceramic Coatings</a>
-        <a href="/ppf.html" class="hover:text-brandGold">PPF</a>
-        <a href="/valeting.html" class="hover:text-brandGold">Valeting</a>
-        <a href="/gallery.html" class="hover:text-brandGold">Gallery</a>
-        <a href="/tips.html" class="hover:text-brandGold">Expert Advice</a>
-        <a href="/contact.html" class="px-3 py-1 bg-brandDark text-white rounded">Contact / Book</a>
+
+      <button id="mobileNavToggle" class="mobile-toggle" aria-label="Open menu">☰</button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="/index.html" class="nav-link">Home</a>
+        <a href="/services.html" class="nav-link">Services</a>
+        <a href="/paint-correction.html" class="nav-link">Paint Correction</a>
+        <a href="/ceramic-coatings.html" class="nav-link nav-active">Ceramic Coatings</a>
+        <a href="/ppf.html" class="nav-link">PPF</a>
+        <a href="/valeting.html" class="nav-link">Valeting</a>
+        <a href="/gallery.html" class="nav-link">Gallery</a>
+        <a href="/tips.html" class="nav-link">Expert Advice</a>
+        <a href="/contact.html" class="nav-cta">Contact / Book</a>
       </nav>
-      <div class="md:hidden">
-        <button id="mobileMenuBtn4" class="p-2 rounded bg-slate-100">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" /></svg>
-        </button>
-      </div>
-    </div>
-    <div id="mobileMenu4" class="hidden md:hidden border-t">
-      <div class="px-4 py-3 space-y-2">
-        <a href="/index.html" class="block">Home</a>
-        <a href="/services.html" class="block">Services</a>
-        <a href="/paint-correction.html" class="block">Paint Correction</a>
-        <a href="/ceramic-coatings.html" class="block font-semibold">Ceramic Coatings</a>
-        <a href="/ppf.html" class="block">PPF</a>
-        <a href="/valeting.html" class="block">Valeting</a>
-        <a href="/gallery.html" class="block">Gallery</a>
-        <a href="/tips.html" class="block">Expert Advice</a>
-        <a href="/contact.html" class="block">Contact / Book</a>
-      </div>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto p-6">
-    <h1 class="text-3xl font-extrabold mb-4">Ceramic Coatings — long-lasting protection</h1>
-    <p class="text-slate-700 mb-4">Our high-grade ceramic coatings add hydrophobic protection and long-term gloss. Options from 1-year maintenance coatings to 5+ year professional systems.</p>
+  <!-- MAIN -->
+  <main class="wrap main-content">
 
-    <section class="bg-white p-6 rounded shadow mb-4">
-      <h2 class="text-xl font-semibold">Why choose a ceramic coating?</h2>
-      <ul class="list-disc list-inside text-slate-600 mt-2">
-        <li>Hydrophobic, repels water & dirt</li>
-        <li>UV protection & chemical resistance</li>
-        <li>Reduced maintenance & quicker washes</li>
+    <!-- Intro -->
+    <header class="page-header">
+      <h1>Ceramic Coatings — long-life, hydrophobic protection</h1>
+      <p class="muted">Our coatings create a tough, glassy layer that bonds to your paintwork. You’ll see faster washing, stronger chemical & UV resistance, and deeper, longer-lasting gloss. Best results when applied after paint correction.</p>
+      <div style="margin-top:12px;">
+        <a class="btn btn-primary" href="/contact.html#book">Get coating options</a>
+        <a class="btn btn-outline" href="/paint-correction.html" style="margin-left:10px;">Pair with paint correction</a>
+      </div>
+    </header>
+
+    <!-- Hero visuals -->
+    <section class="cards small-gap" style="margin-top:18px;">
+      <figure class="card">
+        <img src="/images/gallery3.jpg" alt="Ceramic coating water beading on bonnet">
+        <figcaption class="muted">Hydrophobic behaviour — water beads and sheets off the surface.</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="/images/gallery1-after.jpg" alt="High gloss finish after ceramic coating application">
+        <figcaption class="muted">Deep gloss effect — enhanced clarity and colour depth.</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="/images/tip-ceramic-coating.jpg" alt="Close-up of a coated panel under light">
+        <figcaption class="muted">Durable protection — better resistance to chemicals and UV.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Benefits -->
+    <section class="card" style="margin-top:20px;">
+      <h2>Why choose a ceramic coating?</h2>
+      <div class="grid-3 small-gap" style="margin-top:12px;">
+        <div class="card">
+          <h3>Easier cleaning</h3>
+          <p class="muted">The slick, hydrophobic surface repels dirt and water. Grime doesn’t cling, so safe washes take less time and effort.</p>
+        </div>
+        <div class="card">
+          <h3>Stronger protection</h3>
+          <p class="muted">Improved resistance to chemicals, road film and UV fading compared to traditional waxes and sealants.</p>
+        </div>
+        <div class="card">
+          <h3>Longer-lasting gloss</h3>
+          <p class="muted">Coatings last years, not months. Pair with correction for that wet, mirror-like finish that holds up to daily use.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packages -->
+    <section class="card" style="margin-top:20px;">
+      <h2>Packages & pricing guide</h2>
+      <div class="grid-3 small-gap" style="margin-top:12px;">
+        <div class="card">
+          <h3>Express — 1 year</h3>
+          <p class="muted">Entry-level ceramic protection. Great for cars in good condition or as a maintenance top-up.</p>
+          <p><strong>From £120</strong> (after prep). Time: ~1–2 hours on prepped paint.</p>
+        </div>
+        <div class="card">
+          <h3>Professional — 3 year</h3>
+          <p class="muted">Our most popular balance of durability and value. Ideal with single- or multi-stage correction.</p>
+          <p><strong>From £450+</strong> with correction. Time: varies by vehicle size & condition.</p>
+        </div>
+        <div class="card">
+          <h3>Premium — 5+ year</h3>
+          <p class="muted">Maximum longevity and chemical resistance. Suited to enthusiast or high-value vehicles.</p>
+          <p><strong>Quoted on inspection</strong> — combine with multi-stage correction for best results.</p>
+        </div>
+      </div>
+      <div style="margin-top:12px;">
+        <a href="/contact.html#book" class="btn btn-primary">Request a coating quote</a>
+        <a href="/services.html" class="btn btn-outline" style="margin-left:10px;">View all services</a>
+      </div>
+    </section>
+
+    <!-- Prep & Application -->
+    <section class="card" style="margin-top:20px;">
+      <h2>Preparation & application — what we do</h2>
+      <ol class="muted" style="padding-left:18px; line-height:1.7;">
+        <li><strong>Assessment & lighting check</strong> — we inspect paint and discuss goals.</li>
+        <li><strong>Decontamination</strong> — safe wash, iron fallout and tar removal, clay if required.</li>
+        <li><strong>Paint correction (recommended)</strong> — single or multi-stage polishing to perfect the finish.</li>
+        <li><strong>Panel wipe & coating</strong> — apply coating in controlled sections; cure per manufacturer spec.</li>
+        <li><strong>Final check & advice</strong> — we inspect under lighting and provide aftercare guidance.</li>
+      </ol>
+    </section>
+
+    <!-- Maintenance -->
+    <section class="card" style="margin-top:20px;">
+      <h2>Maintenance & aftercare</h2>
+      <ul class="muted" style="padding-left:18px; line-height:1.7;">
+        <li>Use a pH-neutral shampoo and safe wash method (two buckets, grit guards, quality microfibres).</li>
+        <li>Avoid harsh roadside chemicals and automatic brush washes.</li>
+        <li>For coated cars, use the recommended topper every few months to maintain slickness and beading.</li>
+        <li>Remove bird droppings and tree sap quickly to protect the coating.</li>
       </ul>
-      <a href="/contact.html#book" class="mt-4 inline-block bg-brandDark text-white px-4 py-2 rounded">Request coating options</a>
     </section>
 
-    <section class="bg-white p-6 rounded shadow">
-      <h2 class="text-xl font-semibold">Packages & guidance</h2>
-      <p class="text-slate-700">We match coating to paint condition — full correction + premium coating gives the best long-term results.</p>
-      <p class="mt-3 font-semibold">Express: from £120 · Professional: from £450 · Premium: quotes on inspection.</p>
+    <!-- FAQs -->
+    <section class="card" style="margin-top:20px;">
+      <h2>Quick FAQs</h2>
+      <div class="grid-3 small-gap" style="margin-top:12px;">
+        <div class="card">
+          <h3>Is a coating better than wax?</h3>
+          <p class="muted">Yes — coatings are tougher and last years. Waxes look great but need frequent re-application.</p>
+        </div>
+        <div class="card">
+          <h3>Do I need correction first?</h3>
+          <p class="muted">Strongly recommended. Coatings lock in the finish — correcting first ensures you’re sealing a flawless surface.</p>
+        </div>
+        <div class="card">
+          <h3>How long before I can wash?</h3>
+          <p class="muted">Avoid washing for ~7 days to allow full cure. Gentle maintenance after that keeps performance high.</p>
+        </div>
+      </div>
+      <p class="muted" style="margin-top:8px;">See more on our <a href="/tips.html">Expert Advice</a> page.</p>
     </section>
+
+    <!-- CTA -->
+    <section class="card" style="margin-top:20px;">
+      <h2>Ready for year-round gloss and protection?</h2>
+      <p class="muted">Tell us your vehicle and goals — we’ll recommend the right coating and prep to match your budget and usage.</p>
+      <a class="btn btn-primary" href="/contact.html#book">Get started</a>
+    </section>
+
   </main>
 
-  <footer class="mt-12 border-t py-6 text-sm text-center text-slate-600">
-    Polished & Pristine — 3 Appleby Close, Darlington — DL1 4AJ — <a href="tel:07468286651" class="text-slate-900">07468 286651</a>
-    <div class="mt-2">Serving approx. 25-mile radius | Proudly local</div>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-left">
+        <strong>Polished &amp; Pristine</strong><br>
+        3 Appleby Close, Darlington — DL1 4AJ<br>
+        <a href="tel:07468286651">07468 286651</a>
+      </div>
+      <div class="footer-right">
+        <nav class="footer-nav">
+          <a href="/services.html">Services</a>
+          <a href="/gallery.html">Gallery</a>
+          <a href="/tips.html">Expert Advice</a>
+          <a href="/privacy-policy.html">Privacy</a>
+        </nav>
+        <div class="small muted">Serving approx. 25-mile radius</div>
+      </div>
+    </div>
   </footer>
 
-<script>
-  document.getElementById('mobileMenuBtn4').addEventListener('click', () => {
-    document.getElementById('mobileMenu4').classList.toggle('hidden');
-  });
-</script>
-
+  <!-- Mobile nav toggle (shared) -->
+  <script>
+    (function(){
+      const btn = document.getElementById('mobileNavToggle');
+      const nav = document.getElementById('mainNav');
+      if (btn && nav) {
+        btn.addEventListener('click', () => nav.classList.toggle('nav-open'));
+      }
+    })();
+  </script>
 </body>
 </html>

@@ -1,91 +1,255 @@
 <!doctype html>
 <html lang="en-GB">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Paint Correction — Polished & Pristine Darlington</title>
-  <meta name="description" content="Paint correction services in Darlington — multi-stage polishing to remove swirls, oxidation and restore gloss." />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = { theme: { extend: { colors: { brandBlue: "#1e3a8a", brandGold: "#facc15", brandDark: "#0f172a" }}}}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Paint Correction Darlington — Remove Swirls & Restore Gloss | Polished & Pristine</title>
+  <meta name="description" content="Professional paint correction in Darlington. Remove swirl marks, light scratches and oxidation with safe multi-stage machine polishing. Free assessment & honest advice.">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Paint Correction Darlington — Polished & Pristine">
+  <meta property="og:description" content="Multi-stage machine polishing to remove swirls & restore gloss. Based in Darlington — free assessment.">
+  <meta property="og:image" content="https://polishedandpristine.co.uk/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Service JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"Paint Correction",
+    "provider":{
+      "@type":"LocalBusiness",
+      "name":"Polished & Pristine",
+      "telephone":"07468286651",
+      "address":{
+        "@type":"PostalAddress",
+        "streetAddress":"3 Appleby Close",
+        "addressLocality":"Darlington",
+        "postalCode":"DL1 4AJ",
+        "addressCountry":"GB"
+      }
+    },
+    "areaServed":{
+      "@type":"AdministrativeArea",
+      "name":"Darlington and surrounding towns (~25 miles)"
+    },
+    "description":"Multi-stage machine polishing to safely reduce swirl marks, light scratches and oxidation, restoring gloss and clarity.",
+    "offers":{
+      "@type":"Offer",
+      "priceCurrency":"GBP",
+      "priceSpecification":{
+        "@type":"PriceSpecification",
+        "price":"150",
+        "priceCurrency":"GBP"
+      },
+      "description":"Single-stage correction from £150. Multi-stage quoted after inspection."
+    }
+  }
   </script>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased">
+<body class="site-body">
 
-  <!-- same header/nav -->
-  <header class="bg-white shadow">
-    <div class="max-w-6xl mx-auto p-4 flex items-center justify-between">
-      <a href="/index.html" class="flex items-center gap-3">
-        <img src="/images/logo.jpg" alt="Polished & Pristine logo" class="w-12 h-12 object-contain rounded" />
-        <div>
-          <div class="font-bold text-lg">Polished & Pristine</div>
-          <div class="text-sm text-slate-500">Paint correction • Ceramic coatings • PPF — Darlington</div>
+  <!-- HEADER / NAV -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/index.html" aria-label="Polished & Pristine home">
+        <img src="/images/logo.jpg" alt="Polished & Pristine logo" class="brand-logo">
+        <div class="brand-text">
+          <div class="brand-name">Polished &amp; Pristine</div>
+          <div class="brand-tag">Paint correction • Ceramic coatings • PPF — Darlington</div>
         </div>
       </a>
-      <nav class="hidden md:flex gap-6 text-sm items-center">
-        <a href="/index.html" class="hover:text-brandGold">Home</a>
-        <a href="/services.html" class="hover:text-brandGold">Services</a>
-        <a href="/paint-correction.html" class="hover:text-brandGold font-semibold">Paint Correction</a>
-        <a href="/ceramic-coatings.html" class="hover:text-brandGold">Ceramic Coatings</a>
-        <a href="/ppf.html" class="hover:text-brandGold">PPF</a>
-        <a href="/valeting.html" class="hover:text-brandGold">Valeting</a>
-        <a href="/gallery.html" class="hover:text-brandGold">Gallery</a>
-        <a href="/tips.html" class="hover:text-brandGold">Expert Advice</a>
-        <a href="/contact.html" class="px-3 py-1 bg-brandDark text-white rounded">Contact / Book</a>
+
+      <button id="mobileNavToggle" class="mobile-toggle" aria-label="Open menu">☰</button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="/index.html" class="nav-link">Home</a>
+        <a href="/services.html" class="nav-link">Services</a>
+        <a href="/paint-correction.html" class="nav-link nav-active">Paint Correction</a>
+        <a href="/ceramic-coatings.html" class="nav-link">Ceramic Coatings</a>
+        <a href="/ppf.html" class="nav-link">PPF</a>
+        <a href="/valeting.html" class="nav-link">Valeting</a>
+        <a href="/gallery.html" class="nav-link">Gallery</a>
+        <a href="/tips.html" class="nav-link">Expert Advice</a>
+        <a href="/contact.html" class="nav-cta">Contact / Book</a>
       </nav>
-      <div class="md:hidden">
-        <button id="mobileMenuBtn3" class="p-2 rounded bg-slate-100">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" /></svg>
-        </button>
-      </div>
-    </div>
-    <div id="mobileMenu3" class="hidden md:hidden border-t">
-      <div class="px-4 py-3 space-y-2">
-        <a href="/index.html" class="block">Home</a>
-        <a href="/services.html" class="block">Services</a>
-        <a href="/paint-correction.html" class="block font-semibold">Paint Correction</a>
-        <a href="/ceramic-coatings.html" class="block">Ceramic Coatings</a>
-        <a href="/ppf.html" class="block">PPF</a>
-        <a href="/valeting.html" class="block">Valeting</a>
-        <a href="/gallery.html" class="block">Gallery</a>
-        <a href="/tips.html" class="block">Expert Advice</a>
-        <a href="/contact.html" class="block">Contact / Book</a>
-      </div>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto p-6">
-    <h1 class="text-3xl font-extrabold mb-4">Paint Correction — restore clarity and gloss</h1>
-    <p class="text-slate-700 mb-4">Multi-stage machine polishing removes swirl marks, light scratches and oxidation. We assess paint depth and recommend a safe correction plan.</p>
+  <!-- MAIN -->
+  <main class="wrap main-content">
 
-    <section class="bg-white p-6 rounded shadow mb-4">
-      <h2 class="text-xl font-semibold">What we do</h2>
-      <ul class="list-disc list-inside text-slate-600 mt-2">
-        <li>Condition assessment & paint thickness measurement</li>
-        <li>Decontamination (iron fallout & tar removal)</li>
-        <li>Multi-stage machine polishing and finishing</li>
-        <li>Final protection (sealant or ceramic top coat)</li>
+    <!-- Page intro -->
+    <header class="page-header">
+      <h1>Paint Correction — remove swirls, restore deep gloss</h1>
+      <p class="muted">We safely reduce defects like swirl marks, light scratches and oxidation with multi-stage machine polishing. Based in Darlington — serving nearby towns within ~25 miles.</p>
+      <div style="margin-top:12px;">
+        <a class="btn btn-primary" href="/contact.html#book">Book a free paint assessment</a>
+        <a class="btn btn-outline" href="#pricing" style="margin-left:10px;">See pricing guide</a>
+      </div>
+    </header>
+
+    <!-- Before / After preview -->
+    <section class="cards small-gap" style="margin-top:18px;">
+      <figure class="card">
+        <img src="/images/gallery1-before.jpg" alt="Before: heavy swirl marks under workshop lighting">
+        <figcaption class="muted">Before — swirl marks and dull finish under lighting.</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="/images/gallery1-after.jpg" alt="After: high gloss restored after paint correction">
+        <figcaption class="muted">After — clarity and gloss restored following multi-stage correction.</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="/images/gallery3.jpg" alt="Close-up of refined finish with crisp reflections">
+        <figcaption class="muted">Refined finish — crisp reflections, protected for easy maintenance.</figcaption>
+      </figure>
+    </section>
+
+    <!-- What is paint correction -->
+    <section class="card" style="margin-top:20px;">
+      <h2>What is paint correction?</h2>
+      <p class="muted">Paint correction levels the clear coat microscopically to remove or reduce surface defects. We work with measured, safe techniques — not aggressive “cut & buff”. The result is a truer, deeper gloss that lasts longer when protected.</p>
+      <div class="grid-3 small-gap" style="margin-top:12px;">
+        <div class="card">
+          <h3>Common defects</h3>
+          <ul>
+            <li>Swirl marks from poor washing</li>
+            <li>Light scratches & marring</li>
+            <li>Oxidation / faded paint</li>
+            <li>Water spots & haze</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Our approach</h3>
+          <ul>
+            <li>Paint depth readings (safety first)</li>
+            <li>Pad & polish system matched to paint</li>
+            <li>Panel-by-panel correction & inspection</li>
+            <li>Finishing polish for maximum clarity</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Why it lasts</h3>
+          <ul>
+            <li>True defect removal (not fillers)</li>
+            <li>Protected with sealant or ceramic</li>
+            <li>Aftercare guidance to avoid re-swirl</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our process -->
+    <section class="card" style="margin-top:20px;">
+      <h2>Our process — step by step</h2>
+      <ol class="muted" style="padding-left:18px; line-height:1.7;">
+        <li><strong>Assessment & lighting check</strong> — identify defects and measure paint thickness.</li>
+        <li><strong>Safe wash & decontamination</strong> — two-bucket wash, iron fallout & tar removal.</li>
+        <li><strong>Test section</strong> — select the safest combo of pad & polish for your paint type.</li>
+        <li><strong>Correction stage(s)</strong> — single-stage or multi-stage machine polishing.</li>
+        <li><strong>Finishing & inspection</strong> — refine for clarity and consistent gloss.</li>
+        <li><strong>Protection</strong> — sealant or ceramic coating to lock in results.</li>
+      </ol>
+    </section>
+
+    <!-- Packages & Pricing -->
+    <section id="pricing" class="card" style="margin-top:20px;">
+      <h2>Packages & pricing guide</h2>
+      <div class="grid-3 small-gap" style="margin-top:12px;">
+        <div class="card">
+          <h3>Single-stage Correction</h3>
+          <p class="muted">Ideal for newer paint with light swirling. One polishing stage to lift gloss and reduce minor defects.</p>
+          <p><strong>From £150</strong> (small cars). Time: ~2–4 hours.</p>
+        </div>
+        <div class="card">
+          <h3>Multi-stage Correction</h3>
+          <p class="muted">Cut + refine to tackle heavier swirls and oxidation. Best balance of defect removal vs. paint safety.</p>
+          <p><strong>From £300+</strong> depending on size/condition. Time: ~4–8+ hours.</p>
+        </div>
+        <div class="card">
+          <h3>Correction + Ceramic</h3>
+          <p class="muted">Correction paired with our long-life coating (1–5+ year options) for durable gloss and easier washing.</p>
+          <p><strong>From £450+</strong> depending on coating & vehicle size.</p>
+        </div>
+      </div>
+      <div style="margin-top:12px;">
+        <a href="/contact.html#book" class="btn btn-primary">Request a paint correction quote</a>
+        <a href="/ceramic-coatings.html" class="btn btn-outline" style="margin-left:10px;">See ceramic coating options</a>
+      </div>
+    </section>
+
+    <!-- Aftercare -->
+    <section class="card" style="margin-top:20px;">
+      <h2>Aftercare — keep that finish pristine</h2>
+      <ul class="muted" style="padding-left:18px; line-height:1.7;">
+        <li>Two-bucket safe wash with grit guards and quality mitts.</li>
+        <li>Use pH-neutral shampoo; avoid harsh roadside chemicals.</li>
+        <li>Dry with clean microfibres; avoid circular motions.</li>
+        <li>Top up protection with spray sealant every few months (for coated cars, use the recommended topper).</li>
       </ul>
-      <p class="mt-3 font-semibold">Typical times: 2–8 hours depending on stage count and vehicle size.</p>
+      <p class="muted" style="margin-top:8px;">We’ll provide a simple aftercare guide tailored to your vehicle and protection choice.</p>
     </section>
 
-    <section class="bg-white p-6 rounded shadow">
-      <h2 class="text-xl font-semibold">Pricing guide</h2>
-      <p class="text-slate-700">From £150 (single-stage small cars) to £450+ for premium multi-stage correction.</p>
-      <a href="/contact.html#book" class="mt-4 inline-block bg-brandDark text-white px-4 py-2 rounded">Request a correction quote</a>
+    <!-- FAQ teaser -->
+    <section class="card" style="margin-top:20px;">
+      <h2>Quick FAQs</h2>
+      <div class="grid-3 small-gap" style="margin-top:12px;">
+        <div class="card">
+          <h3>Is machine polishing safe?</h3>
+          <p class="muted">Yes — in trained hands with paint depth checks and the right pads & polishes. We work within safe limits for your clear coat.</p>
+        </div>
+        <div class="card">
+          <h3>Do scratches come back?</h3>
+          <p class="muted">Removed defects don’t reappear, but new ones can be introduced by poor washing. Follow our aftercare to prevent that.</p>
+        </div>
+        <div class="card">
+          <h3>Coating or wax?</h3>
+          <p class="muted">Coatings last years and are more resistant. Waxes look great but are short-term. We’ll recommend the best fit for your use and budget.</p>
+        </div>
+      </div>
+      <p class="muted" style="margin-top:8px;">See more on our <a href="/tips.html">Expert Advice</a> page.</p>
     </section>
+
+    <!-- CTA -->
+    <section class="card" style="margin-top:20px;">
+      <h2>Ready to transform your paint?</h2>
+      <p class="muted">Book a free assessment. We’ll inspect the paint under lighting, explain expected results, and provide a clear quote.</p>
+      <a class="btn btn-primary" href="/contact.html#book">Book now</a>
+    </section>
+
   </main>
 
-  <footer class="mt-12 border-t py-6 text-sm text-center text-slate-600">
-    Polished & Pristine — 3 Appleby Close, Darlington — DL1 4AJ — <a href="tel:07468286651" class="text-slate-900">07468 286651</a>
-    <div class="mt-2">Serving approx. 25-mile radius | Proudly local</div>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-left">
+        <strong>Polished &amp; Pristine</strong><br>
+        3 Appleby Close, Darlington — DL1 4AJ<br>
+        <a href="tel:07468286651">07468 286651</a>
+      </div>
+      <div class="footer-right">
+        <nav class="footer-nav">
+          <a href="/services.html">Services</a>
+          <a href="/gallery.html">Gallery</a>
+          <a href="/tips.html">Expert Advice</a>
+          <a href="/privacy-policy.html">Privacy</a>
+        </nav>
+        <div class="small muted">Serving approx. 25-mile radius</div>
+      </div>
+    </div>
   </footer>
 
-<script>
-  document.getElementById('mobileMenuBtn3').addEventListener('click', () => {
-    document.getElementById('mobileMenu3').classList.toggle('hidden');
-  });
-</script>
-
+  <!-- Mobile nav toggle -->
+  <script>
+    (function(){
+      const btn = document.getElementById('mobileNavToggle');
+      const nav = document.getElementById('mainNav');
+      if (btn && nav) {
+        btn.addEventListener('click', () => nav.classList.toggle('nav-open'));
+      }
+    })();
+  </script>
 </body>
 </html>
