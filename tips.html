@@ -1,161 +1,183 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Detailing Tips & Advice | Polished & Pristine Darlington</title>
-    <meta name="description" content="Expert car detailing tips, FAQ, and advice from Polished & Pristine in Darlington. Learn about paint correction, ceramic coatings, and keeping your car in showroom condition.">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="shortcut icon" href="/images/favicon.ico">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Expert Advice — Polished & Pristine Darlington</title>
+  <meta name="description" content="Expert car detailing tips and FAQ covering paint correction, ceramic coatings, PPF, valeting and more." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { brandBlue: "#1e3a8a", brandGold: "#facc15", brandDark: "#0f172a" }}}}
+  </script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-slate-50 text-slate-900 antialiased">
 
-<header class="bg-white shadow">
-    <div class="container mx-auto flex justify-between items-center py-4 px-6">
-        <h1 class="text-2xl font-bold text-blue-600"><a href="/index.html">Polished <span class="text-black">&</span> Pristine</a></h1>
-        <nav>
-            <ul class="flex space-x-6">
-                <li><a href="/index.html" class="hover:text-blue-600">Home</a></li>
-                <li><a href="/services.html" class="hover:text-blue-600">Services</a></li>
-                <li><a href="/gallery.html" class="hover:text-blue-600">Gallery</a></li>
-                <li><a href="/tips.html" class="text-blue-600 font-semibold">Expert Advice</a></li>
-                <li><a href="/contact.html" class="hover:text-blue-600">Contact</a></li>
-            </ul>
-        </nav>
+  <!-- header/nav (same) -->
+  <header class="bg-white shadow">
+    <div class="max-w-6xl mx-auto p-4 flex items-center justify-between">
+      <a href="/index.html" class="flex items-center gap-3">
+        <img src="/images/logo.jpg" alt="Polished & Pristine logo" class="w-12 h-12 object-contain rounded" />
+        <div>
+          <div class="font-bold text-lg">Polished & Pristine</div>
+          <div class="text-sm text-slate-500">Paint correction • Ceramic coatings • PPF — Darlington</div>
+        </div>
+      </a>
+      <nav class="hidden md:flex gap-6 text-sm items-center">
+        <a href="/index.html" class="hover:text-brandGold">Home</a>
+        <a href="/services.html" class="hover:text-brandGold">Services</a>
+        <a href="/paint-correction.html" class="hover:text-brandGold">Paint Correction</a>
+        <a href="/ceramic-coatings.html" class="hover:text-brandGold">Ceramic Coatings</a>
+        <a href="/ppf.html" class="hover:text-brandGold">PPF</a>
+        <a href="/valeting.html" class="hover:text-brandGold">Valeting</a>
+        <a href="/gallery.html" class="hover:text-brandGold">Gallery</a>
+        <a href="/tips.html" class="hover:text-brandGold font-semibold">Expert Advice</a>
+        <a href="/contact.html" class="px-3 py-1 bg-brandDark text-white rounded">Contact / Book</a>
+      </nav>
+      <div class="md:hidden">
+        <button id="mobileMenuBtn8" class="p-2 rounded bg-slate-100">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" /></svg>
+        </button>
+      </div>
     </div>
-</header>
+    <div id="mobileMenu8" class="hidden md:hidden border-t">
+      <div class="px-4 py-3 space-y-2">
+        <a href="/index.html" class="block">Home</a>
+        <a href="/services.html" class="block">Services</a>
+        <a href="/paint-correction.html" class="block">Paint Correction</a>
+        <a href="/ceramic-coatings.html" class="block">Ceramic Coatings</a>
+        <a href="/ppf.html" class="block">PPF</a>
+        <a href="/valeting.html" class="block">Valeting</a>
+        <a href="/gallery.html" class="block">Gallery</a>
+        <a href="/tips.html" class="block font-semibold">Expert Advice</a>
+        <a href="/contact.html" class="block">Contact / Book</a>
+      </div>
+    </div>
+  </header>
 
-<main class="container mx-auto py-10 px-6">
-    <h2 class="text-3xl font-bold text-center mb-6">Car Detailing Tips & Frequently Asked Questions</h2>
-    <p class="text-center mb-8">Learn from the experts at Polished & Pristine. Find answers to your car care questions, discover best practices, and explore premium detailing services.</p>
+  <main class="max-w-6xl mx-auto p-6">
+    <h1 class="text-3xl font-extrabold mb-4">Expert Detailing Tips & FAQ</h1>
+    <p class="text-slate-700 mb-6">Search or browse our FAQs for paint and interior care advice. Designed for car lovers and owners who want the best results.</p>
 
-    <!-- Search -->
-    <div class="mb-6 text-center">
-        <input id="faqSearch" type="text" placeholder="Search FAQs..." class="w-full md:w-1/2 px-4 py-2 border rounded shadow focus:outline-none focus:ring-2 focus:ring-blue-500">
+    <!-- Search input -->
+    <div class="mb-6">
+      <input id="faqSearch" type="text" placeholder="Search FAQs..." class="w-full md:w-1/2 px-4 py-2 border rounded shadow focus:outline-none focus:ring-2 focus:ring-brandBlue">
     </div>
 
-    <!-- FAQ Container -->
     <div id="faqContainer" class="space-y-4">
-        <!-- Individual FAQ items will be injected by JS -->
+      <!-- JS will render the 30 FAQs and search results here (same dataset we discussed) -->
     </div>
 
-    <!-- SEO Images -->
-    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <img src="/images/detailing1.jpg" alt="Professional car detailing close-up" class="rounded shadow">
-        <img src="/images/detailing2.jpg" alt="Ceramic coating application on car hood" class="rounded shadow">
-        <img src="/images/detailing3.jpg" alt="Paint correction showing before and after" class="rounded shadow">
-        <img src="/images/detailing4.jpg" alt="Interior deep clean of car seats" class="rounded shadow">
-        <img src="/images/detailing5.jpg" alt="Luxury car polished to mirror shine" class="rounded shadow">
-        <img src="/images/detailing6.jpg" alt="Wheel and rim cleaning detail" class="rounded shadow">
+    <!-- SEO images -->
+    <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <img src="/images/tip-paint-correction.jpg" alt="Paint correction close up" class="rounded shadow">
+      <img src="/images/tip-ceramic-coating.jpg" alt="Ceramic coating beading" class="rounded shadow">
+      <img src="/images/tip-interior-clean.jpg" alt="Interior deep clean result" class="rounded shadow">
     </div>
 
-    <!-- TikTok Widget -->
-    <div class="mt-12">
-        <h3 class="text-2xl font-semibold mb-4 text-center">Watch Our Work in Action</h3>
-        <p class="text-center mb-6">Our gallery is updated automatically with our latest transformations from TikTok!</p>
-        <script src="https://static.elfsight.com/platform/platform.js" async></script>
-        <div class="elfsight-app-c1dcfc2c-362b-4a17-9ce8-a8ed5283ac9b" data-elfsight-app-lazy></div>
+    <!-- TikTok embed kept below -->
+    <div class="mt-10">
+      <script src="https://static.elfsight.com/platform/platform.js" async></script>
+      <div class="elfsight-app-c1dcfc2c-362b-4a17-9ce8-a8ed5283ac9b" data-elfsight-app-lazy></div>
     </div>
-</main>
+  </main>
 
-<footer class="bg-white mt-12 py-6 text-center shadow">
-    <p>Polished & Pristine &copy; 2025 | Professional Detailing in Darlington</p>
-</footer>
+  <footer class="mt-12 border-t py-6 text-sm text-center text-slate-600">
+    Polished & Pristine — 3 Appleby Close, Darlington — DL1 4AJ — <a href="tel:07468286651" class="text-slate-900">07468 286651</a>
+    <div class="mt-2">Serving approx. 25-mile radius | Proudly local</div>
+  </footer>
 
-<!-- JS for FAQ and Search -->
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
 <script>
-    const faqData = [
-        {q: "What’s the real difference between a car wash, a valet, and a detail?", a: "A car wash cleans surfaces. A valet cleans thoroughly with safe methods. Detailing restores, protects, and perfects paint and interiors."},
-        {q: "My car's interior has seen better days thanks to kids and a dog! What can you do?", a: "Our specialist steam and extraction methods clean deeply, sanitize, and restore interiors, perfect for families and pet owners."},
-        {q: "Is a machine polish the same as T-cutting or removing scratches?", a: "Machine polishing removes light swirl marks with a professional machine safely, while T-cut is an abrasive applied by hand and can damage paint."},
-        {q: "I've heard about fallout and decontamination. Is that really necessary?", a: "Yes. Chemical decontamination removes bonded iron, tar, and contaminants ensuring coatings and waxes bond correctly and last longer."},
-        {q: "What is a ceramic coating, and is it better than waxing?", a: "Ceramic coatings provide years of chemical and UV resistance, water repellency, and durability far beyond traditional waxes."},
-        {q: "How often should I have my car polished or corrected?", a: "New cars: 12–18 months if coated. Older cars: 6–12 months depending on condition and exposure."},
-        {q: "Is ceramic coating worth it on my daily driver?", a: "Yes, it protects against UV, bird droppings, and chemicals, reduces wash frequency, and maintains showroom gloss."},
-        {q: "Can I put a paint protection film (PPF) on my car myself?", a: "DIY is risky. Professional installation ensures invisible, bubble-free coverage, especially on bumpers and edges."},
-        {q: "How do I safely remove contaminants like iron fallout or tar?", a: "Professional chemical decontamination safely removes particles without scratching paint."},
-        {q: "Do tinted windows need special care during detailing?", a: "Yes. Use pH-neutral cleaners and soft cloths to avoid lifting tint or scratching protective films."},
-        {q: "Can I wash my car in the winter without damaging it?", a: "Yes, with safe water temperatures, proper drying, and pH-neutral shampoo. Avoid freezing conditions without precautions."},
-        {q: "What’s the best way to maintain leather and interior surfaces?", a: "Condition leather every 3–6 months, use pH-neutral cleaners, and steam sanitize to kill bacteria."},
-        {q: "How can I make my car stand out at shows or meets?", a: "Paint enhancement, engine bay detailing, clean wheels, and spotless interiors impress judges and enthusiasts."},
-        {q: "How do I prevent swirl marks when washing my car?", a: "Use two-bucket method, grit catchers, microfiber mitts, and proper drying cloths."},
-        {q: "How do I maintain gloss on dark-colored cars?", a: "Regular clay barring, polishing, and coating maintain depth. Avoid automatic brush washes."},
-        {q: "Can I apply wax over ceramic coating?", a: "Yes, but not necessary. Maintenance sprays are usually sufficient."},
-        {q: "How often should I decontaminate my paint?", a: "Every 6–12 months depending on environmental exposure."},
-        {q: "Why is paint correction important before coating?", a: "Coatings bond to the paint surface. Correcting defects first ensures a perfect finish."},
-        {q: "Are matte finishes treated differently?", a: "Yes, matte requires special cleaners to avoid glossy streaks."},
-        {q: "Can I leave my car outside after ceramic coating?", a: "Yes, coatings protect against UV and chemicals, but clean off bird droppings promptly."},
-        {q: "Is machine polishing safe on thin paint?", a: "Professionals use paint depth gauges and proper pads to prevent clear coat thinning."},
-        {q: "How do I care for carbon fiber or alloy parts?", a: "Use mild cleaners and microfiber cloths. Protect with sealants or coatings safe for composites."},
-        {q: "How do I remove water spots safely?", a: "Use pH-neutral water spot removers or professional deionised treatments."},
-        {q: "What is hydrophobic treatment and why is it good?", a: "It makes surfaces water-repellent, reducing dirt adhesion and making washes easier."},
-        {q: "Can detailing help resale value?", a: "Yes, a clean, protected car shows care and increases buyer confidence."},
-        {q: "How do I maintain matte black interiors?", a: "Use non-gloss cleaners, avoid silicone-based products, and steam clean fabrics and plastics."},
-        {q: "How do I keep wheels clean and protected?", a: "Use dedicated cleaners, brushes, and sealants; wash regularly to prevent brake dust buildup."},
-        {q: "Do pets affect detailing frequency?", a: "Yes — pet hair, scratches, and odors require more frequent interior deep cleaning."},
-        {q: "How do I protect convertible tops?", a: "Clean with fabric-specific cleaners, protect with UV-safe sprays, and avoid harsh brushes."},
-        {q: "Are eco-friendly car shampoos as effective?", a: "Yes, modern eco-friendly shampoos clean effectively without harsh chemicals."}
-    ];
+  // Mobile menu toggle
+  document.getElementById('mobileMenuBtn8').addEventListener('click', () => {
+    document.getElementById('mobileMenu8').classList.toggle('hidden');
+  });
 
-    const faqContainer = document.getElementById('faqContainer');
-    const faqSearchInput = document.getElementById('faqSearch');
+  // FAQ data (30 items) - same content we agreed earlier
+  const faqData = [
+    {q: "What’s the real difference between a car wash, a valet, and a detail?", a: "A basic car wash cleans surfaces. A valet uses safe methods for a thorough clean. Detailing restores, protects and perfects with decontamination and polish."},
+    {q: "My car's interior has seen better days thanks to kids and a dog! What can you do?", a: "We use steam sanitisation, hot water extraction and specialist stain removal to reset interiors. Interior Deep Clean from £80."},
+    {q: "Is a machine polish the same as T-cutting or removing scratches?", a: "T-cut is abrasive and hand-applied; machine polishing uses controlled tools and pads for safer defect removal."},
+    {q: "I've heard about fallout and decontamination. Is that necessary?", a: "Yes — chemical decontamination removes bonded iron and tar so coatings and waxes bond properly."},
+    {q: "What is a ceramic coating, and is it better than waxing?", a: "Ceramic coatings form a semi-permanent bond providing better durability, chemical resistance and hydrophobic properties than wax."},
+    {q: "How often should I have my car polished or corrected?", a: "New cars: 12–18 months if coated. Older cars: 6–12 months depending on exposure."},
+    {q: "Is ceramic coating worth it on my daily driver?", a: "Yes — it reduces maintenance and protects against UV, bird droppings and chemicals."},
+    {q: "Can I put a PPF on my car myself?", a: "DIY is risky. Professional installation is recommended for seamless, bubble-free results."},
+    {q: "How do I safely remove contaminants like iron fallout or tar?", a: "Use professional chemical decontamination and clay barring rather than harsh abrasives."},
+    {q: "Do tinted windows need special care during detailing?", a: "Yes. Use pH-neutral cleaners and avoid abrasive tools near tint."},
+    {q: "Can I wash my car in the winter without damaging it?", a: "Yes, but avoid freezing conditions. Use warm water, dry quickly and avoid harsh winter chemical cleaners."},
+    {q: "What’s the best way to maintain leather and interior surfaces?", a: "Condition leather every 3–6 months, use pH-neutral cleaners and steam sanitize for deep hygiene."},
+    {q: "How can I make my car stand out at shows or meets?", a: "Prioritise paint enhancement, engine bay detailing, protected wheels and a spotless interior."},
+    {q: "How do I prevent swirl marks when washing my car?", a: "Two-bucket method, grit catchers, microfiber mitts and proper drying technique."},
+    {q: "How do I maintain gloss on dark-colored cars?", a: "Regular decontamination, polishing and coatings — avoid brush washes."},
+    {q: "Can I apply wax over ceramic coating?", a: "Yes, but it's not necessary; maintenance sprays are usually better for coated cars."},
+    {q: "How often should I decontaminate my paint?", a: "Every 6–12 months depending on environment and exposure."},
+    {q: "Why is paint correction important before coating?", a: "Coatings bond to the surface — correct defects first so finish is perfect and durable."},
+    {q: "Are matte finishes treated differently?", a: "Yes — matte requires specific products to avoid creating shine."},
+    {q: "Can I leave my car outside after ceramic coating?", a: "Yes, but remove bird droppings and harsh contaminants quickly to protect the coating."},
+    {q: "Is machine polishing safe on thin paint?", a: "Yes when professionals use paint depth gauges and the right pads/polishes."},
+    {q: "How do I care for carbon fiber or alloy parts?", a: "Use mild cleaners, microfiber cloths, and safe coatings for composites."},
+    {q: "How do I remove water spots safely?", a: "Use pH-neutral water spot removers or professional deionised treatments."},
+    {q: "What is hydrophobic treatment and why is it good?", a: "A hydrophobic treatment repels water, reduces dirt adhesion and makes washing easier."},
+    {q: "Can detailing help resale value?", a: "Yes — a protected, clean car shows it’s been cared for and commands higher buyer confidence."},
+    {q: "How do I maintain matte black interiors?", a: "Use non-gloss cleaners, avoid silicone products and steam clean fabrics."},
+    {q: "How do I keep wheels clean and protected?", a: "Use dedicated wheel cleaners, brushes and wheel sealants regularly."},
+    {q: "Do pets affect detailing frequency?", a: "Yes — pet owners need more frequent interior deep cleans for hair, scratches and odours."},
+    {q: "How do I protect convertible tops?", a: "Use fabric-specific cleaners and UV-safe protectants; avoid pressure washing the top."},
+    {q: "Are eco-friendly car shampoos as effective?", a: "Yes — modern eco shampoos clean well while being gentler on the environment."}
+  ];
 
-    // Create FAQ HTML
-    function renderFAQs(data) {
-        faqContainer.innerHTML = '';
-        data.forEach(item => {
-            const faqItem = document.createElement('div');
-            faqItem.classList.add('bg-white', 'p-4', 'rounded', 'shadow');
-            faqItem.innerHTML = `
-                <button class="w-full text-left font-semibold text-lg flex justify-between items-center faq-btn">
-                    <span>${item.q}</span>
-                    <span class="faq-icon text-blue-600">+</span>
-                </button>
-                <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 mt-2">
-                    <p>${item.a}</p>
-                </div>
-            `;
-            faqContainer.appendChild(faqItem);
-        });
-        attachFAQToggle();
-    }
+  const faqContainer = document.getElementById('faqContainer');
+  const faqSearchInput = document.getElementById('faqSearch');
 
-    // Toggle FAQ answers
-    function attachFAQToggle() {
-        const buttons = document.querySelectorAll('.faq-btn');
-        buttons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const parent = btn.parentElement;
-                const answer = parent.querySelector('.faq-answer');
-                const icon = btn.querySelector('.faq-icon');
-                const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
-
-                document.querySelectorAll('.faq-answer').forEach(ans => ans.style.maxHeight = '0');
-                document.querySelectorAll('.faq-icon').forEach(ic => ic.textContent = '+');
-
-                if (!isOpen) {
-                    answer.style.maxHeight = answer.scrollHeight + 'px';
-                    icon.textContent = '-';
-                }
-            });
-        });
-    }
-
-    renderFAQs(faqData);
-
-    // Fuse.js search
-    const fuse = new Fuse(faqData, { keys: ['q', 'a'], threshold: 0.4 });
-
-    faqSearchInput.addEventListener('input', e => {
-        const query = e.target.value;
-        const results = query ? fuse.search(query).map(r => r.item) : faqData;
-        renderFAQs(results);
+  function renderFAQs(data) {
+    faqContainer.innerHTML = '';
+    data.forEach(item => {
+      const block = document.createElement('div');
+      block.className = 'bg-white p-4 rounded shadow';
+      block.innerHTML = `
+        <button class="w-full text-left font-semibold text-lg flex justify-between items-center faq-btn">
+          <span>${item.q}</span>
+          <span class="faq-icon text-brandBlue">+</span>
+        </button>
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 mt-2 text-slate-700">
+          <p>${item.a}</p>
+        </div>
+      `;
+      faqContainer.appendChild(block);
     });
+    attachFAQToggle();
+  }
+
+  function attachFAQToggle() {
+    document.querySelectorAll('.faq-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const parent = btn.parentElement;
+        const ans = parent.querySelector('.faq-answer');
+        const icon = parent.querySelector('.faq-icon');
+        const isOpen = ans.style.maxHeight && ans.style.maxHeight !== '0px';
+
+        document.querySelectorAll('.faq-answer').forEach(a => a.style.maxHeight = '0');
+        document.querySelectorAll('.faq-icon').forEach(i => i.textContent = '+');
+
+        if (!isOpen) {
+          ans.style.maxHeight = ans.scrollHeight + 'px';
+          icon.textContent = '-';
+        }
+      });
+    });
+  }
+
+  renderFAQs(faqData);
+
+  // Fuse.js search
+  const fuse = new Fuse(faqData, { keys: ['q', 'a'], threshold: 0.4 });
+
+  faqSearchInput.addEventListener('input', e => {
+    const query = e.target.value;
+    const results = query ? fuse.search(query).map(r => r.item) : faqData;
+    renderFAQs(results);
+  });
 </script>
 
 </body>

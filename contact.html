@@ -1,86 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — Polished & Pristine | Book Detailing Services Darlington</title>
-  <meta name="description" content="Get in touch with Polished & Pristine for paint correction, ceramic coatings, PPF and valeting services in Darlington. Quick booking form and contact details.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact & Book — Polished & Pristine</title>
+  <meta name="description" content="Contact Polished & Pristine for paint correction, ceramic coatings, PPF and valeting services in Darlington." />
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="shortcut icon" href="/images/favicon.ico">
+  <script> tailwind.config = { theme: { extend: { colors: { brandBlue: "#1e3a8a", brandGold: "#facc15", brandDark: "#0f172a" }}}}</script>
 </head>
 <body class="bg-slate-50 text-slate-900 antialiased">
 
-  <!-- Header -->
+  <!-- header/nav -->
   <header class="bg-white shadow">
     <div class="max-w-6xl mx-auto p-4 flex items-center justify-between">
-      <a href="/index.html" class="text-2xl font-bold text-slate-900">Polished <span class="text-blue-600">&</span> Pristine</a>
-      <nav class="hidden md:flex gap-6 text-sm">
-        <a href="/index.html" class="hover:underline">Home</a>
-        <a href="/services.html" class="hover:underline">Services</a>
-        <a href="/gallery.html" class="hover:underline">Gallery</a>
-        <a href="/tips.html" class="hover:underline">Expert Advice</a>
-        <a href="/contact.html" class="font-semibold px-3 py-1 bg-slate-900 text-white rounded">Contact</a>
+      <a href="/index.html" class="flex items-center gap-3">
+        <img src="/images/logo.jpg" alt="Polished & Pristine logo" class="w-12 h-12 object-contain rounded" />
+        <div>
+          <div class="font-bold text-lg">Polished & Pristine</div>
+          <div class="text-sm text-slate-500">Paint correction • Ceramic coatings • PPF — Darlington</div>
+        </div>
+      </a>
+      <nav class="hidden md:flex gap-6 text-sm items-center">
+        <a href="/index.html" class="hover:text-brandGold">Home</a>
+        <a href="/services.html" class="hover:text-brandGold">Services</a>
+        <a href="/paint-correction.html" class="hover:text-brandGold">Paint Correction</a>
+        <a href="/ceramic-coatings.html" class="hover:text-brandGold">Ceramic Coatings</a>
+        <a href="/ppf.html" class="hover:text-brandGold">PPF</a>
+        <a href="/valeting.html" class="hover:text-brandGold">Valeting</a>
+        <a href="/gallery.html" class="hover:text-brandGold">Gallery</a>
+        <a href="/tips.html" class="hover:text-brandGold">Expert Advice</a>
+        <a href="/contact.html" class="px-3 py-1 bg-brandDark text-white rounded font-semibold">Contact / Book</a>
       </nav>
+      <div class="md:hidden">
+        <button id="mobileMenuBtn9" class="p-2 rounded bg-slate-100">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" /></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu9" class="hidden md:hidden border-t">
+      <div class="px-4 py-3 space-y-2">
+        <a href="/index.html" class="block">Home</a>
+        <a href="/services.html" class="block">Services</a>
+        <a href="/paint-correction.html" class="block">Paint Correction</a>
+        <a href="/ceramic-coatings.html" class="block">Ceramic Coatings</a>
+        <a href="/ppf.html" class="block">PPF</a>
+        <a href="/valeting.html" class="block">Valeting</a>
+        <a href="/gallery.html" class="block">Gallery</a>
+        <a href="/tips.html" class="block">Expert Advice</a>
+        <a href="/contact.html" class="block font-semibold">Contact / Book</a>
+      </div>
     </div>
   </header>
 
-  <!-- Main content -->
   <main class="max-w-6xl mx-auto p-6">
     <h1 class="text-3xl font-extrabold mb-6 text-center">Get in Touch</h1>
-    <p class="text-slate-700 text-center mb-8">Book your detailing service or ask a question. We offer paint correction, ceramic coatings, PPF and valeting services across Darlington and nearby areas.</p>
+    <p class="text-center text-slate-700 mb-8">Book your detailing service or ask a question. For urgent enquiries call <a href="tel:07468286651" class="text-brandBlue">07468 286651</a>.</p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-
-      <!-- Contact Form -->
       <div>
         <form action="https://formsubmit.co/b89300d152399ad939e7db161cbb0cfa" method="POST" enctype="multipart/form-data" class="grid gap-4 bg-white p-6 rounded shadow">
           <input type="hidden" name="_next" value="https://polishedandpristine.co.uk/thank-you.html">
           <input type="hidden" name="_subject" value="Website enquiry: Polished & Pristine">
-          
-          <input type="text" name="name" placeholder="Full name" required class="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
-          <input type="email" name="email" placeholder="Email address" required class="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
-          <input type="tel" name="phone" placeholder="Phone number" class="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
-          
-          <select name="service" required class="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <input type="text" name="name" placeholder="Full name" required class="p-2 border rounded">
+          <input type="email" name="email" placeholder="Email address" required class="p-2 border rounded">
+          <input type="tel" name="phone" placeholder="Phone number" class="p-2 border rounded">
+          <select name="service" required class="p-2 border rounded">
             <option value="">Select service</option>
             <option value="Paint Correction">Paint Correction</option>
             <option value="Ceramic Coating">Ceramic Coating</option>
             <option value="PPF Installation">PPF Installation</option>
             <option value="Valeting / Interior Clean">Valeting / Interior Clean</option>
           </select>
-          
-          <textarea name="message" placeholder="Additional info / vehicle details" class="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-          
-          <button type="submit" class="bg-slate-900 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Send Enquiry</button>
+          <textarea name="message" placeholder="Additional info / vehicle details" class="p-2 border rounded"></textarea>
+          <button type="submit" class="bg-brandDark text-white px-4 py-2 rounded">Send Enquiry</button>
         </form>
       </div>
 
-      <!-- Contact Info / Map -->
-      <div class="bg-white p-6 rounded shadow space-y-4">
+      <div class="bg-white p-6 rounded shadow">
         <h2 class="text-xl font-semibold">Contact Details</h2>
-        <p><strong>Address:</strong> 3 Appleby Close, Darlington, DL1 4AJ</p>
-        <p><strong>Phone:</strong> <a href="tel:07468286651" class="text-blue-600 hover:underline">07468 286651</a></p>
-        <p><strong>Email:</strong> <a href="mailto:info@polishedandpristine.co.uk" class="text-blue-600 hover:underline">info@polishedandpristine.co.uk</a></p>
-        <p><strong>Coverage:</strong> Approx. 25-mile radius around Darlington</p>
-        
-        <!-- Optional: Google Map Embed -->
+        <p class="mt-2"><strong>Address:</strong> 3 Appleby Close, Darlington, DL1 4AJ</p>
+        <p><strong>Phone:</strong> <a href="tel:07468286651" class="text-brandBlue">07468 286651</a></p>
+        <p><strong>Coverage:</strong> Approx. 25-mile radius</p>
         <div class="mt-4">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2422.XXXXXX" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <!-- Optional map - replace src with valid embed URL -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1dXXXXXX" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
-
     </div>
   </main>
 
-  <!-- Footer -->
   <footer class="mt-12 border-t py-6 text-sm text-center text-slate-600">
-    Polished & Pristine &copy; 2025 | Professional Detailing in Darlington
+    Polished & Pristine — 3 Appleby Close, Darlington — DL1 4AJ — <a href="tel:07468286651" class="text-slate-900">07468 286651</a>
+    <div class="mt-2">Serving approx. 25-mile radius | Proudly local</div>
   </footer>
+
+<script>
+  document.getElementById('mobileMenuBtn9').addEventListener('click', () => {
+    document.getElementById('mobileMenu9').classList.toggle('hidden');
+  });
+</script>
 
 </body>
 </html>
