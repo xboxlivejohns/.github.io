@@ -7,7 +7,20 @@
   <meta name="description" content="Paint correction services in Darlington — multi-stage polishing to remove swirls, oxidation and restore gloss." />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = { theme: { extend: { colors: { brandBlue: "#1e3a8a", brandGold: "#facc15", brandDark: "#0f172a" }}}}
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandBlue: "#1e3a8a",
+            brandGold: "#facc15",
+            brandDark: "#0f172a"
+          },
+          fontFamily: {
+            sans: ["Inter", "system-ui", "sans-serif"]
+          }
+        }
+      }
+    }
   </script>
 </head>
 <body class="bg-slate-50 text-slate-900 antialiased">
@@ -16,7 +29,7 @@
   <header class="bg-white shadow">
     <div class="max-w-6xl mx-auto p-4 flex items-center justify-between">
       <a href="/index.html" class="flex items-center gap-3">
-        <img src="/images/logo.jpg" alt="Polished & Pristine logo" class="w-12 h-12 object-contain rounded" />
+        <img src="/images/logo.jpg" alt="Polished & Pristine logo" class="w-14 h-14 object-contain rounded" />
         <div>
           <div class="font-bold text-lg">Polished & Pristine</div>
           <div class="text-sm text-slate-500">Paint correction • Ceramic coatings • PPF — Darlington</div>
@@ -34,12 +47,12 @@
         <a href="/contact.html" class="px-3 py-1 bg-brandDark text-white rounded">Contact / Book</a>
       </nav>
       <div class="md:hidden">
-        <button id="mobileMenuBtn3" class="p-2 rounded bg-slate-100">
+        <button id="mobileMenuBtn" class="p-2 rounded bg-slate-100">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" /></svg>
         </button>
       </div>
     </div>
-    <div id="mobileMenu3" class="hidden md:hidden border-t">
+    <div id="mobileMenu" class="hidden md:hidden border-t">
       <div class="px-4 py-3 space-y-2">
         <a href="/index.html" class="block">Home</a>
         <a href="/services.html" class="block">Services</a>
@@ -82,8 +95,8 @@
   </footer>
 
 <script>
-  document.getElementById('mobileMenuBtn3').addEventListener('click', () => {
-    document.getElementById('mobileMenu3').classList.toggle('hidden');
+  document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.toggle('hidden');
   });
 </script>
 
