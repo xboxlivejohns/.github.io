@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="en-GB">
 <head>
@@ -8,11 +10,12 @@
   <script> tailwind.config = { theme: { extend: { colors: { brandBlue: "#1e3a8a", brandGold: "#facc15", brandDark: "#0f172a" }}}}</script>
 </head>
 <body class="bg-slate-50 text-slate-900 antialiased">
+{% include partials/header.html %}
   <main class="max-w-4xl mx-auto p-6 text-center">
-    <img src="/images/logo.jpg" alt="Polished & Pristine" class="mx-auto w-24 h-24 mb-4 rounded">
     <h1 class="text-2xl font-bold mb-2">Thanks — we’ve received your enquiry</h1>
     <p class="text-slate-700 mb-4">We’ll be in touch on 07468 286651 within 24 hours to arrange your consultation. If it’s urgent, please call.</p>
     <a href="/index.html" class="inline-block bg-brandDark text-white px-4 py-2 rounded">Back to home</a>
   </main>
+{% include partials/footer.html %}
 </body>
 </html>

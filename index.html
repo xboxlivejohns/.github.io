@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="en-GB">
 <head>
@@ -49,49 +51,7 @@
 <body class="bg-slate-50 text-slate-900 antialiased">
 
   <!-- Shared header / nav -->
-  <header class="bg-white shadow">
-    <div class="max-w-6xl mx-auto p-4 flex items-center justify-between">
-      <a href="/index.html" class="flex items-center gap-3">
-        <img src="/images/logo.jpg" alt="Polished & Pristine logo" class="w-14 h-14 object-contain rounded" />
-        <div>
-          <div class="font-bold text-lg">Polished & Pristine</div>
-          <div class="text-sm text-slate-500">Paint correction • Ceramic coatings • PPF — Darlington</div>
-        </div>
-      </a>
-      <nav class="hidden md:flex gap-6 text-sm items-center">
-        <a href="/index.html" class="hover:text-brandGold">Home</a>
-        <a href="/services.html" class="hover:text-brandGold">Services</a>
-        <a href="/paint-correction.html" class="hover:text-brandGold">Paint Correction</a>
-        <a href="/ceramic-coatings.html" class="hover:text-brandGold">Ceramic Coatings</a>
-        <a href="/ppf.html" class="hover:text-brandGold">PPF</a>
-        <a href="/valeting.html" class="hover:text-brandGold">Valeting</a>
-        <a href="/gallery.html" class="hover:text-brandGold">Gallery</a>
-        <a href="/tips.html" class="hover:text-brandGold">Expert Advice</a>
-        <a href="/contact.html" class="px-3 py-1 bg-brandDark text-white rounded">Contact / Book</a>
-      </nav>
-      <!-- Mobile toggle -->
-      <div class="md:hidden">
-        <button id="mobileMenuBtn" class="p-2 rounded bg-slate-100">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" /></svg>
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile menu (hidden by default) -->
-    <div id="mobileMenu" class="hidden md:hidden border-t">
-      <div class="px-4 py-3 space-y-2">
-        <a href="/index.html" class="block">Home</a>
-        <a href="/services.html" class="block">Services</a>
-        <a href="/paint-correction.html" class="block">Paint Correction</a>
-        <a href="/ceramic-coatings.html" class="block">Ceramic Coatings</a>
-        <a href="/ppf.html" class="block">PPF</a>
-        <a href="/valeting.html" class="block">Valeting</a>
-        <a href="/gallery.html" class="block">Gallery</a>
-        <a href="/tips.html" class="block">Expert Advice</a>
-        <a href="/contact.html" class="block font-semibold">Contact / Book</a>
-      </div>
-    </div>
-  </header>
+  {% include partials/header.html %}
 
   <main class="max-w-6xl mx-auto p-6">
     <!-- Hero -->
@@ -175,18 +135,7 @@
   </main>
 
   <!-- Shared footer -->
-  <footer class="mt-12 border-t py-6 text-sm text-center text-slate-600">
-    Polished & Pristine — 3 Appleby Close, Darlington — DL1 4AJ — <a href="tel:07468286651" class="text-slate-900">07468 286651</a>
-    <div class="mt-2">Serving approx. 25-mile radius | Proudly local</div>
-  </footer>
-
-<script>
-  // Mobile menu toggle
-  document.getElementById('mobileMenuBtn').addEventListener('click', () => {
-    const m = document.getElementById('mobileMenu');
-    m.classList.toggle('hidden');
-  });
-</script>
+  {% include partials/footer.html %}
 
 </body>
 </html>
