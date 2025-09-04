@@ -34,7 +34,7 @@
         <a href="/contact.html" class="px-3 py-1 bg-brandDark text-white rounded">Contact / Book</a>
       </nav>
       <div class="md:hidden">
-        <button id="mobileMenuBtn5" class="p-2 rounded bg-slate-100">
+        <button id="mobileMenuBtn5" class="p-2 rounded bg-slate-100" aria-controls="mobileMenu5" aria-expanded="false">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" /></svg>
         </button>
       </div>
@@ -75,11 +75,7 @@
     <div class="mt-2">Serving approx. 25-mile radius | Proudly local</div>
   </footer>
 
-<script>
-  document.getElementById('mobileMenuBtn5').addEventListener('click', () => {
-    document.getElementById('mobileMenu5').classList.toggle('hidden');
-  });
-</script>
+<script src="/assets/menu.js"></script>
 
 </body>
 </html>

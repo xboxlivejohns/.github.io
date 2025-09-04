@@ -71,7 +71,7 @@
       </nav>
       <!-- Mobile toggle -->
       <div class="md:hidden">
-        <button id="mobileMenuBtn" class="p-2 rounded bg-slate-100">
+        <button id="mobileMenuBtn" class="p-2 rounded bg-slate-100" aria-controls="mobileMenu" aria-expanded="false">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" /></svg>
         </button>
       </div>
@@ -180,13 +180,7 @@
     <div class="mt-2">Serving approx. 25-mile radius | Proudly local</div>
   </footer>
 
-<script>
-  // Mobile menu toggle
-  document.getElementById('mobileMenuBtn').addEventListener('click', () => {
-    const m = document.getElementById('mobileMenu');
-    m.classList.toggle('hidden');
-  });
-</script>
+<script src="/assets/menu.js"></script>
 
 </body>
 </html>

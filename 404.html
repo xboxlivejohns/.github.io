@@ -50,7 +50,7 @@
 
       <!-- Mobile toggle -->
       <div class="md:hidden">
-        <button id="mobileMenuBtn404" class="p-2 rounded bg-slate-100" aria-label="Open menu">
+        <button id="mobileMenuBtn404" class="p-2 rounded bg-slate-100" aria-label="Open menu" aria-controls="mobileMenu404" aria-expanded="false">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
           </svg>
@@ -99,12 +99,7 @@
     <div class="mt-2">Serving approx. 25-mile radius | Proudly local</div>
   </footer>
 
-<script>
-  // Mobile menu toggle for 404
-  document.getElementById('mobileMenuBtn404').addEventListener('click', () => {
-    document.getElementById('mobileMenu404').classList.toggle('hidden');
-  });
-</script>
+<script src="/assets/menu.js"></script>
 
 </body>
 </html>

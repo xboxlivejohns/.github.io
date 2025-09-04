@@ -34,7 +34,7 @@
         <a href="/contact.html" class="px-3 py-1 bg-brandDark text-white rounded">Contact / Book</a>
       </nav>
       <div class="md:hidden">
-        <button id="mobileMenuBtn8" class="p-2 rounded bg-slate-100">
+        <button id="mobileMenuBtn8" class="p-2 rounded bg-slate-100" aria-controls="mobileMenu8" aria-expanded="false">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" /></svg>
         </button>
       </div>
@@ -87,12 +87,8 @@
   </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+<script src="/assets/menu.js"></script>
 <script>
-  // Mobile menu toggle
-  document.getElementById('mobileMenuBtn8').addEventListener('click', () => {
-    document.getElementById('mobileMenu8').classList.toggle('hidden');
-  });
-
   // FAQ data (30 items) - same content we agreed earlier
   const faqData = [
     {q: "What’s the real difference between a car wash, a valet, and a detail?", a: "A basic car wash cleans surfaces. A valet uses safe methods for a thorough clean. Detailing restores, protects and perfects with decontamination and polish."},
