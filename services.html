@@ -1,112 +1,250 @@
 <!doctype html>
 <html lang="en-GB">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Services — Polished & Pristine | Paint Enhancement & Protection</title>
-  <meta name="description" content="Our services: paint correction, ceramic coatings, PPF, and valeting. Transparent pricing and professional workmanship in Darlington." />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = { theme: { extend: { colors: { brandBlue: "#1e3a8a", brandGold: "#facc15", brandDark: "#0f172a" }}}}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Services — Paint Correction, Ceramic Coatings & PPF | Polished & Pristine</title>
+  <meta name="description" content="Services at Polished & Pristine — specialist paint correction, long-life ceramic coatings, PPF and professional valeting in Darlington. Clear pricing and expert results.">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Polished & Pristine — Services: Paint Correction, Ceramic Coatings & PPF">
+  <meta property="og:description" content="Multi-stage paint correction, durable ceramic coatings and PPF installed to best practice. Based in Darlington.">
+  <meta property="og:image" content="https://polishedandpristine.co.uk/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- LocalBusiness JSON-LD (page-level copy) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Polished & Pristine",
+    "image": "https://polishedandpristine.co.uk/images/logo.jpg",
+    "@id": "https://polishedandpristine.co.uk",
+    "url": "https://polishedandpristine.co.uk/services.html",
+    "telephone": "07468286651",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3 Appleby Close",
+      "addressLocality": "Darlington",
+      "postalCode": "DL1 4AJ",
+      "addressCountry": "GB"
+    },
+    "openingHours": "Mo-Fr 08:00-18:00"
+  }
   </script>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased">
+<body class="site-body">
 
-  <!-- Shared header/nav (same as index) -->
-  <header class="bg-white shadow">
-    <div class="max-w-6xl mx-auto p-4 flex items-center justify-between">
-      <a href="/index.html" class="flex items-center gap-3">
-        <img src="/images/logo.jpg" alt="Polished & Pristine logo" class="w-12 h-12 object-contain rounded" />
-        <div>
-          <div class="font-bold text-lg">Polished & Pristine</div>
-          <div class="text-sm text-slate-500">Paint correction • Ceramic coatings • PPF — Darlington</div>
+  <!-- HEADER / NAV (same as index) -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/index.html" aria-label="Polished & Pristine home">
+        <img src="/images/logo.jpg" alt="Polished & Pristine logo" class="brand-logo">
+        <div class="brand-text">
+          <div class="brand-name">Polished &amp; Pristine</div>
+          <div class="brand-tag">Paint correction • Ceramic coatings • PPF — Darlington</div>
         </div>
       </a>
-      <nav class="hidden md:flex gap-6 text-sm items-center">
-        <a href="/index.html" class="hover:text-brandGold">Home</a>
-        <a href="/services.html" class="hover:text-brandGold font-semibold">Services</a>
-        <a href="/paint-correction.html" class="hover:text-brandGold">Paint Correction</a>
-        <a href="/ceramic-coatings.html" class="hover:text-brandGold">Ceramic Coatings</a>
-        <a href="/ppf.html" class="hover:text-brandGold">PPF</a>
-        <a href="/valeting.html" class="hover:text-brandGold">Valeting</a>
-        <a href="/gallery.html" class="hover:text-brandGold">Gallery</a>
-        <a href="/tips.html" class="hover:text-brandGold">Expert Advice</a>
-        <a href="/contact.html" class="px-3 py-1 bg-brandDark text-white rounded">Contact / Book</a>
+
+      <button id="mobileNavToggle" class="mobile-toggle" aria-label="Open menu">☰</button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="/index.html" class="nav-link">Home</a>
+        <a href="/services.html" class="nav-link nav-active">Services</a>
+        <a href="/paint-correction.html" class="nav-link">Paint Correction</a>
+        <a href="/ceramic-coatings.html" class="nav-link">Ceramic Coatings</a>
+        <a href="/ppf.html" class="nav-link">PPF</a>
+        <a href="/valeting.html" class="nav-link">Valeting</a>
+        <a href="/gallery.html" class="nav-link">Gallery</a>
+        <a href="/tips.html" class="nav-link">Expert Advice</a>
+        <a href="/contact.html" class="nav-cta">Contact / Book</a>
       </nav>
-      <div class="md:hidden">
-        <button id="mobileMenuBtn2" class="p-2 rounded bg-slate-100">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" /></svg>
-        </button>
-      </div>
-    </div>
-    <div id="mobileMenu2" class="hidden md:hidden border-t">
-      <div class="px-4 py-3 space-y-2">
-        <a href="/index.html" class="block">Home</a>
-        <a href="/services.html" class="block font-semibold">Services</a>
-        <a href="/paint-correction.html" class="block">Paint Correction</a>
-        <a href="/ceramic-coatings.html" class="block">Ceramic Coatings</a>
-        <a href="/ppf.html" class="block">PPF</a>
-        <a href="/valeting.html" class="block">Valeting</a>
-        <a href="/gallery.html" class="block">Gallery</a>
-        <a href="/tips.html" class="block">Expert Advice</a>
-        <a href="/contact.html" class="block">Contact / Book</a>
-      </div>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto p-6">
-    <h1 class="text-3xl font-extrabold mb-4">Services — Focused on Paint Enhancement</h1>
-    <p class="text-slate-700 mb-6">We’re shifting our main focus to high-value paint enhancement and protection. Valeting remains available.</p>
+  <!-- MAIN -->
+  <main class="wrap main-content">
 
-    <section id="correction" class="bg-white p-6 rounded shadow mb-6">
-      <h2 class="text-2xl font-semibold mb-3">Paint Correction</h2>
-      <p class="text-slate-700 mb-3">Multi-stage machine polishing to remove swirls, scratches and oxidation. We assess condition and recommend stage count.</p>
-      <ul class="list-disc list-inside text-slate-600">
-        <li>Single-stage — light defect removal</li>
-        <li>Multi-stage — deep defect removal & max gloss</li>
-        <li>Times: 2–8 hours depending on size & condition</li>
-      </ul>
-      <p class="mt-3 font-semibold">Prices from £150 (small cars single stage) — quote after inspection.</p>
-      <a class="inline-block mt-4 bg-brandDark text-white px-4 py-2 rounded" href="/contact.html#book">Request a correction quote</a>
+    <header class="page-header">
+      <h1>Services — Paint enhancement & protection</h1>
+      <p class="muted">We focus on high-value paint enhancement while keeping valeting available. Based in Darlington and covering approx. 25-mile radius.</p>
+    </header>
+
+    <!-- Paint Correction -->
+    <section id="paint-correction" class="card">
+      <h2>Paint Correction — reclaim gloss, remove defects</h2>
+      <p class="muted">Paint correction is the process of removing or reducing defects in the clear coat to restore clarity, gloss and depth. We use multi-stage machine polishing and measure paint thickness to work safely.</p>
+
+      <div class="grid-3 small-gap" style="margin-top:16px;">
+        <div class="card">
+          <h3>What it includes</h3>
+          <ul>
+            <li>Full vehicle assessment & paint depth check</li>
+            <li>Decontamination: iron fallout & tar removal</li>
+            <li>Multi-stage machine polishing (single → multi-stage)</li>
+            <li>Finishing polish and surface prep for protection</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Typical times</h3>
+          <p class="muted">Small cars: 2–4 hours (single stage). Medium / large / multi-stage: 4–8+ hours depending on condition and stages required.</p>
+        </div>
+
+        <div class="card">
+          <h3>Pricing guide</h3>
+          <p><strong>From £150</strong> (single-stage, small cars). Multi-stage correction and premium vehicles quoted after inspection. Exact price depends on severity of defects and vehicle size.</p>
+          <a href="/contact.html#book" class="btn btn-primary">Request a correction quote</a>
+        </div>
+      </div>
     </section>
 
-    <section id="coatings" class="bg-white p-6 rounded shadow mb-6">
-      <h2 class="text-2xl font-semibold mb-3">Ceramic Coatings</h2>
-      <p class="text-slate-700 mb-3">Hydrophobic and UV-resistant coatings for long-term protection and easier maintenance.</p>
-      <ul class="list-disc list-inside text-slate-600">
-        <li>Express (1 year)</li>
-        <li>Professional (3 year)</li>
-        <li>Premium (5+ year)</li>
-      </ul>
-      <p class="mt-3 font-semibold">Packages from £120 (express) to £450+ (professional).</p>
-      <a class="inline-block mt-4 bg-brandDark text-white px-4 py-2 rounded" href="/contact.html#book">Get coating options</a>
+    <!-- Ceramic Coatings -->
+    <section id="ceramic-coatings" class="card" style="margin-top:20px;">
+      <h2>Ceramic Coatings — long-life hydrophobic protection</h2>
+      <p class="muted">A ceramic coating bonds with the paint to form a durable, glassy layer that is highly hydrophobic and chemically resistant. Coatings are best applied after paint correction for maximum gloss and longevity.</p>
+
+      <div class="grid-3 small-gap" style="margin-top:16px;">
+        <div class="card">
+          <h3>Benefits</h3>
+          <ul>
+            <li>Superior water beading & easier cleaning</li>
+            <li>UV protection and increased chemical resistance</li>
+            <li>Longer-lasting gloss vs traditional wax</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Packages</h3>
+          <p class="muted">Express (1 year) · Professional (3 year) · Premium (5+ year). We match coating to vehicle use and budget.</p>
+        </div>
+
+        <div class="card">
+          <h3>Pricing guide</h3>
+          <p><strong>From £120</strong> for express packages. Full correction + premium coating typically from £450+. Quotes provided after inspection.</p>
+          <a href="/contact.html#book" class="btn btn-primary">Get coating options</a>
+        </div>
+      </div>
     </section>
 
-    <section id="ppf" class="bg-white p-6 rounded shadow mb-6">
-      <h2 class="text-2xl font-semibold mb-3">Paint Protection Film (PPF)</h2>
-      <p class="text-slate-700 mb-3">Invisible film for high-impact zones — ideal for new cars and track use.</p>
-      <p class="mt-3 font-semibold">PPF quoted on inspection — typical jobs £600+</p>
-      <a class="inline-block mt-4 bg-brandDark text-white px-4 py-2 rounded" href="/contact.html#book">Book PPF consultation</a>
+    <!-- PPF -->
+    <section id="ppf" class="card" style="margin-top:20px;">
+      <h2>Paint Protection Film (PPF)</h2>
+      <p class="muted">PPF offers invisible, high-impact protection for bumpers, sills, mirrors and full-wrap options. Modern films often have self-healing topcoats for minor swirl/abrasion resistance.</p>
+
+      <div class="grid-3 small-gap" style="margin-top:16px;">
+        <div class="card">
+          <h3>Who it's for</h3>
+          <ul>
+            <li>New car owners who want long-term protection</li>
+            <li>Drivers who do a lot of motorway miles</li>
+            <li>Owners who want to protect show/track vehicles</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Options</h3>
+          <p class="muted">Partial coverage (bumper/sills), full bonnet/wing, or full vehicle wrap. Films vary by finish (gloss/satin/stealth).</p>
+        </div>
+
+        <div class="card">
+          <h3>Pricing</h3>
+          <p><strong>Quoted on inspection</strong> — typical high-impact jobs start from £600 depending on coverage and film chosen.</p>
+          <a href="/contact.html#book" class="btn btn-primary">Book PPF consultation</a>
+        </div>
+      </div>
     </section>
 
-    <section id="valet" class="bg-white p-6 rounded shadow">
-      <h2 class="text-2xl font-semibold mb-3">Valeting & Interior (still available)</h2>
-      <p class="text-slate-700">Mini Valet, Full Valet and Interior Deep Clean (steam sanitisation & stain removal). Typically 2–4 hours depending on scope.</p>
-      <a class="inline-block mt-4 bg-brandDark text-white px-4 py-2 rounded" href="/contact.html#book">Book a valet</a>
+    <!-- Valeting & Interior -->
+    <section id="valeting" class="card" style="margin-top:20px;">
+      <h2>Valeting & Interior — thorough, professional cleans</h2>
+      <p class="muted">We still provide a full range of valeting services, including interior deep cleans with steam sanitisation, stain removal and hot water extraction. These services are perfect as standalone treatments or alongside paint enhancement work.</p>
+
+      <div class="grid-3 small-gap" style="margin-top:16px;">
+        <div class="card">
+          <h3>Options</h3>
+          <ul>
+            <li>Mini Valet — exterior wash & quick interior wipe</li>
+            <li>Full Valet — full exterior & interior clean</li>
+            <li>Interior Deep Clean — steam, extraction, odour removal</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Times</h3>
+          <p class="muted">Mini: 1–2 hours · Full valet: 2–4 hours · Interior deep clean: 3–5 hours depending on condition.</p>
+        </div>
+
+        <div class="card">
+          <h3>Pricing guide</h3>
+          <p><strong>Interior Deep Clean from £80</strong>. Exact price depends on vehicle size and contamination level.</p>
+          <a href="/contact.html#book" class="btn btn-primary">Book a valet</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why choose us short -->
+    <section class="cards small-gap" style="margin-top:22px;">
+      <article class="card">
+        <h3>Professional process</h3>
+        <p class="muted">We follow a clear process: assess → decontaminate → correct → protect. Every job includes a walk-through of findings and recommended options.</p>
+      </article>
+      <article class="card">
+        <h3>Quality materials</h3>
+        <p class="muted">We use trusted coatings, polishes and PPF films from well-known manufacturers and follow application best practice.</p>
+      </article>
+      <article class="card">
+        <h3>Local & approachable</h3>
+        <p class="muted">Based in Darlington — we pride ourselves on clear communication and realistic results.</p>
+      </article>
+    </section>
+
+    <!-- Callouts & FAQ teaser -->
+    <section style="margin-top:20px;">
+      <div class="card">
+        <h3>Want a clear quote?</h3>
+        <p class="muted">Send us your vehicle details or book a free paint assessment. You can also use our registration-based vehicle lookup (coming soon) to get size & class automatically.</p>
+        <div style="margin-top:12px;">
+          <a class="btn btn-primary" href="/contact.html#book">Request a quote</a>
+          <a class="btn btn-outline" href="/tips.html" style="margin-left:10px;">Read our FAQ</a>
+        </div>
+      </div>
     </section>
 
   </main>
 
-  <footer class="mt-12 border-t py-6 text-sm text-center text-slate-600">
-    Polished & Pristine — 3 Appleby Close, Darlington — DL1 4AJ — <a href="tel:07468286651" class="text-slate-900">07468 286651</a>
-    <div class="mt-2">Serving approx. 25-mile radius | Proudly local</div>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-left">
+        <strong>Polished &amp; Pristine</strong><br>
+        3 Appleby Close, Darlington — DL1 4AJ<br>
+        <a href="tel:07468286651">07468 286651</a>
+      </div>
+      <div class="footer-right">
+        <nav class="footer-nav">
+          <a href="/services.html">Services</a>
+          <a href="/gallery.html">Gallery</a>
+          <a href="/tips.html">Expert Advice</a>
+          <a href="/privacy-policy.html">Privacy</a>
+        </nav>
+        <div class="small muted">Serving approx. 25-mile radius</div>
+      </div>
+    </div>
   </footer>
 
-<script>
-  document.getElementById('mobileMenuBtn2').addEventListener('click', () => {
-    document.getElementById('mobileMenu2').classList.toggle('hidden');
-  });
-</script>
-
+  <!-- Mobile nav toggle script (shared) -->
+  <script>
+    (function(){
+      const btn = document.getElementById('mobileNavToggle');
+      const nav = document.getElementById('mainNav');
+      if (btn && nav) {
+        btn.addEventListener('click', () => {
+          nav.classList.toggle('nav-open');
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
