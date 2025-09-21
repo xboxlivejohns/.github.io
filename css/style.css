@@ -120,3 +120,42 @@ img { max-width:100%; display:block; height:auto; }
 .main-content > section.card:nth-of-type(odd) {
   background: #ffffff;
 }
+/* Dark sections with texture overlays */
+.section-dark {
+  position: relative;
+  color:#fff;
+  background-color:#0f172a; /* fallback */
+  background-size: cover;
+  background-position: center;
+  border-radius:12px;
+  overflow:hidden;
+}
+
+.section-dark::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.55); /* overlay tint */
+  z-index:0;
+}
+
+.section-dark > * {
+  position:relative;
+  z-index:1; /* ensures text/buttons sit above overlay */
+}
+
+.section-dark h1,
+.section-dark h2,
+.section-dark h3 {
+  color:var(--brand-gold);
+}
+
+.section-dark .btn-outline {
+  border:1px solid #facc15;
+  color:#fff;
+}
+
+.cta-band {
+  padding:40px 24px;
+  text-align:center;
+}
