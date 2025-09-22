@@ -3,182 +3,174 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Expert Advice — Polished & Pristine Darlington</title>
-  <meta name="description" content="Expert car detailing tips and FAQ covering paint correction, ceramic coatings, PPF, valeting and more." />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = { theme: { extend: { colors: { brandBlue: "#1e3a8a", brandGold: "#facc15", brandDark: "#0f172a" }}}}
-  </script>
-</head>
-<body class="bg-slate-50 text-slate-900 antialiased">
+  <title>Expert Advice — Aftercare & Detailing Tips | Polished & Pristine</title>
+  <meta name="description" content="Aftercare and detailing tips from Polished & Pristine: maintenance washing, drying safely, decontamination schedule, ceramic coating care, and FAQs." />
+  <link rel="stylesheet" href="/css/style.css">
 
-  <!-- header/nav (same) -->
-  <header class="bg-white shadow">
-    <div class="max-w-6xl mx-auto p-4 flex items-center justify-between">
-      <a href="/index.html" class="flex items-center gap-3">
-        <img src="/images/logo.png" alt="Polished & Pristine logo" class="w-12 h-12 object-contain rounded" />
-        <div>
-          <div class="font-bold text-lg">Polished & Pristine</div>
-          <div class="text-sm text-slate-500">Paint correction • Ceramic coatings • PPF — Darlington</div>
+  <!-- Open Graph -->
+  <meta property="og:title" content="Polished & Pristine — Expert Advice" />
+  <meta property="og:description" content="Maintenance wash guide, drying safely, decon schedule, coating care, and FAQs." />
+  <meta property="og:image" content="https://polishedandpristine.co.uk/images/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+</head>
+<body class="site-body">
+
+  <!-- HEADER / NAV -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/index.html" aria-label="Polished & Pristine home">
+        <img src="/images/logo.png" alt="Polished & Pristine logo" class="brand-logo">
+        <div class="brand-text">
+          <div class="brand-name">Polished &amp; Pristine</div>
+          <div class="brand-tag">Paint correction • Ceramic coatings • PPF — Darlington</div>
         </div>
       </a>
-      <nav class="hidden md:flex gap-6 text-sm items-center">
-        <a href="/index.html" class="hover:text-brandGold">Home</a>
-        <a href="/services.html" class="hover:text-brandGold">Services</a>
-        <a href="/paint-correction.html" class="hover:text-brandGold">Paint Correction</a>
-        <a href="/ceramic-coatings.html" class="hover:text-brandGold">Ceramic Coatings</a>
-        <a href="/ppf.html" class="hover:text-brandGold">PPF</a>
-        <a href="/valeting.html" class="hover:text-brandGold">Valeting</a>
-        <a href="/gallery.html" class="hover:text-brandGold">Gallery</a>
-        <a href="/tips.html" class="hover:text-brandGold font-semibold">Expert Advice</a>
-        <a href="/contact.html" class="px-3 py-1 bg-brandDark text-white rounded">Contact / Book</a>
+
+      <button id="mobileNavToggle" class="mobile-toggle" aria-label="Open menu">☰</button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="/index.html" class="nav-link">Home</a>
+        <a href="/services.html" class="nav-link">Services</a>
+        <a href="/paint-correction.html" class="nav-link">Paint Correction</a>
+        <a href="/ceramic-coatings.html" class="nav-link">Ceramic Coatings</a>
+        <a href="/ppf.html" class="nav-link">PPF</a>
+        <a href="/valeting.html" class="nav-link">Valeting</a>
+        <a href="/gallery.html" class="nav-link">Gallery</a>
+        <a href="/tips.html" class="nav-link nav-active">Expert Advice</a>
+        <a href="/contact.html" class="nav-cta">Contact / Book</a>
       </nav>
-      <div class="md:hidden">
-        <button id="mobileMenuBtn8" class="p-2 rounded bg-slate-100">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" /></svg>
-        </button>
-      </div>
-    </div>
-    <div id="mobileMenu8" class="hidden md:hidden border-t">
-      <div class="px-4 py-3 space-y-2">
-        <a href="/index.html" class="block">Home</a>
-        <a href="/services.html" class="block">Services</a>
-        <a href="/paint-correction.html" class="block">Paint Correction</a>
-        <a href="/ceramic-coatings.html" class="block">Ceramic Coatings</a>
-        <a href="/ppf.html" class="block">PPF</a>
-        <a href="/valeting.html" class="block">Valeting</a>
-        <a href="/gallery.html" class="block">Gallery</a>
-        <a href="/tips.html" class="block font-semibold">Expert Advice</a>
-        <a href="/contact.html" class="block">Contact / Book</a>
-      </div>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto p-6">
-    <h1 class="text-3xl font-extrabold mb-4">Expert Detailing Tips & FAQ</h1>
-    <p class="text-slate-700 mb-6">Search or browse our FAQs for paint and interior care advice. Designed for car lovers and owners who want the best results.</p>
+  <!-- MAIN -->
+  <main class="wrap main-content">
 
-    <!-- Search input -->
-    <div class="mb-6">
-      <input id="faqSearch" type="text" placeholder="Search FAQs..." class="w-full md:w-1/2 px-4 py-2 border rounded shadow focus:outline-none focus:ring-2 focus:ring-brandBlue">
-    </div>
+    <!-- Intro (dark band) -->
+    <section class="section-dark" style="margin-top:18px;">
+      <h1>Expert Advice — aftercare &amp; maintenance</h1>
+      <p class="lede">Keep your finish looking sharp with simple, proven routines. This is the guidance we give customers after correction, ceramic coating or PPF installs.</p>
+    </section>
 
-    <div id="faqContainer" class="space-y-4">
-      <!-- JS will render the 30 FAQs and search results here (same dataset we discussed) -->
-    </div>
+    <!-- Core guides -->
+    <section class="cards small-gap" style="margin-top:22px;">
+      <article class="card">
+        <h3>Maintenance wash (safe)</h3>
+        <ul class="muted" style="margin:0 0 8px 18px;">
+          <li>Rinse first to remove loose grit.</li>
+          <li>Pre-wash (snow foam) — let dwell, don’t let it dry.</li>
+          <li>Two-bucket wash with soft mitt; work top to bottom.</li>
+          <li>Separate tools for wheels/arches.</li>
+        </ul>
+        <p class="muted"><strong>Frequency:</strong> Weekly/fortnightly depending on mileage and weather.</p>
+      </article>
 
-    <!-- SEO images -->
-    <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-      <img src="/images/tip-paint-correction.jpg" alt="Paint correction close up" class="rounded shadow">
-      <img src="/images/tip-ceramic-coating.jpg" alt="Ceramic coating beading" class="rounded shadow">
-      <img src="/images/tip-interior-clean.jpg" alt="Interior deep clean result" class="rounded shadow">
-    </div>
+      <article class="card">
+        <h3>Drying safely</h3>
+        <ul class="muted" style="margin:0 0 8px 18px;">
+          <li>Sheet water off with a hose; then pat dry with plush towels.</li>
+          <li>Use a drying aid or quick detailer for slickness.</li>
+          <li>Leaf blower / pet dryer helps avoid touching high-risk areas.</li>
+        </ul>
+        <p class="muted"><strong>Avoid:</strong> Beach towels, old T-shirts, chamois — they mar the finish.</p>
+      </article>
 
-    <!-- TikTok embed kept below -->
-    <div class="mt-10">
-      <script src="https://static.elfsight.com/platform/platform.js" async></script>
-      <div class="elfsight-app-c1dcfc2c-362b-4a17-9ce8-a8ed5283ac9b" data-elfsight-app-lazy></div>
-    </div>
+      <article class="card">
+        <h3>Decontamination schedule</h3>
+        <ul class="muted" style="margin:0 0 8px 18px;">
+          <li>Iron remover: every 2–3 months or as needed.</li>
+          <li>Tar remover: when you see specks on sills/rear quarters.</li>
+          <li>Clay: only when necessary — always re-protect afterwards.</li>
+        </ul>
+        <p class="muted">On coated cars, decon helps restore beading when the surface becomes clogged.</p>
+      </article>
+    </section>
+
+    <!-- Coating & PPF care (dark band) -->
+    <section class="section-dark" style="margin-top:30px;">
+      <h2>Ceramic coating &amp; PPF care</h2>
+      <div class="cards small-gap" style="margin-top:10px;">
+        <article class="card">
+          <h3>Ceramic coatings</h3>
+          <ul class="muted" style="margin:0 0 8px 18px;">
+            <li>First 7 days: avoid harsh washes or chemicals.</li>
+            <li>Use pH-neutral shampoos; avoid strong APCs.</li>
+            <li>Top up with silica-based spray every few months if desired.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>PPF</h3>
+          <ul class="muted" style="margin:0 0 8px 18px;">
+            <li>Hand wash with soft mitts; avoid aggressive solvents.</li>
+            <li>Bug splatter & bird droppings: soften with warm, soapy water before wiping.</li>
+            <li>Light swirls may self-heal with warmth/sun.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Winter tips</h3>
+          <ul class="muted" style="margin:0 0 8px 18px;">
+            <li>Rinse more often to remove salt.</li>
+            <li>Use pre-wash liberally; keep mitts/towels clean.</li>
+            <li>Consider a decon mid-winter to keep coatings lively.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="cards small-gap" style="margin-top:22px;">
+      <article class="card">
+        <h3>How long does a ceramic coating last?</h3>
+        <p class="muted">Our packages range 1–5+ years. Real-world life depends on wash method, mileage and storage. We include a single-stage machine polish in every coating package for proper bonding.</p>
+      </article>
+      <article class="card">
+        <h3>Do I still need to wash a coated car?</h3>
+        <p class="muted">Yes — coatings don’t stop dirt landing; they make it easier and safer to remove. Follow the routine above for swirl-free results.</p>
+      </article>
+      <article class="card">
+        <h3>Will PPF yellow?</h3>
+        <p class="muted">Modern quality films are highly resistant. Keep them clean, avoid harsh chemicals, and they’ll stay clear for years.</p>
+      </article>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band section-dark" style="margin-top:30px;">
+      <h2 class="cta-title">Want tailored advice for your car?</h2>
+      <p class="muted">Send your reg and how you use the vehicle. We’ll recommend the right care routine and products.</p>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="/contact.html#book">Ask a question</a>
+        <a class="btn btn-outline" href="/services.html">Explore services</a>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="mt-12 border-t py-6 text-sm text-center text-slate-600">
-    Polished & Pristine — 3 Appleby Close, Darlington — DL1 4AJ — <a href="tel:07468286651" class="text-slate-900">07468 286651</a>
-    <div class="mt-2">Serving approx. 25-mile radius | Proudly local</div>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-left">
+        <strong>Polished &amp; Pristine</strong><br>
+        3 Appleby Close, Darlington — DL1 4AJ<br>
+        <a href="tel:07468286651">07468 286651</a>
+      </div>
+      <div class="footer-right">
+        <nav class="footer-nav">
+          <a href="/services.html">Services</a>
+          <a href="/gallery.html">Gallery</a>
+          <a href="/tips.html">Expert Advice</a>
+          <a href="/privacy-policy.html">Privacy</a>
+        </nav>
+        <div class="small muted">Serving approx. 25-mile radius</div>
+      </div>
+    </div>
   </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
-<script>
-  // Mobile menu toggle
-  document.getElementById('mobileMenuBtn8').addEventListener('click', () => {
-    document.getElementById('mobileMenu8').classList.toggle('hidden');
-  });
-
-  // FAQ data (30 items) - same content we agreed earlier
-  const faqData = [
-    {q: "What’s the real difference between a car wash, a valet, and a detail?", a: "A basic car wash cleans surfaces. A valet uses safe methods for a thorough clean. Detailing restores, protects and perfects with decontamination and polish."},
-    {q: "My car's interior has seen better days thanks to kids and a dog! What can you do?", a: "We use steam sanitisation, hot water extraction and specialist stain removal to reset interiors. Interior Deep Clean from £80."},
-    {q: "Is a machine polish the same as T-cutting or removing scratches?", a: "T-cut is abrasive and hand-applied; machine polishing uses controlled tools and pads for safer defect removal."},
-    {q: "I've heard about fallout and decontamination. Is that necessary?", a: "Yes — chemical decontamination removes bonded iron and tar so coatings and waxes bond properly."},
-    {q: "What is a ceramic coating, and is it better than waxing?", a: "Ceramic coatings form a semi-permanent bond providing better durability, chemical resistance and hydrophobic properties than wax."},
-    {q: "How often should I have my car polished or corrected?", a: "New cars: 12–18 months if coated. Older cars: 6–12 months depending on exposure."},
-    {q: "Is ceramic coating worth it on my daily driver?", a: "Yes — it reduces maintenance and protects against UV, bird droppings and chemicals."},
-    {q: "Can I put a PPF on my car myself?", a: "DIY is risky. Professional installation is recommended for seamless, bubble-free results."},
-    {q: "How do I safely remove contaminants like iron fallout or tar?", a: "Use professional chemical decontamination and clay barring rather than harsh abrasives."},
-    {q: "Do tinted windows need special care during detailing?", a: "Yes. Use pH-neutral cleaners and avoid abrasive tools near tint."},
-    {q: "Can I wash my car in the winter without damaging it?", a: "Yes, but avoid freezing conditions. Use warm water, dry quickly and avoid harsh winter chemical cleaners."},
-    {q: "What’s the best way to maintain leather and interior surfaces?", a: "Condition leather every 3–6 months, use pH-neutral cleaners and steam sanitize for deep hygiene."},
-    {q: "How can I make my car stand out at shows or meets?", a: "Prioritise paint enhancement, engine bay detailing, protected wheels and a spotless interior."},
-    {q: "How do I prevent swirl marks when washing my car?", a: "Two-bucket method, grit catchers, microfiber mitts and proper drying technique."},
-    {q: "How do I maintain gloss on dark-colored cars?", a: "Regular decontamination, polishing and coatings — avoid brush washes."},
-    {q: "Can I apply wax over ceramic coating?", a: "Yes, but it's not necessary; maintenance sprays are usually better for coated cars."},
-    {q: "How often should I decontaminate my paint?", a: "Every 6–12 months depending on environment and exposure."},
-    {q: "Why is paint correction important before coating?", a: "Coatings bond to the surface — correct defects first so finish is perfect and durable."},
-    {q: "Are matte finishes treated differently?", a: "Yes — matte requires specific products to avoid creating shine."},
-    {q: "Can I leave my car outside after ceramic coating?", a: "Yes, but remove bird droppings and harsh contaminants quickly to protect the coating."},
-    {q: "Is machine polishing safe on thin paint?", a: "Yes when professionals use paint depth gauges and the right pads/polishes."},
-    {q: "How do I care for carbon fiber or alloy parts?", a: "Use mild cleaners, microfiber cloths, and safe coatings for composites."},
-    {q: "How do I remove water spots safely?", a: "Use pH-neutral water spot removers or professional deionised treatments."},
-    {q: "What is hydrophobic treatment and why is it good?", a: "A hydrophobic treatment repels water, reduces dirt adhesion and makes washing easier."},
-    {q: "Can detailing help resale value?", a: "Yes — a protected, clean car shows it’s been cared for and commands higher buyer confidence."},
-    {q: "How do I maintain matte black interiors?", a: "Use non-gloss cleaners, avoid silicone products and steam clean fabrics."},
-    {q: "How do I keep wheels clean and protected?", a: "Use dedicated wheel cleaners, brushes and wheel sealants regularly."},
-    {q: "Do pets affect detailing frequency?", a: "Yes — pet owners need more frequent interior deep cleans for hair, scratches and odours."},
-    {q: "How do I protect convertible tops?", a: "Use fabric-specific cleaners and UV-safe protectants; avoid pressure washing the top."},
-    {q: "Are eco-friendly car shampoos as effective?", a: "Yes — modern eco shampoos clean well while being gentler on the environment."}
-  ];
-
-  const faqContainer = document.getElementById('faqContainer');
-  const faqSearchInput = document.getElementById('faqSearch');
-
-  function renderFAQs(data) {
-    faqContainer.innerHTML = '';
-    data.forEach(item => {
-      const block = document.createElement('div');
-      block.className = 'bg-white p-4 rounded shadow';
-      block.innerHTML = `
-        <button class="w-full text-left font-semibold text-lg flex justify-between items-center faq-btn">
-          <span>${item.q}</span>
-          <span class="faq-icon text-brandBlue">+</span>
-        </button>
-        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 mt-2 text-slate-700">
-          <p>${item.a}</p>
-        </div>
-      `;
-      faqContainer.appendChild(block);
-    });
-    attachFAQToggle();
-  }
-
-  function attachFAQToggle() {
-    document.querySelectorAll('.faq-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const parent = btn.parentElement;
-        const ans = parent.querySelector('.faq-answer');
-        const icon = parent.querySelector('.faq-icon');
-        const isOpen = ans.style.maxHeight && ans.style.maxHeight !== '0px';
-
-        document.querySelectorAll('.faq-answer').forEach(a => a.style.maxHeight = '0');
-        document.querySelectorAll('.faq-icon').forEach(i => i.textContent = '+');
-
-        if (!isOpen) {
-          ans.style.maxHeight = ans.scrollHeight + 'px';
-          icon.textContent = '-';
-        }
-      });
-    });
-  }
-
-  renderFAQs(faqData);
-
-  // Fuse.js search
-  const fuse = new Fuse(faqData, { keys: ['q', 'a'], threshold: 0.4 });
-
-  faqSearchInput.addEventListener('input', e => {
-    const query = e.target.value;
-    const results = query ? fuse.search(query).map(r => r.item) : faqData;
-    renderFAQs(results);
-  });
-</script>
-
+  <!-- Mobile nav toggle -->
+  <script>
+    (function(){
+      const btn = document.getElementById('mobileNavToggle');
+      const nav = document.getElementById('mainNav');
+      if (btn && nav) btn.addEventListener('click', () => nav.classList.toggle('nav-open'));
+    })();
+  </script>
 </body>
 </html>

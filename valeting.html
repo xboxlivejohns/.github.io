@@ -3,92 +3,181 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Valeting & Interior Cleaning — Polished & Pristine</title>
-  <meta name="description" content="Valeting and interior deep clean services in Darlington. Steam sanitisation, stain removal, and maintenance valets." />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = { theme: { extend: { colors: { brandBlue: "#1e3a8a", brandGold: "#facc15", brandDark: "#0f172a" }}}}
-  </script>
-</head>
-<body class="bg-slate-50 text-slate-900 antialiased">
+  <title>Valeting & Interior Cleaning — Polished & Pristine (Darlington)</title>
+  <meta name="description" content="Valeting and interior deep clean services in Darlington. Steam sanitisation, stain removal, odour treatments and maintenance valets by Polished & Pristine." />
+  <link rel="stylesheet" href="/css/style.css">
 
-  <!-- header/nav -->
-  <header class="bg-white shadow">
-    <div class="max-w-6xl mx-auto p-4 flex items-center justify-between">
-      <a href="/index.html" class="flex items-center gap-3">
-        <img src="/images/logo.png" alt="Polished & Pristine logo" class="w-12 h-12 object-contain rounded" />
-        <div>
-          <div class="font-bold text-lg">Polished & Pristine</div>
-          <div class="text-sm text-slate-500">Paint correction • Ceramic coatings • PPF — Darlington</div>
+  <!-- Open Graph -->
+  <meta property="og:title" content="Polished & Pristine — Valeting & Interior Cleaning" />
+  <meta property="og:description" content="Professional valeting in Darlington: mini, full and interior deep cleans with steam sanitisation and extraction." />
+  <meta property="og:image" content="https://polishedandpristine.co.uk/images/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+</head>
+<body class="site-body">
+
+  <!-- HEADER / NAV -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/index.html" aria-label="Polished & Pristine home">
+        <img src="/images/logo.png" alt="Polished & Pristine logo" class="brand-logo">
+        <div class="brand-text">
+          <div class="brand-name">Polished &amp; Pristine</div>
+          <div class="brand-tag">Paint correction • Ceramic coatings • PPF — Darlington</div>
         </div>
       </a>
-      <nav class="hidden md:flex gap-6 text-sm items-center">
-        <a href="/index.html" class="hover:text-brandGold">Home</a>
-        <a href="/services.html" class="hover:text-brandGold">Services</a>
-        <a href="/paint-correction.html" class="hover:text-brandGold">Paint Correction</a>
-        <a href="/ceramic-coatings.html" class="hover:text-brandGold">Ceramic Coatings</a>
-        <a href="/ppf.html" class="hover:text-brandGold">PPF</a>
-        <a href="/valeting.html" class="hover:text-brandGold font-semibold">Valeting</a>
-        <a href="/gallery.html" class="hover:text-brandGold">Gallery</a>
-        <a href="/tips.html" class="hover:text-brandGold">Expert Advice</a>
-        <a href="/contact.html" class="px-3 py-1 bg-brandDark text-white rounded">Contact / Book</a>
+
+      <button id="mobileNavToggle" class="mobile-toggle" aria-label="Open menu">☰</button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="/index.html" class="nav-link">Home</a>
+        <a href="/services.html" class="nav-link">Services</a>
+        <a href="/paint-correction.html" class="nav-link">Paint Correction</a>
+        <a href="/ceramic-coatings.html" class="nav-link">Ceramic Coatings</a>
+        <a href="/ppf.html" class="nav-link">PPF</a>
+        <a href="/valeting.html" class="nav-link nav-active">Valeting</a>
+        <a href="/gallery.html" class="nav-link">Gallery</a>
+        <a href="/tips.html" class="nav-link">Expert Advice</a>
+        <a href="/contact.html" class="nav-cta">Contact / Book</a>
       </nav>
-      <div class="md:hidden">
-        <button id="mobileMenuBtn6" class="p-2 rounded bg-slate-100">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" /></svg>
-        </button>
-      </div>
-    </div>
-    <div id="mobileMenu6" class="hidden md:hidden border-t">
-      <div class="px-4 py-3 space-y-2">
-        <a href="/index.html" class="block">Home</a>
-        <a href="/services.html" class="block">Services</a>
-        <a href="/paint-correction.html" class="block">Paint Correction</a>
-        <a href="/ceramic-coatings.html" class="block">Ceramic Coatings</a>
-        <a href="/ppf.html" class="block">PPF</a>
-        <a href="/valeting.html" class="block font-semibold">Valeting</a>
-        <a href="/gallery.html" class="block">Gallery</a>
-        <a href="/tips.html" class="block">Expert Advice</a>
-        <a href="/contact.html" class="block">Contact / Book</a>
-      </div>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto p-6">
-    <h1 class="text-3xl font-extrabold mb-4">Valeting & Interior Cleaning</h1>
-    <p class="text-slate-700 mb-4">We continue to offer valeting services with the same care and professionalism—steam sanitisation, stain removal, and full interior refreshes.</p>
+  <!-- MAIN -->
+  <main class="wrap main-content">
 
-    <section class="bg-white p-6 rounded shadow mb-4">
-      <h2 class="text-xl font-semibold">Our valet options</h2>
-      <ul class="list-disc list-inside text-slate-600 mt-2">
-        <li>Mini Valet — exterior wash, interior wipe-down</li>
-        <li>Full Valet — full exterior, interior hoover, wipe and polish</li>
-        <li>Interior Deep Clean — steam sanitisation, hot water extraction (3–5 hours)</li>
-      </ul>
-      <p class="mt-3 font-semibold">Interior Deep Clean from £80. Exact pricing by vehicle size and condition.</p>
-      <a href="/contact.html#book" class="mt-4 inline-block bg-brandDark text-white px-4 py-2 rounded">Book a valet</a>
+    <!-- Intro (dark band) -->
+    <section class="section-dark" style="margin-top:18px;">
+      <h1>Valeting &amp; Interior Cleaning</h1>
+      <p class="lede">
+        Thorough, professional cleans with the same attention to detail as our correction &amp; coating work.
+        <strong>Steam sanitisation, stain removal and hot-water extraction</strong> available for deep refreshes.
+      </p>
     </section>
 
-    <section class="bg-white p-6 rounded shadow">
-      <h2 class="text-xl font-semibold">Add-ons &amp; advice</h2>
-      <ul class="list-disc list-inside text-slate-600 mt-2">
-        <li>Fabric &amp; leather protection available on request</li>
-        <li>Odour neutralising treatments for persistent smells</li>
-        <li>Ask about maintenance plans to keep interiors fresh</li>
-      </ul>
+    <!-- Packages -->
+    <section class="services-preview" style="margin-top:22px;">
+      <div class="grid-3">
+        <!-- Mini Valet -->
+        <article class="service-card">
+          <h2>Mini Valet</h2>
+          <ul class="muted" style="margin:0 0 10px 18px;">
+            <li>Pre-wash & contact wash</li>
+            <li>Wheels & tyres cleaned</li>
+            <li>Quick interior wipe & vac</li>
+            <li>Glass inside & out</li>
+          </ul>
+          <p class="muted"><strong>Time:</strong> 1–2 hours (size/condition dependent)</p>
+          <div style="margin-top:10px;">
+            <a href="/contact.html#book" class="btn btn-primary">Book Mini Valet</a>
+          </div>
+        </article>
+
+        <!-- Full Valet -->
+        <article class="service-card">
+          <h2>Full Valet</h2>
+          <ul class="muted" style="margin:0 0 10px 18px;">
+            <li>All Mini steps, plus thorough interior clean</li>
+            <li>Plastics & trims dressed</li>
+            <li>Detailed door shuts & fuel flap</li>
+            <li>Optional spray sealant for extra gloss</li>
+          </ul>
+          <p class="muted"><strong>Time:</strong> 2–4 hours</p>
+          <div style="margin-top:10px;">
+            <a href="/contact.html#book" class="btn btn-primary">Book Full Valet</a>
+          </div>
+        </article>
+
+        <!-- Interior Deep Clean -->
+        <article class="service-card">
+          <h2>Interior Deep Clean</h2>
+          <ul class="muted" style="margin:0 0 10px 18px;">
+            <li><strong>Steam sanitisation</strong> for hard surfaces & vents</li>
+            <li>Hot-water extraction for fabrics & carpets</li>
+            <li>Stain treatment & odour neutralising</li>
+            <li>Leather cleanse & nourish (if applicable)</li>
+          </ul>
+          <p class="muted"><strong>Time:</strong> 3–5 hours · <strong>From £80</strong></p>
+          <div style="margin-top:10px;">
+            <a href="/contact.html#book" class="btn btn-primary">Book Deep Clean</a>
+          </div>
+        </article>
+      </div>
     </section>
+
+    <!-- Add-ons (dark band) -->
+    <section class="section-dark" style="margin-top:30px;">
+      <h2>Add-ons &amp; aftercare</h2>
+      <div class="cards small-gap" style="margin-top:10px;">
+        <article class="card">
+          <h3>Fabric &amp; leather protection</h3>
+          <p class="muted">Hydrophobic textile guards and leather protectors help resist spills and dye transfer.</p>
+        </article>
+        <article class="card">
+          <h3>Odour treatments</h3>
+          <p class="muted">Targeted neutralising for persistent smells (smoke, wet dog, food). Includes cabin filter advice.</p>
+        </article>
+        <article class="card">
+          <h3>Maintenance plans</h3>
+          <p class="muted">Keep interiors fresher for longer with scheduled top-up cleans at sensible intervals.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Notes -->
+    <section class="cards small-gap" style="margin-top:22px;">
+      <article class="card">
+        <h3>Fair, condition-based pricing</h3>
+        <p class="muted">Exact price depends on vehicle size and contamination level. Send a few photos for a quick quote.</p>
+      </article>
+      <article class="card">
+        <h3>Perfect alongside coatings</h3>
+        <p class="muted">Many customers book an interior deep clean when choosing ceramic coatings or correction work.</p>
+      </article>
+      <article class="card">
+        <h3>Local &amp; straightforward</h3>
+        <p class="muted">Darlington-based. Clear communication and realistic results you can maintain.</p>
+      </article>
+    </section>
+
+    <!-- CTA (dark band) -->
+    <section class="cta-band section-dark" style="margin-top:30px;">
+      <h2 class="cta-title">Ready to freshen up your interior?</h2>
+      <p class="muted">Tell us your reg and a couple of photos — we’ll recommend the right valet level with a clear price.</p>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="/contact.html#book">Book a valet</a>
+        <a class="btn btn-outline" href="/services.html">Compare services</a>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="mt-12 border-t py-6 text-sm text-center text-slate-600">
-    Polished & Pristine — 3 Appleby Close, Darlington — DL1 4AJ — <a href="tel:07468286651" class="text-slate-900">07468 286651</a>
-    <div class="mt-2">Serving approx. 25-mile radius | Proudly local</div>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-left">
+        <strong>Polished &amp; Pristine</strong><br>
+        3 Appleby Close, Darlington — DL1 4AJ<br>
+        <a href="tel:07468286651">07468 286651</a>
+      </div>
+      <div class="footer-right">
+        <nav class="footer-nav">
+          <a href="/services.html">Services</a>
+          <a href="/gallery.html">Gallery</a>
+          <a href="/tips.html">Expert Advice</a>
+          <a href="/privacy-policy.html">Privacy</a>
+        </nav>
+        <div class="small muted">Serving approx. 25-mile radius</div>
+      </div>
+    </div>
   </footer>
 
-<script>
-  document.getElementById('mobileMenuBtn6').addEventListener('click', () => {
-    document.getElementById('mobileMenu6').classList.toggle('hidden');
-  });
-</script>
-
+  <!-- Mobile nav toggle -->
+  <script>
+    (function(){
+      const btn = document.getElementById('mobileNavToggle');
+      const nav = document.getElementById('mainNav');
+      if (btn && nav) btn.addEventListener('click', () => nav.classList.toggle('nav-open'));
+    })();
+  </script>
 </body>
 </html>

@@ -3,102 +3,200 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact & Book — Polished & Pristine</title>
-  <meta name="description" content="Contact Polished & Pristine for paint correction, ceramic coatings, PPF and valeting services in Darlington." />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script> tailwind.config = { theme: { extend: { colors: { brandBlue: "#1e3a8a", brandGold: "#facc15", brandDark: "#0f172a" }}}}</script>
+  <title>Contact / Book — Polished & Pristine (Darlington)</title>
+  <meta name="description" content="Contact Polished & Pristine — book a free assessment for ceramic coatings, paint correction and PPF in Darlington." />
+  <link rel="stylesheet" href="/css/style.css">
+  <meta property="og:title" content="Polished & Pristine — Contact / Book" />
+  <meta property="og:description" content="Book a free assessment or ask a question. Darlington & surrounding areas." />
+  <meta property="og:image" content="https://polishedandpristine.co.uk/images/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased">
+<body class="site-body">
 
-  <!-- header/nav -->
-  <header class="bg-white shadow">
-    <div class="max-w-6xl mx-auto p-4 flex items-center justify-between">
-      <a href="/index.html" class="flex items-center gap-3">
-        <img src="/images/logo.png" alt="Polished & Pristine logo" class="w-12 h-12 object-contain rounded" />
-        <div>
-          <div class="font-bold text-lg">Polished & Pristine</div>
-          <div class="text-sm text-slate-500">Paint correction • Ceramic coatings • PPF — Darlington</div>
+  <!-- HEADER / NAV -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/index.html" aria-label="Polished & Pristine home">
+        <img src="/images/logo.png" alt="Polished & Pristine logo" class="brand-logo">
+        <div class="brand-text">
+          <div class="brand-name">Polished &amp; Pristine</div>
+          <div class="brand-tag">Paint correction • Ceramic coatings • PPF — Darlington</div>
         </div>
       </a>
-      <nav class="hidden md:flex gap-6 text-sm items-center">
-        <a href="/index.html" class="hover:text-brandGold">Home</a>
-        <a href="/services.html" class="hover:text-brandGold">Services</a>
-        <a href="/paint-correction.html" class="hover:text-brandGold">Paint Correction</a>
-        <a href="/ceramic-coatings.html" class="hover:text-brandGold">Ceramic Coatings</a>
-        <a href="/ppf.html" class="hover:text-brandGold">PPF</a>
-        <a href="/valeting.html" class="hover:text-brandGold">Valeting</a>
-        <a href="/gallery.html" class="hover:text-brandGold">Gallery</a>
-        <a href="/tips.html" class="hover:text-brandGold">Expert Advice</a>
-        <a href="/contact.html" class="px-3 py-1 bg-brandDark text-white rounded font-semibold">Contact / Book</a>
+
+      <button id="mobileNavToggle" class="mobile-toggle" aria-label="Open menu">☰</button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="/index.html" class="nav-link">Home</a>
+        <a href="/services.html" class="nav-link">Services</a>
+        <a href="/paint-correction.html" class="nav-link">Paint Correction</a>
+        <a href="/ceramic-coatings.html" class="nav-link">Ceramic Coatings</a>
+        <a href="/ppf.html" class="nav-link">PPF</a>
+        <a href="/valeting.html" class="nav-link">Valeting</a>
+        <a href="/gallery.html" class="nav-link">Gallery</a>
+        <a href="/tips.html" class="nav-link">Expert Advice</a>
+        <a href="/contact.html" class="nav-link nav-active">Contact / Book</a>
       </nav>
-      <div class="md:hidden">
-        <button id="mobileMenuBtn9" class="p-2 rounded bg-slate-100">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" /></svg>
-        </button>
-      </div>
-    </div>
-    <div id="mobileMenu9" class="hidden md:hidden border-t">
-      <div class="px-4 py-3 space-y-2">
-        <a href="/index.html" class="block">Home</a>
-        <a href="/services.html" class="block">Services</a>
-        <a href="/paint-correction.html" class="block">Paint Correction</a>
-        <a href="/ceramic-coatings.html" class="block">Ceramic Coatings</a>
-        <a href="/ppf.html" class="block">PPF</a>
-        <a href="/valeting.html" class="block">Valeting</a>
-        <a href="/gallery.html" class="block">Gallery</a>
-        <a href="/tips.html" class="block">Expert Advice</a>
-        <a href="/contact.html" class="block font-semibold">Contact / Book</a>
-      </div>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto p-6">
-    <h1 class="text-3xl font-extrabold mb-6 text-center">Get in Touch</h1>
-    <p class="text-center text-slate-700 mb-8">Book your detailing service or ask a question. For urgent enquiries call <a href="tel:07468286651" class="text-brandBlue">07468 286651</a>.</p>
+  <!-- MAIN -->
+  <main class="wrap main-content" id="book">
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-      <div>
-        <form action="https://formsubmit.co/b89300d152399ad939e7db161cbb0cfa" method="POST" enctype="multipart/form-data" class="grid gap-4 bg-white p-6 rounded shadow">
+    <!-- Intro (dark band) -->
+    <section class="section-dark" style="margin-top:18px;">
+      <h1>Contact / Book</h1>
+      <p class="lede">
+        Fastest way? <strong>Call or WhatsApp</strong>:
+        <a href="tel:07468286651" class="btn btn-primary" style="margin-left:8px;">07468 286651</a>
+      </p>
+      <p class="muted">Or send your details below — we’ll reply with options and a clear quote.</p>
+    </section>
+
+    <!-- Two-column content -->
+    <section style="margin-top:22px; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px;">
+      <!-- FORM (FormSubmit wired) -->
+      <article class="card">
+        <h2>Send a booking request</h2>
+
+        <form action="https://formsubmit.co/b89300d152399ad939e7db161cbb0cfa"
+              method="POST" enctype="multipart/form-data" style="margin-top:10px;">
+          <!-- FormSubmit controls -->
           <input type="hidden" name="_next" value="https://polishedandpristine.co.uk/thank-you.html">
-          <input type="hidden" name="_subject" value="Website enquiry: Polished & Pristine">
-          <input type="text" name="name" placeholder="Full name" required class="p-2 border rounded">
-          <input type="email" name="email" placeholder="Email address" required class="p-2 border rounded">
-          <input type="tel" name="phone" placeholder="Phone number" class="p-2 border rounded">
-          <select name="service" required class="p-2 border rounded">
-            <option value="">Select service</option>
-            <option value="Paint Correction">Paint Correction</option>
-            <option value="Ceramic Coating">Ceramic Coating</option>
-            <option value="PPF Installation">PPF Installation</option>
-            <option value="Valeting / Interior Clean">Valeting / Interior Clean</option>
-          </select>
-          <textarea name="message" placeholder="Additional info / vehicle details" class="p-2 border rounded"></textarea>
-          <button type="submit" class="bg-brandDark text-white px-4 py-2 rounded">Send Enquiry</button>
-        </form>
-      </div>
+          <input type="hidden" name="_subject" value="Website enquiry: Polished &amp; Pristine">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <!-- Honeypot (spam trap) -->
+          <input type="text" name="_honey" style="display:none">
 
-      <div class="bg-white p-6 rounded shadow">
-        <h2 class="text-xl font-semibold">Contact Details</h2>
-        <p class="mt-2"><strong>Address:</strong> 3 Appleby Close, Darlington, DL1 4AJ</p>
-        <p><strong>Phone:</strong> <a href="tel:07468286651" class="text-brandBlue">07468 286651</a></p>
-        <p><strong>Coverage:</strong> Approx. 25-mile radius</p>
-        <div class="mt-4">
-          <!-- Optional map - replace src with valid embed URL -->
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2315.7224098824217!2d-1.5460040229747303!3d54.520756786207095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487e9b004c1c7981%3A0x35752b60fca69ad0!2sPolished%20and%20pristine%20Mobile!5e0!3m2!1sen!2suk!4v1758434944960!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div style="display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:12px;">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" required
+                     style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required
+                     style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
+            </div>
+            <div>
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel"
+                     style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
+            </div>
+            <div>
+              <label for="postcode">Postcode</label>
+              <input id="postcode" name="postcode"
+                     style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
+            </div>
+            <div>
+              <label for="reg">Vehicle reg</label>
+              <input id="reg" name="reg"
+                     style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
+            </div>
+            <div>
+              <label for="service">Service</label>
+              <select id="service" name="service" required
+                      style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
+                <option value="">Select service</option>
+                <option value="Ceramic coating (polish included)">Ceramic coating (polish included)</option>
+                <option value="Paint correction">Paint correction</option>
+                <option value="PPF">PPF</option>
+                <option value="Valeting / Interior">Valeting / Interior</option>
+                <option value="Other / Advice">Other / Advice</option>
+              </select>
+            </div>
+
+            <div style="grid-column:1/-1;">
+              <label for="dates">Preferred dates/times</label>
+              <input id="dates" name="dates"
+                     style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
+            </div>
+
+            <div style="grid-column:1/-1;">
+              <label for="message">Notes</label>
+              <textarea id="message" name="message" rows="5"
+                        style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;"
+                        placeholder="Tell us about the car, defects you see, goals and budget."></textarea>
+            </div>
+
+            <div style="grid-column:1/-1; display:flex; align-items:center; gap:8px;">
+              <input id="consent" name="consent" type="checkbox" required>
+              <label for="consent" class="muted">I agree to be contacted regarding my enquiry and accept the <a href="/privacy-policy.html">Privacy Policy</a>.</label>
+            </div>
+          </div>
+
+          <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+            <button type="submit" class="btn btn-primary">Send request</button>
+            <a class="btn btn-outline" href="mailto:info@polishedandpristine.co.uk">Email instead</a>
+            <a class="btn btn-outline" href="tel:07468286651">Call instead</a>
+          </div>
+
+          <p class="muted" style="margin-top:10px;">Prefer WhatsApp? Message us on <a href="tel:07468286651">07468 286651</a> and include your reg &amp; postcode.</p>
+        </form>
+      </article>
+
+      <!-- DETAILS / MAP -->
+      <article class="card">
+        <h2>Contact details</h2>
+        <p class="muted" style="margin-top:6px;">
+          <strong>Polished &amp; Pristine</strong><br>
+          3 Appleby Close, Darlington — DL1 4AJ<br>
+          <a href="tel:07468286651">07468 286651</a><br>
+          <a href="mailto:info@polishedandpristine.co.uk">info@polishedandpristine.co.uk</a><br>
+          Serving approx. 25-mile radius
+        </p>
+        <div style="margin-top:12px; border-radius:10px; overflow:hidden;">
+          <div style="position:relative; padding-bottom:56.25%; height:0;">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2315.7224098824217!2d-1.5460040229747303!3d54.520756786207095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487e9b004c1c7981%3A0x35752b60fca69ad0!2sPolished%20and%20pristine%20Mobile!5e0!3m2!1sen!2suk!4v1758434944960!5m2!1sen!2suk"
+              style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
+      </article>
+    </section>
+
+    <!-- CTA (dark band) -->
+    <section class="cta-band section-dark" style="margin-top:30px;">
+      <h2 class="cta-title">Need a quick opinion first?</h2>
+      <p class="muted">Send a couple of photos — we’ll let you know if it’s a one-stage polish, multi-stage correction or PPF situation.</p>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="mailto:info@polishedandpristine.co.uk">Email photos</a>
+        <a class="btn btn-outline" href="/tips.html">Read our advice</a>
       </div>
-    </div>
+    </section>
+
   </main>
 
-  <footer class="mt-12 border-t py-6 text-sm text-center text-slate-600">
-    Polished & Pristine — 3 Appleby Close, Darlington — DL1 4AJ — <a href="tel:07468286651" class="text-slate-900">07468 286651</a>
-    <div class="mt-2">Serving approx. 25-mile radius | Proudly local</div>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-left">
+        <strong>Polished &amp; Pristine</strong><br>
+        3 Appleby Close, Darlington — DL1 4AJ<br>
+        <a href="tel:07468286651">07468 286651</a>
+      </div>
+      <div class="footer-right">
+        <nav class="footer-nav">
+          <a href="/services.html">Services</a>
+          <a href="/gallery.html">Gallery</a>
+          <a href="/tips.html">Expert Advice</a>
+          <a href="/privacy-policy.html">Privacy</a>
+        </nav>
+        <div class="small muted">Serving approx. 25-mile radius</div>
+      </div>
+    </div>
   </footer>
 
-<script>
-  document.getElementById('mobileMenuBtn9').addEventListener('click', () => {
-    document.getElementById('mobileMenu9').classList.toggle('hidden');
-  });
-</script>
-
+  <!-- Mobile nav toggle -->
+  <script>
+    (function(){
+      const btn = document.getElementById('mobileNavToggle');
+      const nav = document.getElementById('mainNav');
+      if (btn && nav) btn.addEventListener('click', () => nav.classList.toggle('nav-open'));
+    })();
+  </script>
 </body>
 </html>

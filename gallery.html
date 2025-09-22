@@ -3,94 +3,129 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Gallery — Polished & Pristine | Before & After</title>
-  <meta name="description" content="Before & after images and videos showcasing paint correction, ceramic coatings and PPF by Polished & Pristine in Darlington." />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = { theme: { extend: { colors: { brandBlue: "#1e3a8a", brandGold: "#facc15", brandDark: "#0f172a" }}}}
-  </script>
-</head>
-<body class="bg-slate-50 text-slate-900 antialiased">
+  <title>Gallery — Before & After | Polished & Pristine (Darlington)</title>
+  <meta name="description" content="Before & after images and short videos of paint correction, ceramic coatings (polish included) and PPF by Polished & Pristine in Darlington." />
+  <link rel="stylesheet" href="/css/style.css">
 
-  <!-- header/nav -->
-  <header class="bg-white shadow">
-    <div class="max-w-6xl mx-auto p-4 flex items-center justify-between">
-      <a href="/index.html" class="flex items-center gap-3">
-        <img src="/images/logo.png" alt="Polished & Pristine logo" class="w-12 h-12 object-contain rounded" />
-        <div>
-          <div class="font-bold text-lg">Polished & Pristine</div>
-          <div class="text-sm text-slate-500">Paint correction • Ceramic coatings • PPF — Darlington</div>
+  <!-- Open Graph -->
+  <meta property="og:title" content="Polished & Pristine — Gallery: Before & After" />
+  <meta property="og:description" content="Real results: correction, ceramic coatings and PPF. Darlington & surrounding areas." />
+  <meta property="og:image" content="https://polishedandpristine.co.uk/images/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+</head>
+<body class="site-body">
+
+  <!-- HEADER / NAV (same as index) -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/index.html" aria-label="Polished & Pristine home">
+        <img src="/images/logo.png" alt="Polished & Pristine logo" class="brand-logo">
+        <div class="brand-text">
+          <div class="brand-name">Polished &amp; Pristine</div>
+          <div class="brand-tag">Paint correction • Ceramic coatings • PPF — Darlington</div>
         </div>
       </a>
-      <nav class="hidden md:flex gap-6 text-sm items-center">
-        <a href="/index.html" class="hover:text-brandGold">Home</a>
-        <a href="/services.html" class="hover:text-brandGold">Services</a>
-        <a href="/paint-correction.html" class="hover:text-brandGold">Paint Correction</a>
-        <a href="/ceramic-coatings.html" class="hover:text-brandGold">Ceramic Coatings</a>
-        <a href="/ppf.html" class="hover:text-brandGold">PPF</a>
-        <a href="/valeting.html" class="hover:text-brandGold">Valeting</a>
-        <a href="/gallery.html" class="hover:text-brandGold font-semibold">Gallery</a>
-        <a href="/tips.html" class="hover:text-brandGold">Expert Advice</a>
-        <a href="/contact.html" class="px-3 py-1 bg-brandDark text-white rounded">Contact / Book</a>
+
+      <button id="mobileNavToggle" class="mobile-toggle" aria-label="Open menu">☰</button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="/index.html" class="nav-link">Home</a>
+        <a href="/services.html" class="nav-link">Services</a>
+        <a href="/paint-correction.html" class="nav-link">Paint Correction</a>
+        <a href="/ceramic-coatings.html" class="nav-link">Ceramic Coatings</a>
+        <a href="/ppf.html" class="nav-link">PPF</a>
+        <a href="/valeting.html" class="nav-link">Valeting</a>
+        <a href="/gallery.html" class="nav-link nav-active">Gallery</a>
+        <a href="/tips.html" class="nav-link">Expert Advice</a>
+        <a href="/contact.html" class="nav-cta">Contact / Book</a>
       </nav>
-      <div class="md:hidden">
-        <button id="mobileMenuBtn7" class="p-2 rounded bg-slate-100">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" /></svg>
-        </button>
-      </div>
-    </div>
-    <div id="mobileMenu7" class="hidden md:hidden border-t">
-      <div class="px-4 py-3 space-y-2">
-        <a href="/index.html" class="block">Home</a>
-        <a href="/services.html" class="block">Services</a>
-        <a href="/paint-correction.html" class="block">Paint Correction</a>
-        <a href="/ceramic-coatings.html" class="block">Ceramic Coatings</a>
-        <a href="/ppf.html" class="block">PPF</a>
-        <a href="/valeting.html" class="block">Valeting</a>
-        <a href="/gallery.html" class="block font-semibold">Gallery</a>
-        <a href="/tips.html" class="block">Expert Advice</a>
-        <a href="/contact.html" class="block">Contact / Book</a>
-      </div>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto p-6">
-    <h1 class="text-3xl font-extrabold mb-6">Gallery — real results</h1>
-    <p class="text-slate-700 mb-6">Before &amp; afters focused on paint correction and coatings. Our TikTok gallery is embedded below for video proof.</p>
+  <!-- MAIN -->
+  <main class="wrap main-content">
 
-    <!-- Native image grid for SEO -->
-    <section class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-10">
-      <figure class="bg-white rounded shadow overflow-hidden">
-        <img src="/images/gallery1-before.jpg" alt="Before swirls & oxidation on a red car" class="w-full h-56 object-cover">
-        <figcaption class="p-3 text-sm text-slate-600">Before — heavy swirls. Process: 3-stage correction.</figcaption>
-      </figure>
-      <figure class="bg-white rounded shadow overflow-hidden">
-        <img src="/images/gallery1-after.jpg" alt="After high gloss restored on red car" class="w-full h-56 object-cover">
-        <figcaption class="p-3 text-sm text-slate-600">After — gloss restored & coated (3 year).</figcaption>
-      </figure>
-      <!-- Add more image cards as needed -->
+    <!-- Page intro (dark band) -->
+    <section class="section-dark" style="margin-top:18px;">
+      <h1>Gallery — real results</h1>
+      <p class="lede">
+        A small selection of <strong>before &amp; afters</strong> from recent paint correction, ceramic coating (polish included)
+        and PPF work. For more transformations, see the video feed below.
+      </p>
     </section>
 
-    <!-- TikTok widget -->
-    <section class="mt-4">
-      <h2 class="text-2xl font-semibold mb-3">Watch our transformations</h2>
-      <p class="text-slate-700 mb-4">Short videos of detailing work. Follow us on TikTok for more clips.</p>
+    <!-- Image grid -->
+    <section class="gallery-preview" style="margin-top:22px;">
+      <div class="cards small-gap">
+        <!-- Example pair -->
+        <figure class="gallery-item">
+          <img src="/images/gallery1-before.jpg" alt="Before: heavy swirls visible under light on red paintwork">
+          <figcaption class="muted" style="padding:10px;">Before — heavy swirls & oxidation. Plan: 3-stage correction.</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="/images/gallery1-after.jpg" alt="After: swirl-free, mirror gloss on red paint after correction and ceramic coat">
+          <figcaption class="muted" style="padding:10px;">After — clarity restored & 3-year ceramic coating applied.</figcaption>
+        </figure>
+
+        <!-- Add more items as you have assets -->
+        <figure class="gallery-item">
+          <img src="/images/gallery3.jpg" alt="Close-up of refined, swirl-free black paint under inspection lighting">
+          <figcaption class="muted" style="padding:10px;">Correction finish — deep gloss on black paint.</figcaption>
+        </figure>
+        <!-- Duplicate the <figure> blocks above with your other images -->
+      </div>
+    </section>
+
+    <!-- Video / TikTok feed (dark band) -->
+    <section class="section-dark" style="margin-top:30px;">
+      <h2>Watch our transformations</h2>
+      <p class="muted">Short clips of correction, coatings and PPF installs. Follow us on TikTok for more.</p>
+      <!-- Elfsight TikTok widget -->
       <script src="https://static.elfsight.com/platform/platform.js" async></script>
-      <div class="elfsight-app-c1dcfc2c-362b-4a17-9ce8-a8ed5283ac9b w-full max-w-6xl" data-elfsight-app-lazy></div>
+      <div class="elfsight-app-c1dcfc2c-362b-4a17-9ce8-a8ed5283ac9b" data-elfsight-app-lazy></div>
+    </section>
+
+    <!-- CTA (dark band) -->
+    <section class="cta-band section-dark" style="margin-top:30px;">
+      <h2 class="cta-title">Want your car to look like this?</h2>
+      <p class="muted">
+        Tell us your reg and what finish you’re after. We’ll recommend the most effective route for your budget and goals.
+      </p>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="/contact.html#book">Book a free assessment</a>
+        <a class="btn btn-outline" href="/services.html">Compare services</a>
+      </div>
     </section>
 
   </main>
 
-  <footer class="mt-12 border-t py-6 text-sm text-center text-slate-600">
-    Polished & Pristine — 3 Appleby Close, Darlington — DL1 4AJ — <a href="tel:07468286651" class="text-slate-900">07468 286651</a>
-    <div class="mt-2">Serving approx. 25-mile radius | Proudly local</div>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-left">
+        <strong>Polished &amp; Pristine</strong><br>
+        3 Appleby Close, Darlington — DL1 4AJ<br>
+        <a href="tel:07468286651">07468 286651</a>
+      </div>
+      <div class="footer-right">
+        <nav class="footer-nav">
+          <a href="/services.html">Services</a>
+          <a href="/gallery.html">Gallery</a>
+          <a href="/tips.html">Expert Advice</a>
+          <a href="/privacy-policy.html">Privacy</a>
+        </nav>
+        <div class="small muted">Serving approx. 25-mile radius</div>
+      </div>
+    </div>
   </footer>
 
-<script>
-  document.getElementById('mobileMenuBtn7').addEventListener('click', () => {
-    document.getElementById('mobileMenu7').classList.toggle('hidden');
-  });
-</script>
-
+  <!-- Mobile nav toggle -->
+  <script>
+    (function(){
+      const btn = document.getElementById('mobileNavToggle');
+      const nav = document.getElementById('mainNav');
+      if (btn && nav) btn.addEventListener('click', () => nav.classList.toggle('nav-open'));
+    })();
+  </script>
 </body>
 </html>
