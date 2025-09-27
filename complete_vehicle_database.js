@@ -1,4 +1,7 @@
 // Complete UK Vehicle Database - Replace the vehicleDatabase object in your booking system with this
+// Audit note: currently covers 22 manufacturers. Frequently requested marques that are not yet
+// represented include Citroën, Fiat, Alfa Romeo, Lexus, Mitsubishi, Suzuki, Jeep, Porsche, Cupra,
+// Polestar, MG, DS Automobiles and Genesis.
 const vehicleDatabase = {
     "Ford": {
         "Fiesta": {
