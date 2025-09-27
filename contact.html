@@ -59,8 +59,39 @@
       <article class="card">
         <h2>Send a booking request</h2>
 
+        <style>
+          .booking-steps { display:flex; flex-direction:column; gap:18px; margin-top:16px; }
+          .booking-steps fieldset { border:1px solid rgba(148,163,184,0.35); border-radius:12px; background:rgba(15,23,42,0.65); padding:18px; }
+          .booking-steps legend { font-weight:700; padding:0 6px; color:#f8fafc; }
+          .step-indicator { font-size:0.95rem; font-weight:600; color:var(--brand-gold); margin-bottom:8px; display:block; }
+          .step-intro { margin-top:0; }
+          .form-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; }
+          .form-field label { display:block; font-weight:600; }
+          .form-field input,
+          .form-field select,
+          .form-field textarea { width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px; }
+          .form-field textarea { min-height:110px; resize:vertical; }
+          .form-error { margin:6px 0 0; color:#fca5a5; font-size:0.85rem; min-height:1em; }
+          .location-options { display:flex; flex-direction:column; gap:8px; margin-top:10px; }
+          .location-options label { display:flex; gap:10px; align-items:flex-start; background:#101a2f; border:1px solid rgba(250,204,21,0.25); border-radius:10px; padding:10px; cursor:pointer; }
+          .location-options input[type="radio"] { margin-top:3px; }
+          .location-options label:focus-within { outline:2px solid var(--brand-gold); outline-offset:2px; }
+          .summary-card { background:#101a2f; border-radius:12px; padding:16px; border:1px solid rgba(250,204,21,0.35); }
+          .summary-card h3 { margin-top:0; margin-bottom:12px; color:#fff; }
+          .summary-card dl { margin:0; display:grid; grid-template-columns:minmax(0,160px) 1fr; gap:8px 14px; }
+          .summary-card dt { font-weight:700; color:var(--muted); }
+          .summary-card dd { margin:0; color:#e5e7eb; }
+          .step-actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; }
+          .is-disabled input { opacity:0.7; }
+          .consent-field { display:flex; align-items:flex-start; gap:10px; }
+          .consent-field input { margin-top:4px; }
+          @media (max-width:720px) {
+            .summary-card dl { grid-template-columns:1fr; }
+          }
+        </style>
+
         <form action="https://formsubmit.co/b89300d152399ad939e7db161cbb0cfa"
-              method="POST" enctype="multipart/form-data" style="margin-top:10px;">
+              method="POST" enctype="multipart/form-data" style="margin-top:10px;" data-booking-form>
           <!-- FormSubmit controls -->
           <input type="hidden" name="_next" value="https://polishedandpristine.co.uk/thank-you.html">
           <input type="hidden" name="_subject" value="Website enquiry: Polished &amp; Pristine">
@@ -69,72 +100,194 @@
           <!-- Honeypot (spam trap) -->
           <input type="text" name="_honey" style="display:none">
 
-          <div style="display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:12px;">
-            <div>
-              <label for="name">Name</label>
-              <input id="name" name="name" required
-                     style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" required
-                     style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
-            </div>
-            <div>
-              <label for="phone">Phone</label>
-              <input id="phone" name="phone" type="tel"
-                     style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
-            </div>
-            <div>
-              <label for="postcode">Postcode</label>
-              <input id="postcode" name="postcode"
-                     style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
-            </div>
-            <div>
-              <label for="reg">Vehicle reg</label>
-              <input id="reg" name="reg"
-                     style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
-            </div>
-            <div>
-              <label for="service">Service</label>
-              <select id="service" name="service" required
-                      style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
-                <option value="">Select service</option>
-                <option value="Ceramic coating (polish included)">Ceramic coating (polish included)</option>
-                <option value="Paint correction">Paint correction</option>
-                <option value="PPF">PPF</option>
-                <option value="Valeting / Interior">Valeting / Interior</option>
-                <option value="Other / Advice">Other / Advice</option>
-              </select>
-            </div>
+          <div class="booking-steps">
+            <fieldset class="form-step" data-step="0">
+              <legend>Your details</legend>
+              <span class="step-indicator" data-step-indicator>Step 1 of 4</span>
+              <p class="muted step-intro">Tell us who we’ll be speaking with and how to contact you.</p>
+              <div class="form-grid">
+                <div class="form-field" data-field>
+                  <label for="name">Name</label>
+                  <input id="name" name="name" required data-validate data-error-required="Enter your name."
+                         autocomplete="name">
+                  <p class="form-error" data-error id="name-error" aria-live="polite"></p>
+                </div>
+                <div class="form-field" data-field>
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" required data-validate data-error-required="Enter your email address."
+                         autocomplete="email">
+                  <p class="form-error" data-error id="email-error" aria-live="polite"></p>
+                </div>
+                <div class="form-field" data-field>
+                  <label for="phone">Phone <span class="muted" style="font-weight:400;">(optional)</span></label>
+                  <input id="phone" name="phone" type="tel" data-validate autocomplete="tel">
+                  <p class="form-error" data-error id="phone-error" aria-live="polite"></p>
+                </div>
+                <div class="form-field" data-field>
+                  <label for="reg">Vehicle reg</label>
+                  <input id="reg" name="reg" data-validate autocomplete="off">
+                  <p class="form-error" data-error id="reg-error" aria-live="polite"></p>
+                </div>
+              </div>
+              <div class="step-actions">
+                <button type="button" class="btn btn-primary" data-action="next">Continue</button>
+              </div>
+            </fieldset>
 
-            <div style="grid-column:1/-1;">
-              <label for="dates">Preferred dates/times</label>
-              <input id="dates" name="dates"
-                     style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
-            </div>
+            <fieldset class="form-step" data-step="1" aria-hidden="true" hidden>
+              <legend>Service &amp; schedule</legend>
+              <span class="step-indicator" data-step-indicator>Step 2 of 4</span>
+              <p class="muted step-intro">Let us know the service you’re interested in and when suits you.</p>
+              <div class="form-grid">
+                <div class="form-field" data-field>
+                  <label for="service">Service</label>
+                  <select id="service" name="service" required data-validate data-error-required="Select the service you need.">
+                    <option value="">Select service</option>
+                    <option value="Ceramic coating (polish included)">Ceramic coating (polish included)</option>
+                    <option value="Paint correction">Paint correction</option>
+                    <option value="PPF">PPF</option>
+                    <option value="Valeting / Interior">Valeting / Interior</option>
+                    <option value="Other / Advice">Other / Advice</option>
+                  </select>
+                  <p class="form-error" data-error id="service-error" aria-live="polite"></p>
+                </div>
+                <div class="form-field" data-field>
+                  <label for="dates">Preferred dates/times</label>
+                  <input id="dates" name="dates" data-validate placeholder="e.g. weekday mornings, ASAP, specific dates" autocomplete="off">
+                  <p class="form-error" data-error id="dates-error" aria-live="polite"></p>
+                </div>
+                <div class="form-field" data-field style="grid-column:1/-1;">
+                  <label for="message">Notes</label>
+                  <textarea id="message" name="message" rows="5" data-validate placeholder="Tell us about the car, defects you see, goals and budget."></textarea>
+                  <p class="form-error" data-error id="message-error" aria-live="polite"></p>
+                </div>
+              </div>
+              <div class="step-actions">
+                <button type="button" class="btn btn-outline" data-action="back">Back</button>
+                <button type="button" class="btn btn-primary" data-action="next">Continue</button>
+              </div>
+            </fieldset>
 
-            <div style="grid-column:1/-1;">
-              <label for="message">Notes</label>
-              <textarea id="message" name="message" rows="5"
-                        style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;"
-                        placeholder="Tell us about the car, defects you see, goals and budget."></textarea>
-            </div>
+            <fieldset class="form-step" data-step="2" aria-hidden="true" hidden>
+              <legend>Service location</legend>
+              <span class="step-indicator" data-step-indicator>Step 3 of 4</span>
+              <p class="muted step-intro">Choose where we’ll complete the work and confirm the full address.</p>
 
-            <div style="grid-column:1/-1; display:flex; align-items:center; gap:8px;">
-              <input id="consent" name="consent" type="checkbox" required>
-              <label for="consent" class="muted">I agree to be contacted regarding my enquiry and accept the <a href="/privacy-policy.html">Privacy Policy</a>.</label>
-            </div>
+              <div class="form-field">
+                <fieldset class="location-fieldset" aria-describedby="location-help location-error">
+                  <legend style="font-weight:600;">Where should the service take place?</legend>
+                  <div class="location-options">
+                    <label>
+                      <input type="radio" name="service_location" value="Customer location" data-location-option data-label="Customer address" aria-describedby="location-help location-error">
+                      <span>
+                        <strong>At my address</strong><br>
+                        We’ll come to you — let us know the street and town so we can confirm access and travel time.
+                      </span>
+                    </label>
+                    <label>
+                      <input type="radio" name="service_location" value="Studio (Polished &amp; Pristine)" data-location-option data-label="Studio (Polished &amp; Pristine)" aria-describedby="location-help location-error">
+                      <span>
+                        <strong>Polished &amp; Pristine studio</strong><br>
+                        Bring the vehicle to 3 Appleby Close, Darlington, DL1 4AJ.
+                      </span>
+                    </label>
+                  </div>
+                </fieldset>
+                <p id="location-help" class="muted" style="margin-top:6px;">Pick the option that suits you — address fields update automatically for studio appointments.</p>
+                <p class="form-error" id="location-error" data-location-error aria-live="polite" hidden></p>
+              </div>
+
+              <div class="form-grid">
+                <div class="form-field" data-field>
+                  <label for="street">Street address</label>
+                  <input id="street" name="street" data-address-field data-default-value="3 Appleby Close" data-validate data-error-required="Enter the street address.">
+                  <p class="form-error" data-error id="street-error" aria-live="polite"></p>
+                </div>
+                <div class="form-field" data-field>
+                  <label for="town">Town / City</label>
+                  <input id="town" name="town" data-address-field data-default-value="Darlington" data-validate data-error-required="Enter the town or city.">
+                  <p class="form-error" data-error id="town-error" aria-live="polite"></p>
+                </div>
+                <div class="form-field" data-field>
+                  <label for="postcode">Postcode</label>
+                  <input id="postcode" name="postcode" data-address-field data-default-value="DL1 4AJ" data-validate data-error-required="Enter the postcode.">
+                  <p class="form-error" data-error id="postcode-error" aria-live="polite"></p>
+                </div>
+              </div>
+
+              <div class="step-actions">
+                <button type="button" class="btn btn-outline" data-action="back">Back</button>
+                <button type="button" class="btn btn-primary" data-action="next">Continue</button>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-step" data-step="3" aria-hidden="true" hidden>
+              <legend>Review &amp; send</legend>
+              <span class="step-indicator" data-step-indicator>Step 4 of 4</span>
+              <p class="muted step-intro">Check the details below, then send your request.</p>
+
+              <div class="summary-card" data-summary>
+                <h3>Booking summary</h3>
+                <dl>
+                  <div>
+                    <dt>Name</dt>
+                    <dd data-summary-field="name">—</dd>
+                  </div>
+                  <div>
+                    <dt>Email</dt>
+                    <dd data-summary-field="email">—</dd>
+                  </div>
+                  <div>
+                    <dt>Phone</dt>
+                    <dd data-summary-field="phone">—</dd>
+                  </div>
+                  <div>
+                    <dt>Vehicle reg</dt>
+                    <dd data-summary-field="reg">—</dd>
+                  </div>
+                  <div>
+                    <dt>Service</dt>
+                    <dd data-summary-field="service">—</dd>
+                  </div>
+                  <div>
+                    <dt>Preferred times</dt>
+                    <dd data-summary-field="dates">—</dd>
+                  </div>
+                  <div>
+                    <dt>Notes</dt>
+                    <dd data-summary-field="message">—</dd>
+                  </div>
+                  <div>
+                    <dt>Location</dt>
+                    <dd data-summary-field="service_location">—</dd>
+                  </div>
+                  <div>
+                    <dt>Address</dt>
+                    <dd data-summary-field="address">—</dd>
+                  </div>
+                </dl>
+              </div>
+
+              <div class="form-field consent-field" data-field>
+                <input id="consent" name="consent" type="checkbox" required data-validate data-error-required="Please confirm you consent to contact.">
+                <label for="consent" class="muted">I agree to be contacted regarding my enquiry and accept the <a href="/privacy-policy.html">Privacy Policy</a>.</label>
+              </div>
+              <p class="form-error" data-error id="consent-error" aria-live="polite" style="margin-top:-6px;"></p>
+
+              <div class="step-actions">
+                <button type="button" class="btn btn-outline" data-action="back">Back</button>
+                <button type="submit" class="btn btn-primary">Send request</button>
+              </div>
+            </fieldset>
           </div>
-
-          <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
-            <button type="submit" class="btn btn-primary">Send request</button>
-            <a class="btn btn-outline" href="mailto:info@polishedandpristine.co.uk">Email instead</a>
-            <a class="btn btn-outline" href="tel:07468286651">Call instead</a>
-          </div>
-
-          <p class="muted" style="margin-top:10px;">Prefer WhatsApp? Message us on <a href="tel:07468286651">07468 286651</a> and include your reg &amp; postcode.</p>
         </form>
+
+        <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-outline" href="mailto:info@polishedandpristine.co.uk">Email instead</a>
+          <a class="btn btn-outline" href="tel:07468286651">Call instead</a>
+        </div>
+
+        <p class="muted" style="margin-top:10px;">Prefer WhatsApp? Message us on <a href="tel:07468286651">07468 286651</a> and include your reg &amp; postcode.</p>
       </article>
 
       <!-- DETAILS / MAP -->
@@ -189,6 +342,293 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    (function(){
+      const form = document.querySelector('[data-booking-form]');
+      if(!form) return;
+
+      const steps = Array.from(form.querySelectorAll('.form-step'));
+      const stepIndicators = Array.from(form.querySelectorAll('[data-step-indicator]'));
+      const addressFields = Array.from(form.querySelectorAll('[data-address-field]'));
+      const locationOptions = Array.from(form.querySelectorAll('[data-location-option]'));
+      const locationError = form.querySelector('[data-location-error]');
+      const summaryFields = Array.from(form.querySelectorAll('[data-summary-field]'));
+      let currentStep = 0;
+
+      const isStudioSelected = () => {
+        const selected = form.querySelector('input[name="service_location"]:checked');
+        return !!(selected && selected.value.includes('Studio'));
+      };
+
+      const setStepIndicators = () => {
+        stepIndicators.forEach((indicator) => {
+          const stepEl = indicator.closest('.form-step');
+          const index = steps.indexOf(stepEl);
+          if(index > -1) indicator.textContent = `Step ${index + 1} of ${steps.length}`;
+        });
+      };
+
+      const getErrorElement = (input) => {
+        if(!input) return null;
+        if(input.id){
+          const byId = form.querySelector(`#${input.id}-error`);
+          if(byId) return byId;
+        }
+        if(input.name){
+          const byName = form.querySelector(`#${input.name}-error`);
+          if(byName) return byName;
+        }
+        return input.closest('[data-field]')?.querySelector('[data-error]') || null;
+      };
+
+      const setError = (input, message) => {
+        const errorEl = getErrorElement(input);
+        if(errorEl){
+          errorEl.textContent = message || '';
+          if(message){
+            errorEl.removeAttribute('hidden');
+          } else if(errorEl.hasAttribute('hidden')) {
+            // keep hidden for elements such as the location message
+          }
+        }
+        if(!input) return;
+        if(message){
+          input.setAttribute('aria-invalid', 'true');
+        } else {
+          input.removeAttribute('aria-invalid');
+        }
+      };
+
+      const handleLocationSelection = () => {
+        const selected = form.querySelector('input[name="service_location"]:checked');
+        const studioSelected = isStudioSelected();
+        addressFields.forEach((field) => {
+          const wrapper = field.closest('[data-field]');
+          if(studioSelected){
+            field.dataset.previousValue = field.value || '';
+            field.value = field.dataset.defaultValue || '';
+            field.readOnly = true;
+            wrapper?.classList.add('is-disabled');
+            setError(field, '');
+          } else {
+            if(field.dataset.previousValue !== undefined){
+              field.value = field.dataset.previousValue;
+            }
+            field.readOnly = false;
+            wrapper?.classList.remove('is-disabled');
+          }
+        });
+        if(locationError){
+          if(selected){
+            locationError.textContent = '';
+            locationError.setAttribute('hidden', '');
+          }
+        }
+      };
+
+      const runValidation = (input) => {
+        if(!input || input.disabled) return true;
+        const studioSelected = isStudioSelected();
+        const isAddressField = input.hasAttribute('data-address-field');
+        const requiresValue = input.required || (!!input.dataset.errorRequired && (!isAddressField || !studioSelected));
+        let value = '';
+        if(input.type === 'checkbox'){
+          value = input.checked ? 'checked' : '';
+        } else {
+          value = (input.value || '').trim();
+        }
+        let message = '';
+
+        if(requiresValue && !value){
+          message = input.dataset.errorRequired || 'Please complete this field.';
+        }
+
+        if(!message && value){
+          if(input.type === 'email' && !input.checkValidity()){
+            message = 'Enter a valid email address.';
+          } else if(input.type === 'tel' && value && !/^[\d+()\s-]{6,}$/.test(value)){
+            message = 'Enter a valid phone number.';
+          } else if(input.id === 'postcode'){
+            const postcodePattern = /^[A-Za-z]{1,2}\d[A-Za-z\d]?\s*\d[A-Za-z]{2}$/i;
+            if(!postcodePattern.test(value)){
+              message = 'Enter a valid postcode.';
+            }
+          }
+        }
+
+        setError(input, message);
+        return !message;
+      };
+
+      const validateStep = () => {
+        const step = steps[currentStep];
+        if(!step) return true;
+        let isValid = true;
+        let firstInvalid = null;
+        const inputs = Array.from(step.querySelectorAll('[data-validate]'));
+        inputs.forEach((input) => {
+          const valid = runValidation(input);
+          if(!valid){
+            isValid = false;
+            if(!firstInvalid && input.type !== 'checkbox' && !input.readOnly){
+              firstInvalid = input;
+            }
+          }
+        });
+
+        if(step.contains(locationError)){
+          const selected = form.querySelector('input[name="service_location"]:checked');
+          if(!selected){
+            locationError.textContent = 'Select where the service will take place.';
+            locationError.removeAttribute('hidden');
+            isValid = false;
+          }
+        }
+
+        if(!isValid && firstInvalid){
+          firstInvalid.focus();
+        }
+        return isValid;
+      };
+
+      const updateSummary = () => {
+        const data = {
+          name: form.elements.name?.value?.trim() || '—',
+          email: form.elements.email?.value?.trim() || '—',
+          phone: form.elements.phone?.value?.trim() || '—',
+          reg: form.elements.reg?.value?.trim() || '—',
+          service: (() => {
+            const select = form.elements.service;
+            if(!select) return '—';
+            const option = select.options[select.selectedIndex];
+            return option && option.value ? option.textContent.trim() : '—';
+          })(),
+          dates: form.elements.dates?.value?.trim() || '—',
+          message: form.elements.message?.value?.trim() || '—',
+          service_location: (() => {
+            const selected = form.querySelector('input[name="service_location"]:checked');
+            if(!selected) return '—';
+            return selected.dataset.label || selected.value;
+          })(),
+          address: (() => {
+            const parts = [form.elements.street?.value, form.elements.town?.value, form.elements.postcode?.value]
+              .map((part) => (part || '').trim())
+              .filter(Boolean);
+            return parts.length ? parts.join(', ') : '—';
+          })()
+        };
+
+        summaryFields.forEach((field) => {
+          const key = field.dataset.summaryField;
+          if(!key) return;
+          field.textContent = data[key] || '—';
+        });
+      };
+
+      const showStep = (index) => {
+        if(index < 0 || index >= steps.length) return;
+        steps.forEach((step, stepIndex) => {
+          const active = stepIndex === index;
+          step.hidden = !active;
+          step.setAttribute('aria-hidden', active ? 'false' : 'true');
+          if(active){
+            const focusable = step.querySelector('input:not([type="hidden"]):not([disabled]):not([hidden]), select:not([disabled]), textarea:not([disabled]), button:not([disabled])');
+            if(focusable){
+              window.requestAnimationFrame(() => focusable.focus());
+            }
+          }
+        });
+        currentStep = index;
+        if(currentStep === steps.length - 1){
+          updateSummary();
+        }
+      };
+
+      form.addEventListener('click', (event) => {
+        const actionButton = event.target.closest('[data-action]');
+        if(!actionButton) return;
+        event.preventDefault();
+        if(actionButton.dataset.action === 'back'){
+          const target = Math.max(0, currentStep - 1);
+          showStep(target);
+        } else if(actionButton.dataset.action === 'next'){
+          if(validateStep()){
+            const target = Math.min(steps.length - 1, currentStep + 1);
+            if(target === steps.length - 1){
+              updateSummary();
+            }
+            showStep(target);
+          }
+        }
+      });
+
+      form.addEventListener('submit', (event) => {
+        if(currentStep < steps.length - 1){
+          event.preventDefault();
+          if(validateStep()){
+            const target = Math.min(steps.length - 1, currentStep + 1);
+            if(target === steps.length - 1){
+              updateSummary();
+            }
+            showStep(target);
+          }
+          return;
+        }
+        if(!validateStep()){
+          event.preventDefault();
+          return;
+        }
+        updateSummary();
+      });
+
+      form.addEventListener('change', (event) => {
+        const target = event.target;
+        if(target.matches('[data-location-option]')){
+          handleLocationSelection();
+          if(steps[steps.length - 1].getAttribute('aria-hidden') === 'false'){
+            updateSummary();
+          }
+        }
+        if(target.matches('[data-validate]')){
+          runValidation(target);
+          if(steps[steps.length - 1].getAttribute('aria-hidden') === 'false'){
+            updateSummary();
+          }
+        }
+      });
+
+      form.addEventListener('input', (event) => {
+        const target = event.target;
+        if(target.matches('[data-validate]')){
+          if(target.getAttribute('aria-invalid') === 'true'){
+            runValidation(target);
+          }
+          if(steps[steps.length - 1].getAttribute('aria-hidden') === 'false'){
+            updateSummary();
+          }
+        }
+      });
+
+      form.addEventListener('blur', (event) => {
+        const target = event.target;
+        if(form.contains(target) && target.matches('[data-validate]')){
+          runValidation(target);
+        }
+      }, true);
+
+      locationOptions.forEach((option) => option.addEventListener('focus', () => {
+        if(locationError){
+          locationError.textContent = '';
+          locationError.setAttribute('hidden', '');
+        }
+      }));
+
+      setStepIndicators();
+      handleLocationSelection();
+      showStep(0);
+    })();
+  </script>
 
   <!-- Mobile nav toggle -->
   <script>
