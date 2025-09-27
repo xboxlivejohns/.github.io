@@ -473,12 +473,12 @@ a { color:inherit; text-decoration:none; }
   .mobile-toggle { display:block; }
   .brand-logo { width:48px; height:48px; }
   .hero { padding:22px; }
-}
 
-/* --- Mobile nav open --- */
-.main-nav.nav-open {
-  display:flex; position:fixed; left:0; top:72px; right:0;
-  background: var(--bg); flex-direction:column; padding:18px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.5); z-index:60;
-  border-top:1px solid rgba(250,204,21,.25);
+  /* Mobile nav open */
+  .main-nav.nav-open {
+    display:flex; position:fixed; left:0; top:72px; right:0;
+    background: var(--bg); flex-direction:column; padding:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.5); z-index:60;
+    border-top:1px solid rgba(250,204,21,.25);
+  }
 }
