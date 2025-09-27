@@ -95,7 +95,8 @@
     <section class="cards small-gap" style="margin-top:22px; grid-template-columns:1fr;">
       <!-- FORM (FormSubmit wired) -->
       <article class="card">
-        <h2>Send a booking request</h2>
+        <h2>Get an instant quote</h2>
+        <p class="muted" style="margin-top:6px;">Start with your vehicle and service choice — we'll ask for your contact details at the end.</p>
 
         <form action="https://formsubmit.co/b89300d152399ad939e7db161cbb0cfa"
               method="POST" enctype="multipart/form-data" style="margin-top:10px;"
@@ -117,31 +118,6 @@
           <input type="text" name="_honey" style="display:none">
 
           <div style="display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:12px;">
-            <div>
-              <label for="name">Name</label>
-              <input id="name" name="name" required
-                     style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" required
-                     style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
-            </div>
-            <div>
-              <label for="phone">Phone</label>
-              <input id="phone" name="phone" type="tel"
-                     style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
-            </div>
-            <div>
-              <label for="postcode">Postcode</label>
-              <input id="postcode" name="postcode"
-                     style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
-            </div>
-            <div>
-              <label for="reg">Vehicle reg</label>
-              <input id="reg" name="reg"
-                     style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
-            </div>
             <div style="grid-column:1/-1;">
               <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px;">
                 <div>
@@ -232,6 +208,37 @@
               <textarea id="message" name="message" rows="5"
                         style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;"
                         placeholder="Tell us about the car, defects you see, goals and budget."></textarea>
+            </div>
+
+            <div style="grid-column:1/-1; margin-top:4px;">
+              <div class="muted" style="margin-bottom:4px; font-size:0.9rem;">Almost done — add your details so we can confirm the quote.</div>
+              <div style="display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:12px;">
+                <div>
+                  <label for="name">Name</label>
+                  <input id="name" name="name" required
+                         style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" required
+                         style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
+                </div>
+                <div>
+                  <label for="phone">Phone</label>
+                  <input id="phone" name="phone" type="tel"
+                         style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
+                </div>
+                <div>
+                  <label for="postcode">Postcode</label>
+                  <input id="postcode" name="postcode"
+                         style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
+                </div>
+                <div style="grid-column:1/-1;">
+                  <label for="reg">Vehicle reg</label>
+                  <input id="reg" name="reg"
+                         style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
+                </div>
+              </div>
             </div>
 
             <div style="grid-column:1/-1; display:flex; align-items:center; gap:8px;">
