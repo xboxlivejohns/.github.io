@@ -60,12 +60,18 @@
         <h2>Send a booking request</h2>
 
         <form action="https://formsubmit.co/b89300d152399ad939e7db161cbb0cfa"
-              method="POST" enctype="multipart/form-data" style="margin-top:10px;">
+              method="POST" enctype="multipart/form-data" style="margin-top:10px;"
+              data-booking-form>
           <!-- FormSubmit controls -->
           <input type="hidden" name="_next" value="https://polishedandpristine.co.uk/thank-you.html">
           <input type="hidden" name="_subject" value="Website enquiry: Polished &amp; Pristine">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="vehicle_make" id="vehicleMakeHidden">
+          <input type="hidden" name="vehicle_model" id="vehicleModelHidden">
+          <input type="hidden" name="vehicle_variant" id="vehicleVariantHidden">
+          <input type="hidden" name="vehicle_category" id="vehicleCategoryHidden">
+          <input type="hidden" name="vehicle_condition" id="vehicleConditionHidden">
           <!-- Honeypot (spam trap) -->
           <input type="text" name="_honey" style="display:none">
 
@@ -94,6 +100,47 @@
               <label for="reg">Vehicle reg</label>
               <input id="reg" name="reg"
                      style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
+            </div>
+            <div style="grid-column:1/-1;">
+              <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px;">
+                <div>
+                  <label for="vehicleMake">Vehicle make</label>
+                  <select id="vehicleMake" required
+                          style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
+                    <option value="">Select make</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="vehicleModel">Model</label>
+                  <select id="vehicleModel" required disabled
+                          style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
+                    <option value="">Select model</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="vehicleVariant">Year / variant</label>
+                  <select id="vehicleVariant" required disabled
+                          style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
+                    <option value="">Select year / variant</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="vehicleCategoryDisplay">Size category</label>
+                  <input id="vehicleCategoryDisplay" type="text" readonly placeholder="Select year / variant" data-category=""
+                         style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#111b2f; color:#e5e7eb; margin-top:6px;">
+                </div>
+                <div>
+                  <label for="vehicleCondition">Vehicle condition</label>
+                  <select id="vehicleCondition" required
+                          style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
+                    <option value="">Select condition</option>
+                    <option value="Excellent">Excellent (new / ceramic-ready)</option>
+                    <option value="Good">Good (light marring)</option>
+                    <option value="Needs correction">Needs correction (swirls, scratches)</option>
+                    <option value="Severe correction">Severe correction (oxidation / heavy defects)</option>
+                  </select>
+                </div>
+              </div>
             </div>
             <div>
               <label for="service">Service</label>
@@ -191,6 +238,8 @@
   </footer>
 
   <!-- Mobile nav toggle -->
+  <script src="/complete_vehicle_database.js"></script>
+  <script src="/js/booking.js"></script>
   <script>
     (function(){
       const btn = document.getElementById('mobileNavToggle');
