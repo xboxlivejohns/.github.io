@@ -8,6 +8,9 @@
   const modelSelect = form.querySelector('#vehicleModel');
   const variantSelect = form.querySelector('#vehicleVariant');
   const conditionSelect = form.querySelector('#vehicleCondition');
+  const conditionFieldWrapper = conditionSelect
+    ? conditionSelect.closest('[data-condition-wrapper]')
+    : null;
   const packageSelect = form.querySelector('#servicePackage');
   const serviceField = form.querySelector('#serviceHidden');
   const addonList = form.querySelector('[data-addon-list]');
@@ -70,6 +73,7 @@
         label: 'Maintenance valet (exterior & interior)',
         service: 'Valeting / Interior',
         description: '2-3 hour maintenance detail ideal for well-kept cars.',
+        requiresCondition: false,
         pricing: {
           'Small Car': 55,
           'Medium Car': 65,
@@ -85,6 +89,7 @@
         label: 'Deep clean valet + gloss boost',
         service: 'Valeting / Interior',
         description: 'Full interior shampoo, steam clean and machine glaze.',
+        requiresCondition: false,
         pricing: {
           'Small Car': 95,
           'Medium Car': 110,
@@ -100,6 +105,7 @@
         label: 'Single-stage paint correction',
         service: 'Paint correction',
         description: 'Enhancement polish to remove light swirls and restore gloss.',
+        requiresCondition: true,
         pricing: {
           'Small Car': 220,
           'Medium Car': 260,
@@ -115,6 +121,7 @@
         label: 'Two-stage correction + 2yr ceramic',
         service: 'Ceramic coating (polish included)',
         description: 'Heavy correction, panel wipe and 2-year ceramic coating.',
+        requiresCondition: true,
         pricing: {
           'Small Car': 420,
           'Medium Car': 470,
@@ -130,6 +137,7 @@
         label: 'PPF partial front (bumper, bonnet, wings, mirrors)',
         service: 'PPF',
         description: 'Stone-chip protection film for the most exposed panels.',
+        requiresCondition: false,
         pricing: {
           'Small Car': 650,
           'Medium Car': 700,
@@ -268,11 +276,16 @@
     variantSelect.disabled = false;
   };
 
+  const isConditionFieldVisible = () =>
+    !conditionFieldWrapper || !conditionFieldWrapper.hidden;
+
   const updateHiddenFields = () => {
     hiddenMake.value = makeSelect.value;
     hiddenModel.value = modelSelect.value;
     hiddenVariant.value = variantSelect.value;
-    hiddenCondition.value = conditionSelect.value;
+    hiddenCondition.value = isConditionFieldVisible()
+      ? conditionSelect.value
+      : 'Not required for selected package';
     hiddenPackage.value = packageSelect.value;
     hiddenService.value = serviceField.value;
   };
@@ -280,6 +293,9 @@
   const getCategory = () => categoryDisplay.dataset.category || categoryDisplay.value || '';
 
   const getConditionMultiplier = () => {
+    if (!isConditionFieldVisible()) {
+      return 1;
+    }
     const multiplier = pricingConfig.conditionMultipliers[conditionSelect.value];
     return typeof multiplier === 'number'
       ? multiplier
@@ -359,6 +375,28 @@
     }
   };
 
+  const toggleConditionField = (selectedPackage) => {
+    if (!conditionSelect || !conditionFieldWrapper) {
+      return;
+    }
+    const requiresCondition = Boolean(
+      selectedPackage
+        ? selectedPackage.requiresCondition
+        : (getSelectedPackage() || {}).requiresCondition
+    );
+
+    conditionFieldWrapper.hidden = !requiresCondition;
+    conditionSelect.required = requiresCondition;
+
+    if (!requiresCondition) {
+      if (conditionSelect.value) {
+        conditionSelect.value = '';
+      }
+    }
+
+    updateHiddenFields();
+  };
+
   const updateExtrasPricingDisplay = () => {
     const category = getCategory();
     pricingConfig.extras.forEach((extra) => {
@@ -379,6 +417,8 @@
     const category = getCategory();
     const selectedPackage = getSelectedPackage();
     setServiceSummary(selectedPackage);
+    toggleConditionField(selectedPackage);
+    const conditionActive = isConditionFieldVisible();
     const packageBase = selectedPackage
       ? resolvePrice(selectedPackage.pricing, category)
       : 0;
@@ -420,7 +460,9 @@
     }
 
     if (totalCondition) {
-      if (!conditionSelect.value) {
+      if (!conditionActive) {
+        totalCondition.textContent = 'Condition uplift: Not required for this package';
+      } else if (!conditionSelect.value) {
         totalCondition.textContent = 'Condition uplift: Waiting for condition';
       } else if (conditionMultiplier > 1) {
         const upliftValue = Math.max(0, adjustedBase - packageBase);
@@ -430,9 +472,11 @@
       }
     }
 
-    const multiplierLabel = conditionSelect.value
-      ? `${conditionSelect.value} condition`
-      : 'Condition not provided';
+    const multiplierLabel = !conditionActive
+      ? 'Condition not required'
+      : conditionSelect.value
+        ? `${conditionSelect.value} condition`
+        : 'Condition not provided';
 
     const extrasSummary = Array.from(getExtrasCheckboxes())
       .filter((checkbox) => checkbox.checked)
@@ -459,9 +503,11 @@
     hiddenTotal.value = formatCurrency(total);
 
     if (totalNote) {
-      totalNote.textContent = conditionSelect.value
-        ? 'Estimate = package price × condition uplift + extras. We confirm the figure after hands-on inspection.'
-        : 'Select a vehicle condition to confirm the uplift. Estimate currently assumes excellent condition.';
+      totalNote.textContent = !conditionActive
+        ? 'Estimate excludes condition uplift (not required for this package).'
+        : conditionSelect.value
+          ? 'Estimate = package price × condition uplift + extras. We confirm the figure after hands-on inspection.'
+          : 'Select a vehicle condition to confirm the uplift. Estimate currently assumes excellent condition.';
     }
   };
 
@@ -477,6 +523,7 @@
   populatePackages();
   renderExtras();
   setServiceSummary(null);
+  toggleConditionField(null);
   clearCategory();
 
   makeSelect.addEventListener('change', () => {
