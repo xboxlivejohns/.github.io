@@ -66,8 +66,8 @@
       <article class="card">
         <h2>📊 Smart pricing engine</h2>
         <p class="muted">
-          Pricing automatically adjusts to the true vehicle size and chosen package (valet, correction or coatings).
-          You can still add extras such as clay bar treatment, engine bay detail or ceramic upgrades at checkout.
+          Pricing automatically adjusts to the true vehicle size, your chosen package (valet, correction or coatings) and the vehicle’s condition.
+          Extras such as clay bar treatment, engine bay detail or ceramic upgrades are added transparently to the running total.
         </p>
         <div class="muted" style="margin-top:12px;">
           <strong>Guideline size-based ranges</strong>
@@ -110,6 +110,9 @@
           <input type="hidden" name="vehicle_variant" id="vehicleVariantHidden">
           <input type="hidden" name="vehicle_category" id="vehicleCategoryHidden">
           <input type="hidden" name="vehicle_condition" id="vehicleConditionHidden">
+          <input type="hidden" name="service_package" id="servicePackageHidden">
+          <input type="hidden" name="selected_extras" id="selectedExtrasHidden">
+          <input type="hidden" name="calculated_total" id="calculatedTotalHidden">
           <!-- Honeypot (spam trap) -->
           <input type="text" name="_honey" style="display:none">
 
@@ -180,6 +183,31 @@
                 </div>
               </div>
             </div>
+            <div style="grid-column:1/-1; margin-top:4px; display:grid; gap:12px;">
+              <div>
+                <label for="servicePackage">Choose a package</label>
+                <select id="servicePackage" required
+                        style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
+                  <option value="">Select package (auto-pricing)</option>
+                </select>
+                <p class="muted" style="margin:6px 0 0; font-size:0.9rem;">Base prices adjust automatically to your detected vehicle size. Choose the package closest to what you need and we’ll confirm availability.</p>
+              </div>
+              <fieldset style="border:1px solid #2a3346; border-radius:10px; padding:12px;">
+                <legend style="padding:0 6px; font-size:0.95rem;">Optional add-ons</legend>
+                <p class="muted" style="margin:0 0 8px; font-size:0.9rem;">Tick extras for protection or deep-clean elements. Prices below already include the size-based adjustment.</p>
+                <div data-addon-list style="display:grid; gap:8px;"></div>
+              </fieldset>
+              <div style="background:#111b2f; border:1px solid #2a3346; border-radius:10px; padding:12px; display:flex; flex-direction:column; gap:6px;">
+                <strong>Total estimate</strong>
+                <div data-total-display style="font-size:1.4rem; font-weight:600;">Select vehicle &amp; package</div>
+                <ul data-total-breakdown style="list-style:none; padding:0; margin:0; display:grid; gap:2px; font-size:0.9rem;">
+                  <li data-total-base class="muted">Base package: —</li>
+                  <li data-total-condition class="muted">Condition uplift: —</li>
+                  <li data-total-extras class="muted">Extras: —</li>
+                </ul>
+                <p class="muted" style="margin:0; font-size:0.9rem;" data-total-note>Totals reflect the package price, condition uplift and any extras. Final invoice is confirmed after inspection.</p>
+              </div>
+            </div>
             <div>
               <label for="service">Service</label>
               <select id="service" name="service" required
@@ -218,7 +246,7 @@
             <a class="btn btn-outline" href="tel:07468286651">Call instead</a>
           </div>
 
-          <p class="muted" style="margin-top:10px;">Prefer WhatsApp? Message us on <a href="tel:07468286651">07468 286651</a> and include your reg &amp; postcode.</p>
+          <p class="muted" style="margin-top:10px;">Prefer WhatsApp? Message us on <a href="tel:07468286651">07468 286651</a> and include your reg &amp; postcode. We’ll confirm the package, condition uplift and extras before booking you in.</p>
         </form>
       </article>
 
