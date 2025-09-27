@@ -9,7 +9,7 @@
   const variantSelect = form.querySelector('#vehicleVariant');
   const conditionSelect = form.querySelector('#vehicleCondition');
   const packageSelect = form.querySelector('#servicePackage');
-  const serviceSelect = form.querySelector('#service');
+  const serviceField = form.querySelector('#serviceHidden');
   const addonList = form.querySelector('[data-addon-list]');
   const totalDisplay = form.querySelector('[data-total-display]');
   const totalNote = form.querySelector('[data-total-note]');
@@ -18,6 +18,7 @@
   const totalExtras = form.querySelector('[data-total-extras]');
   const defaultTotalNote = totalNote ? totalNote.textContent : '';
   const categoryDisplay = form.querySelector('#vehicleCategoryDisplay');
+  const serviceDisplay = form.querySelector('[data-service-display]');
 
   const hiddenMake = form.querySelector('#vehicleMakeHidden');
   const hiddenModel = form.querySelector('#vehicleModelHidden');
@@ -27,6 +28,7 @@
   const hiddenPackage = form.querySelector('#servicePackageHidden');
   const hiddenExtras = form.querySelector('#selectedExtrasHidden');
   const hiddenTotal = form.querySelector('#calculatedTotalHidden');
+  const hiddenService = form.querySelector('#serviceHidden');
 
   if (
     !makeSelect ||
@@ -34,7 +36,7 @@
     !variantSelect ||
     !conditionSelect ||
     !packageSelect ||
-    !serviceSelect ||
+    !serviceField ||
     !addonList ||
     !totalDisplay ||
     !totalBase ||
@@ -47,6 +49,7 @@
     !hiddenCategory ||
     !hiddenCondition ||
     !hiddenPackage ||
+    !hiddenService ||
     !hiddenExtras ||
     !hiddenTotal
   ) {
@@ -271,6 +274,7 @@
     hiddenVariant.value = variantSelect.value;
     hiddenCondition.value = conditionSelect.value;
     hiddenPackage.value = packageSelect.value;
+    hiddenService.value = serviceField.value;
   };
 
   const getCategory = () => categoryDisplay.dataset.category || categoryDisplay.value || '';
@@ -312,25 +316,19 @@
       const id = `addon-${extra.id}`;
       const wrapper = document.createElement('label');
       wrapper.setAttribute('for', id);
-      wrapper.style.display = 'grid';
-      wrapper.style.gridTemplateColumns = 'auto 1fr';
-      wrapper.style.alignItems = 'start';
-      wrapper.style.gap = '10px';
 
       const checkbox = document.createElement('input');
       checkbox.type = 'checkbox';
       checkbox.id = id;
       checkbox.dataset.extraId = extra.id;
       checkbox.dataset.extraLabel = extra.label;
-      checkbox.style.marginTop = '3px';
 
       const textWrap = document.createElement('div');
       const title = document.createElement('div');
       title.textContent = extra.label;
-      title.style.fontWeight = '600';
+      title.className = 'instant-quote-extras__title';
       const price = document.createElement('div');
-      price.className = 'muted';
-      price.style.fontSize = '0.9rem';
+      price.className = 'muted instant-quote-extras__price';
       price.dataset.priceDisplay = extra.id;
 
       textWrap.appendChild(title);
@@ -344,15 +342,20 @@
 
   const getExtrasCheckboxes = () => addonList.querySelectorAll('input[type="checkbox"]');
 
-  const updateServiceSelection = (pkg) => {
-    if (!pkg) {
+  const setServiceSummary = (pkg) => {
+    if (!serviceField) {
       return;
     }
-    const match = Array.from(serviceSelect.options).find(
-      (option) => option.value === pkg.service
-    );
-    if (match) {
-      serviceSelect.value = match.value;
+    if (!pkg) {
+      serviceField.value = '';
+      if (serviceDisplay) {
+        serviceDisplay.textContent = 'Choose a package to see the focus area.';
+      }
+      return;
+    }
+    serviceField.value = pkg.service;
+    if (serviceDisplay) {
+      serviceDisplay.textContent = pkg.service;
     }
   };
 
@@ -375,6 +378,7 @@
   const updateTotal = () => {
     const category = getCategory();
     const selectedPackage = getSelectedPackage();
+    setServiceSummary(selectedPackage);
     const packageBase = selectedPackage
       ? resolvePrice(selectedPackage.pricing, category)
       : 0;
@@ -472,6 +476,7 @@
   populateMakes();
   populatePackages();
   renderExtras();
+  setServiceSummary(null);
   clearCategory();
 
   makeSelect.addEventListener('change', () => {
@@ -515,7 +520,7 @@
   packageSelect.addEventListener('change', () => {
     updateHiddenFields();
     const pkg = getSelectedPackage();
-    updateServiceSelection(pkg);
+    setServiceSummary(pkg);
     updateTotal();
   });
 

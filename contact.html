@@ -43,82 +43,41 @@
   <!-- MAIN -->
   <main class="wrap main-content" id="book">
 
-    <!-- Intro (dark band) -->
-    <section class="section-dark contact-cta" style="margin-top:18px;">
-      <div class="contact-cta__content">
-        <p class="contact-cta__eyebrow">Polished &amp; Pristine — Darlington &amp; North East</p>
+    <section class="instant-quote-hero">
+      <div class="instant-quote-hero__copy">
+        <span class="instant-quote-badge">⚡ Instant quote</span>
         <h1>Contact / Book</h1>
-        <p class="lede">Choose the quickest route to a confirmed slot or tailored quote.</p>
-        <div class="contact-cta__actions">
+        <p class="lede">Drop your vehicle details and we’ll respond within minutes during open hours — no email tennis or waiting around.</p>
+        <div class="instant-quote-actions">
           <a href="tel:07468286651" class="btn btn-primary">Call 07468 286651</a>
           <a href="https://wa.me/447468286651" class="btn btn-outline">WhatsApp message</a>
         </div>
-        <p class="muted contact-cta__note">Prefer email? Use the booking form below — we respond within a working day with availability and clear pricing.</p>
-      </div>
-      <div class="contact-cta__card">
-        <h2>What to expect</h2>
-        <ul>
-          <li><strong>Friendly consultation:</strong> quick chat to confirm vehicle, condition and goals.</li>
-          <li><strong>Transparent pricing:</strong> no hidden fees — every option explained before you book.</li>
-          <li><strong>Flexible scheduling:</strong> mobile visits across Darlington, Teesside and County Durham.</li>
+        <ul class="instant-quote-points">
+          <li><span>🚗</span><div><strong>Vehicle-matched pricing:</strong> the quote adjusts to the exact make, model and variant you select.</div></li>
+          <li><span>🛠️</span><div><strong>Hands-on advice:</strong> quick chat to confirm condition, goals and ideal package with zero guesswork.</div></li>
+          <li><span>📆</span><div><strong>Fast scheduling:</strong> we lock in dates via call or WhatsApp — no endless back-and-forth.</div></li>
         </ul>
-        <div class="contact-cta__hours">
-          <span>📅</span>
-          <div>
-            <strong>Typical response hours</strong>
-            <p>Mon–Sat 8am–7pm</p>
+        <div class="instant-quote-meta">
+          <div class="instant-quote-hours">
+            <span>📅</span>
+            <div>
+              <strong>Typical response hours</strong>
+              <p>Mon–Sat 8am–7pm</p>
+            </div>
+          </div>
+          <div class="instant-quote-meta-card">
+            <strong>Area covered</strong>
+            <p>Mobile visits across Darlington, Teesside and County Durham.</p>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Two-column content -->
-    <section class="cards small-gap" style="margin:22px 0 0 0;">
-      <article class="card">
-        <h2>✅ Complete vehicle lookup</h2>
-        <p class="muted">
-          Our booking form is powered by a <strong>400+ vehicle database</strong> covering more than 20 popular UK manufacturers.
-          Select the make, model and year and we instantly detect the <em>exact size category</em> – no guesswork.
-        </p>
-        <p class="muted">Every major brand is covered: Audi, BMW, Mercedes, Ford, Vauxhall, VW and many more.</p>
-      </article>
-      <article class="card">
-        <h2>📊 Smart pricing engine</h2>
-        <p class="muted">
-          Pricing automatically adjusts to the true vehicle size, your chosen package (valet, correction or coatings) and the vehicle’s condition.
-          Extras such as clay bar treatment, engine bay detail or ceramic upgrades are added transparently to the running total.
-        </p>
-        <div class="muted" style="margin-top:12px;">
-          <strong>Guideline size-based ranges</strong>
-          <ul style="margin:8px 0 0 18px;">
-            <li>Small cars: £45–£150</li>
-            <li>Medium cars: £55–£180</li>
-            <li>Large cars: £65–£210</li>
-            <li>SUVs: £75–£250</li>
-            <li>Vans: £95–£320</li>
-          </ul>
-          <p style="margin:10px 0 0;">Final quote depends on the package (mini/full valet, paint correction, ceramic coating) and condition.</p>
-        </div>
-      </article>
-      <article class="card">
-        <h2>🗓️ Frictionless booking flow</h2>
-        <p class="muted">
-          Choose your vehicle, service package and any add-ons, then pick a date and supply your details.
-          The form shows the running total before you confirm, so you know the investment before we arrive.
-        </p>
-        <p class="muted">The layout is optimised for one-handed use on mobile with fast-loading pages and smooth transitions.</p>
-      </article>
-    </section>
-
-    <!-- Two-column content -->
-    <section class="cards small-gap" style="margin-top:22px; grid-template-columns:1fr;">
-      <!-- FORM (FormSubmit wired) -->
-      <article class="card">
+      <div class="instant-quote-card">
         <h2>Get an instant quote</h2>
-        <p class="muted" style="margin-top:6px;">Start with your vehicle and service choice — we'll ask for your contact details at the end.</p>
+        <p class="muted">Start with your vehicle and package — the pricing updates as you choose options.</p>
 
         <form action="https://formsubmit.co/b89300d152399ad939e7db161cbb0cfa"
-              method="POST" enctype="multipart/form-data" style="margin-top:10px;"
+              method="POST" enctype="multipart/form-data"
+              class="instant-quote-form"
               data-booking-form>
           <!-- FormSubmit controls -->
           <input type="hidden" name="_next" value="https://polishedandpristine.co.uk/thank-you.html">
@@ -133,153 +92,171 @@
           <input type="hidden" name="service_package" id="servicePackageHidden">
           <input type="hidden" name="selected_extras" id="selectedExtrasHidden">
           <input type="hidden" name="calculated_total" id="calculatedTotalHidden">
+          <input type="hidden" name="service" id="serviceHidden">
           <!-- Honeypot (spam trap) -->
-          <input type="text" name="_honey" style="display:none">
+          <input type="text" name="_honey" class="instant-quote-honeypot">
 
-          <div style="display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:12px;">
-            <div style="grid-column:1/-1;">
-              <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px;">
-                <div>
-                  <label for="vehicleMake">Vehicle make</label>
-                  <select id="vehicleMake" required
-                          style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
-                    <option value="">Select make</option>
-                  </select>
-                </div>
-                <div>
-                  <label for="vehicleModel">Model</label>
-                  <select id="vehicleModel" required disabled
-                          style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
-                    <option value="">Select model</option>
-                  </select>
-                </div>
-                <div>
-                  <label for="vehicleVariant">Year / variant</label>
-                  <select id="vehicleVariant" required disabled
-                          style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
-                    <option value="">Select year / variant</option>
-                  </select>
-                </div>
-                <div>
-                  <label for="vehicleCategoryDisplay">Size category</label>
-                  <input id="vehicleCategoryDisplay" type="text" readonly placeholder="Select year / variant" data-category=""
-                         style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#111b2f; color:#e5e7eb; margin-top:6px;">
-                </div>
-                <div>
-                  <label for="vehicleCondition">Vehicle condition</label>
-                  <select id="vehicleCondition" required
-                          style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
-                    <option value="">Select condition</option>
-                    <option value="Excellent">Excellent (new / ceramic-ready)</option>
-                    <option value="Good">Good (light marring)</option>
-                    <option value="Needs correction">Needs correction (swirls, scratches)</option>
-                    <option value="Severe correction">Severe correction (oxidation / heavy defects)</option>
-                  </select>
-                </div>
+          <div class="instant-quote-form__section">
+            <div class="instant-quote-form__columns">
+              <div class="instant-quote-form__field">
+                <label for="vehicleMake">Vehicle make</label>
+                <select id="vehicleMake" required>
+                  <option value="">Select make</option>
+                </select>
+              </div>
+              <div class="instant-quote-form__field">
+                <label for="vehicleModel">Model</label>
+                <select id="vehicleModel" required disabled>
+                  <option value="">Select model</option>
+                </select>
+              </div>
+              <div class="instant-quote-form__field">
+                <label for="vehicleVariant">Year / variant</label>
+                <select id="vehicleVariant" required disabled>
+                  <option value="">Select year / variant</option>
+                </select>
+              </div>
+              <div class="instant-quote-form__field">
+                <label for="vehicleCategoryDisplay">Size category</label>
+                <input id="vehicleCategoryDisplay" type="text" readonly placeholder="Select year / variant" data-category="">
+              </div>
+              <div class="instant-quote-form__field">
+                <label for="vehicleCondition">Vehicle condition</label>
+                <select id="vehicleCondition" required>
+                  <option value="">Select condition</option>
+                  <option value="Excellent">Excellent (new / ceramic-ready)</option>
+                  <option value="Good">Good (light marring)</option>
+                  <option value="Needs correction">Needs correction (swirls, scratches)</option>
+                  <option value="Severe correction">Severe correction (oxidation / heavy defects)</option>
+                </select>
               </div>
             </div>
-            <div style="grid-column:1/-1; margin-top:4px; display:grid; gap:12px;">
-              <div>
+
+            <div class="instant-quote-form__stack">
+              <div class="instant-quote-form__field">
                 <label for="servicePackage">Choose a package</label>
-                <select id="servicePackage" required
-                        style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
+                <select id="servicePackage" required>
                   <option value="">Select package (auto-pricing)</option>
                 </select>
-                <p class="muted" style="margin:6px 0 0; font-size:0.9rem;">Base prices adjust automatically to your detected vehicle size. Choose the package closest to what you need and we’ll confirm availability.</p>
+                <div class="instant-quote-service">
+                  <span>Focus:</span>
+                  <strong data-service-display>Choose a package to see the focus area.</strong>
+                </div>
+                <p class="muted instant-quote-hint">Base prices adjust automatically to your detected vehicle size. Pick the package closest to what you need and we’ll confirm availability.</p>
               </div>
-              <fieldset style="border:1px solid #2a3346; border-radius:10px; padding:12px;">
-                <legend style="padding:0 6px; font-size:0.95rem;">Optional add-ons</legend>
-                <p class="muted" style="margin:0 0 8px; font-size:0.9rem;">Tick extras for protection or deep-clean elements. Prices below already include the size-based adjustment.</p>
-                <div data-addon-list style="display:grid; gap:8px;"></div>
+
+              <fieldset class="instant-quote-form__extras">
+                <legend>Optional add-ons</legend>
+                <p class="muted">Tick extras for protection or deep-clean elements. Prices already include the size-based adjustment.</p>
+                <div data-addon-list class="instant-quote-extras"></div>
               </fieldset>
-              <div style="background:#111b2f; border:1px solid #2a3346; border-radius:10px; padding:12px; display:flex; flex-direction:column; gap:6px;">
+
+              <div class="instant-quote-total">
                 <strong>Total estimate</strong>
-                <div data-total-display style="font-size:1.4rem; font-weight:600;">Select vehicle &amp; package</div>
-                <ul data-total-breakdown style="list-style:none; padding:0; margin:0; display:grid; gap:2px; font-size:0.9rem;">
+                <div data-total-display class="instant-quote-total__figure">Select vehicle &amp; package</div>
+                <ul data-total-breakdown class="instant-quote-total__list">
                   <li data-total-base class="muted">Base package: —</li>
                   <li data-total-condition class="muted">Condition uplift: —</li>
                   <li data-total-extras class="muted">Extras: —</li>
                 </ul>
-                <p class="muted" style="margin:0; font-size:0.9rem;" data-total-note>Totals reflect the package price, condition uplift and any extras. Final invoice is confirmed after inspection.</p>
+                <p class="muted instant-quote-total__note" data-total-note>Totals reflect the package price, condition uplift and any extras. Final invoice is confirmed after inspection.</p>
               </div>
             </div>
-            <div>
-              <label for="service">Service</label>
-              <select id="service" name="service" required
-                      style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
-                <option value="">Select service</option>
-                <option value="Ceramic coating (polish included)">Ceramic coating (polish included)</option>
-                <option value="Paint correction">Paint correction</option>
-                <option value="PPF">PPF</option>
-                <option value="Valeting / Interior">Valeting / Interior</option>
-                <option value="Other / Advice">Other / Advice</option>
-              </select>
-            </div>
 
-            <div style="grid-column:1/-1;">
+            <div class="instant-quote-form__field">
               <label for="dates">Preferred dates/times</label>
-              <input id="dates" name="dates"
-                     style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
+              <input id="dates" name="dates">
             </div>
 
-            <div style="grid-column:1/-1;">
+            <div class="instant-quote-form__field instant-quote-form__field--full">
               <label for="message">Notes</label>
-              <textarea id="message" name="message" rows="5"
-                        style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;"
-                        placeholder="Tell us about the car, defects you see, goals and budget."></textarea>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us about the car, defects you see, goals and budget."></textarea>
             </div>
 
-            <div style="grid-column:1/-1; margin-top:4px;">
-              <div class="muted" style="margin-bottom:4px; font-size:0.9rem;">Almost done — add your details so we can confirm the quote.</div>
-              <div style="display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:12px;">
-                <div>
+            <div class="instant-quote-form__field-group">
+              <div class="muted instant-quote-hint">Almost done — add your details so we can confirm the quote.</div>
+              <div class="instant-quote-form__columns">
+                <div class="instant-quote-form__field">
                   <label for="name">Name</label>
-                  <input id="name" name="name" required
-                         style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
+                  <input id="name" name="name" required>
                 </div>
-                <div>
+                <div class="instant-quote-form__field">
                   <label for="email">Email</label>
-                  <input id="email" name="email" type="email" required
-                         style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
+                  <input id="email" name="email" type="email" required>
                 </div>
-                <div>
+                <div class="instant-quote-form__field">
                   <label for="phone">Phone</label>
-                  <input id="phone" name="phone" type="tel"
-                         style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
+                  <input id="phone" name="phone" type="tel">
                 </div>
-                <div>
+                <div class="instant-quote-form__field">
                   <label for="postcode">Postcode</label>
-                  <input id="postcode" name="postcode"
-                         style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
+                  <input id="postcode" name="postcode">
                 </div>
-                <div style="grid-column:1/-1;">
+                <div class="instant-quote-form__field instant-quote-form__field--full">
                   <label for="reg">Vehicle reg</label>
-                  <input id="reg" name="reg"
-                         style="width:100%; padding:10px; border-radius:8px; border:1px solid #2a3346; background:#0f182b; color:#e5e7eb; margin-top:6px;">
+                  <input id="reg" name="reg">
                 </div>
               </div>
             </div>
 
-            <div style="grid-column:1/-1; display:flex; align-items:center; gap:8px;">
+            <div class="instant-quote-form__consent">
               <input id="consent" name="consent" type="checkbox" required>
               <label for="consent" class="muted">I agree to be contacted regarding my enquiry and accept the <a href="/privacy-policy.html">Privacy Policy</a>.</label>
             </div>
           </div>
 
-          <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+          <div class="instant-quote-form__actions">
             <button type="submit" class="btn btn-primary">Send request</button>
-            <a class="btn btn-outline" href="mailto:info@polishedandpristine.co.uk">Email instead</a>
-            <a class="btn btn-outline" href="tel:07468286651">Call instead</a>
+            <a class="btn btn-outline" href="tel:07468286651">Call now</a>
+            <a class="btn btn-outline" href="https://wa.me/447468286651">Share photos on WhatsApp</a>
           </div>
 
-          <p class="muted" style="margin-top:10px;">Prefer WhatsApp? Message us on <a href="tel:07468286651">07468 286651</a> and include your reg &amp; postcode. We’ll confirm the package, condition uplift and extras before booking you in.</p>
+          <p class="muted instant-quote-form__note">Prefer WhatsApp? Message us on <a href="tel:07468286651">07468 286651</a> with your reg &amp; postcode — we’ll confirm the package, condition uplift and extras straight away.</p>
         </form>
-      </article>
+      </div>
+    </section>
 
-      <!-- DETAILS -->
+    <section class="cards small-gap instant-quote-support">
       <article class="card">
+        <h2>✅ Complete vehicle lookup</h2>
+        <p class="muted">
+          Our booking form is powered by a <strong>400+ vehicle database</strong> covering more than 20 popular UK manufacturers.
+          Select the make, model and year and we instantly detect the <em>exact size category</em> – no guesswork.
+        </p>
+        <p class="muted">Every major brand is covered: Audi, BMW, Mercedes, Ford, Vauxhall, VW and many more.</p>
+      </article>
+      <article class="card">
+        <h2>📊 Smart pricing engine</h2>
+        <p class="muted">
+          Pricing automatically adjusts to the true vehicle size, your chosen package (valet, correction or coatings) and the vehicle’s condition.
+          Extras such as clay bar treatment, engine bay detail or ceramic upgrades are added transparently to the running total.
+        </p>
+        <div class="muted instant-quote-support__list">
+          <strong>Guideline size-based ranges</strong>
+          <ul>
+            <li>Small cars: £45–£150</li>
+            <li>Medium cars: £55–£180</li>
+            <li>Large cars: £65–£210</li>
+            <li>SUVs: £75–£250</li>
+            <li>Vans: £95–£320</li>
+          </ul>
+          <p>Final quote depends on the package (mini/full valet, paint correction, ceramic coating) and condition.</p>
+        </div>
+      </article>
+      <article class="card">
+        <h2>🗓️ Frictionless booking flow</h2>
+        <p class="muted">
+          Choose your vehicle, service package and any add-ons, then pick a date and supply your details.
+          The form shows the running total before you confirm, so you know the investment before we arrive.
+        </p>
+        <p class="muted">Optimised for one-handed use on mobile with fast-loading pages and smooth transitions.</p>
+      </article>
+    </section>
+
+    <section class="cards small-gap contact-details-grid">
+      <article class="card contact-details-card">
         <h2>Contact details</h2>
-        <p class="muted" style="margin-top:6px;">
+        <p class="muted">
           <strong>Polished &amp; Pristine</strong><br>
           3 Appleby Close, Darlington — DL1 4AJ<br>
           <a href="tel:07468286651">07468 286651</a><br>
@@ -294,7 +271,8 @@
       <h2 class="cta-title">Need a quick opinion first?</h2>
       <p class="muted">Send a couple of photos — we’ll let you know if it’s a one-stage polish, multi-stage correction or PPF situation.</p>
       <div class="cta-actions">
-        <a class="btn btn-primary" href="mailto:info@polishedandpristine.co.uk">Email photos</a>
+        <a class="btn btn-primary" href="https://wa.me/447468286651">WhatsApp photos</a>
+        <a class="btn btn-outline" href="mailto:info@polishedandpristine.co.uk">Email photos</a>
         <a class="btn btn-outline" href="/tips.html">Read our advice</a>
       </div>
     </section>
