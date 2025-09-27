@@ -1,5 +1,5 @@
 (function () {
-  const form = document.querySelector('[data-booking-form]');
+  const form = document.querySelector('[data-instant-quote-form]');
   if (!form || typeof vehicleDatabase === 'undefined') {
     return;
   }
