@@ -371,11 +371,26 @@
   const getExtrasCheckboxes = () => addonList.querySelectorAll('input[type="checkbox"]');
 
   const updateServiceSelection = (pkg) => {
-    if (!pkg) {
+    let desiredService = '';
+
+    if (pkg && pkg.service) {
+      desiredService = pkg.service;
+    } else {
+      const selectedIndex = packageSelect.selectedIndex;
+      if (selectedIndex >= 0) {
+        const selectedOption = packageSelect.options[selectedIndex];
+        if (selectedOption && selectedOption.dataset.service) {
+          desiredService = selectedOption.dataset.service;
+        }
+      }
+    }
+
+    if (!desiredService) {
       return;
     }
+
     const match = Array.from(serviceSelect.options).find(
-      (option) => option.value === pkg.service
+      (option) => option.value === desiredService
     );
     if (match) {
       serviceSelect.value = match.value;
