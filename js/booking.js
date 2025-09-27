@@ -276,14 +276,14 @@
     variantSelect.disabled = false;
   };
 
-  const isConditionFieldVisible = () =>
-    !conditionFieldWrapper || !conditionFieldWrapper.hidden;
+  const isConditionFieldActive = () =>
+    Boolean(conditionSelect) && !conditionSelect.disabled;
 
   const updateHiddenFields = () => {
     hiddenMake.value = makeSelect.value;
     hiddenModel.value = modelSelect.value;
     hiddenVariant.value = variantSelect.value;
-    hiddenCondition.value = isConditionFieldVisible()
+    hiddenCondition.value = isConditionFieldActive()
       ? conditionSelect.value
       : 'Not required for selected package';
     hiddenPackage.value = packageSelect.value;
@@ -293,7 +293,7 @@
   const getCategory = () => categoryDisplay.dataset.category || categoryDisplay.value || '';
 
   const getConditionMultiplier = () => {
-    if (!isConditionFieldVisible()) {
+    if (!isConditionFieldActive()) {
       return 1;
     }
     const multiplier = pricingConfig.conditionMultipliers[conditionSelect.value];
@@ -385,7 +385,8 @@
         : (getSelectedPackage() || {}).requiresCondition
     );
 
-    conditionFieldWrapper.hidden = !requiresCondition;
+    conditionFieldWrapper.hidden = false;
+    conditionSelect.disabled = !requiresCondition;
     conditionSelect.required = requiresCondition;
 
     if (!requiresCondition) {
@@ -418,7 +419,7 @@
     const selectedPackage = getSelectedPackage();
     setServiceSummary(selectedPackage);
     toggleConditionField(selectedPackage);
-    const conditionActive = isConditionFieldVisible();
+    const conditionActive = isConditionFieldActive();
     const packageBase = selectedPackage
       ? resolvePrice(selectedPackage.pricing, category)
       : 0;
