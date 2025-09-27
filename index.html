@@ -48,7 +48,7 @@
         </div>
       </a>
 
-      <button id="mobileNavToggle" class="mobile-toggle" aria-label="Open menu">☰</button>
+      <button id="mobileNavToggle" class="mobile-toggle" aria-label="Open menu" aria-controls="mainNav" aria-expanded="false">☰</button>
 
       <nav class="main-nav" id="mainNav" aria-label="Main navigation">
         <a href="/index.html" class="nav-link nav-active">Home</a>
@@ -191,7 +191,13 @@
       const btn = document.getElementById('mobileNavToggle');
       const nav = document.getElementById('mainNav');
       if (btn && nav) {
-        btn.addEventListener('click', () => nav.classList.toggle('nav-open'));
+        btn.addEventListener('click', () => {
+          const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!isExpanded));
+          btn.setAttribute('aria-label', isExpanded ? 'Open menu' : 'Close menu');
+          btn.textContent = isExpanded ? '☰' : '✕';
+          nav.classList.toggle('nav-open');
+        });
       }
     })();
   </script>
