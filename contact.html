@@ -173,8 +173,13 @@
             </div>
 
             <div class="instant-quote-form__field">
-              <label for="dates">Preferred dates/times</label>
-              <input id="dates" name="dates">
+              <label for="dates">Preferred date &amp; time</label>
+              <input id="dates"
+                     name="dates"
+                     type="datetime-local"
+                     step="900"
+                     data-preferred-slot>
+              <p class="muted instant-quote-hint">Use the calendar to choose when suits you best. We’ll confirm availability when we reply.</p>
             </div>
 
             <div class="instant-quote-form__field instant-quote-form__field--full">
