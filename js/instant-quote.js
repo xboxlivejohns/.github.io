@@ -32,6 +32,7 @@
   const hiddenExtras = form.querySelector('#selectedExtrasHidden');
   const hiddenTotal = form.querySelector('#calculatedTotalHidden');
   const hiddenService = form.querySelector('#serviceHidden');
+  const preferredSlotField = form.querySelector('[data-preferred-slot]');
 
   if (
     !makeSelect ||
@@ -585,4 +586,32 @@
     }
     updateTotal();
   });
+
+  const updatePreferredSlotMin = () => {
+    if (!preferredSlotField) {
+      return;
+    }
+    const now = new Date();
+    const stepMinutes = 15;
+    const stepMs = stepMinutes * 60 * 1000;
+    const rounded = new Date(Math.ceil(now.getTime() / stepMs) * stepMs);
+    const toLocalValue = (date) => {
+      const local = new Date(date.getTime() - date.getTimezoneOffset() * 60000);
+      return local.toISOString().slice(0, 16);
+    };
+    const minValue = toLocalValue(rounded);
+    preferredSlotField.min = minValue;
+
+    if (preferredSlotField.value) {
+      const provided = new Date(preferredSlotField.value);
+      if (Number.isNaN(provided.getTime()) || provided < rounded) {
+        preferredSlotField.value = '';
+      }
+    }
+  };
+
+  updatePreferredSlotMin();
+  if (preferredSlotField) {
+    preferredSlotField.addEventListener('focus', updatePreferredSlotMin, { once: true });
+  }
 })();
