@@ -111,6 +111,9 @@ a:hover { text-decoration:underline; }
 .section-dark h1, .section-dark h2, .section-dark h3 { color:var(--text-inverse); }
 .section-dark a { color:var(--brand-gold); }
 .section-dark a:hover { color:var(--brand-gold-hover); }
+.section-dark .btn-primary {
+  color:#1f2937;
+}
 .section-dark .btn-outline {
   border-color:rgba(96,165,250,0.9);
   color:var(--brand-blue-light);
