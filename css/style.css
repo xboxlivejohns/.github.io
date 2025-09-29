@@ -12,7 +12,7 @@
   --panel: #0f172a;               /* dark bands */
   --panel-accent: #11264a;
   --card-bg: #ffffff;             /* light cards */
-  --card-border: rgba(15,23,42,0.08);
+  --card-border: rgba(0,0,0,0.35);
   --text: #0f172a;                /* base text on light */
   --muted: #64748b;               /* muted on light */
   --text-inverse: #f8fafc;
