@@ -101,6 +101,8 @@
     }
     const items = [];
     let subtotal = 0;
+    let deepExteriorPrice = 0;
+    let interiorSteamPrice = 0;
     const band = state.band;
 
     if (state.exterior === 'EX_WASH' || state.exterior === 'EX_DEEP') {
@@ -108,6 +110,9 @@
       if (typeof price === 'number') {
         items.push({ code: state.exterior, pence: price });
         subtotal += price;
+        if (state.exterior === 'EX_DEEP') {
+          deepExteriorPrice = price;
+        }
       }
     }
 
@@ -116,6 +121,7 @@
       if (typeof price === 'number') {
         items.push({ code: 'INT_STEAM', pence: price });
         subtotal += price;
+        interiorSteamPrice = price;
       }
     }
 
@@ -137,10 +143,9 @@
       });
     }
 
-    const hasDeep = items.some((item) => item.code === 'EX_DEEP');
-    const hasInterior = items.some((item) => item.code === 'INT_STEAM');
-    if (hasDeep && hasInterior) {
-      const discount = Math.round(subtotal * Number(config.bundle_discount || 0));
+    if (deepExteriorPrice > 0 && interiorSteamPrice > 0) {
+      const baseBundleTotal = deepExteriorPrice + interiorSteamPrice;
+      const discount = Math.round(baseBundleTotal * Number(config.bundle_discount || 0));
       if (discount > 0) {
         items.push({ code: 'BUNDLE_DISC', pence: -discount });
         subtotal -= discount;
