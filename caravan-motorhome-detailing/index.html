@@ -567,16 +567,21 @@
   </script>
 
   <script src="/js/leisure-quote.js" defer></script>
+
+  <!-- Mobile nav toggle (shared) -->
   <script>
     (function(){
       const btn = document.getElementById('mobileNavToggle');
       const nav = document.getElementById('mainNav');
-      if(!btn || !nav){return;}
-      btn.addEventListener('click', () => {
-        const expanded = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', (!expanded).toString());
-        nav.classList.toggle('nav-open');
-      });
+      if (btn && nav) {
+        btn.addEventListener('click', () => {
+          const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!isExpanded));
+          btn.setAttribute('aria-label', isExpanded ? 'Open menu' : 'Close menu');
+          btn.textContent = isExpanded ? '☰' : '✕';
+          nav.classList.toggle('nav-open');
+        });
+      }
     })();
   </script>
 </body>

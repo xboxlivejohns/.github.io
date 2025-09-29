@@ -33,7 +33,7 @@
         </div>
       </a>
 
-      <button id="mobileNavToggle" class="mobile-toggle" aria-label="Open menu">☰</button>
+      <button id="mobileNavToggle" class="mobile-toggle" aria-label="Open menu" aria-controls="mainNav" aria-expanded="false">☰</button>
 
       <nav class="main-nav" id="mainNav" aria-label="Main navigation">
         <a href="/index.html" class="nav-link">Home</a>
@@ -45,7 +45,7 @@
         <a href="/caravan-motorhome-detailing" class="nav-link">Caravan &amp; Motorhome</a>
         <a href="/gallery.html" class="nav-link">Gallery</a>
         <a href="/tips.html" class="nav-link">Expert Advice</a>
-        <a href="/contact.html" class="nav-link nav-active">Contact / Book</a>
+        <a href="/contact.html" class="nav-cta nav-active">Contact / Book</a>
       </nav>
     </div>
   </header>
@@ -332,14 +332,23 @@
     </div>
   </footer>
 
-  <!-- Mobile nav toggle -->
   <script src="/complete_vehicle_database.js"></script>
   <script src="/js/instant-quote.js"></script>
+
+  <!-- Mobile nav toggle (shared) -->
   <script>
     (function(){
       const btn = document.getElementById('mobileNavToggle');
       const nav = document.getElementById('mainNav');
-      if (btn && nav) btn.addEventListener('click', () => nav.classList.toggle('nav-open'));
+      if (btn && nav) {
+        btn.addEventListener('click', () => {
+          const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!isExpanded));
+          btn.setAttribute('aria-label', isExpanded ? 'Open menu' : 'Close menu');
+          btn.textContent = isExpanded ? '☰' : '✕';
+          nav.classList.toggle('nav-open');
+        });
+      }
     })();
   </script>
 </body>
