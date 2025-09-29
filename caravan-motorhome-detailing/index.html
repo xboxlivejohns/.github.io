@@ -330,10 +330,20 @@
         <p class="muted">Dedicated leisure flow with live estimate. Share photos (3–5) so we can confirm the exact scope and availability.</p>
       </header>
       <div class="leisure-form-card">
-        <form class="leisure-form" data-leisure-quote-form enctype="multipart/form-data" novalidate>
+        <form class="leisure-form"
+              action="https://formsubmit.co/b89300d152399ad939e7db161cbb0cfa"
+              method="POST"
+              enctype="multipart/form-data"
+              data-leisure-quote-form
+              novalidate>
           <input type="hidden" name="quote_type" value="leisure">
           <input type="hidden" name="estimate_total_pence" data-estimate-total>
           <input type="hidden" name="estimate_breakdown" data-estimate-breakdown-field>
+          <input type="hidden" name="_next" value="https://polishedandpristine.co.uk/thank-you.html">
+          <input type="hidden" name="_subject" value="Website enquiry: Leisure detailing quote">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" class="instant-quote-honeypot">
 
           <div class="leisure-form__group">
             <h3>Vehicle &amp; packages</h3>
@@ -479,7 +489,7 @@
             <label class="leisure-field leisure-field--full">
               <span>Upload photos</span>
               <input type="file" name="photos" accept="image/*" multiple>
-              <small class="muted">Add front, rear, one side and roof if accessible. Files auto-compress client-side before sending.</small>
+              <small class="muted">Add front, rear, one side and roof if accessible. Attachments send securely with your quote request.</small>
             </label>
           </div>
 
