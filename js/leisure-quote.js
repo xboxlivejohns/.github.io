@@ -12,7 +12,6 @@
   const scrollBtn = document.querySelector('[data-scroll-to-form]');
   const whatsappSummaryLink = document.querySelector('[data-success-whatsapp]');
   const statusBox = form.querySelector('[data-form-status]');
-  const submitBtn = form.querySelector('[data-submit-btn]');
 
   const vehicleType = form.querySelector('[data-vehicle-type]');
   const lengthBand = form.querySelector('[data-length-band]');
@@ -239,54 +238,24 @@
       });
     }
 
-    form.addEventListener('submit', async (event) => {
-      event.preventDefault();
+    form.addEventListener('submit', (event) => {
       if (!pricingConfig) {
+        event.preventDefault();
+        if (statusBox) {
+          statusBox.textContent = 'Please wait for live pricing to load, then submit again or WhatsApp John on 07468 286651.';
+          statusBox.classList.add('leisure-form__status--error');
+        }
         return;
       }
 
+      if (!currentEstimate) {
+        updateEstimate();
+      }
+
       if (statusBox) {
-        statusBox.textContent = 'Submitting…';
+        statusBox.textContent = 'Submitting securely…';
         statusBox.classList.remove('leisure-form__status--error');
         statusBox.classList.remove('leisure-form__status--success');
-      }
-      if (submitBtn) {
-        submitBtn.disabled = true;
-      }
-
-      const formData = new FormData(form);
-      if (currentEstimate) {
-        formData.set('estimate_total_pence', String(currentEstimate.quote.total_pence));
-        formData.set('estimate_breakdown', JSON.stringify({
-          items: currentEstimate.quote.items,
-          selection: currentEstimate.state,
-        }));
-      }
-
-      try {
-        const response = await fetch('/api/quotes/leisure', {
-          method: 'POST',
-          body: formData,
-        });
-
-        if (!response.ok) {
-          throw new Error('Request failed');
-        }
-
-        const data = await response.json().catch(() => ({}));
-        if (statusBox) {
-          statusBox.textContent = data.message || 'Thanks! We have your leisure quote request. Tap WhatsApp to follow up instantly.';
-          statusBox.classList.add('leisure-form__status--success');
-        }
-      } catch (error) {
-        if (statusBox) {
-          statusBox.textContent = 'Something went wrong sending the quote. Please WhatsApp John on 07468 286651 with your selections.';
-          statusBox.classList.add('leisure-form__status--error');
-        }
-      } finally {
-        if (submitBtn) {
-          submitBtn.disabled = false;
-        }
       }
     });
   };
