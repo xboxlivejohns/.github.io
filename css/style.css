@@ -1249,3 +1249,19 @@ a:hover { text-decoration:underline; }
     height: 180px;
   }
 }
+
+/* Screenreader-only text (accessibility) */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Social list styling */
+.social-list{display:flex;gap:.6rem;list-style:none;margin:1rem 0;padding:0}
+.social-list li{display:block}
+.social-list a{display:inline-flex;align-items:center;justify-content:center;border:1px solid #e5e7eb;border-radius:10px;padding:.35rem;background:#fff;text-decoration:none}
+.social-list a:hover{border-color:var(--accent, #111)}
+.social-list .i.social{width:22px;height:22px}
+
+/* Optional: dark mode polish */
+@media (prefers-color-scheme: dark){
+  .social-list a{background:#111;border-color:#2a2a2a}
+}
+
