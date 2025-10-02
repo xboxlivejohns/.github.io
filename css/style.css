@@ -84,6 +84,14 @@ p {
 .nav-item--has-submenu.submenu-open .nav-submenu { display:flex; }
 
 @media (min-width:981px) {
+  .nav-item--has-submenu::after {
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    top:100%;
+    height:14px;
+  }
   .nav-item--has-submenu:hover .nav-submenu,
   .nav-item--has-submenu:focus-within .nav-submenu {
     display:flex;
