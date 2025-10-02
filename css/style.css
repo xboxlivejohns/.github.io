@@ -72,6 +72,23 @@ p {
 .main-nav { display:flex; gap:14px; align-items:center; }
 .main-nav a { font-size:0.95rem; padding:6px 8px; border-radius:6px; color:inherit; text-decoration:none; }
 .main-nav a:hover, .nav-link.nav-active { color: var(--brand-gold); }
+.nav-item--has-submenu { position:relative; display:flex; align-items:center; gap:6px; }
+.nav-item-trigger { display:flex; align-items:center; gap:4px; }
+.nav-link--services { display:inline-flex; align-items:center; gap:6px; }
+.nav-submenu-toggle { display:none; background:none; border:0; color:inherit; padding:4px; border-radius:6px; cursor:pointer; line-height:1; transition:color .15s ease, transform .2s ease; }
+.nav-submenu-toggle:hover, .nav-submenu-toggle:focus-visible { color:var(--brand-gold); outline:none; }
+.nav-submenu-toggle-icon { font-size:0.75rem; transition:transform .2s ease; }
+.nav-item--has-submenu.submenu-open .nav-submenu-toggle-icon { transform:rotate(180deg); }
+.nav-submenu { display:none; position:absolute; top:calc(100% + 10px); left:0; background:rgba(15,23,42,0.96); border-radius:12px; border:1px solid rgba(148,163,184,0.25); box-shadow:0 18px 40px rgba(15,23,42,0.4); padding:14px 16px; min-width:220px; flex-direction:column; gap:6px; z-index:70; }
+.nav-submenu .nav-link { white-space:nowrap; display:block; }
+.nav-item--has-submenu.submenu-open .nav-submenu { display:flex; }
+
+@media (min-width:981px) {
+  .nav-item--has-submenu:hover .nav-submenu,
+  .nav-item--has-submenu:focus-within .nav-submenu {
+    display:flex;
+  }
+}
 .nav-cta { background:var(--brand-gold); color:#111827; padding:8px 12px; border-radius:8px; box-shadow:0 12px 28px rgba(250,204,21,0.3); }
 .mobile-toggle { display:none; background:none; border:0; font-size:1.3rem; padding:8px; color:var(--text-inverse); }
 
@@ -584,6 +601,10 @@ p {
   .cards { grid-template-columns:1fr; }
   .grid-3 { grid-template-columns:1fr; }
   .main-nav { display:none; }
+  .nav-item--has-submenu { width:100%; }
+  .nav-item-trigger { width:100%; gap:8px; }
+  .nav-link--services { flex:1; justify-content:flex-start; }
+  .nav-submenu-toggle { display:inline-flex; align-items:center; justify-content:center; font-size:0.85rem; }
   .mobile-toggle { display:block; }
   .brand-logo { width:48px; height:48px; }
   .hero { padding:22px; }
@@ -601,6 +622,48 @@ p {
   background: var(--brand-dark); flex-direction:column; padding:18px;
   box-shadow:0 10px 30px rgba(15,23,42,0.55); z-index:60;
   border-top:1px solid rgba(148,163,184,0.3);
+}
+
+.main-nav.nav-open .nav-item--has-submenu {
+  flex-direction:column;
+  align-items:stretch;
+  gap:6px;
+}
+
+.main-nav.nav-open .nav-item-trigger {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.main-nav.nav-open .nav-submenu-toggle {
+  display:inline-flex;
+}
+
+.main-nav.nav-open .nav-submenu {
+  position:static;
+  background:transparent;
+  border:0;
+  box-shadow:none;
+  padding:0 0 0 12px;
+  margin:0;
+  border-left:2px solid rgba(148,163,184,0.35);
+  display:none;
+  gap:4px;
+}
+
+.main-nav.nav-open .nav-item--has-submenu.submenu-open .nav-submenu {
+  display:flex;
+}
+
+.main-nav.nav-open .nav-submenu .nav-link {
+  padding:6px 4px;
+  border-radius:6px;
+}
+
+.main-nav.nav-open .nav-submenu .nav-link:hover {
+  background:rgba(148,163,184,0.16);
 }
 
 /* --- Leisure (Caravan & Motorhome) page --- */
