@@ -2,24 +2,74 @@
 layout: default
 title: Contact
 ---
-<section class="max-w-3xl mx-auto px-6 py-20 space-y-12">
-  <header class="space-y-4">
-    <h1 class="text-3xl sm:text-4xl font-bold">Book Your Detail</h1>
-    <p class="text-slate-400">Tell us about your vehicle, preferred package, and any upgrades such as ceramic coatings. We aim to confirm appointments within 24 hours.</p>
+<section class="max-w-5xl mx-auto px-6 py-20 space-y-16">
+  <header class="space-y-5 text-center">
+    <p class="text-primary uppercase tracking-[0.4em] text-xs">Contact</p>
+    <h1 class="text-3xl sm:text-4xl font-bold">Book your Polished and Pristine detailing experience</h1>
+    <p class="text-slate-400 max-w-2xl mx-auto">Tell us about your vehicle, the service you're interested in, and where you're based. We'll confirm availability and provide a clear, no-obligation quote.</p>
   </header>
-  <form class="bg-slate-900/40 border border-slate-800 rounded-2xl p-8 space-y-6">
-    <div>
-      <label class="block text-sm font-semibold text-slate-300 mb-2" for="name">Name</label>
-      <input class="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 focus:outline-none focus:border-primary" id="name" type="text" placeholder="Your name">
-    </div>
-    <div>
-      <label class="block text-sm font-semibold text-slate-300 mb-2" for="email">Email</label>
-      <input class="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 focus:outline-none focus:border-primary" id="email" type="email" placeholder="you@example.com">
-    </div>
-    <div>
-      <label class="block text-sm font-semibold text-slate-300 mb-2" for="message">Vehicle & service details</label>
-      <textarea class="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 focus:outline-none focus:border-primary" id="message" rows="5" placeholder="Vehicle make/model, service tier, preferred dates"></textarea>
-    </div>
-    <button type="submit" class="bg-primary text-slate-900 font-semibold px-6 py-3 rounded-full hover:bg-sky-300 transition">Send message</button>
-  </form>
+
+  <div class="grid gap-12 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
+    <form class="bg-slate-900/40 border border-slate-800 rounded-3xl p-8 space-y-6">
+      <div>
+        <label class="block text-sm font-semibold text-slate-300 mb-2" for="name">Name</label>
+        <input class="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 focus:outline-none focus:border-primary" id="name" type="text" placeholder="Your name">
+      </div>
+      <div class="grid gap-6 md:grid-cols-2">
+        <div>
+          <label class="block text-sm font-semibold text-slate-300 mb-2" for="email">Email</label>
+          <input class="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 focus:outline-none focus:border-primary" id="email" type="email" placeholder="you@example.com">
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-slate-300 mb-2" for="phone">Phone</label>
+          <input class="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 focus:outline-none focus:border-primary" id="phone" type="tel" placeholder="07353 761525">
+        </div>
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-slate-300 mb-2" for="location">Location</label>
+        <input class="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 focus:outline-none focus:border-primary" id="location" type="text" placeholder="Town / Postcode within 15 miles of Darlington">
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-slate-300 mb-2" for="service">Service required</label>
+        <select class="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 focus:outline-none focus:border-primary" id="service">
+          <option>Express Detail</option>
+          <option>Full Exterior Detail</option>
+          <option>Deep Interior Detail</option>
+          <option>Paint Correction</option>
+          <option>Ceramic Coating</option>
+          <option>Headlight Restoration</option>
+          <option>Engine Bay Detailing</option>
+          <option>Fleet / Business Service</option>
+          <option>Other / Not sure</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-slate-300 mb-2" for="message">Vehicle & service details</label>
+        <textarea class="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 focus:outline-none focus:border-primary" id="message" rows="6" placeholder="Vehicle make/model, condition, preferred dates, special requests"></textarea>
+      </div>
+      <button type="submit" class="bg-primary text-slate-900 font-semibold px-6 py-3 rounded-full hover:bg-sky-300 transition">Send message</button>
+      <p class="text-xs text-slate-500">We aim to respond within the same day. For urgent bookings, call us directly on <a href="tel:+447353761525" class="text-primary font-semibold">07353 761525</a>.</p>
+    </form>
+
+    <aside class="space-y-8">
+      <div class="bg-slate-900/40 border border-slate-800 rounded-3xl p-8 space-y-4">
+        <h2 class="text-xl font-semibold text-primary">Direct contact</h2>
+        <p class="text-slate-300 font-semibold text-lg"><a href="tel:+447353761525" class="hover:text-primary transition">07353 761525</a></p>
+        <p class="text-slate-400"><a href="mailto:hello@polishedandpristine.co.uk" class="hover:text-primary transition">hello@polishedandpristine.co.uk</a></p>
+        <p class="text-slate-400">Available Monday–Saturday with flexible evening appointments on request.</p>
+      </div>
+      <div class="bg-slate-900/40 border border-slate-800 rounded-3xl p-8 space-y-4">
+        <h2 class="text-xl font-semibold text-primary">Areas we cover</h2>
+        <p class="text-slate-400 text-sm">We operate a fully mobile service across a 15-mile radius of Darlington, including:</p>
+        <ul class="space-y-2 text-slate-400 text-sm">
+          <li>Darlington, Newton Aycliffe, Bishop Auckland</li>
+          <li>Stockton-on-Tees, Middlesbrough, Thornaby</li>
+          <li>Yarm, Eaglescliffe, Sedgefield, Ferryhill</li>
+          <li>Shildon, Spennymoor, Richmond, Northallerton</li>
+          <li>All surrounding County Durham & North Yorkshire villages</li>
+        </ul>
+        <p class="text-slate-500 text-xs">Not sure if you're in range? Send your postcode and we'll confirm right away.</p>
+      </div>
+    </aside>
+  </div>
 </section>
