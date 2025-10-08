@@ -9,70 +9,66 @@ title: Services
     <p class="text-slate-400 max-w-3xl mx-auto">From maintenance details to multi-stage paint correction, {{ site.name }} offers handcrafted packages that restore, protect, and enhance your vehicle inside and out.</p>
   </header>
 
-  <div class="grid gap-10 md:grid-cols-2">
-    <article class="bg-slate-900/40 border border-slate-800 rounded-2xl p-8 space-y-4">
-      <h2 class="text-2xl font-semibold text-primary">Express Detail</h2>
-      <p class="text-slate-400">Ideal between full details to keep your car looking fresh.</p>
-      <ul class="list-disc list-inside text-slate-500 space-y-1">
-        <li>Thorough exterior hand wash using safe methods</li>
-        <li>Wheel faces, tyres, and arches cleaned and dressed</li>
-        <li>Interior vacuum, wipe down, and touch-point sanitising</li>
-        <li>Windows cleaned inside and out</li>
-        <li>Quick protective wax application</li>
-      </ul>
+  <div class="space-y-16">
+    <article id="ceramic-coating" class="grid gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] bg-slate-900/40 border border-slate-800 rounded-3xl p-10">
+      <div class="space-y-5">
+        <h2 class="text-3xl font-semibold text-primary">Ceramic Coating</h2>
+        <p class="text-slate-400">Long-lasting, professional-grade ceramic coatings that lock in a deep gloss finish while shielding your vehicle from the North East climate.</p>
+        <ul class="space-y-3 text-slate-400">
+          <li><strong class="text-slate-100">Benefits:</strong> High-gloss, hydrophobic finish repels grime, road salt, and UV exposure for easier maintenance.</li>
+          <li><strong class="text-slate-100">Process:</strong> We complete full decontamination, machine refine the paintwork, and apply multi-layer coatings to paint, trims, and wheel faces.</li>
+          <li><strong class="text-slate-100">Durability:</strong> Professional coatings lasting up to 5 years with annual inspections available for maximum protection.</li>
+        </ul>
+      </div>
+      <div class="space-y-6">
+        <div class="grid grid-cols-2 gap-4">
+          <img src="{{ '/images/ceramic-black-back.jpg' | relative_url }}" alt="Glossy black SUV rear after ceramic coating" class="rounded-2xl object-cover h-40 w-full">
+          <img src="{{ '/images/ceramic-black-back-right.jpg' | relative_url }}" alt="Detailed view of ceramic-coated panels" class="rounded-2xl object-cover h-40 w-full">
+          <img src="{{ '/images/ceramic-black-left.jpg' | relative_url }}" alt="Ceramic coated side profile reflecting sky" class="rounded-2xl object-cover h-40 w-full">
+          <img src="{{ '/images/ceramic-blue-bmw-back.jpg' | relative_url }}" alt="Blue BMW showing ceramic gloss" class="rounded-2xl object-cover h-40 w-full">
+        </div>
+        <a href="{{ '/contact.html' | relative_url }}" class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 font-semibold text-slate-900 hover:bg-sky-300 transition">Request Quote</a>
+      </div>
     </article>
-    <article class="bg-slate-900/40 border border-slate-800 rounded-2xl p-8 space-y-4">
-      <h2 class="text-2xl font-semibold text-primary">Full Exterior Detail</h2>
-      <p class="text-slate-400">Comprehensive exterior treatment for maximum gloss and protection.</p>
-      <ul class="list-disc list-inside text-slate-500 space-y-1">
-        <li>Safe wash with premium shampoos and snow foam</li>
-        <li>Full decontamination including clay bar and fallout removal</li>
-        <li>Machine polish to eliminate swirls and light scratches</li>
-        <li>Premium wax or sealant, plus wheel ceramic coating</li>
-        <li>Trim revival, tyre dressing, and hydrophobic glass treatment</li>
-      </ul>
+
+    <article id="interior-detailing" class="grid gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] bg-slate-900/40 border border-slate-800 rounded-3xl p-10">
+      <div class="space-y-5">
+        <h2 class="text-3xl font-semibold text-primary">Interior Detailing</h2>
+        <p class="text-slate-400">Revive and protect every surface with deep-cleaning treatments that leave your cabin fresh, sanitised, and inviting.</p>
+        <ul class="space-y-3 text-slate-400">
+          <li><strong class="text-slate-100">Benefits:</strong> Eliminate odours, allergens, and staining while restoring luxurious textures on leather, fabric, and trims.</li>
+          <li><strong class="text-slate-100">Process:</strong> Comprehensive vacuuming, steam cleaning, fabric and leather shampooing, plus meticulous detailing of vents, dashboards, and touch points.</li>
+          <li><strong class="text-slate-100">Durability:</strong> Interior protectants guard against spills, UV fading, and dye transfer for months of daily comfort.</li>
+        </ul>
+      </div>
+      <div class="space-y-6">
+        <div class="grid grid-cols-2 gap-4">
+          <img src="{{ '/images/carpet-stripes-detailing.jpg' | relative_url }}" alt="Perfect vacuum lines across interior carpet" class="rounded-2xl object-cover h-40 w-full">
+          <img src="{{ '/images/detailing-interior-lines.jpg' | relative_url }}" alt="Detailed seats and carpets after interior detail" class="rounded-2xl object-cover h-40 w-full">
+          <img src="{{ '/images/seat-clean-before.jpg' | relative_url }}" alt="Seat prior to deep interior cleaning" class="rounded-2xl object-cover h-40 w-full">
+          <img src="{{ '/images/seat-clean-after.jpg' | relative_url }}" alt="Seat following deep interior detailing" class="rounded-2xl object-cover h-40 w-full">
+        </div>
+        <a href="{{ '/contact.html' | relative_url }}" class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 font-semibold text-slate-900 hover:bg-sky-300 transition">Request Quote</a>
+      </div>
     </article>
-    <article id="deep-interior-detail" class="bg-slate-900/40 border border-slate-800 rounded-2xl p-8 space-y-4">
-      <h2 class="text-2xl font-semibold text-primary">Deep Interior Detail</h2>
-      <p class="text-slate-400">Restore cabin comfort with meticulous cleaning and protection.</p>
-      <ul class="list-disc list-inside text-slate-500 space-y-1">
-        <li>Complete vacuum including boot, vents, and under seats</li>
-        <li>Carpet and upholstery shampooing or steam cleaning</li>
-        <li>Leather cleansing and conditioning</li>
-        <li>Dashboard, trims, and door shuts deep cleaned and protected</li>
-        <li>Odour elimination and UV protection on all surfaces</li>
-      </ul>
-    </article>
-    <article id="paint-correction" class="bg-slate-900/40 border border-slate-800 rounded-2xl p-8 space-y-4">
-      <h2 class="text-2xl font-semibold text-primary">Paint Correction</h2>
-      <p class="text-slate-400">Multi-stage machine polishing to revive clarity and depth.</p>
-      <ul class="list-disc list-inside text-slate-500 space-y-1">
-        <li>Defect assessment under calibrated lighting</li>
-        <li>Cutting and refining stages tailored to paint type</li>
-        <li>Up to 95% swirl and scratch removal</li>
-        <li>Perfect preparation for ceramic coating application</li>
-        <li>Panel wipe and gloss inspection before protection</li>
-      </ul>
-    </article>
-    <article id="ceramic-coating" class="bg-slate-900/40 border border-slate-800 rounded-2xl p-8 space-y-4">
-      <h2 class="text-2xl font-semibold text-primary">Ceramic Coating</h2>
-      <p class="text-slate-400">Professional-grade protection lasting 2–5 years.</p>
-      <ul class="list-disc list-inside text-slate-500 space-y-1">
-        <li>High-gloss, hydrophobic finish that repels dirt and water</li>
-        <li>UV, chemical, and environmental resistance</li>
-        <li>Optional wheel, glass, and trim coating add-ons</li>
-        <li>Easier maintenance with less frequent washing</li>
-      </ul>
-    </article>
-    <article class="bg-slate-900/40 border border-slate-800 rounded-2xl p-8 space-y-4">
-      <h2 class="text-2xl font-semibold text-primary">Specialist Enhancements</h2>
-      <p class="text-slate-400">Finishing touches that elevate safety and presentation.</p>
-      <ul class="list-disc list-inside text-slate-500 space-y-1">
-        <li>Headlight restoration to remove hazing and improve visibility</li>
-        <li>Engine bay detailing with safe degreasing and dressing</li>
-        <li>Convertible roof cleaning and protection</li>
-        <li>Fleet, taxi, and commercial vehicle preparation</li>
-      </ul>
+
+    <article id="paint-correction" class="grid gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] bg-slate-900/40 border border-slate-800 rounded-3xl p-10">
+      <div class="space-y-5">
+        <h2 class="text-3xl font-semibold text-primary">Paint Correction</h2>
+        <p class="text-slate-400">Restore depth, clarity, and mirror reflections with precision machine polishing tailored to your vehicle's finish.</p>
+        <ul class="space-y-3 text-slate-400">
+          <li><strong class="text-slate-100">Benefits:</strong> Remove swirling, light scratches, and oxidation to revive colour accuracy and showroom gloss.</li>
+          <li><strong class="text-slate-100">Process:</strong> Thorough inspection, paint depth readings, and multi-stage correction with finishing polish to refine every panel.</li>
+          <li><strong class="text-slate-100">Durability:</strong> Sealed with premium protection or ceramic coating options to preserve results for the long term.</li>
+        </ul>
+      </div>
+      <div class="space-y-6">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <img src="{{ '/images/paint-correction-before-after-combo.jpg' | relative_url }}" alt="Paint correction before and after results" class="rounded-2xl object-cover h-48 w-full sm:col-span-2">
+          <img src="{{ '/images/ceramic-black-paint.jpg' | relative_url }}" alt="Close-up of refined black paintwork after correction" class="rounded-2xl object-cover h-40 w-full">
+        </div>
+        <a href="{{ '/contact.html' | relative_url }}" class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 font-semibold text-slate-900 hover:bg-sky-300 transition">Request Quote</a>
+      </div>
     </article>
   </div>
 
@@ -88,19 +84,19 @@ title: Services
         <p>Serving Stockton High Street, Castlegate Quay, Norton, Billingham, Thornaby, Ingleby Barwick, and Teesside Riverside with mobile detailing and ceramic protection.</p>
       </div>
       <div class="space-y-3 text-slate-400">
-        <h3 class="text-lg font-semibold text-slate-100">Middlesbrough & Teesside (TS1-TS10)</h3>
+        <h3 class="text-lg font-semibold text-slate-100">Middlesbrough &amp; Teesside (TS1-TS10)</h3>
         <p>Specialists in removing industrial fallout and restoring gloss for Centre Square, Linthorpe, Acklam, Marton, Coulby Newham, and Hemlington.</p>
       </div>
       <div class="space-y-3 text-slate-400">
-        <h3 class="text-lg font-semibold text-slate-100">Newton Aycliffe & Bishop Auckland (DL4-DL5-DL14)</h3>
+        <h3 class="text-lg font-semibold text-slate-100">Newton Aycliffe &amp; Bishop Auckland (DL4-DL5-DL14)</h3>
         <p>Rapid-response mobile detailing for Aycliffe Business Park, School Aycliffe, Heighington, Bishop Auckland town, South Church, West Auckland, and nearby villages.</p>
       </div>
       <div class="space-y-3 text-slate-400">
-        <h3 class="text-lg font-semibold text-slate-100">Yarm & Eaglescliffe (TS15)</h3>
+        <h3 class="text-lg font-semibold text-slate-100">Yarm &amp; Eaglescliffe (TS15)</h3>
         <p>Luxury car detailing along Yarm High Street, Eaglescliffe golf club area, and Georgian residences with premium ceramic and maintenance plans.</p>
       </div>
       <div class="space-y-3 text-slate-400">
-        <h3 class="text-lg font-semibold text-slate-100">Sedgefield, Ferryhill & Tees Valley</h3>
+        <h3 class="text-lg font-semibold text-slate-100">Sedgefield, Ferryhill &amp; Tees Valley</h3>
         <p>Professional valeting for Sedgefield village, Hardwick Park, Ferryhill Station, Spennymoor, Shildon, Richmond, Northallerton, and surrounding towns.</p>
       </div>
     </div>
@@ -111,7 +107,7 @@ title: Services
     <div class="grid gap-8 md:grid-cols-2">
       <ul class="space-y-3 text-slate-400">
         <li><strong class="text-slate-100">Protects your investment:</strong> Maintain paintwork, prevent premature ageing, and boost resale value.</li>
-        <li><strong class="text-slate-100">Health & wellbeing:</strong> Remove allergens, bacteria, and pollutants for a healthier cabin environment.</li>
+        <li><strong class="text-slate-100">Health &amp; wellbeing:</strong> Remove allergens, bacteria, and pollutants for a healthier cabin environment.</li>
         <li><strong class="text-slate-100">Safety first:</strong> Clear windows and headlights improve visibility in adverse conditions.</li>
         <li><strong class="text-slate-100">Prevents damage:</strong> Eliminate contaminants before they permanently mark paint and trim.</li>
         <li><strong class="text-slate-100">Weather protection:</strong> Shield against road salt, rain, and coastal fallout across the North East.</li>
@@ -129,7 +125,7 @@ title: Services
     </div>
   </section>
 
-  <section class="bg-slate-900/40 border border-slate-800 rounded-3xl p-10 space-y-8">
+  <section id="frequently-asked-questions" class="bg-slate-900/40 border border-slate-800 rounded-3xl p-10 space-y-8">
     <div class="space-y-3">
       <h2 class="text-2xl font-semibold text-primary">Frequently asked questions</h2>
       <p class="text-slate-400">Honest answers to the questions we hear most often.</p>
@@ -161,10 +157,4 @@ title: Services
       </div>
     </dl>
   </section>
-
-  <div class="text-center space-y-4">
-    <h2 class="text-3xl font-semibold">Ready to book your detail?</h2>
-    <p class="text-slate-400 max-w-2xl mx-auto">Call 07353 761525 or send us a message with your vehicle make, model, service requirements, and preferred location. We'll provide a clear, no-obligation quote.</p>
-    <a href="{{ '/contact.html' | relative_url }}" class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 font-semibold text-slate-900 hover:bg-sky-300 transition">Start your booking</a>
-  </div>
 </section>
