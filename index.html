@@ -4,11 +4,56 @@ title: Home
 ---
 <section class="max-w-5xl mx-auto px-6 py-24 text-center space-y-6">
   <p class="text-primary uppercase tracking-[0.4em] text-xs">Darlington's Premier Car Detailing Specialists</p>
-  <h1 class="text-4xl sm:text-5xl font-bold">Welcome to {{ site.name }}</h1>
-  <p class="text-slate-400 max-w-2xl mx-auto">Transform your vehicle from ordinary to extraordinary. We deliver professional detailing across Darlington, Stockton, Middlesbrough, Bishop Auckland, Newton Aycliffe, Yarm, and every town and village within a 15-mile radius.</p>
+  <h1 class="text-4xl sm:text-5xl font-bold">Showroom shine, delivered to your driveway</h1>
+  <p class="text-slate-300 max-w-2xl mx-auto">{{ site.name }} provides meticulous mobile detailing, ceramic protection, and interior rejuvenation across the North East so your car looks incredible every time you drive.</p>
   <div class="flex flex-wrap justify-center gap-4">
-    <a href="tel:+447353761525" class="bg-primary text-slate-900 px-6 py-3 rounded-full font-semibold shadow hover:bg-sky-300 transition">📞 Call 07353 761525</a>
-    <a href="{{ '/services.html' | relative_url }}" class="border border-slate-700 px-6 py-3 rounded-full font-semibold hover:border-primary hover:text-primary transition">Discover Our Services</a>
+    <a href="{{ '/services.html' | relative_url }}" class="bg-primary text-slate-900 px-6 py-3 rounded-full font-semibold shadow hover:bg-sky-300 transition">View Services</a>
+    <a href="{{ '/contact.html' | relative_url }}" class="border border-slate-700 px-6 py-3 rounded-full font-semibold hover:border-primary hover:text-primary transition">Get a Quote</a>
+  </div>
+</section>
+
+<section class="max-w-5xl mx-auto px-6 py-16">
+  <div class="grid gap-6 md:grid-cols-3">
+    <article class="bg-slate-900/40 border border-slate-800 rounded-2xl p-6 space-y-2">
+      <h2 class="text-xl font-semibold text-slate-100">Ceramic Coating</h2>
+      <p class="text-slate-400 text-sm">Seal in gloss with 2–5 year protection against UV, grime, and the North East weather.</p>
+      <a href="{{ '/services.html#ceramic-coating' | relative_url }}" class="inline-flex items-center gap-2 text-primary text-sm font-semibold">Learn more<span aria-hidden="true">→</span></a>
+    </article>
+    <article class="bg-slate-900/40 border border-slate-800 rounded-2xl p-6 space-y-2">
+      <h2 class="text-xl font-semibold text-slate-100">Interior Detailing</h2>
+      <p class="text-slate-400 text-sm">Deep clean, sanitise, and protect every surface for a cabin that feels factory-fresh.</p>
+      <a href="{{ '/services.html#deep-interior-detail' | relative_url }}" class="inline-flex items-center gap-2 text-primary text-sm font-semibold">Discover what's included<span aria-hidden="true">→</span></a>
+    </article>
+    <article class="bg-slate-900/40 border border-slate-800 rounded-2xl p-6 space-y-2">
+      <h2 class="text-xl font-semibold text-slate-100">Paint Correction</h2>
+      <p class="text-slate-400 text-sm">Remove swirls, restore clarity, and prepare your paintwork for long-lasting protection.</p>
+      <a href="{{ '/services.html#paint-correction' | relative_url }}" class="inline-flex items-center gap-2 text-primary text-sm font-semibold">See the process<span aria-hidden="true">→</span></a>
+    </article>
+  </div>
+</section>
+
+<section class="bg-slate-900/40 border-y border-slate-800">
+  <div class="max-w-5xl mx-auto px-6 py-20 space-y-6">
+    <div class="grid gap-8 md:grid-cols-2 md:items-center">
+      <figure class="space-y-3">
+        <div class="grid gap-4 md:grid-cols-2 md:gap-6">
+          <div class="relative overflow-hidden rounded-2xl h-64 sm:h-72">
+            <img src="{{ '/assets/images/seat-clean-before.jpg' | relative_url }}" alt="Car seat before detailing with visible stains and dirt" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+            <span class="absolute left-4 top-4 rounded-full bg-slate-900/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-slate-100">Before</span>
+          </div>
+          <div class="relative overflow-hidden rounded-2xl h-64 sm:h-72">
+            <img src="{{ '/assets/images/seat-clean-after.jpg' | relative_url }}" alt="Car seat after detailing, restored to a spotless and even finish" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+            <span class="absolute left-4 top-4 rounded-full bg-primary/90 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-slate-900">After</span>
+          </div>
+        </div>
+        <figcaption class="text-center text-sm text-slate-400">Every inch rejuvenated—from embedded stains to showroom-ready seats.</figcaption>
+      </figure>
+      <div class="space-y-4">
+        <h2 class="text-3xl font-semibold">See the difference professional detailing makes</h2>
+        <p class="text-slate-400">Our meticulous approach tackles stubborn stains, eliminates odours, and revives fabrics without damaging delicate materials. Whether it's a family car or a cherished classic, we restore comfort and confidence in every drive.</p>
+        <a href="{{ '/services.html#deep-interior-detail' | relative_url }}" class="inline-flex items-center gap-2 text-primary font-semibold">Explore interior detailing<span aria-hidden="true">→</span></a>
+      </div>
+    </div>
   </div>
 </section>
 
