@@ -1,0 +1,9 @@
+name: Codex Site
+markdown: kramdown
+theme: null
+plugins: []
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
