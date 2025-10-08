@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className="bg-gray-50 text-slate-900">
+      <body className="bg-paper text-ink">
         <DefaultSeo
           titleTemplate="%s | Detailing Site"
           defaultTitle="Detailing Site"

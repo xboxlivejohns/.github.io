@@ -6,7 +6,17 @@ module.exports = {
     "./app/**/*.{ts,tsx}"
   ],
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        brand: {
+          DEFAULT: "#2563eb",
+          foreground: "#ffffff"
+        },
+        ink: "#111111",
+        paper: "#ffffff",
+        muted: "#6b7280"
+      }
+    }
   },
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")]
 };
