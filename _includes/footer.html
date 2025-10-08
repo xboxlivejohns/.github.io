@@ -1,10 +1,27 @@
-<footer class="border-t border-slate-800 bg-slate-900/80">
-  <div class="max-w-5xl mx-auto px-6 py-8 text-sm text-slate-400 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-    <p>&copy; {{ site.time | date: '%Y' }} {{ site.name }}. All rights reserved.</p>
-    <div class="flex gap-4">
-      <a href="mailto:contact@example.com" class="hover:text-primary transition">Email</a>
-      <a href="#" class="hover:text-primary transition">Twitter</a>
-      <a href="#" class="hover:text-primary transition">LinkedIn</a>
+<footer class="border-t border-slate-800 bg-slate-950/90 backdrop-blur">
+  <div class="max-w-5xl mx-auto px-6 py-10 text-sm text-slate-400 grid gap-8 md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
+    <div class="space-y-4">
+      <div class="space-y-1">
+        <h2 class="text-lg font-semibold text-slate-100">{{ site.name }}</h2>
+        <p class="text-slate-400">Phone: <a href="tel:+441912345678" class="hover:text-primary transition">+44 191 234 5678</a></p>
+        <p class="text-slate-400">Email: <a href="mailto:hello@example.com" class="hover:text-primary transition">hello@example.com</a></p>
+      </div>
+      <p class="text-slate-500 uppercase tracking-[0.3em] text-xs">North East England</p>
+      <p class="text-xs text-slate-500">&copy; {{ site.time | date: '%Y' }} {{ site.name }}. All rights reserved.</p>
+    </div>
+    <div class="space-y-4 md:justify-self-end">
+      <p class="text-slate-300 font-semibold uppercase tracking-wide">Connect</p>
+      <div class="flex items-center gap-3">
+        <a href="#" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-800 bg-slate-900/50 text-slate-400 transition hover:border-primary hover:text-primary" aria-label="Facebook">
+          <span class="text-xs font-semibold">Fb</span>
+        </a>
+        <a href="#" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-800 bg-slate-900/50 text-slate-400 transition hover:border-primary hover:text-primary" aria-label="Instagram">
+          <span class="text-xs font-semibold">Ig</span>
+        </a>
+        <a href="#" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-800 bg-slate-900/50 text-slate-400 transition hover:border-primary hover:text-primary" aria-label="LinkedIn">
+          <span class="text-xs font-semibold">In</span>
+        </a>
+      </div>
     </div>
   </div>
 </footer>
