@@ -4,7 +4,28 @@
       <img src="{{ 'images/logo.png' | relative_url }}" alt="{{ site.name }} logo" class="h-10 w-auto" width="500" height="500" decoding="async">
       <span class="text-xl font-semibold text-white tracking-tight">{{ site.name }}</span>
     </a>
-    <nav class="flex flex-wrap items-center gap-4 text-sm font-medium uppercase tracking-wide text-zinc-400" data-nav>
+    <button
+      type="button"
+      class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:hidden"
+      data-nav-toggle
+      aria-controls="primary-navigation"
+      aria-expanded="false"
+    >
+      <span class="sr-only">Toggle navigation</span>
+      <span aria-hidden="true" class="flex items-center gap-2">
+        <span class="relative block h-3.5 w-4">
+          <span class="absolute inset-x-0 top-0 h-0.5 rounded-full bg-current transition-transform duration-200" data-hamburger-line></span>
+          <span class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 rounded-full bg-current transition-opacity duration-200" data-hamburger-line></span>
+          <span class="absolute inset-x-0 bottom-0 h-0.5 rounded-full bg-current transition-transform duration-200" data-hamburger-line></span>
+        </span>
+        <span aria-hidden="true">Menu</span>
+      </span>
+    </button>
+    <nav
+      id="primary-navigation"
+      class="hidden w-full flex-col items-stretch gap-4 text-sm font-medium uppercase tracking-wide text-zinc-400 md:flex md:w-auto md:flex-row md:flex-wrap md:items-center"
+      data-nav
+    >
       <a class="px-2 py-1 border-b-2 border-transparent transition hover:text-white hover:border-white {% if page.url == '/' %}text-white border-white{% endif %}" href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
       <a class="px-2 py-1 border-b-2 border-transparent transition hover:text-white hover:border-white {% if page.url == '/services.html' %}text-white border-white{% endif %}" href="{{ '/services.html' | relative_url }}" {% if page.url == '/services.html' %}aria-current="page"{% endif %}>Services</a>
       <a class="px-2 py-1 border-b-2 border-transparent transition hover:text-white hover:border-white {% if page.url == '/pricing.html' %}text-white border-white{% endif %}" href="{{ '/pricing.html' | relative_url }}" {% if page.url == '/pricing.html' %}aria-current="page"{% endif %}>Pricing</a>

@@ -49,4 +49,83 @@
   };
 
   window.addEventListener('pagehide', cleanup, { once: true });
+
+  const navToggle = header.querySelector('[data-nav-toggle]');
+  const nav = header.querySelector('[data-nav]');
+
+  if (!navToggle || !nav) {
+    return;
+  }
+
+  const navHiddenClass = 'hidden';
+  const navVisibleClass = 'flex';
+  const navActiveClass = 'is-open';
+  const desktopQuery = window.matchMedia('(min-width: 768px)');
+
+  const isDesktop = () => desktopQuery.matches;
+
+  const openNav = () => {
+    navToggle.setAttribute('aria-expanded', 'true');
+    navToggle.classList.add('is-active');
+    nav.classList.add(navVisibleClass, navActiveClass);
+    nav.classList.remove(navHiddenClass);
+  };
+
+  const closeNav = ({ focusToggle = false } = {}) => {
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.classList.remove('is-active');
+    nav.classList.remove(navActiveClass);
+    if (!isDesktop()) {
+      nav.classList.remove(navVisibleClass);
+      nav.classList.add(navHiddenClass);
+      if (focusToggle) {
+        navToggle.focus();
+      }
+    }
+  };
+
+  navToggle.addEventListener('click', () => {
+    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+    if (expanded) {
+      closeNav();
+    } else {
+      openNav();
+    }
+  });
+
+  nav.addEventListener('click', (event) => {
+    const target = event.target.closest('a[href]');
+    if (!target) return;
+    if (!isDesktop()) {
+      closeNav();
+    }
+  });
+
+  const handleKeydown = (event) => {
+    if (event.key !== 'Escape') return;
+    if (navToggle.getAttribute('aria-expanded') !== 'true') return;
+    if (isDesktop()) return;
+    event.stopPropagation();
+    closeNav({ focusToggle: true });
+  };
+
+  window.addEventListener('keydown', handleKeydown);
+
+  const handleViewportChange = (event) => {
+    if (event.matches) {
+      nav.classList.remove(navHiddenClass, navVisibleClass, navActiveClass);
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.classList.remove('is-active');
+    } else {
+      closeNav();
+    }
+  };
+
+  if (typeof desktopQuery.addEventListener === 'function') {
+    desktopQuery.addEventListener('change', handleViewportChange);
+  } else if (typeof desktopQuery.addListener === 'function') {
+    desktopQuery.addListener(handleViewportChange);
+  }
+
+  handleViewportChange(desktopQuery);
 })();
