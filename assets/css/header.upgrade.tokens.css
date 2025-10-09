@@ -1,11 +1,11 @@
 .header-upgrade{
-  --pp-bg-0:#ffffff;
-  --pp-bg-0-90:rgba(255,255,255,.90);
-  --pp-text-0:#111111;
-  --pp-text-1:#444444;
-  --pp-accent:#000000;
+  --pp-bg-0:#000000;
+  --pp-bg-0-90:rgba(0,0,0,.92);
+  --pp-text-0:#f9fafb;
+  --pp-text-1:#d4d4d8;
+  --pp-accent:#ef4444;
   --pp-accent-contrast:#ffffff;
-  --pp-elev:0 6px 18px rgba(0,0,0,.1);
+  --pp-elev:0 6px 18px rgba(0,0,0,.35);
   --pp-h-desktop:96px;
   --pp-h-condensed:64px;
 }
