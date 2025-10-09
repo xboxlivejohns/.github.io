@@ -136,25 +136,59 @@ canonical_url: /services.html
     </div>
   </section>
 
+  {% assign reviews = site.data.reviews | sort: 'date' | reverse %}
+  {% assign paint_review = reviews | where: 'name', 'Max' | first %}
+  {% assign interior_review = reviews | where: 'name', 'Sheila' | first %}
+  {% assign maintenance_review = reviews | where: 'name', 'Danny' | first %}
   <section class="bg-slate-900/40 border border-slate-800 rounded-3xl p-10 space-y-8">
     <header class="space-y-2 text-center">
       <p class="text-primary uppercase tracking-[0.3em] text-xs">Client Feedback</p>
-      <h2 class="text-3xl font-semibold">Testimonials coming soon</h2>
-      <p class="text-slate-400 max-w-3xl mx-auto">We're inviting recent detailing clients to share their experiences across ceramic coatings, interior rejuvenation, and paint correction. Expect verified ratings and long-form reviews shortly.</p>
+      <h2 class="text-3xl font-semibold">Recent detailing results our clients rave about</h2>
+      <p class="text-slate-400 max-w-3xl mx-auto">Explore a snapshot of verified five-star reviews that highlight how {{ site.name }} delivers on ceramic protection, interior rejuvenation, and paint correction promises.</p>
     </header>
     <div class="grid gap-6 md:grid-cols-3">
-      <article class="rounded-2xl border border-slate-800 bg-slate-950/60 p-6 text-left">
-        <p class="text-slate-300 italic">“Placeholder for a ceramic coating review praising flawless reflections and easy maintenance.”</p>
-        <p class="mt-4 text-sm font-semibold text-slate-500">— Review Pending</p>
+      {% if paint_review %}
+      <article class="rounded-2xl border border-slate-800 bg-slate-950/60 p-6 text-left space-y-4">
+        <div class="flex flex-wrap items-center gap-3">
+          <p class="text-amber-300 text-sm font-semibold tracking-[0.3em]" aria-hidden="true">{% for star in (1..paint_review.rating) %}★{% endfor %}</p>
+          {% if paint_review.display_date %}
+          <p class="text-xs uppercase tracking-[0.3em] text-slate-500">{{ paint_review.display_date }}</p>
+          {% endif %}
+        </div>
+        <p class="text-slate-200 italic leading-relaxed">“{{ paint_review.body }}”</p>
+        <p class="text-sm font-semibold text-slate-400">— {{ paint_review.name }}</p>
+        <p class="text-xs uppercase tracking-[0.25em] text-slate-500">Paint correction brilliance</p>
       </article>
-      <article class="rounded-2xl border border-slate-800 bg-slate-950/60 p-6 text-left">
-        <p class="text-slate-300 italic">“Placeholder for an interior rejuvenation testimonial celebrating fresh fabrics and a hygienic cabin.”</p>
-        <p class="mt-4 text-sm font-semibold text-slate-500">— Review Pending</p>
+      {% endif %}
+      {% if interior_review %}
+      <article class="rounded-2xl border border-slate-800 bg-slate-950/60 p-6 text-left space-y-4">
+        <div class="flex flex-wrap items-center gap-3">
+          <p class="text-amber-300 text-sm font-semibold tracking-[0.3em]" aria-hidden="true">{% for star in (1..interior_review.rating) %}★{% endfor %}</p>
+          {% if interior_review.display_date %}
+          <p class="text-xs uppercase tracking-[0.3em] text-slate-500">{{ interior_review.display_date }}</p>
+          {% endif %}
+        </div>
+        <p class="text-slate-200 italic leading-relaxed">“{{ interior_review.body }}”</p>
+        <p class="text-sm font-semibold text-slate-400">— {{ interior_review.name }}</p>
+        <p class="text-xs uppercase tracking-[0.25em] text-slate-500">Interior rejuvenation</p>
       </article>
-      <article class="rounded-2xl border border-slate-800 bg-slate-950/60 p-6 text-left">
-        <p class="text-slate-300 italic">“Placeholder for a paint correction rating highlighting swirl removal and restored clarity.”</p>
-        <p class="mt-4 text-sm font-semibold text-slate-500">— Review Pending</p>
+      {% endif %}
+      {% if maintenance_review %}
+      <article class="rounded-2xl border border-slate-800 bg-slate-950/60 p-6 text-left space-y-4">
+        <div class="flex flex-wrap items-center gap-3">
+          <p class="text-amber-300 text-sm font-semibold tracking-[0.3em]" aria-hidden="true">{% for star in (1..maintenance_review.rating) %}★{% endfor %}</p>
+          {% if maintenance_review.display_date %}
+          <p class="text-xs uppercase tracking-[0.3em] text-slate-500">{{ maintenance_review.display_date }}</p>
+          {% endif %}
+        </div>
+        <p class="text-slate-200 italic leading-relaxed">“{{ maintenance_review.body }}”</p>
+        <p class="text-sm font-semibold text-slate-400">— {{ maintenance_review.name }}</p>
+        <p class="text-xs uppercase tracking-[0.25em] text-slate-500">Maintenance &amp; ongoing care</p>
       </article>
+      {% endif %}
+    </div>
+    <div class="text-center">
+      <a href="{{ '/index.html#reviews' | relative_url }}" class="inline-flex items-center gap-2 text-primary font-semibold">Read every five-star review<span aria-hidden="true">→</span></a>
     </div>
   </section>
 
