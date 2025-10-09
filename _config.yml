@@ -1,6 +1,8 @@
 name: Polished and Pristine
 markdown: kramdown
 theme: null
+url: https://polishedandpristine.co.uk
+description: Mobile car detailing, paint correction, and ceramic coating specialists serving Darlington and the wider North East of England.
 plugins: []
 exclude:
   - Gemfile

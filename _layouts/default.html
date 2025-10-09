@@ -3,7 +3,34 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ page.title | default: site.name }}</title>
+    {% assign meta_title = page.meta_title | default: page.title | default: site.name %}
+    <title>{{ meta_title }}</title>
+    {% assign meta_description = page.meta_description | default: site.meta_description | default: site.description %}
+    {% if meta_description %}
+    <meta name="description" content="{{ meta_description | strip }}">
+    {% endif %}
+    {% if site.url %}
+    {% assign canonical_url = page.canonical_url | default: page.url | absolute_url %}
+    <link rel="canonical" href="{{ canonical_url }}">
+    {% endif %}
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:type" content="{{ page.og_type | default: 'website' }}">
+    <meta property="og:title" content="{{ meta_title }}">
+    {% if meta_description %}
+    <meta property="og:description" content="{{ meta_description | strip }}">
+    {% endif %}
+    {% if site.url %}
+    <meta property="og:url" content="{{ canonical_url }}">
+    {% endif %}
+    {% assign og_image = page.og_image | default: '/images/logo.png' %}
+    <meta property="og:image" content="{{ og_image | absolute_url }}">
+    <meta name="twitter:card" content="{{ page.twitter_card | default: 'summary_large_image' }}">
+    <meta name="twitter:title" content="{{ meta_title }}">
+    {% if meta_description %}
+    <meta name="twitter:description" content="{{ meta_description | strip }}">
+    {% endif %}
+    <meta name="twitter:image" content="{{ og_image | absolute_url }}">
+    <meta property="og:locale" content="en_GB">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -25,9 +52,7 @@
   <body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col">
     {% include header.html %}
     <main class="flex-1">
-      <div class="max-w-5xl mx-auto w-full px-6 py-12">
-        {{ content }}
-      </div>
+      {{ content }}
     </main>
     {% include footer.html %}
   </body>
