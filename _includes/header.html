@@ -1,16 +1,16 @@
-<header class="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/80 backdrop-blur">
+<header class="sticky top-0 z-50 border-b border-zinc-800 bg-black/80 backdrop-blur">
   <div class="max-w-5xl mx-auto px-6 py-4 flex flex-wrap items-center gap-6 justify-between">
     <a href="{{ '/' | relative_url }}" class="flex items-center gap-3 text-left">
       <img src="{{ 'images/logo.png' | relative_url }}" alt="{{ site.name }} logo" class="h-10 w-auto" width="500" height="500" decoding="async">
-      <span class="text-xl font-semibold text-primary tracking-tight">{{ site.name }}</span>
+      <span class="text-xl font-semibold text-white tracking-tight">{{ site.name }}</span>
     </a>
-    <nav class="flex flex-wrap items-center gap-4 text-sm font-medium uppercase tracking-wide">
-      <a class="px-2 py-1 border-b-2 border-transparent transition hover:text-primary hover:border-primary {% if page.url == '/' %}text-primary border-primary{% endif %}" href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
-      <a class="px-2 py-1 border-b-2 border-transparent transition hover:text-primary hover:border-primary {% if page.url == '/services.html' %}text-primary border-primary{% endif %}" href="{{ '/services.html' | relative_url }}" {% if page.url == '/services.html' %}aria-current="page"{% endif %}>Services</a>
-      <a class="px-2 py-1 border-b-2 border-transparent transition hover:text-primary hover:border-primary {% if page.url == '/pricing.html' %}text-primary border-primary{% endif %}" href="{{ '/pricing.html' | relative_url }}" {% if page.url == '/pricing.html' %}aria-current="page"{% endif %}>Pricing</a>
-      <a class="px-2 py-1 border-b-2 border-transparent transition hover:text-primary hover:border-primary {% if page.url == '/about.html' %}text-primary border-primary{% endif %}" href="{{ '/about.html' | relative_url }}" {% if page.url == '/about.html' %}aria-current="page"{% endif %}>About</a>
-      <a class="px-2 py-1 border-b-2 border-transparent transition hover:text-primary hover:border-primary {% if page.url == '/contact.html' %}text-primary border-primary{% endif %}" href="{{ '/contact.html' | relative_url }}" {% if page.url == '/contact.html' %}aria-current="page"{% endif %}>Contact</a>
-      <a class="ml-2 inline-flex items-center rounded-full bg-accent px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white shadow-lg shadow-accent/30 transition hover:bg-accent/90" href="{{ '/contact.html' | relative_url }}">Book Now</a>
+    <nav class="flex flex-wrap items-center gap-4 text-sm font-medium uppercase tracking-wide text-zinc-400">
+      <a class="px-2 py-1 border-b-2 border-transparent transition hover:text-white hover:border-white {% if page.url == '/' %}text-white border-white{% endif %}" href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
+      <a class="px-2 py-1 border-b-2 border-transparent transition hover:text-white hover:border-white {% if page.url == '/services.html' %}text-white border-white{% endif %}" href="{{ '/services.html' | relative_url }}" {% if page.url == '/services.html' %}aria-current="page"{% endif %}>Services</a>
+      <a class="px-2 py-1 border-b-2 border-transparent transition hover:text-white hover:border-white {% if page.url == '/pricing.html' %}text-white border-white{% endif %}" href="{{ '/pricing.html' | relative_url }}" {% if page.url == '/pricing.html' %}aria-current="page"{% endif %}>Pricing</a>
+      <a class="px-2 py-1 border-b-2 border-transparent transition hover:text-white hover:border-white {% if page.url == '/about.html' %}text-white border-white{% endif %}" href="{{ '/about.html' | relative_url }}" {% if page.url == '/about.html' %}aria-current="page"{% endif %}>About</a>
+      <a class="px-2 py-1 border-b-2 border-transparent transition hover:text-white hover:border-white {% if page.url == '/contact.html' %}text-white border-white{% endif %}" href="{{ '/contact.html' | relative_url }}" {% if page.url == '/contact.html' %}aria-current="page"{% endif %}>Contact</a>
+      <a class="ml-2 inline-flex items-center rounded-full bg-accent px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white shadow-lg shadow-accent/30 transition hover:bg-accent/80" href="{{ '/contact.html' | relative_url }}">Book Now</a>
     </nav>
   </div>
 </header>
