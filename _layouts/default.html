@@ -31,6 +31,12 @@
     {% endif %}
     <meta name="twitter:image" content="{{ og_image | absolute_url }}">
     <meta property="og:locale" content="en_GB">
+    <meta name="theme-color" content="#ef4444">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/images/favicon-32x32.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/images/favicon-16x16.png' | relative_url }}">
+    <link rel="icon" href="{{ '/images/favicon.ico' | relative_url }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/apple-touch-icon.png' | relative_url }}">
+    <link rel="manifest" href="{{ '/manifest.json' | relative_url }}">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
