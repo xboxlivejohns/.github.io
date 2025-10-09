@@ -51,24 +51,28 @@ twitter_card: summary_large_image
 </section>
 
 <section class="max-w-5xl mx-auto px-6 py-20 space-y-10">
+  {% assign reviews = site.data.reviews | sort: 'date' | reverse %}
   <header class="space-y-3 text-center">
     <p class="text-primary uppercase tracking-[0.3em] text-xs">Testimonials</p>
-    <h2 class="text-3xl sm:text-4xl font-bold">Real reviews arriving soon</h2>
-    <p class="text-slate-400 max-w-3xl mx-auto">We're gathering detailed stories from recent ceramic coating, interior rejuvenation, and paint correction clients. Check back shortly to read how {{ site.name }} keeps vehicles immaculate across the North East.</p>
+    <h2 class="text-3xl sm:text-4xl font-bold">Verified five-star detailing reviews</h2>
+    <p class="text-slate-400 max-w-3xl mx-auto">Read what drivers across the North East share after trusting {{ site.name }} with ceramic coatings, interior rejuvenation, and paint correction. Every story below is a genuine 5★ client review.</p>
   </header>
-  <div class="grid gap-6 md:grid-cols-3">
-    <article class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6 text-left">
-      <p class="text-slate-300 italic">“Placeholder for a five-star ceramic coating review highlighting unbeatable gloss and long-term protection.”</p>
-      <p class="mt-4 text-sm font-semibold text-slate-500">— Upcoming Client Story</p>
+  <div class="grid gap-6 md:grid-cols-2">
+    {% for review in reviews %}
+    <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 text-left space-y-4">
+      <div class="flex flex-wrap items-center gap-3">
+        <p class="text-amber-300 text-sm font-semibold tracking-[0.3em]" aria-hidden="true">
+          {% for star in (1..review.rating) %}★{% endfor %}
+        </p>
+        <span class="sr-only">Rated {{ review.rating }} out of 5 stars</span>
+        {% if review.display_date %}
+        <p class="text-xs uppercase tracking-[0.3em] text-slate-500">{{ review.display_date }}</p>
+        {% endif %}
+      </div>
+      <p class="text-slate-200 italic leading-relaxed">“{{ review.body }}”</p>
+      <p class="text-sm font-semibold text-slate-400">— {{ review.name }}</p>
     </article>
-    <article class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6 text-left">
-      <p class="text-slate-300 italic">“Placeholder for an interior detail testimonial praising fresh fabrics, allergen removal, and meticulous care.”</p>
-      <p class="mt-4 text-sm font-semibold text-slate-500">— Upcoming Client Story</p>
-    </article>
-    <article class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6 text-left">
-      <p class="text-slate-300 italic">“Placeholder for a paint correction rating sharing how swirl marks disappeared and clarity returned.”</p>
-      <p class="mt-4 text-sm font-semibold text-slate-500">— Upcoming Client Story</p>
-    </article>
+    {% endfor %}
   </div>
 </section>
 
