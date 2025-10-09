@@ -1,10 +1,15 @@
 ---
 layout: default
 title: Home
+meta_title: Car Detailing North East England | Polished and Pristine
+meta_description: Mobile car detailing in Darlington delivering paint correction, ceramic coatings, and interior rejuvenation across North East England.
+og_type: website
+og_image: /images/ceramic-shine-blue-bmw.jpg
+twitter_card: summary_large_image
 ---
 <section class="max-w-5xl mx-auto px-6 py-24 text-center space-y-6">
   <p class="text-primary uppercase tracking-[0.4em] text-xs">Darlington's Premier Car Detailing Specialists</p>
-  <h1 class="text-4xl sm:text-5xl font-bold">Showroom shine, delivered to your driveway</h1>
+  <h1 class="text-4xl sm:text-5xl font-bold">Car Detailing North East England, delivered to your driveway</h1>
   <p class="text-slate-300 max-w-2xl mx-auto">{{ site.name }} provides meticulous mobile detailing, ceramic protection, and interior rejuvenation across the North East so your car looks incredible every time you drive.</p>
   <div class="flex flex-wrap justify-center gap-4">
     <a href="{{ '/services.html' | relative_url }}" class="bg-primary text-slate-900 px-6 py-3 rounded-full font-semibold shadow hover:bg-sky-300 transition">View Services</a>
@@ -32,17 +37,25 @@ title: Home
   </div>
 </section>
 
+<section class="max-w-4xl mx-auto px-6 py-12">
+  <div class="rounded-3xl border border-slate-800 bg-slate-900/40 p-8 space-y-4 text-center">
+    <p class="text-primary uppercase tracking-[0.3em] text-xs">Service Area</p>
+    <h2 class="text-2xl sm:text-3xl font-semibold">Darlington hub serving Car Detailing across North East England</h2>
+    <p class="text-slate-400">Our mobile detailing team travels throughout County Durham, Teesside, and North Yorkshire. Learn more about our story and capabilities on the <a href="{{ '/about.html' | relative_url }}" class="text-primary font-semibold">About page</a>.</p>
+  </div>
+</section>
+
 <section class="bg-slate-900/40 border-y border-slate-800">
   <div class="max-w-5xl mx-auto px-6 py-20 space-y-6">
     <div class="grid gap-8 md:grid-cols-2 md:items-center">
       <figure class="space-y-3">
         <div class="grid gap-4 md:grid-cols-2 md:gap-6">
           <div class="relative overflow-hidden rounded-2xl h-64 sm:h-72">
-            <img src="{{ '/assets/images/seat-clean-before.jpg' | relative_url }}" alt="Car seat before detailing with visible stains and dirt" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+            <img src="{{ '/images/seat-clean-before.jpg' | relative_url }}" alt="Car seat before detailing with visible stains and dirt" loading="lazy" decoding="async" width="2000" height="1000" class="absolute inset-0 h-full w-full object-cover" />
             <span class="absolute left-4 top-4 rounded-full bg-slate-900/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-slate-100">Before</span>
           </div>
           <div class="relative overflow-hidden rounded-2xl h-64 sm:h-72">
-            <img src="{{ '/assets/images/seat-clean-after.jpg' | relative_url }}" alt="Car seat after detailing, restored to a spotless and even finish" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+            <img src="{{ '/images/seat-clean-after.jpg' | relative_url }}" alt="Car seat after detailing, restored to a spotless and even finish" loading="lazy" decoding="async" width="2000" height="1000" class="absolute inset-0 h-full w-full object-cover" />
             <span class="absolute left-4 top-4 rounded-full bg-primary/90 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-slate-900">After</span>
           </div>
         </div>
@@ -265,3 +278,30 @@ title: Home
   <h2 class="text-sm font-semibold text-slate-300 uppercase tracking-[0.3em]">Popular searches</h2>
   <p>Car detailing Darlington, mobile valeting Stockton-on-Tees, ceramic coating Middlesbrough, paint correction North East, car valeting Bishop Auckland, professional car detailing Newton Aycliffe, auto detailing Yarm, vehicle detailing County Durham, car cleaning service Teesside, mobile car wash Sedgefield, interior car cleaning Darlington, leather seat cleaning Stockton, headlight restoration Middlesbrough, engine bay cleaning, swirl mark removal North East, paint protection Tees Valley, car detailer near me, best car detailing Darlington, luxury car detailing Yarm, professional valeting Bishop Auckland, car detailing near me DL1 DL2 DL3, mobile detailing TS postcodes.</p>
 </section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Polished and Pristine",
+  "url": "https://polishedandpristine.co.uk",
+  "image": "https://polishedandpristine.co.uk/images/logo.png",
+  "telephone": "+44 7353 761525",
+  "email": "hello@polishedandpristine.co.uk",
+  "priceRange": "££",
+  "description": "Mobile car detailing, paint correction, and ceramic coatings for Darlington and the wider North East of England.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Unit 12 Morton Park Way",
+    "addressLocality": "Darlington",
+    "addressRegion": "County Durham",
+    "postalCode": "DL1 4PJ",
+    "addressCountry": "GB"
+  },
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "North East England"
+  },
+  "openingHours": "Mo-Sa 08:00-18:00"
+}
+</script>

@@ -1,55 +1,67 @@
 ---
 layout: default
 title: Contact
+meta_title: Contact Polished and Pristine | Car Detailing Darlington
+meta_description: Request a quote for mobile car detailing, paint correction, or ceramic coatings in Darlington and North East England using our secure contact form.
+og_type: article
+og_image: /images/logo.png
+twitter_card: summary
 ---
 <section class="max-w-5xl mx-auto px-6 py-20 space-y-16">
   <header class="space-y-5 text-center">
     <p class="text-primary uppercase tracking-[0.4em] text-xs">Contact</p>
     <h1 class="text-3xl sm:text-4xl font-bold">Book your Polished and Pristine detailing experience</h1>
-    <p class="text-slate-400 max-w-2xl mx-auto">Tell us about your vehicle, the service you're interested in, and where you're based. We'll confirm availability and provide a clear, no-obligation quote.</p>
+    <p class="text-slate-400 max-w-2xl mx-auto">Tell us about your vehicle, the service you're interested in, and where you're based. We're the Darlington Car Detailing North East England specialists ready to confirm availability and provide a clear, no-obligation quote.</p>
   </header>
 
   <div class="grid gap-12 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
-    <form class="bg-slate-900/40 border border-slate-800 rounded-3xl p-8 space-y-6">
-      <div>
-        <label class="block text-sm font-semibold text-slate-300 mb-2" for="name">Name</label>
-        <input class="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 focus:outline-none focus:border-primary" id="name" type="text" placeholder="Your name">
-      </div>
-      <div class="grid gap-6 md:grid-cols-2">
+    <div class="space-y-8">
+      <form action="https://formspree.io/f/mjkvpgkn" method="POST" class="bg-slate-900/40 border border-slate-800 rounded-3xl p-8 space-y-6" id="contact-form">
         <div>
-          <label class="block text-sm font-semibold text-slate-300 mb-2" for="email">Email</label>
-          <input class="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 focus:outline-none focus:border-primary" id="email" type="email" placeholder="you@example.com">
+          <label class="block text-sm font-semibold text-slate-300 mb-2" for="name">Name</label>
+          <input class="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 focus:outline-none focus:border-primary" id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+        </div>
+        <div class="grid gap-6 md:grid-cols-2">
+          <div>
+            <label class="block text-sm font-semibold text-slate-300 mb-2" for="email">Email</label>
+            <input class="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 focus:outline-none focus:border-primary" id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-slate-300 mb-2" for="phone">Phone</label>
+            <input class="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 focus:outline-none focus:border-primary" id="phone" name="phone" type="tel" placeholder="07353 761525" autocomplete="tel" required>
+          </div>
         </div>
         <div>
-          <label class="block text-sm font-semibold text-slate-300 mb-2" for="phone">Phone</label>
-          <input class="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 focus:outline-none focus:border-primary" id="phone" type="tel" placeholder="07353 761525">
+          <label class="block text-sm font-semibold text-slate-300 mb-2" for="service">Service type</label>
+          <select class="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 focus:outline-none focus:border-primary" id="service" name="service_type" required>
+            <option value="">Select a service</option>
+            <option>Express Detail</option>
+            <option>Full Exterior Detail</option>
+            <option>Deep Interior Detail</option>
+            <option>Paint Correction</option>
+            <option>Ceramic Coating</option>
+            <option>Headlight Restoration</option>
+            <option>Engine Bay Detailing</option>
+            <option>Fleet / Business Service</option>
+            <option>Other / Not sure</option>
+          </select>
         </div>
+        <div>
+          <label class="block text-sm font-semibold text-slate-300 mb-2" for="message">Vehicle &amp; service details</label>
+          <textarea class="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 focus:outline-none focus:border-primary" id="message" name="message" rows="6" placeholder="Vehicle make/model, location, condition, preferred dates, special requests" required></textarea>
+        </div>
+        <div class="flex items-start gap-3">
+          <input type="checkbox" id="consent" name="consent" value="yes" required class="mt-1 h-4 w-4 rounded border border-slate-600 bg-slate-950 text-primary focus:ring-primary">
+          <label for="consent" class="text-xs text-slate-400">I consent to Polished and Pristine storing my details so they can respond to my enquiry about detailing services.</label>
+        </div>
+        <input type="hidden" name="_subject" value="New detailing enquiry from website">
+        <button type="submit" class="bg-primary text-slate-900 font-semibold px-6 py-3 rounded-full hover:bg-sky-300 transition">Send message</button>
+        <p class="text-xs text-slate-500">We aim to respond within the same day. For urgent bookings, call us directly on <a href="tel:+447353761525" class="text-primary font-semibold">07353 761525</a>.</p>
+      </form>
+      <div class="overflow-hidden rounded-3xl border border-slate-800 shadow-lg shadow-slate-900/30">
+        <iframe src="https://maps.google.com/maps?q=Polished%20and%20Pristine%20Darlington&t=&z=13&ie=UTF8&iwloc=&output=embed" title="Map showing Polished and Pristine in Darlington" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen class="h-72 w-full" style="border:0;"></iframe>
       </div>
-      <div>
-        <label class="block text-sm font-semibold text-slate-300 mb-2" for="location">Location</label>
-        <input class="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 focus:outline-none focus:border-primary" id="location" type="text" placeholder="Town / Postcode within 15 miles of Darlington">
-      </div>
-      <div>
-        <label class="block text-sm font-semibold text-slate-300 mb-2" for="service">Service required</label>
-        <select class="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 focus:outline-none focus:border-primary" id="service">
-          <option>Express Detail</option>
-          <option>Full Exterior Detail</option>
-          <option>Deep Interior Detail</option>
-          <option>Paint Correction</option>
-          <option>Ceramic Coating</option>
-          <option>Headlight Restoration</option>
-          <option>Engine Bay Detailing</option>
-          <option>Fleet / Business Service</option>
-          <option>Other / Not sure</option>
-        </select>
-      </div>
-      <div>
-        <label class="block text-sm font-semibold text-slate-300 mb-2" for="message">Vehicle & service details</label>
-        <textarea class="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 focus:outline-none focus:border-primary" id="message" rows="6" placeholder="Vehicle make/model, condition, preferred dates, special requests"></textarea>
-      </div>
-      <button type="submit" class="bg-primary text-slate-900 font-semibold px-6 py-3 rounded-full hover:bg-sky-300 transition">Send message</button>
-      <p class="text-xs text-slate-500">We aim to respond within the same day. For urgent bookings, call us directly on <a href="tel:+447353761525" class="text-primary font-semibold">07353 761525</a>.</p>
-    </form>
+    </div>
 
     <aside class="space-y-8">
       <div class="bg-slate-900/40 border border-slate-800 rounded-3xl p-8 space-y-4">
@@ -66,9 +78,19 @@ title: Contact
           <li>Stockton-on-Tees, Middlesbrough, Thornaby</li>
           <li>Yarm, Eaglescliffe, Sedgefield, Ferryhill</li>
           <li>Shildon, Spennymoor, Richmond, Northallerton</li>
-          <li>All surrounding County Durham & North Yorkshire villages</li>
+          <li>All surrounding County Durham &amp; North Yorkshire villages</li>
         </ul>
         <p class="text-slate-500 text-xs">Not sure if you're in range? Send your postcode and we'll confirm right away.</p>
+      </div>
+      <div class="bg-slate-900/40 border border-slate-800 rounded-3xl p-8 space-y-4">
+        <h2 class="text-xl font-semibold text-primary">Alternate contact methods</h2>
+        <p class="text-slate-400 text-sm">Prefer to chat another way? Reach out via the channels below and we'll reply during business hours.</p>
+        <ul class="space-y-2 text-slate-400 text-sm">
+          <li><a href="#" class="text-primary font-semibold">WhatsApp (coming soon)</a></li>
+          <li><a href="#" class="text-primary font-semibold">Facebook Messenger (coming soon)</a></li>
+          <li><a href="#" class="text-primary font-semibold">Instagram Direct (coming soon)</a></li>
+        </ul>
+        <p class="text-xs text-slate-500">Follow our social channels for detailing tips, North East England project highlights, and availability updates.</p>
       </div>
     </aside>
   </div>
