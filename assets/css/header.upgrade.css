@@ -204,11 +204,11 @@
   box-shadow:0 12px 32px rgba(0,0,0,.22);
 }
 
-.header-upgrade [data-header] .text-zinc-400{
+.header-upgrade [data-header] .text-amber-600{
   color:var(--pp-nav-link-muted);
 }
 
-.header-upgrade [data-header][data-state="scrolled"] .text-zinc-400{
+.header-upgrade [data-header][data-state="scrolled"] .text-amber-600{
   color:var(--pp-nav-link-color);
 }
 
