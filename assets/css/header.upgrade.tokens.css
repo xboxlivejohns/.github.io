@@ -1,11 +1,11 @@
 .header-upgrade{
-  --pp-bg-0:#0E0E0F;
-  --pp-bg-0-90:rgba(14,14,15,.90);
-  --pp-text-0:#F4F4F2;
-  --pp-text-1:#C8C8C4;
-  --pp-accent:#C7A360;
-  --pp-accent-contrast:#0B0B0C;
-  --pp-elev:0 6px 18px rgba(0,0,0,.25);
+  --pp-bg-0:#ffffff;
+  --pp-bg-0-90:rgba(255,255,255,.90);
+  --pp-text-0:#111111;
+  --pp-text-1:#444444;
+  --pp-accent:#000000;
+  --pp-accent-contrast:#ffffff;
+  --pp-elev:0 6px 18px rgba(0,0,0,.1);
   --pp-h-desktop:96px;
   --pp-h-condensed:64px;
 }
