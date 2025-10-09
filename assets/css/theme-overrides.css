@@ -1,16 +1,63 @@
 :root {
-  --brand-yellow: #f59e0b;
-  --brand-yellow-light: #fff7ed;
-  --brand-yellow-dark: #b45309;
-  --brand-black: #111827;
-  --brand-slate: #334155;
+  --brand-yellow: #facc15;
+  --brand-yellow-bright: #fde047;
+  --brand-yellow-light: #fefce8;
+  --brand-yellow-dark: #eab308;
+  --brand-black: #050505;
+  --brand-charcoal: #111827;
+  --brand-slate: #1f2937;
   --brand-paper: #f8fafc;
 }
 
 body {
   background-color: var(--brand-paper);
-  color: var(--brand-black);
+  color: var(--brand-charcoal);
   line-height: 1.7;
+}
+
+section[data-hero] {
+  position: relative;
+  background: radial-gradient(circle at top, rgba(250, 204, 21, 0.22), rgba(5, 5, 5, 0.92) 42%, rgba(5, 5, 5, 0.96) 100%);
+  border: 1px solid rgba(250, 204, 21, 0.35);
+  border-radius: 2rem;
+  color: var(--brand-yellow-light);
+  box-shadow: 0 30px 70px rgba(5, 5, 5, 0.45);
+}
+
+section[data-hero]::after {
+  content: "";
+  position: absolute;
+  inset: 2rem;
+  border-radius: 1.5rem;
+  pointer-events: none;
+  background: linear-gradient(120deg, rgba(250, 204, 21, 0.1), transparent 55%);
+  mix-blend-mode: screen;
+}
+
+section[data-hero] > * {
+  position: relative;
+  z-index: 1;
+}
+
+section[data-hero] p {
+  color: var(--brand-yellow-light);
+}
+
+section[data-hero] .text-amber-700 {
+  color: var(--brand-yellow-bright) !important;
+}
+
+section[data-hero] .text-amber-600 {
+  color: var(--brand-yellow-light) !important;
+}
+
+section[data-hero] a {
+  color: var(--brand-yellow) !important;
+}
+
+section[data-hero] a:hover,
+section[data-hero] a:focus {
+  color: var(--brand-yellow-bright) !important;
 }
 
 .bg-amber-900\/40,
@@ -27,8 +74,47 @@ body {
 .bg-amber-300,
 .bg-amber-200,
 .bg-amber-100 {
-  background-color: var(--brand-yellow-light) !important;
-  color: var(--brand-black) !important;
+  background: linear-gradient(140deg, rgba(5, 5, 5, 0.94), rgba(17, 24, 39, 0.92));
+  color: var(--brand-yellow-light) !important;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(250, 204, 21, 0.35);
+  box-shadow: 0 20px 60px rgba(5, 5, 5, 0.35);
+}
+
+.bg-amber-900\/40 p,
+.bg-amber-900\/40 li,
+.bg-amber-900\/40 small,
+.bg-amber-900\/50 p,
+.bg-amber-900\/50 li,
+.bg-amber-900\/50 small,
+.bg-amber-900\/60 p,
+.bg-amber-900\/60 li,
+.bg-amber-900\/60 small,
+.bg-amber-900\/80 p,
+.bg-amber-900\/80 li,
+.bg-amber-900\/80 small,
+.bg-amber-900\/90 p,
+.bg-amber-900\/90 li,
+.bg-amber-900\/90 small {
+  color: var(--brand-yellow-light) !important;
+}
+
+.bg-amber-900\/40 h1,
+.bg-amber-900\/40 h2,
+.bg-amber-900\/40 h3,
+.bg-amber-900\/50 h1,
+.bg-amber-900\/50 h2,
+.bg-amber-900\/50 h3,
+.bg-amber-900\/60 h1,
+.bg-amber-900\/60 h2,
+.bg-amber-900\/60 h3,
+.bg-amber-900\/80 h1,
+.bg-amber-900\/80 h2,
+.bg-amber-900\/80 h3,
+.bg-amber-900\/90 h1,
+.bg-amber-900\/90 h2,
+.bg-amber-900\/90 h3 {
+  color: var(--brand-yellow-bright) !important;
 }
 
 .bg-amber-900\/40 a,
@@ -36,8 +122,8 @@ body {
 .bg-amber-900\/60 a,
 .bg-amber-900\/80 a,
 .bg-amber-900\/90 a {
-  color: var(--brand-yellow-dark) !important;
-  text-decoration-color: rgba(180, 83, 9, 0.4);
+  color: var(--brand-yellow) !important;
+  text-decoration-color: rgba(250, 204, 21, 0.4);
 }
 
 .bg-amber-900\/40 a:hover,
@@ -45,7 +131,7 @@ body {
 .bg-amber-900\/60 a:hover,
 .bg-amber-900\/80 a:hover,
 .bg-amber-900\/90 a:hover {
-  color: var(--brand-yellow) !important;
+  color: var(--brand-yellow-bright) !important;
 }
 
 .bg-amber-900\/40 .text-white,
@@ -53,7 +139,7 @@ body {
 .bg-amber-900\/60 .text-white,
 .bg-amber-900\/80 .text-white,
 .bg-amber-900\/90 .text-white {
-  color: var(--brand-black) !important;
+  color: var(--brand-yellow-light) !important;
 }
 
 .bg-amber-900\/40 [class*="text-amber-"],
@@ -61,9 +147,11 @@ body {
 .bg-amber-900\/60 [class*="text-amber-"],
 .bg-amber-900\/80 [class*="text-amber-"],
 .bg-amber-900\/90 [class*="text-amber-"] {
-  color: var(--brand-slate) !important;
+  color: var(--brand-yellow) !important;
 }
 
+.border-amber-900,
+.border-amber-800,
 .border-amber-700,
 .border-amber-700\/80,
 .border-amber-600,
@@ -72,21 +160,22 @@ body {
 .border-amber-300,
 .border-amber-200,
 .border-amber-100,
-.border-amber-50,
-.border-amber-800,
-.border-amber-900 {
-  border-color: var(--brand-yellow-dark) !important;
+.border-amber-50 {
+  border-color: rgba(250, 204, 21, 0.55) !important;
 }
 
 .text-amber-900,
-.text-amber-800,
+.text-amber-800 {
+  color: var(--brand-charcoal) !important;
+}
+
 .text-amber-700 {
-  color: var(--brand-black) !important;
+  color: var(--brand-yellow) !important;
 }
 
 .text-amber-600,
 .text-amber-500 {
-  color: var(--brand-slate) !important;
+  color: var(--brand-yellow-dark) !important;
 }
 
 .text-amber-400,
@@ -94,22 +183,18 @@ body {
 .text-amber-200,
 .text-amber-100,
 .text-amber-50 {
-  color: var(--brand-yellow-dark) !important;
+  color: var(--brand-yellow-bright) !important;
 }
 
 .hover\:bg-amber-200:hover,
 .hover\:bg-amber-100:hover {
-  background-color: var(--brand-yellow-light) !important;
+  background-color: var(--brand-yellow-bright) !important;
   color: var(--brand-black) !important;
 }
 
 .hover\:bg-amber-900:hover {
-  background-color: var(--brand-yellow) !important;
-  color: #ffffff !important;
-}
-
-.border-amber-800 {
-  border-color: var(--brand-yellow-dark) !important;
+  background-color: var(--brand-yellow-dark) !important;
+  color: var(--brand-black) !important;
 }
 
 header .text-white {
@@ -122,7 +207,7 @@ header [class*="text-amber-"] {
 
 header a:hover,
 header a:focus {
-  color: var(--brand-yellow-light) !important;
+  color: var(--brand-yellow-bright) !important;
 }
 
 footer,
@@ -142,34 +227,34 @@ footer a {
 
 footer a:hover,
 footer a:focus {
-  color: #ffffff !important;
+  color: var(--brand-yellow-bright) !important;
 }
 
 .bg-accent {
-  background-color: var(--brand-yellow-dark) !important;
-  color: #ffffff !important;
+  background-color: var(--brand-yellow) !important;
+  color: var(--brand-black) !important;
 }
 
 .bg-accent:hover {
-  background-color: var(--brand-yellow) !important;
+  background-color: var(--brand-yellow-bright) !important;
 }
 
 .text-accent {
-  color: var(--brand-yellow-dark) !important;
+  color: var(--brand-yellow) !important;
   text-decoration: underline;
-  text-decoration-color: rgba(180, 83, 9, 0.4);
+  text-decoration-color: rgba(250, 204, 21, 0.45);
 }
 
 .text-accent:hover {
-  color: var(--brand-yellow) !important;
+  color: var(--brand-yellow-bright) !important;
 }
 
 .border-accent {
-  border-color: var(--brand-yellow-dark) !important;
+  border-color: rgba(250, 204, 21, 0.55) !important;
 }
 
 .shadow-accent\/30 {
-  box-shadow: 0 20px 45px rgba(245, 158, 11, 0.3) !important;
+  box-shadow: 0 24px 65px rgba(250, 204, 21, 0.28) !important;
 }
 
 .bg-black\/60 .text-amber-200,
@@ -190,9 +275,44 @@ footer a:focus {
 button,
 .cta-button {
   color: var(--brand-black) !important;
+  background: linear-gradient(120deg, var(--brand-yellow), var(--brand-yellow-bright));
+  border-radius: 999px;
+  box-shadow: 0 15px 35px rgba(250, 204, 21, 0.35);
 }
 
 button.bg-black,
 .cta-button.bg-black {
-  color: #ffffff !important;
+  background: var(--brand-black) !important;
+  color: var(--brand-yellow-light) !important;
+  box-shadow: 0 15px 35px rgba(5, 5, 5, 0.45);
+}
+
+button.bg-black:hover,
+.cta-button.bg-black:hover {
+  background: var(--brand-charcoal) !important;
+  color: var(--brand-yellow-bright) !important;
+}
+
+button:hover,
+.cta-button:hover {
+  box-shadow: 0 18px 40px rgba(250, 204, 21, 0.45);
+}
+
+.bg-black\/60 span,
+.bg-black\/80 span,
+.bg-black\/90 span {
+  color: var(--brand-yellow-bright) !important;
+}
+
+.badge-outline {
+  border: 1px solid rgba(250, 204, 21, 0.35);
+  color: var(--brand-yellow-bright);
+  background-color: rgba(5, 5, 5, 0.65);
+  letter-spacing: 0.3em;
+}
+
+.section-title {
+  color: var(--brand-charcoal);
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
 }
