@@ -64,18 +64,18 @@ canonical_url: /
   </header>
   <div class="grid gap-6 md:grid-cols-2">
     {% for review in reviews %}
-    <article class="rounded-2xl border border-amber-700 bg-amber-900/60 p-6 text-left space-y-4">
+    <article class="rounded-2xl border border-amber-700 bg-amber-900/60 p-6 text-left space-y-4 text-white">
       <div class="flex flex-wrap items-center gap-3">
-        <p class="text-amber-300 text-sm font-semibold tracking-[0.3em]" aria-hidden="true">
+        <p class="text-sm font-semibold tracking-[0.3em]" aria-hidden="true">
           {% for star in (1..review.rating) %}★{% endfor %}
         </p>
         <span class="sr-only">Rated {{ review.rating }} out of 5 stars</span>
         {% if review.display_date %}
-        <p class="text-xs uppercase tracking-[0.3em] text-amber-700">{{ review.display_date }}</p>
+        <p class="text-xs uppercase tracking-[0.3em]">{{ review.display_date }}</p>
         {% endif %}
       </div>
-      <p class="text-amber-200 italic leading-relaxed">“{{ review.body }}”</p>
-      <p class="text-sm font-semibold text-amber-600">— {{ review.name }}</p>
+      <p class="italic leading-relaxed">“{{ review.body }}”</p>
+      <p class="text-sm font-semibold">— {{ review.name }}</p>
     </article>
     {% endfor %}
   </div>
