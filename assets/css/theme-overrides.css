@@ -224,6 +224,17 @@ header [data-nav-toggle]:focus-visible {
   color: var(--brand-black) !important;
 }
 
+header [data-nav] a,
+header [data-nav] a:hover,
+header [data-nav] a:focus-visible,
+header [data-nav] a[aria-current="page"] {
+  color: var(--brand-black) !important;
+}
+
+header [data-cta="book"] {
+  color: var(--brand-black) !important;
+}
+
 footer,
 footer .text-amber-600,
 footer .text-amber-700,
