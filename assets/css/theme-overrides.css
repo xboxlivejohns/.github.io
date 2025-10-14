@@ -210,6 +210,20 @@ header a:focus {
   color: var(--brand-yellow-bright) !important;
 }
 
+header [data-nav-toggle] {
+  background-color: var(--brand-yellow) !important;
+  border-color: var(--brand-yellow) !important;
+  color: var(--brand-black) !important;
+  box-shadow: 0 16px 40px rgba(250, 204, 21, 0.22);
+}
+
+header [data-nav-toggle]:hover,
+header [data-nav-toggle]:focus-visible {
+  background-color: var(--brand-yellow-bright) !important;
+  border-color: var(--brand-yellow-bright) !important;
+  color: var(--brand-black) !important;
+}
+
 footer,
 footer .text-amber-600,
 footer .text-amber-700,
