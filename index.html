@@ -51,7 +51,11 @@ canonical_url: /
   <div class="rounded-3xl border border-amber-700 bg-amber-900/40 p-8 space-y-5 text-center">
     <p class="text-amber-700 uppercase tracking-[0.3em] text-xs">Service Area</p>
     <h2 class="text-2xl sm:text-3xl font-semibold">Darlington base, North East coverage</h2>
-    <p class="text-amber-600">We bring premium detailing to homes and workplaces across County Durham, Teesside, and North Yorkshire. See how we tailor our approach to each community on the <a href="{{ '/locations.html' | relative_url }}" class="text-accent font-semibold">locations page</a>, or discover our ethos on the <a href="{{ '/about.html' | relative_url }}" class="text-accent font-semibold">About page</a>.</p>
+    <p class="text-amber-600">We travel across County Durham, Teesside, and North Yorkshire with fully mobile equipment and flexible scheduling.</p>
+    <div class="flex flex-wrap justify-center gap-4 text-sm font-semibold">
+      <a href="{{ '/locations.html' | relative_url }}" class="inline-flex items-center gap-2 text-accent">See full coverage<span aria-hidden="true">→</span></a>
+      <a href="{{ '/about.html' | relative_url }}" class="inline-flex items-center gap-2 text-accent">Meet the team<span aria-hidden="true">→</span></a>
+    </div>
   </div>
 </section>
 
@@ -99,7 +103,11 @@ canonical_url: /
       </figure>
       <div class="space-y-4">
         <h2 class="text-3xl font-semibold">See the difference professional detailing makes</h2>
-        <p class="text-amber-600">Our meticulous approach tackles stubborn stains, eliminates odours, and revives fabrics without damaging delicate materials. Whether it's a family car or a cherished classic, we restore comfort and confidence in every drive.</p>
+        <ul class="space-y-2 text-amber-600">
+          <li class="flex items-start gap-2"><span aria-hidden="true">•</span><span>Stain removal and odour neutralising for a refreshed cabin.</span></li>
+          <li class="flex items-start gap-2"><span aria-hidden="true">•</span><span>Gentle techniques that protect leather, Alcantara, and fabric.</span></li>
+          <li class="flex items-start gap-2"><span aria-hidden="true">•</span><span>Tailored care plans for family cars, daily drivers, and cherished classics.</span></li>
+        </ul>
         <a href="{{ '/services.html#deep-interior-detail' | relative_url }}" class="inline-flex items-center gap-2 text-accent font-semibold">Explore interior detailing<span aria-hidden="true">→</span></a>
       </div>
     </div>
@@ -110,18 +118,20 @@ canonical_url: /
   <div class="max-w-5xl mx-auto px-6 py-16 grid gap-12 md:grid-cols-2">
     <div class="space-y-4 text-left">
       <h2 class="text-3xl font-semibold">About {{ site.name }}</h2>
-      <p class="text-amber-600">We're passionate about making your vehicle look its absolute best. Based in Darlington, our fully insured team treats every car as if it were our own—using premium products, proven techniques, and meticulous attention to detail.</p>
-      <p class="text-amber-600">From everyday family cars to prestige vehicles, we restore, protect, and maintain finishes so you can take pride in every journey.</p>
+      <p class="text-amber-600">Darlington-based detailers delivering insured, mobile services with premium products and proven techniques.</p>
+      <ul class="space-y-2 text-amber-600 text-sm">
+        <li class="flex items-start gap-2"><span aria-hidden="true">•</span><span>Prestige, daily, and family vehicles treated with the same care.</span></li>
+        <li class="flex items-start gap-2"><span aria-hidden="true">•</span><span>Flexible booking at your home, workplace, or secure drop-off.</span></li>
+      </ul>
       <a href="{{ '/about.html' | relative_url }}" class="inline-flex items-center gap-2 text-accent font-semibold">Learn more<span aria-hidden="true">→</span></a>
     </div>
     <div class="space-y-4">
-      <h3 class="text-xl font-semibold text-white uppercase tracking-wider">Why choose us</h3>
-      <ul class="space-y-3 text-amber-600">
-        <li><strong class="text-amber-100">Professional Excellence:</strong> Fully trained, fully insured, and committed to unrivalled results.</li>
-        <li><strong class="text-amber-100">Obsessed with Detail:</strong> Every surface, every corner, every inch receives our complete focus.</li>
-        <li><strong class="text-amber-100">Flexible & Honest:</strong> Mobile or drop-off appointments with transparent pricing and advice.</li>
-        <li><strong class="text-amber-100">Local Specialists:</strong> Serving the whole North East with knowledge of local weather and road conditions.</li>
-      </ul>
+      <h3 class="text-xl font-semibold text-white uppercase tracking-wider">Why drivers choose us</h3>
+      <div class="grid gap-3 text-amber-600 text-sm">
+        <p class="rounded-2xl border border-amber-700/60 bg-black/30 p-4"><strong class="text-amber-100">Pro results:</strong> Accredited coatings, machine polishing, and meticulous finishing.</p>
+        <p class="rounded-2xl border border-amber-700/60 bg-black/30 p-4"><strong class="text-amber-100">Clear guidance:</strong> Honest recommendations and aftercare support in plain English.</p>
+        <p class="rounded-2xl border border-amber-700/60 bg-black/30 p-4"><strong class="text-amber-100">Local knowledge:</strong> Packages tuned for North East weather, roads, and daily driving.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -129,44 +139,48 @@ canonical_url: /
 <section class="max-w-5xl mx-auto px-6 py-20 space-y-12">
   <header class="space-y-4 text-center">
     <h2 class="text-3xl sm:text-4xl font-bold">Detailing services tailored to your vehicle</h2>
-    <p class="text-amber-600 max-w-3xl mx-auto">Whether you need a quick maintenance refresh or multi-stage paint correction, {{ site.name }} has a package that restores pride of ownership and protects your investment.</p>
+    <p class="text-amber-600 max-w-3xl mx-auto">Choose the level of transformation you need today, then dive deeper for full inclusions.</p>
   </header>
   <div class="grid gap-10 md:grid-cols-2">
     <article class="bg-amber-900/40 border border-amber-700 rounded-xl p-8 space-y-3">
       <h3 class="text-2xl font-semibold text-white">Express Detail</h3>
-      <p class="text-amber-600">Perfect for maintaining your vehicle between full details with a thorough wash, interior refresh, and protective wax.</p>
+      <p class="text-amber-600 text-sm">Maintenance wash, interior refresh, and quick protection for regular upkeep.</p>
       <ul class="list-disc list-inside text-amber-700 space-y-1">
         <li>Hand wash, wheels, and tyre dressing</li>
         <li>Interior vacuum and wipe down</li>
         <li>Crystal clear glass inside and out</li>
       </ul>
+      <a href="{{ '/services.html#express-detail' | relative_url }}" class="inline-flex items-center gap-2 text-accent text-sm font-semibold">Read more<span aria-hidden="true">→</span></a>
     </article>
     <article class="bg-amber-900/40 border border-amber-700 rounded-xl p-8 space-y-3">
       <h3 class="text-2xl font-semibold text-white">Full Exterior Detail</h3>
-      <p class="text-amber-600">Safe washing, decontamination, machine polishing, and long-lasting protection for jaw-dropping gloss.</p>
+      <p class="text-amber-600 text-sm">Multi-stage wash, decontamination, and machine polishing for lasting gloss.</p>
       <ul class="list-disc list-inside text-amber-700 space-y-1">
         <li>Clay bar, swirl removal, and trim revival</li>
         <li>Premium wax or sealant, plus wheel coating</li>
         <li>Hydrophobic glass protection</li>
       </ul>
+      <a href="{{ '/services.html#full-exterior-detail' | relative_url }}" class="inline-flex items-center gap-2 text-accent text-sm font-semibold">Read more<span aria-hidden="true">→</span></a>
     </article>
     <article class="bg-amber-900/40 border border-amber-700 rounded-xl p-8 space-y-3">
       <h3 class="text-2xl font-semibold text-white">Deep Interior Detail</h3>
-      <p class="text-amber-600">Restore cabin comfort with deep cleaning, odour elimination, and UV protection across every surface.</p>
+      <p class="text-amber-600 text-sm">Odour removal, fabric rejuvenation, and UV protection across every surface.</p>
       <ul class="list-disc list-inside text-amber-700 space-y-1">
         <li>Carpets, upholstery, and leather rejuvenation</li>
         <li>Dash, trim, and door shuts meticulously cleaned</li>
         <li>Family-friendly, allergen-reducing process</li>
       </ul>
+      <a href="{{ '/services.html#deep-interior-detail' | relative_url }}" class="inline-flex items-center gap-2 text-accent text-sm font-semibold">Read more<span aria-hidden="true">→</span></a>
     </article>
     <article class="bg-amber-900/40 border border-amber-700 rounded-xl p-8 space-y-3">
       <h3 class="text-2xl font-semibold text-white">Specialist Upgrades</h3>
-      <p class="text-amber-600">Unlock maximum protection and clarity with ceramic coatings, paint correction, headlight restoration, and engine bay care.</p>
+      <p class="text-amber-600 text-sm">Enhance protection and clarity with ceramic coatings, paint correction, and more.</p>
       <ul class="list-disc list-inside text-amber-700 space-y-1">
         <li>2–5 year ceramic coating durability</li>
         <li>Up to 95% paint defect removal</li>
         <li>Showroom-ready engine bay presentation</li>
       </ul>
+      <a href="{{ '/services.html#specialist-upgrades' | relative_url }}" class="inline-flex items-center gap-2 text-accent text-sm font-semibold">Read more<span aria-hidden="true">→</span></a>
     </article>
   </div>
   <div class="text-center">
@@ -179,23 +193,34 @@ canonical_url: /
     <header class="space-y-3 text-center">
       <p class="text-amber-700 uppercase tracking-[0.3em] text-xs">15-mile radius from Darlington</p>
       <h2 class="text-3xl font-bold">North East coverage you can rely on</h2>
-      <p class="text-amber-600 max-w-3xl mx-auto">Our vans reach busy market towns, industrial hubs, and rural villages alike. We tailor appointments around local parking, access, and weather patterns so every detail runs smoothly.</p>
+      <p class="text-amber-600 max-w-3xl mx-auto">Quick snapshots of where we work most. Tap through for the full itinerary.</p>
     </header>
     <div class="grid gap-6 md:grid-cols-3 text-sm text-amber-600">
       <article class="space-y-2">
         <h3 class="text-lg font-semibold text-amber-100">Darlington & County Durham</h3>
-        <p>City centre penthouses, family estates in Hummersknott, and farm tracks near Staindrop all receive the same meticulous care.</p>
+        <ul class="space-y-1">
+          <li>City centre detailing with secure parking guidance.</li>
+          <li>Rural visits with on-board water and power.</li>
+        </ul>
       </article>
       <article class="space-y-2">
         <h3 class="text-lg font-semibold text-amber-100">Teesside & coastal routes</h3>
-        <p>From Stockton and Middlesbrough to Ingleby Barwick, we remove fallout and salt spray before it can dull your finish.</p>
+        <ul class="space-y-1">
+          <li>Fallout and salt spray removal for commuters.</li>
+          <li>Flexible slots for industrial estates and offices.</li>
+        </ul>
       </article>
       <article class="space-y-2">
         <h3 class="text-lg font-semibold text-amber-100">North Yorkshire villages</h3>
-        <p>We regularly visit Yarm, Richmond, Northallerton, and surrounding villages with bespoke maintenance schedules.</p>
+        <ul class="space-y-1">
+          <li>Maintenance plans for market towns and countryside homes.</li>
+          <li>Seasonal protection tailored to local roads.</li>
+        </ul>
       </article>
     </div>
-    <p class="text-center text-amber-600 text-sm">See a full breakdown of each service area on our <a href="{{ '/locations.html' | relative_url }}" class="text-accent font-semibold">dedicated locations page</a>.</p>
+    <div class="text-center">
+      <a href="{{ '/locations.html' | relative_url }}" class="inline-flex items-center gap-2 text-accent font-semibold">View the full coverage map<span aria-hidden="true">→</span></a>
+    </div>
   </div>
 </section>
 
