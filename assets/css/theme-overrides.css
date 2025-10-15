@@ -9,6 +9,10 @@
   --brand-paper: #f8fafc;
 }
 
+.text-brand-black {
+  color: var(--brand-black) !important;
+}
+
 body {
   background-color: var(--brand-paper);
   color: var(--brand-charcoal);
