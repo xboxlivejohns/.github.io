@@ -2,7 +2,7 @@
 title: "Darlington Car Detailing North East England | Polished & Pristine Mobile"
 description: "Mobile car detailing in Darlington delivering paint correction, ceramic coatings, and interior rejuvenation across North East England."
 ---
-![Polished & Pristine Mobile logo](/images/logo.png)
+![Polished & Pristine Mobile logo](/assets/logo.png)
 
 Darlington's Premier Car Detailing Specialists
 
@@ -228,11 +228,11 @@ Rated 5 out of 5 stars
 
 — Monther
 
-![Car seat before detailing with visible stains and dirt](/images/seat-clean-before.jpg)
+![Car seat before detailing with visible stains and dirt](/assets/seat-clean-before.jpg)
 
 Before
 
-![Car seat after detailing, restored to a spotless and even finish](/images/seat-clean-after.jpg)
+![Car seat after detailing, restored to a spotless and even finish](/assets/seat-clean-after.jpg)
 
 After
 

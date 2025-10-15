@@ -1,0 +1,95 @@
+[
+  {
+    "originalRef": "/images/carpet-stripes-detailing.jpg",
+    "targetPath": "/assets/carpet-stripes-detailing.jpg",
+    "usedBy": [
+      "/content/services.md"
+    ]
+  },
+  {
+    "originalRef": "/images/ceramic-black-back-right.jpg",
+    "targetPath": "/assets/ceramic-black-back-right.jpg",
+    "usedBy": [
+      "/content/services.md"
+    ]
+  },
+  {
+    "originalRef": "/images/ceramic-black-back.jpg",
+    "targetPath": "/assets/ceramic-black-back.jpg",
+    "usedBy": [
+      "/content/services.md"
+    ]
+  },
+  {
+    "originalRef": "/images/ceramic-black-left.jpg",
+    "targetPath": "/assets/ceramic-black-left.jpg",
+    "usedBy": [
+      "/content/services.md"
+    ]
+  },
+  {
+    "originalRef": "/images/ceramic-black-paint.jpg",
+    "targetPath": "/assets/ceramic-black-paint.jpg",
+    "usedBy": [
+      "/content/services.md"
+    ]
+  },
+  {
+    "originalRef": "/images/ceramic-blue-bmw-back.jpg",
+    "targetPath": "/assets/ceramic-blue-bmw-back.jpg",
+    "usedBy": [
+      "/content/services.md"
+    ]
+  },
+  {
+    "originalRef": "/images/ceramic-shine-blue-bmw.jpg",
+    "targetPath": "/assets/ceramic-shine-blue-bmw.jpg",
+    "usedBy": [
+      "/content/about.md"
+    ]
+  },
+  {
+    "originalRef": "/images/detailer-john.png",
+    "targetPath": "/assets/detailer-john.png",
+    "usedBy": [
+      "/content/about.md"
+    ]
+  },
+  {
+    "originalRef": "/images/detailing-interior-lines.jpg",
+    "targetPath": "/assets/detailing-interior-lines.jpg",
+    "usedBy": [
+      "/content/services.md"
+    ]
+  },
+  {
+    "originalRef": "/images/logo.png",
+    "targetPath": "/assets/logo.png",
+    "usedBy": [
+      "/content/index.md"
+    ]
+  },
+  {
+    "originalRef": "/images/paint-correction-before-after-combo.jpg",
+    "targetPath": "/assets/paint-correction-before-after-combo.jpg",
+    "usedBy": [
+      "/content/services.md"
+    ]
+  },
+  {
+    "originalRef": "/images/seat-clean-after.jpg",
+    "targetPath": "/assets/seat-clean-after.jpg",
+    "usedBy": [
+      "/content/index.md",
+      "/content/services.md"
+    ]
+  },
+  {
+    "originalRef": "/images/seat-clean-before.jpg",
+    "targetPath": "/assets/seat-clean-before.jpg",
+    "usedBy": [
+      "/content/index.md",
+      "/content/services.md"
+    ]
+  }
+]
