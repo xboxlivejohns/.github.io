@@ -3,6 +3,7 @@
   --brand-yellow-bright: #fde047;
   --brand-yellow-light: #fefce8;
   --brand-yellow-dark: #eab308;
+  --brand-amber-800: #5c260b;
   --brand-amber-700: #78350f;
   --brand-amber-600: #92400e;
   --brand-amber-500: #b45309;
@@ -27,14 +28,22 @@ body {
 
 section[data-hero] {
   position: relative;
+  background: radial-gradient(circle at top, rgba(250, 204, 21, 0.28), rgba(254, 252, 232, 0.96) 55%, rgba(248, 250, 252, 0.96) 100%);
+  border: 1px solid rgba(120, 53, 15, 0.25);
+  border-radius: 2rem;
+  color: var(--brand-amber-800);
+  box-shadow: 0 25px 60px rgba(120, 53, 15, 0.2);
+}
+
+[data-hero][data-tone="dark"] {
   background: radial-gradient(circle at top, rgba(250, 204, 21, 0.22), rgba(5, 5, 5, 0.92) 42%, rgba(5, 5, 5, 0.96) 100%);
   border: 1px solid rgba(250, 204, 21, 0.35);
-  border-radius: 2rem;
   color: var(--brand-yellow-light);
   box-shadow: 0 30px 70px rgba(5, 5, 5, 0.45);
 }
 
-section[data-hero]::after {
+section[data-hero]::after,
+[data-hero][data-tone="dark"]::after {
   content: "";
   position: absolute;
   inset: 2rem;
@@ -49,25 +58,24 @@ section[data-hero] > * {
   z-index: 1;
 }
 
-section[data-hero] p {
-  color: var(--brand-yellow-light);
-}
-
-section[data-hero] .text-amber-700 {
-  color: var(--brand-yellow-bright) !important;
-}
-
-section[data-hero] .text-amber-600 {
+[data-hero][data-tone="dark"] p,
+[data-hero][data-tone="dark"] .text-amber-700,
+[data-hero][data-tone="dark"] .text-amber-600 {
   color: var(--brand-yellow-light) !important;
 }
 
-section[data-hero] a {
-  color: var(--brand-yellow) !important;
+section[data-hero] p {
+  color: var(--brand-amber-600);
 }
 
-section[data-hero] a:hover,
-section[data-hero] a:focus {
-  color: var(--brand-yellow-bright) !important;
+section[data-hero] .text-amber-700 {
+  color: var(--brand-amber-700) !important;
+}
+
+section[data-hero] .text-amber-600,
+section[data-hero] .text-amber-500,
+section[data-hero] .text-amber-400 {
+  color: var(--brand-amber-600) !important;
 }
 
 .bg-amber-900\/40,
@@ -84,11 +92,11 @@ section[data-hero] a:focus {
 .bg-amber-300,
 .bg-amber-200,
 .bg-amber-100 {
-  background: linear-gradient(140deg, rgba(5, 5, 5, 0.94), rgba(17, 24, 39, 0.92));
-  color: var(--brand-yellow-light) !important;
+  background: linear-gradient(140deg, rgba(248, 250, 252, 0.92), rgba(254, 243, 199, 0.94));
+  color: var(--brand-amber-800) !important;
   border-radius: 1.5rem;
-  border: 1px solid rgba(250, 204, 21, 0.35);
-  box-shadow: 0 20px 60px rgba(5, 5, 5, 0.35);
+  border: 1px solid rgba(120, 53, 15, 0.25);
+  box-shadow: 0 20px 60px rgba(120, 53, 15, 0.18);
 }
 
 .bg-amber-900\/40 p,
@@ -106,7 +114,7 @@ section[data-hero] a:focus {
 .bg-amber-900\/90 p,
 .bg-amber-900\/90 li,
 .bg-amber-900\/90 small {
-  color: var(--brand-yellow-light) !important;
+  color: var(--brand-amber-600) !important;
 }
 
 .bg-amber-900\/40 h1,
@@ -124,7 +132,7 @@ section[data-hero] a:focus {
 .bg-amber-900\/90 h1,
 .bg-amber-900\/90 h2,
 .bg-amber-900\/90 h3 {
-  color: var(--brand-yellow-bright) !important;
+  color: var(--brand-amber-800) !important;
 }
 
 .bg-amber-900\/40 a,
@@ -132,8 +140,8 @@ section[data-hero] a:focus {
 .bg-amber-900\/60 a,
 .bg-amber-900\/80 a,
 .bg-amber-900\/90 a {
-  color: var(--brand-yellow) !important;
-  text-decoration-color: rgba(250, 204, 21, 0.4);
+  color: var(--brand-amber-700) !important;
+  text-decoration-color: rgba(120, 53, 15, 0.35);
 }
 
 .bg-amber-900\/40 a:hover,
@@ -141,7 +149,7 @@ section[data-hero] a:focus {
 .bg-amber-900\/60 a:hover,
 .bg-amber-900\/80 a:hover,
 .bg-amber-900\/90 a:hover {
-  color: var(--brand-yellow-bright) !important;
+  color: var(--brand-amber-600) !important;
 }
 
 .bg-amber-900\/40 .text-white,
@@ -149,15 +157,61 @@ section[data-hero] a:focus {
 .bg-amber-900\/60 .text-white,
 .bg-amber-900\/80 .text-white,
 .bg-amber-900\/90 .text-white {
-  color: var(--brand-yellow-light) !important;
+  color: var(--brand-amber-800) !important;
 }
 
-.bg-amber-900\/40 [class*="text-amber-"],
-.bg-amber-900\/50 [class*="text-amber-"],
-.bg-amber-900\/60 [class*="text-amber-"],
-.bg-amber-900\/80 [class*="text-amber-"],
-.bg-amber-900\/90 [class*="text-amber-"] {
-  color: var(--brand-yellow) !important;
+.bg-amber-900\/40 .text-amber-900,
+.bg-amber-900\/40 .text-amber-800,
+.bg-amber-900\/50 .text-amber-900,
+.bg-amber-900\/50 .text-amber-800,
+.bg-amber-900\/60 .text-amber-900,
+.bg-amber-900\/60 .text-amber-800,
+.bg-amber-900\/80 .text-amber-900,
+.bg-amber-900\/80 .text-amber-800,
+.bg-amber-900\/90 .text-amber-900,
+.bg-amber-900\/90 .text-amber-800 {
+  color: var(--brand-amber-800) !important;
+}
+
+.bg-amber-900\/40 .text-amber-700,
+.bg-amber-900\/40 .text-amber-600,
+.bg-amber-900\/50 .text-amber-700,
+.bg-amber-900\/50 .text-amber-600,
+.bg-amber-900\/60 .text-amber-700,
+.bg-amber-900\/60 .text-amber-600,
+.bg-amber-900\/80 .text-amber-700,
+.bg-amber-900\/80 .text-amber-600,
+.bg-amber-900\/90 .text-amber-700,
+.bg-amber-900\/90 .text-amber-600 {
+  color: var(--brand-amber-700) !important;
+}
+
+.bg-amber-900\/40 .text-amber-500,
+.bg-amber-900\/40 .text-amber-400,
+.bg-amber-900\/40 .text-amber-300,
+.bg-amber-900\/40 .text-amber-200,
+.bg-amber-900\/40 .text-amber-100,
+.bg-amber-900\/50 .text-amber-500,
+.bg-amber-900\/50 .text-amber-400,
+.bg-amber-900\/50 .text-amber-300,
+.bg-amber-900\/50 .text-amber-200,
+.bg-amber-900\/50 .text-amber-100,
+.bg-amber-900\/60 .text-amber-500,
+.bg-amber-900\/60 .text-amber-400,
+.bg-amber-900\/60 .text-amber-300,
+.bg-amber-900\/60 .text-amber-200,
+.bg-amber-900\/60 .text-amber-100,
+.bg-amber-900\/80 .text-amber-500,
+.bg-amber-900\/80 .text-amber-400,
+.bg-amber-900\/80 .text-amber-300,
+.bg-amber-900\/80 .text-amber-200,
+.bg-amber-900\/80 .text-amber-100,
+.bg-amber-900\/90 .text-amber-500,
+.bg-amber-900\/90 .text-amber-400,
+.bg-amber-900\/90 .text-amber-300,
+.bg-amber-900\/90 .text-amber-200,
+.bg-amber-900\/90 .text-amber-100 {
+  color: var(--brand-amber-600) !important;
 }
 
 .border-amber-900,
@@ -171,7 +225,7 @@ section[data-hero] a:focus {
 .border-amber-200,
 .border-amber-100,
 .border-amber-50 {
-  border-color: rgba(250, 204, 21, 0.55) !important;
+  border-color: rgba(120, 53, 15, 0.45) !important;
 }
 
 .text-amber-900,
