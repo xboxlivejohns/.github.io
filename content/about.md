@@ -35,7 +35,7 @@ Rooted in Darlington
 
 Local, reliable, and only ever a short drive away.
 
-![John, owner of Polished & Pristine Mobile, smiling in front of a detailed vehicle.](/images/detailer-john.png "John “Polished & Pristine Mobile”, Owner & Lead Detailer")
+![John, owner of Polished & Pristine Mobile, smiling in front of a detailed vehicle.](/assets/detailer-john.png "John “Polished & Pristine Mobile”, Owner & Lead Detailer")
 
 ## Trusted, accredited, and insured
 
@@ -45,7 +45,7 @@ Our reputation is built on delivering exceptional finishes with complete transpa
 - **Quality standards:** Accredited ceramic partners, calibrated lighting, and manufacturer-approved products on every job.
 - **Insured & guaranteed:** Full public liability cover with satisfaction guarantees and aftercare guidance for peace of mind.
 
-![Detailer inspecting a ceramic-coated blue BMW](/images/ceramic-shine-blue-bmw.jpg)
+![Detailer inspecting a ceramic-coated blue BMW](/assets/ceramic-shine-blue-bmw.jpg)
 
 ## Service Area
 

@@ -10,13 +10,13 @@ Long-lasting, professional-grade ceramic coatings that lock in a deep gloss fini
 - **Process:** We complete full decontamination, machine refine the paintwork, and apply multi-layer coatings to paint, trims, and wheel faces.
 - **Durability:** Professional coatings lasting up to 5 years with annual inspections available for maximum protection.
 
-![Glossy black SUV rear after ceramic coating](/images/ceramic-black-back.jpg)
+![Glossy black SUV rear after ceramic coating](/assets/ceramic-black-back.jpg)
 
-![Detailed view of ceramic-coated panels](/images/ceramic-black-back-right.jpg)
+![Detailed view of ceramic-coated panels](/assets/ceramic-black-back-right.jpg)
 
-![Ceramic coated side profile reflecting sky](/images/ceramic-black-left.jpg)
+![Ceramic coated side profile reflecting sky](/assets/ceramic-black-left.jpg)
 
-![Blue BMW showing ceramic gloss](/images/ceramic-blue-bmw-back.jpg)
+![Blue BMW showing ceramic gloss](/assets/ceramic-blue-bmw-back.jpg)
 
 [Request Quote](/contact.html)
 
@@ -28,13 +28,13 @@ Revive and protect every surface with deep-cleaning treatments that leave your c
 - **Process:** Comprehensive vacuuming, steam cleaning, fabric and leather shampooing, plus meticulous detailing of vents, dashboards, and touch points.
 - **Durability:** Interior protectants guard against spills, UV fading, and dye transfer for months of daily comfort.
 
-![Perfect vacuum lines across interior carpet](/images/carpet-stripes-detailing.jpg)
+![Perfect vacuum lines across interior carpet](/assets/carpet-stripes-detailing.jpg)
 
-![Detailed seats and carpets after interior detail](/images/detailing-interior-lines.jpg)
+![Detailed seats and carpets after interior detail](/assets/detailing-interior-lines.jpg)
 
-![Seat prior to deep interior cleaning](/images/seat-clean-before.jpg)
+![Seat prior to deep interior cleaning](/assets/seat-clean-before.jpg)
 
-![Seat following deep interior detailing](/images/seat-clean-after.jpg)
+![Seat following deep interior detailing](/assets/seat-clean-after.jpg)
 
 [Request Quote](/contact.html)
 
@@ -46,9 +46,9 @@ Restore depth, clarity, and mirror reflections with precision machine polishing 
 - **Process:** Thorough inspection, paint depth readings, and multi-stage correction with finishing polish to refine every panel.
 - **Durability:** Sealed with premium protection or ceramic coating options to preserve results for the long term.
 
-![Paint correction before and after results](/images/paint-correction-before-after-combo.jpg)
+![Paint correction before and after results](/assets/paint-correction-before-after-combo.jpg)
 
-![Close-up of refined black paintwork after correction](/images/ceramic-black-paint.jpg)
+![Close-up of refined black paintwork after correction](/assets/ceramic-black-paint.jpg)
 
 [Request Quote](/contact.html)
 
