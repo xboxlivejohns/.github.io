@@ -350,18 +350,78 @@ footer a:focus {
   box-shadow: 0 24px 65px rgba(250, 204, 21, 0.28) !important;
 }
 
-.bg-black\/60 .text-amber-200,
-.bg-black\/80 .text-amber-200,
-.bg-black\/90 .text-amber-200,
-.bg-black\/60 .text-amber-300,
-.bg-black\/80 .text-amber-300,
-.bg-black\/90 .text-amber-300 {
+:is(
+    .bg-black,
+    .bg-black\/40,
+    .bg-black\/50,
+    .bg-black\/60,
+    .bg-black\/70,
+    .bg-black\/80,
+    .bg-black\/90
+  ) .text-amber-100,
+:is(
+    .bg-black,
+    .bg-black\/40,
+    .bg-black\/50,
+    .bg-black\/60,
+    .bg-black\/70,
+    .bg-black\/80,
+    .bg-black\/90
+  ) .text-amber-200 {
   color: var(--brand-yellow-light) !important;
 }
 
-.bg-black\/60 .text-amber-700,
-.bg-black\/80 .text-amber-700,
-.bg-black\/90 .text-amber-700 {
+:is(
+    .bg-black,
+    .bg-black\/40,
+    .bg-black\/50,
+    .bg-black\/60,
+    .bg-black\/70,
+    .bg-black\/80,
+    .bg-black\/90
+  ) .text-amber-300 {
+  color: var(--brand-yellow) !important;
+}
+
+:is(
+    .bg-black,
+    .bg-black\/40,
+    .bg-black\/50,
+    .bg-black\/60,
+    .bg-black\/70,
+    .bg-black\/80,
+    .bg-black\/90
+  ) .text-amber-400,
+:is(
+    .bg-black,
+    .bg-black\/40,
+    .bg-black\/50,
+    .bg-black\/60,
+    .bg-black\/70,
+    .bg-black\/80,
+    .bg-black\/90
+  ) .text-amber-500 {
+  color: var(--brand-yellow-bright) !important;
+}
+
+:is(
+    .bg-black,
+    .bg-black\/40,
+    .bg-black\/50,
+    .bg-black\/60,
+    .bg-black\/70,
+    .bg-black\/80,
+    .bg-black\/90
+  ) .text-amber-600,
+:is(
+    .bg-black,
+    .bg-black\/40,
+    .bg-black\/50,
+    .bg-black\/60,
+    .bg-black\/70,
+    .bg-black\/80,
+    .bg-black\/90
+  ) .text-amber-700 {
   color: var(--brand-yellow) !important;
 }
 
