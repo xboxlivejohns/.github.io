@@ -1,137 +1,246 @@
----
-layout: default
-title: About
-meta_title: About Polished &amp; Pristine Mobile | Darlington Car Detailing North East England Experts
-meta_description: Discover the team behind Polished &amp; Pristine Mobile, delivering meticulous car detailing and ceramic coating services across Darlington and North East England.
-og_type: article
-og_image: /images/ceramic-shine-blue-bmw.jpg
-twitter_card: summary_large_image
-canonical_url: /about.html
----
-<section class="max-w-5xl mx-auto px-6 py-20 space-y-16" data-hero>
-  <header class="space-y-5">
-    <p class="text-amber-700 uppercase tracking-[0.4em] text-xs">About Us</p>
-    <h1 class="text-3xl sm:text-4xl font-bold">Darlington car detailing specialists serving North East England drivers</h1>
-    <p class="text-amber-600 max-w-3xl">At {{ site.name }}, we live and breathe automotive perfection. We're a dedicated team serving a 15-mile radius across County Durham, Teesside, and North Yorkshire—treating every vehicle as if it were our own and delivering results that make you fall in love with your car all over again through tailored Car Detailing North East England packages.</p>
-  </header>
+<!DOCTYPE html>
+<html lang="en" class="header-upgrade">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Polished &amp; Pristine Mobile | Darlington Detailing Experts</title>
+    <meta name="description" content="Discover the Darlington-based detailing specialists delivering meticulous paint correction and ceramic coating services across North East England.">
+    <link rel="canonical" href="https://polishedandpristine.co.uk/about.html">
+    <meta property="og:site_name" content="Polished &amp; Pristine Mobile">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="About Polished &amp; Pristine Mobile">
+    <meta property="og:description" content="Meet the Darlington detailing specialists trusted by drivers across North East England.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="About Polished &amp; Pristine Mobile">
+    <meta name="twitter:description" content="Meet the Darlington detailing specialists trusted by drivers across North East England.">
+    <meta property="og:locale" content="en_GB">
+    <meta name="theme-color" content="#000000">
+    <link rel="manifest" href="/manifest.json">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#f4f4f5',
+              accent: '#ef4444',
+              surface: '#0b0b0f',
+              edge: '#1f1f23'
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body { font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    </style>
+    <link rel="stylesheet" href="/assets/css/header.upgrade.tokens.css">
+    <link rel="stylesheet" href="/assets/css/header.upgrade.css">
+    <link rel="stylesheet" href="/assets/css/theme-overrides.css">
+  </head>
+  <body class="bg-white text-black min-h-screen flex flex-col">
+    <header class="sticky top-0 z-50 border-b border-amber-700 bg-black/80 backdrop-blur" data-header data-state="at-top">
+      <div class="max-w-5xl mx-auto px-6 py-4 flex flex-wrap items-center gap-6 justify-between">
+        <a href="/" class="flex items-center gap-3 text-left">
+          <span class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-amber-700 text-xs font-semibold uppercase tracking-[0.3em] text-amber-200">P&amp;P</span>
+          <span class="text-xl font-semibold text-white tracking-tight">Polished &amp; Pristine Mobile</span>
+        </a>
+        <button
+          type="button"
+          class="inline-flex items-center gap-2 rounded-full border border-amber-700 bg-accent px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-black shadow transition hover:bg-amber-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black md:hidden"
+          data-nav-toggle
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <span aria-hidden="true" class="flex items-center gap-2">
+            <span class="relative block h-3.5 w-4">
+              <span class="absolute inset-x-0 top-0 h-0.5 rounded-full bg-current transition-transform duration-200" data-hamburger-line></span>
+              <span class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 rounded-full bg-current transition-opacity duration-200" data-hamburger-line></span>
+              <span class="absolute inset-x-0 bottom-0 h-0.5 rounded-full bg-current transition-transform duration-200" data-hamburger-line></span>
+            </span>
+            <span aria-hidden="true">Menu</span>
+          </span>
+        </button>
+        <nav
+          id="primary-navigation"
+          class="hidden w-full flex-col items-stretch gap-4 text-sm font-medium uppercase tracking-wide text-white md:flex md:w-auto md:flex-row md:flex-wrap md:items-center"
+          data-nav
+        >
+          <a class="px-2 py-1 border-b-2 border-transparent transition hover:text-white hover:border-white" href="/">Home</a>
+          <a class="px-2 py-1 border-b-2 border-transparent transition hover:text-white hover:border-white" href="/services.html">Services</a>
+          <a class="px-2 py-1 border-b-2 border-transparent transition hover:text-white hover:border-white" href="/locations.html">Locations</a>
+          <a class="px-2 py-1 border-b-2 border-transparent transition hover:text-white hover:border-white" href="/pricing.html">Pricing</a>
+          <a class="px-2 py-1 border-b-2 border-white text-white" href="/about.html" aria-current="page">About</a>
+          <a class="px-2 py-1 border-b-2 border-transparent transition hover:text-white hover:border-white" href="/contact.html">Contact</a>
+          <a class="ml-2 inline-flex items-center rounded-full bg-accent px-4 py-2 text-xs font-semibold uppercase tracking-wider text-black shadow-lg shadow-accent/30 transition hover:bg-accent/80" href="/contact.html" data-cta="book">Book Now</a>
+        </nav>
+      </div>
+    </header>
+    <main class="flex-1">
+      <section class="max-w-5xl mx-auto px-6 py-20 space-y-16" data-hero>
+        <header class="space-y-5">
+          <p class="text-amber-700 uppercase tracking-[0.4em] text-xs">About Us</p>
+          <h1 class="text-3xl sm:text-4xl font-bold">Darlington car detailing specialists serving North East England drivers</h1>
+          <p class="text-amber-600 max-w-3xl">At Polished &amp; Pristine Mobile, we live and breathe automotive perfection. We're a dedicated team serving a 15-mile radius across County Durham, Teesside, and North Yorkshire—treating every vehicle as if it were our own and delivering results that make you fall in love with your car all over again.</p>
+        </header>
 
-  <div class="grid gap-12 md:grid-cols-2">
-    <article class="space-y-4 bg-amber-900/40 border border-amber-700 rounded-3xl p-8">
-      <h2 class="text-2xl font-semibold text-white">Professional excellence, personal service</h2>
-      <p class="text-amber-600">Fully trained, fully insured, and fully committed, we combine premium-grade products with proven techniques to restore, protect, and maintain your vehicle. From meticulous safe washing and machine polishing to ceramic coating preparation, every step is completed with precision.</p>
-      <p class="text-amber-600">Whether it's an everyday family car, a cherished classic, or a high-performance vehicle, we customise the detail to suit your expectations and driving habits.</p>
-    </article>
-    <article class="space-y-4 bg-amber-900/40 border border-amber-700 rounded-3xl p-8">
-      <h2 class="text-2xl font-semibold text-white">What makes {{ site.name }} different?</h2>
-      <ul class="space-y-3 text-amber-600">
-        <li><strong class="text-amber-100">Attention to detail:</strong> Every surface, seam, and shut line receives the care it deserves.</li>
-        <li><strong class="text-amber-100">Honest & transparent:</strong> No upselling, no surprises—just expert advice on what your car truly needs.</li>
-        <li><strong class="text-amber-100">Flexible appointments:</strong> Mobile visits at your home or workplace, or drop-off sessions at our Darlington base.</li>
-        <li><strong class="text-amber-100">North East weather specialists:</strong> Protective treatments designed to tackle road salt, rain, and industrial fallout.</li>
-      </ul>
-    </article>
-  </div>
+        <div class="grid gap-12 md:grid-cols-2">
+          <article class="space-y-4 bg-amber-900/40 border border-amber-700 rounded-3xl p-8">
+            <h2 class="text-2xl font-semibold text-white">Professional excellence, personal service</h2>
+            <p class="text-amber-600">Fully trained, fully insured, and fully committed, we combine premium-grade products with proven techniques to restore, protect, and maintain your vehicle. From meticulous safe washing and machine polishing to ceramic coating preparation, every step is completed with precision.</p>
+            <p class="text-amber-600">Whether it's an everyday family car, a cherished classic, or a high-performance vehicle, we customise the detail to suit your expectations and driving habits.</p>
+          </article>
+          <article class="space-y-4 bg-amber-900/40 border border-amber-700 rounded-3xl p-8">
+            <h2 class="text-2xl font-semibold text-white">What makes Polished &amp; Pristine Mobile different?</h2>
+            <ul class="space-y-3 text-amber-600">
+              <li><strong class="text-amber-100">Attention to detail:</strong> Every surface, seam, and shut line receives the care it deserves.</li>
+              <li><strong class="text-amber-100">Honest &amp; transparent:</strong> No upselling, no surprises—just expert advice on what your car truly needs.</li>
+              <li><strong class="text-amber-100">Flexible appointments:</strong> Mobile visits at your home or workplace, or drop-off sessions at our Darlington base.</li>
+              <li><strong class="text-amber-100">North East weather specialists:</strong> Protective treatments designed to tackle road salt, rain, and industrial fallout.</li>
+            </ul>
+          </article>
+        </div>
 
-  <section class="bg-amber-900/40 border border-amber-700 rounded-3xl p-8 sm:p-10 grid gap-8 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] items-center">
-    <div class="space-y-5">
-      <p class="text-amber-700 uppercase tracking-[0.4em] text-xs">Meet John</p>
-      <h2 class="text-2xl font-semibold text-amber-100">Your trusted local detailer</h2>
-      <p class="text-amber-600">I'm John, the face behind {{ site.name }}. After more than 20 years perfecting vehicles for leading dealerships and prestige garages, I launched my own detailing studio in 2019 to bring a more personal, transparent service to fellow North East drivers.</p>
-      <p class="text-amber-600">Since then, I've earned over 200 five-star reviews—without a single rating below five stars—by treating every car as if it were my own and communicating clearly from the first call to the final handover. I'm born-and-bred local, still living in Darlington, and proud to support the community that supports me.</p>
-      <div class="grid gap-4 sm:grid-cols-3 text-sm">
-        <div class="flex items-start gap-3 rounded-2xl border border-amber-700/80 bg-amber-900/60 p-4">
-          <span class="mt-1 text-accent">
-            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9Zm0 0c0-3.314-2.239-6-5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M12 3v4m5.657 1.343-2.828 2.828M21 12h-4M5.636 6.343 8.464 9.17M3 12h4m1.1 7.364 1.95-3.38" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
-          <div>
-            <p class="font-semibold text-amber-100">20+ years expertise</p>
-            <p class="text-amber-600">Dealership-trained detailing and coating know-how.</p>
+        <section class="bg-amber-900/40 border border-amber-700 rounded-3xl p-8 sm:p-10 grid gap-8 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] items-center">
+          <div class="space-y-5">
+            <p class="text-amber-700 uppercase tracking-[0.4em] text-xs">Meet John</p>
+            <h2 class="text-2xl font-semibold text-amber-100">Your trusted local detailer</h2>
+            <p class="text-amber-600">I'm John, the face behind Polished &amp; Pristine Mobile. After more than 20 years perfecting vehicles for leading dealerships and prestige garages, I launched my own detailing studio in 2019 to bring a more personal, transparent service to fellow North East drivers.</p>
+            <p class="text-amber-600">Since then, I've earned over 200 five-star reviews—without a single rating below five stars—by treating every car as if it were my own and communicating clearly from the first call to the final handover. I'm born-and-bred local, still living in Darlington, and proud to support the community that supports me.</p>
+            <div class="grid gap-4 sm:grid-cols-3 text-sm">
+              <div class="flex items-start gap-3 rounded-2xl border border-amber-700/80 bg-amber-900/60 p-4">
+                <span class="mt-1 text-accent">
+                  <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9Zm0 0c0-3.314-2.239-6-5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 3v4m5.657 1.343-2.828 2.828M21 12h-4M5.636 6.343 8.464 9.17M3 12h4m1.1 7.364 1.95-3.38" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                <div>
+                  <p class="font-semibold text-amber-100">20+ years expertise</p>
+                  <p class="text-amber-600">Dealership-trained detailing and coating know-how.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 rounded-2xl border border-amber-700/80 bg-amber-900/60 p-4">
+                <span class="mt-1 text-accent">
+                  <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="m12 3 2.09 4.23 4.67.68-3.38 3.29.8 4.62L12 14.77l-4.18 2.23.8-4.62-3.38-3.29 4.67-.68L12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                    <path d="M8.5 19.5a7 7 0 0 1 7 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                </span>
+                <div>
+                  <p class="font-semibold text-amber-100">200+ five-star reviews</p>
+                  <p class="text-amber-600">Consistent, verified results with zero ratings under five.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 rounded-2xl border border-amber-700/80 bg-amber-900/60 p-4">
+                <span class="mt-1 text-accent">
+                  <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M3 10.5C3 6.358 6.358 3 10.5 3S18 6.358 18 10.5c0 3.333-2.167 6.54-6.5 9.623-4.333-3.084-6.5-6.29-6.5-9.623Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                    <circle cx="10.5" cy="10.5" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M18 14.5 21 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                <div>
+                  <p class="font-semibold text-amber-100">Rooted in Darlington</p>
+                  <p class="text-amber-600">Local, reliable, and only ever a short drive away.</p>
+                </div>
+              </div>
+            </div>
           </div>
+          <figure class="mx-auto flex flex-col items-center gap-4 text-center">
+            <span class="inline-flex h-48 w-48 items-center justify-center rounded-full border border-amber-700 bg-black/70 text-xl font-semibold uppercase tracking-[0.4em] text-amber-100">John</span>
+            <figcaption class="text-sm text-amber-600">John “Polished &amp; Pristine Mobile”, Owner &amp; Lead Detailer</figcaption>
+          </figure>
+        </section>
+
+        <section class="bg-amber-900/40 border border-amber-700 rounded-3xl p-8 sm:p-10 grid gap-8 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] items-center">
+          <div class="space-y-4">
+            <h2 class="text-2xl font-semibold text-white">Trusted, accredited, and insured</h2>
+            <p class="text-amber-600">Our reputation is built on delivering exceptional finishes with complete transparency. From single-vehicle details to fleet maintenance, you benefit from dependable standards every visit.</p>
+            <ul class="space-y-3 text-amber-600">
+              <li><strong class="text-amber-100">Experience:</strong> Over a decade of hands-on detailing, coating, and correction work across premium marques and daily drivers.</li>
+              <li><strong class="text-amber-100">Quality standards:</strong> Accredited ceramic partners, calibrated lighting, and manufacturer-approved products on every job.</li>
+              <li><strong class="text-amber-100">Insured &amp; guaranteed:</strong> Full public liability cover with satisfaction guarantees and aftercare guidance for peace of mind.</li>
+            </ul>
+          </div>
+          <div class="rounded-3xl border border-amber-700 bg-black/50 p-8 space-y-3 text-amber-100">
+            <p class="text-sm uppercase tracking-[0.3em] text-amber-500">Highlights</p>
+            <p class="text-lg font-semibold">Certified ceramic coating installer</p>
+            <p class="text-amber-600 text-sm">Fully insured mobile and studio appointments with transparent aftercare support.</p>
+          </div>
+        </section>
+
+        <section class="bg-amber-900/40 border border-amber-700 rounded-3xl p-10 space-y-6">
+          <div class="space-y-3">
+            <h2 class="text-2xl font-semibold text-white">Service Area</h2>
+            <p class="text-amber-600">Based in Darlington and serving the wider North East of England with both mobile and studio appointments.</p>
+          </div>
+          <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 text-amber-600">
+            <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-accent"></span><span>Newcastle upon Tyne &amp; Gateshead</span></li>
+            <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-accent"></span><span>Sunderland &amp; Washington</span></li>
+            <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-accent"></span><span>Durham City &amp; Chester-le-Street</span></li>
+            <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-accent"></span><span>Darlington &amp; Newton Aycliffe</span></li>
+            <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-accent"></span><span>Stockton-on-Tees &amp; Yarm</span></li>
+            <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-accent"></span><span>Middlesbrough &amp; Redcar</span></li>
+            <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-accent"></span><span>Hartlepool &amp; Peterlee</span></li>
+            <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-accent"></span><span>Bishop Auckland &amp; Barnard Castle</span></li>
+            <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-accent"></span><span>Sedgefield, Ferryhill &amp; Spennymoor</span></li>
+          </ul>
+          <p class="text-amber-600 text-sm">If you are just outside this area, get in touch—we regularly travel for specialist details and ceramic coating bookings.</p>
+        </section>
+
+        <div class="grid gap-10 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
+          <section class="bg-amber-900/40 border border-amber-700 rounded-3xl p-8 space-y-5">
+            <h2 class="text-2xl font-semibold text-white">Our promise to you</h2>
+            <ul class="space-y-3 text-amber-600">
+              <li><strong class="text-amber-100">Premium products only:</strong> Professional-grade brands that deliver superior gloss and durability.</li>
+              <li><strong class="text-amber-100">Safe, modern techniques:</strong> pH-balanced chemistry, soft microfibres, and calibrated lighting to avoid damage.</li>
+              <li><strong class="text-amber-100">Time and care:</strong> We never rush—quality over quantity is at the core of every detail.</li>
+              <li><strong class="text-amber-100">Fully insured:</strong> Complete peace of mind while your vehicle is in our care.</li>
+            </ul>
+          </section>
+          <aside class="bg-amber-900/60 border border-amber-700 rounded-3xl p-8 space-y-4">
+            <h3 class="text-xl font-semibold text-white">Ready to experience Polished &amp; Pristine Mobile?</h3>
+            <p class="text-amber-600">Call 07468 286651 or message us with your vehicle details, location, and the results you're looking for.</p>
+            <a href="/contact.html" class="inline-flex items-center justify-center rounded-full bg-white px-5 py-3 font-semibold text-black transition hover:bg-amber-200">Book your consultation</a>
+          </aside>
         </div>
-        <div class="flex items-start gap-3 rounded-2xl border border-amber-700/80 bg-amber-900/60 p-4">
-          <span class="mt-1 text-accent">
-            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="m12 3 2.09 4.23 4.67.68-3.38 3.29.8 4.62L12 14.77l-4.18 2.23.8-4.62-3.38-3.29 4.67-.68L12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-              <path d="M8.5 19.5a7 7 0 0 1 7 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-          </span>
-          <div>
-            <p class="font-semibold text-amber-100">200+ five-star reviews</p>
-            <p class="text-amber-600">Consistent, verified results with zero ratings under five.</p>
-          </div>
+      </section>
+    </main>
+    <footer class="border-t border-amber-700 bg-black/90 backdrop-blur">
+      <div class="max-w-6xl mx-auto px-6 py-10 text-sm text-amber-600 grid gap-8 md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
+        <div class="space-y-4">
+          <address class="not-italic space-y-1 text-amber-600">
+            <span class="block text-lg font-semibold text-white">Polished &amp; Pristine Mobile</span>
+            <span class="block">3 Appleby Close</span>
+            <span class="block">Darlington, County Durham DL1 4AJ</span>
+            <span class="block">United Kingdom</span>
+            <span class="block">Phone: <a href="tel:+447468286651" class="text-amber-200 transition hover:text-white">07468 286651</a></span>
+            <span class="block">Email: <a href="mailto:polishedpristinemobile@gmail.com" class="text-amber-200 transition hover:text-white">polishedpristinemobile@gmail.com</a></span>
+          </address>
+          <p class="text-amber-700 uppercase tracking-[0.3em] text-xs">Car detailing Darlington · North East England coverage</p>
+          <p class="text-xs text-amber-700">&copy; <span id="current-year"></span> Polished &amp; Pristine Mobile. All rights reserved.</p>
         </div>
-        <div class="flex items-start gap-3 rounded-2xl border border-amber-700/80 bg-amber-900/60 p-4">
-          <span class="mt-1 text-accent">
-            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M3 10.5C3 6.358 6.358 3 10.5 3S18 6.358 18 10.5c0 3.333-2.167 6.54-6.5 9.623-4.333-3.084-6.5-6.29-6.5-9.623Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-              <circle cx="10.5" cy="10.5" r="2.5" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M18 14.5 21 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
-          <div>
-            <p class="font-semibold text-amber-100">Rooted in Darlington</p>
-            <p class="text-amber-600">Local, reliable, and only ever a short drive away.</p>
-          </div>
+        <div class="space-y-4 md:justify-self-end">
+          <p class="text-white font-semibold uppercase tracking-wide">Connect</p>
+          <ul class="space-y-2 text-amber-500">
+            <li><a href="https://polishedandpristine.co.uk" class="inline-flex items-center gap-2 text-amber-200 transition hover:text-white"><span aria-hidden="true" class="text-xs uppercase tracking-[0.3em] text-amber-700">Web</span>polishedandpristine.co.uk</a></li>
+            <li><a href="https://www.facebook.com/PolishedandPristine/" class="inline-flex items-center gap-2 text-amber-200 transition hover:text-white"><span aria-hidden="true" class="text-xs uppercase tracking-[0.3em] text-amber-700">Fb</span>Facebook</a></li>
+            <li><a href="https://www.tiktok.com/@polished_pristine" class="inline-flex items-center gap-2 text-amber-200 transition hover:text-white"><span aria-hidden="true" class="text-xs uppercase tracking-[0.3em] text-amber-700">Tt</span>TikTok</a></li>
+            <li><a href="https://www.instagram.com/polishedpristinemobile/" class="inline-flex items-center gap-2 text-amber-200 transition hover:text-white"><span aria-hidden="true" class="text-xs uppercase tracking-[0.3em] text-amber-700">Ig</span>Instagram</a></li>
+            <li><a href="https://www.yell.com/biz/polished-and-pristine-mobile-darlington-10931334/" class="inline-flex items-center gap-2 text-amber-200 transition hover:text-white"><span aria-hidden="true" class="text-xs uppercase tracking-[0.3em] text-amber-700">Ye</span>Yell Business Listing</a></li>
+          </ul>
         </div>
       </div>
-    </div>
-    <figure class="mx-auto flex flex-col items-center gap-4 text-center">
-      <img src="{{ '/images/detailer-john.png' | relative_url }}" alt="John, owner of Polished &amp; Pristine Mobile, smiling in front of a detailed vehicle." class="h-48 w-48 rounded-full border border-amber-700 object-cover shadow-lg shadow-accent/30" loading="lazy" decoding="async" width="600" height="600">
-      <figcaption class="text-sm text-amber-600">John &ldquo;Polished &amp; Pristine Mobile&rdquo;, Owner &amp; Lead Detailer</figcaption>
-    </figure>
-  </section>
-
-  <section class="bg-amber-900/40 border border-amber-700 rounded-3xl p-8 sm:p-10 grid gap-8 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] items-center">
-    <div class="space-y-4">
-      <h2 class="text-2xl font-semibold text-white">Trusted, accredited, and insured</h2>
-      <p class="text-amber-600">Our reputation is built on delivering exceptional finishes with complete transparency. From single-vehicle details to fleet maintenance, you benefit from dependable standards every visit.</p>
-      <ul class="space-y-3 text-amber-600">
-        <li><strong class="text-amber-100">Experience:</strong> Over a decade of hands-on detailing, coating, and correction work across premium marques and daily drivers.</li>
-        <li><strong class="text-amber-100">Quality standards:</strong> Accredited ceramic partners, calibrated lighting, and manufacturer-approved products on every job.</li>
-        <li><strong class="text-amber-100">Insured &amp; guaranteed:</strong> Full public liability cover with satisfaction guarantees and aftercare guidance for peace of mind.</li>
-      </ul>
-    </div>
-    <div class="relative">
-      <img src="{{ '/images/ceramic-shine-blue-bmw.jpg' | relative_url }}" alt="Detailer inspecting a ceramic-coated blue BMW" class="rounded-3xl border border-amber-700 shadow-lg shadow-accent/30" loading="lazy" decoding="async" width="3024" height="4032">
-    </div>
-  </section>
-
-  <section class="bg-amber-900/40 border border-amber-700 rounded-3xl p-10 space-y-6">
-    <div class="space-y-3">
-      <h2 class="text-2xl font-semibold text-white">Service Area</h2>
-      <p class="text-amber-600">Based in Darlington and serving the wider North East of England with both mobile and studio appointments.</p>
-    </div>
-    <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 text-amber-600">
-      <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-accent"></span><span>Newcastle upon Tyne &amp; Gateshead</span></li>
-      <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-accent"></span><span>Sunderland &amp; Washington</span></li>
-      <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-accent"></span><span>Durham City &amp; Chester-le-Street</span></li>
-      <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-accent"></span><span>Darlington &amp; Newton Aycliffe</span></li>
-      <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-accent"></span><span>Stockton-on-Tees &amp; Yarm</span></li>
-      <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-accent"></span><span>Middlesbrough &amp; Redcar</span></li>
-      <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-accent"></span><span>Hartlepool &amp; Peterlee</span></li>
-      <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-accent"></span><span>Bishop Auckland &amp; Barnard Castle</span></li>
-      <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-accent"></span><span>Sedgefield, Ferryhill &amp; Spennymoor</span></li>
-    </ul>
-    <p class="text-amber-600 text-sm">If you are just outside this area, get in touch—we regularly travel for specialist details and ceramic coating bookings.</p>
-  </section>
-
-  <div class="grid gap-10 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
-    <section class="bg-amber-900/40 border border-amber-700 rounded-3xl p-8 space-y-5">
-      <h2 class="text-2xl font-semibold text-white">Our promise to you</h2>
-      <ul class="space-y-3 text-amber-600">
-        <li><strong class="text-amber-100">Premium products only:</strong> Professional-grade brands that deliver superior gloss and durability.</li>
-        <li><strong class="text-amber-100">Safe, modern techniques:</strong> pH-balanced chemistry, soft microfibres, and calibrated lighting to avoid damage.</li>
-        <li><strong class="text-amber-100">Time and care:</strong> We never rush—quality over quantity is at the core of every detail.</li>
-        <li><strong class="text-amber-100">Fully insured:</strong> Complete peace of mind while your vehicle is in our care.</li>
-      </ul>
-    </section>
-    <aside class="bg-amber-900/60 border border-amber-700 rounded-3xl p-8 space-y-4">
-      <h3 class="text-xl font-semibold text-white">Ready to experience Polished &amp; Pristine Mobile?</h3>
-      <p class="text-amber-600">Call 07468 286651 or message us with your vehicle details, location, and the results you're looking for.</p>
-      <a href="{{ '/contact.html' | relative_url }}" class="inline-flex items-center justify-center rounded-full bg-white px-5 py-3 font-semibold text-black transition hover:bg-amber-200">Book your consultation</a>
-    </aside>
-  </div>
-</section>
+    </footer>
+    <script defer src="/assets/js/header.upgrade.js"></script>
+    <script>
+      const yearEl = document.getElementById('current-year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+    </script>
+  </body>
+</html>
