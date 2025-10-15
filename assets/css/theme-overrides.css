@@ -7,6 +7,9 @@
   --brand-charcoal: #111827;
   --brand-slate: #1f2937;
   --brand-paper: #f8fafc;
+  --accent-bg: var(--brand-yellow);
+  --accent-bg-hover: var(--brand-yellow-bright);
+  --accent-text: var(--brand-black);
 }
 
 .text-brand-black {
@@ -215,24 +218,24 @@ header a:focus {
 }
 
 header [data-nav-toggle] {
-  background-color: var(--brand-yellow) !important;
-  border-color: var(--brand-yellow) !important;
-  color: var(--brand-black) !important;
+  background-color: var(--accent-bg);
+  border-color: var(--accent-bg);
+  color: var(--accent-text);
   box-shadow: 0 16px 40px rgba(250, 204, 21, 0.22);
 }
 
 header [data-nav-toggle]:hover,
 header [data-nav-toggle]:focus-visible {
-  background-color: var(--brand-yellow-bright) !important;
-  border-color: var(--brand-yellow-bright) !important;
-  color: var(--brand-black) !important;
+  background-color: var(--accent-bg-hover);
+  border-color: var(--accent-bg-hover);
+  color: var(--accent-text);
 }
 
 header [data-nav] a,
 header [data-nav] a:hover,
 header [data-nav] a:focus-visible,
 header [data-nav] a[aria-current="page"] {
-  color: var(--brand-black) !important;
+  color: var(--brand-black);
 }
 
 header [data-cta="book"] {
@@ -260,12 +263,13 @@ footer a:focus {
 }
 
 .bg-accent {
-  background-color: var(--brand-yellow) !important;
-  color: var(--brand-black) !important;
+  background-color: var(--accent-bg);
+  color: var(--accent-text);
 }
 
 .bg-accent:hover {
-  background-color: var(--brand-yellow-bright) !important;
+  background-color: var(--accent-bg-hover);
+  color: var(--accent-text);
 }
 
 .text-accent {
