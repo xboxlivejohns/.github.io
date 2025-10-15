@@ -3,6 +3,9 @@
   --brand-yellow-bright: #fde047;
   --brand-yellow-light: #fefce8;
   --brand-yellow-dark: #eab308;
+  --brand-amber-700: #78350f;
+  --brand-amber-600: #92400e;
+  --brand-amber-500: #b45309;
   --brand-black: #050505;
   --brand-charcoal: #111827;
   --brand-slate: #1f2937;
@@ -177,12 +180,15 @@ section[data-hero] a:focus {
 }
 
 .text-amber-700 {
-  color: var(--brand-yellow) !important;
+  color: var(--brand-amber-700) !important;
 }
 
-.text-amber-600,
+.text-amber-600 {
+  color: var(--brand-amber-600) !important;
+}
+
 .text-amber-500 {
-  color: var(--brand-yellow-dark) !important;
+  color: var(--brand-amber-500) !important;
 }
 
 .text-amber-400,
