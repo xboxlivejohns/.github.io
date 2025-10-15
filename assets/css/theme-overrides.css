@@ -327,9 +327,9 @@ button:hover,
   box-shadow: 0 18px 40px rgba(250, 204, 21, 0.45);
 }
 
-.bg-black\/60 span,
-.bg-black\/80 span,
-.bg-black\/90 span {
+[data-hero] .bg-black\/60 span,
+[data-hero] .bg-black\/80 span,
+[data-hero] .bg-black\/90 span {
   color: var(--brand-yellow-bright) !important;
 }
 
