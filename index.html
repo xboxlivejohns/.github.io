@@ -1,378 +1,628 @@
----
-layout: default
-title: Home
-meta_title: Darlington Car Detailing North East England | Polished &amp; Pristine Mobile
-meta_description: Mobile car detailing in Darlington delivering paint correction, ceramic coatings, and interior rejuvenation across North East England.
-og_type: website
-og_image: /images/ceramic-shine-blue-bmw.jpg
-twitter_card: summary_large_image
-canonical_url: /
----
-<section class="max-w-5xl mx-auto px-6 py-24 text-center space-y-6" data-hero>
-  <div>
-    <img src="{{ 'images/logo.png' | relative_url }}" alt="{{ site.name }} logo" class="mx-auto h-48 w-auto" width="500" height="500" loading="lazy" decoding="async">
-  </div>
-  <p class="text-amber-700 uppercase tracking-[0.4em] text-xs">Darlington's Premier Car Detailing Specialists</p>
-  <h1 class="text-4xl sm:text-5xl font-bold">Perfectly Polished. Proudly Pristine.</h1>
-  <p class="text-amber-600 max-w-2xl mx-auto">Mobile detailing across Darlington and the North East — for those who settle for nothing less than flawless.</p>
-  <p class="text-amber-600 max-w-2xl mx-auto">{{ site.name }} delivers expert paint correction, ceramic protection, and interior rejuvenation with every visit so your vehicle always feels freshly detailed.</p>
-  <div class="flex flex-wrap justify-center gap-4">
-    <a href="{{ '/services.html' | relative_url }}" class="cta-button inline-flex items-center justify-center px-6 py-3 font-semibold shadow transition">View Services</a>
-    <a href="{{ '/contact.html' | relative_url }}" class="inline-flex items-center justify-center rounded-full border border-amber-700 bg-accent px-6 py-3 font-semibold text-black shadow transition hover:bg-amber-200">Get a Quote</a>
-  </div>
-  <div class="flex flex-wrap items-center justify-center gap-3 text-xs uppercase tracking-[0.25em] text-amber-700">
-    <span class="rounded-full border border-amber-700 bg-black/60 px-4 py-2 text-[0.65rem] font-semibold text-amber-200">Fully Insured</span>
-    <span class="rounded-full border border-amber-700 bg-black/60 px-4 py-2 text-[0.65rem] font-semibold text-amber-200">Satisfaction Guarantee</span>
-    <span class="rounded-full border border-amber-700 bg-black/60 px-4 py-2 text-[0.65rem] font-semibold text-amber-200">Trusted by North East Drivers</span>
-  </div>
-</section>
-
-<section class="max-w-5xl mx-auto px-6 py-16">
-  <div class="grid gap-6 md:grid-cols-3">
-    <article class="bg-amber-900/40 border border-amber-700 rounded-2xl p-6 space-y-2">
-      <h2 class="text-xl font-semibold text-white">Ceramic Coating</h2>
-      <p class="text-amber-600 text-sm">Seal in gloss with 2–5 year protection against UV, grime, and the North East weather.</p>
-      <a href="{{ '/services.html#ceramic-coating' | relative_url }}" class="inline-flex items-center gap-2 text-accent text-sm font-semibold">Learn more<span aria-hidden="true">→</span></a>
-    </article>
-    <article class="bg-amber-900/40 border border-amber-700 rounded-2xl p-6 space-y-2">
-      <h2 class="text-xl font-semibold text-white">Interior Detailing</h2>
-      <p class="text-amber-600 text-sm">Deep clean, sanitise, and protect every surface for a cabin that feels factory-fresh.</p>
-      <a href="{{ '/services.html#deep-interior-detail' | relative_url }}" class="inline-flex items-center gap-2 text-accent text-sm font-semibold">Discover what's included<span aria-hidden="true">→</span></a>
-    </article>
-    <article class="bg-amber-900/40 border border-amber-700 rounded-2xl p-6 space-y-2">
-      <h2 class="text-xl font-semibold text-white">Paint Correction</h2>
-      <p class="text-amber-600 text-sm">Remove swirls, restore clarity, and prepare your paintwork for long-lasting protection.</p>
-      <a href="{{ '/services.html#paint-correction' | relative_url }}" class="inline-flex items-center gap-2 text-accent text-sm font-semibold">See the process<span aria-hidden="true">→</span></a>
-    </article>
-  </div>
-</section>
-
-<section class="max-w-4xl mx-auto px-6 py-12">
-  <div class="rounded-3xl border border-amber-700 bg-amber-900/40 p-8 space-y-5 text-center">
-    <p class="text-amber-700 uppercase tracking-[0.3em] text-xs">Service Area</p>
-    <h2 class="text-2xl sm:text-3xl font-semibold">Darlington base, North East coverage</h2>
-    <p class="text-amber-600">We travel across County Durham, Teesside, and North Yorkshire with fully mobile equipment and flexible scheduling.</p>
-    <div class="flex flex-wrap justify-center gap-4 text-sm font-semibold">
-      <a href="{{ '/locations.html' | relative_url }}" class="inline-flex items-center gap-2 text-accent">See full coverage<span aria-hidden="true">→</span></a>
-      <a href="{{ '/about.html' | relative_url }}" class="inline-flex items-center gap-2 text-accent">Meet the team<span aria-hidden="true">→</span></a>
-    </div>
-  </div>
-</section>
-
-<section id="reviews" class="max-w-5xl mx-auto px-6 py-20 space-y-10">
-  {% assign reviews = site.data.reviews | sort: 'date' | reverse %}
-  <header class="space-y-3 text-center">
-    <p class="text-amber-700 uppercase tracking-[0.3em] text-xs">Testimonials</p>
-    <h2 class="text-3xl sm:text-4xl font-bold">Verified five-star detailing reviews</h2>
-    <p class="text-amber-600 max-w-3xl mx-auto">Read what drivers across the North East share after trusting {{ site.name }} with ceramic coatings, interior rejuvenation, and paint correction. Every story below is a genuine 5★ client review.</p>
-  </header>
-  <div class="grid gap-6 md:grid-cols-2">
-    {% for review in reviews %}
-    <article class="rounded-2xl border border-amber-700 bg-amber-900/60 p-6 text-left space-y-4 text-white">
-      <div class="flex flex-wrap items-center gap-3">
-        <p class="text-sm font-semibold tracking-[0.3em]" aria-hidden="true">
-          {% for star in (1..review.rating) %}★{% endfor %}
-        </p>
-        <span class="sr-only">Rated {{ review.rating }} out of 5 stars</span>
-        {% if review.display_date %}
-        <p class="text-xs uppercase tracking-[0.3em]">{{ review.display_date }}</p>
-        {% endif %}
+<!DOCTYPE html>
+<html lang="en" class="header-upgrade">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perfectly Polished. Proudly Pristine. | Polished &amp; Pristine Mobile</title>
+    <meta name="description" content="Mobile car detailing in Darlington delivering paint correction, ceramic coatings, and interior rejuvenation across North East England.">
+    <link rel="canonical" href="https://polishedandpristine.co.uk/">
+    <meta property="og:site_name" content="Polished &amp; Pristine Mobile">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Perfectly Polished. Proudly Pristine.">
+    <meta property="og:description" content="Mobile car detailing in Darlington delivering paint correction, ceramic coatings, and interior rejuvenation across North East England.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Perfectly Polished. Proudly Pristine.">
+    <meta name="twitter:description" content="Mobile car detailing in Darlington delivering paint correction, ceramic coatings, and interior rejuvenation across North East England.">
+    <meta property="og:locale" content="en_GB">
+    <meta name="theme-color" content="#000000">
+    <link rel="manifest" href="/manifest.json">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#f4f4f5',
+              accent: '#ef4444',
+              surface: '#0b0b0f',
+              edge: '#1f1f23'
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body { font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    </style>
+    <link rel="stylesheet" href="/assets/css/header.upgrade.tokens.css">
+    <link rel="stylesheet" href="/assets/css/header.upgrade.css">
+    <link rel="stylesheet" href="/assets/css/theme-overrides.css">
+  </head>
+  <body class="bg-white text-black min-h-screen flex flex-col">
+    <header class="sticky top-0 z-50 border-b border-amber-700 bg-black/80 backdrop-blur" data-header data-state="at-top">
+      <div class="max-w-5xl mx-auto px-6 py-4 flex flex-wrap items-center gap-6 justify-between">
+        <a href="/" class="flex items-center gap-3 text-left">
+          <span class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-amber-700 text-xs font-semibold uppercase tracking-[0.3em] text-amber-200">P&amp;P</span>
+          <span class="text-xl font-semibold text-white tracking-tight">Polished &amp; Pristine Mobile</span>
+        </a>
+        <button
+          type="button"
+          class="inline-flex items-center gap-2 rounded-full border border-amber-700 bg-accent px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-black shadow transition hover:bg-amber-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black md:hidden"
+          data-nav-toggle
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <span aria-hidden="true" class="flex items-center gap-2">
+            <span class="relative block h-3.5 w-4">
+              <span class="absolute inset-x-0 top-0 h-0.5 rounded-full bg-current transition-transform duration-200" data-hamburger-line></span>
+              <span class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 rounded-full bg-current transition-opacity duration-200" data-hamburger-line></span>
+              <span class="absolute inset-x-0 bottom-0 h-0.5 rounded-full bg-current transition-transform duration-200" data-hamburger-line></span>
+            </span>
+            <span aria-hidden="true">Menu</span>
+          </span>
+        </button>
+        <nav
+          id="primary-navigation"
+          class="hidden w-full flex-col items-stretch gap-4 text-sm font-medium uppercase tracking-wide text-white md:flex md:w-auto md:flex-row md:flex-wrap md:items-center"
+          data-nav
+        >
+          <a class="px-2 py-1 border-b-2 border-white text-white" href="/" aria-current="page">Home</a>
+          <a class="px-2 py-1 border-b-2 border-transparent transition hover:text-white hover:border-white" href="/services.html">Services</a>
+          <a class="px-2 py-1 border-b-2 border-transparent transition hover:text-white hover:border-white" href="/locations.html">Locations</a>
+          <a class="px-2 py-1 border-b-2 border-transparent transition hover:text-white hover:border-white" href="/pricing.html">Pricing</a>
+          <a class="px-2 py-1 border-b-2 border-transparent transition hover:text-white hover:border-white" href="/about.html">About</a>
+          <a class="px-2 py-1 border-b-2 border-transparent transition hover:text-white hover:border-white" href="/contact.html">Contact</a>
+          <a class="ml-2 inline-flex items-center rounded-full bg-accent px-4 py-2 text-xs font-semibold uppercase tracking-wider text-black shadow-lg shadow-accent/30 transition hover:bg-accent/80" href="/contact.html" data-cta="book">Book Now</a>
+        </nav>
       </div>
-      <p class="italic leading-relaxed">“{{ review.body }}”</p>
-      <p class="text-sm font-semibold">— {{ review.name }}</p>
-    </article>
-    {% endfor %}
-  </div>
-</section>
+    </header>
+    <main class="flex-1">
+      <section class="max-w-5xl mx-auto px-6 py-24 text-center space-y-6" data-hero>
+        <div class="flex justify-center">
+          <span class="inline-flex h-40 w-40 items-center justify-center rounded-full border border-amber-700 bg-black/60 text-lg font-semibold uppercase tracking-[0.4em] text-amber-200">P&amp;P</span>
+        </div>
+        <p class="text-amber-700 uppercase tracking-[0.4em] text-xs">Darlington's Premier Car Detailing Specialists</p>
+        <h1 class="text-4xl sm:text-5xl font-bold">Perfectly Polished. Proudly Pristine.</h1>
+        <p class="text-amber-600 max-w-2xl mx-auto">Mobile detailing across Darlington and the North East — for those who settle for nothing less than flawless.</p>
+        <p class="text-amber-600 max-w-2xl mx-auto">Polished &amp; Pristine Mobile delivers expert paint correction, ceramic protection, and interior rejuvenation with every visit so your vehicle always feels freshly detailed.</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/services.html" class="cta-button inline-flex items-center justify-center px-6 py-3 font-semibold shadow transition">View Services</a>
+          <a href="/contact.html" class="inline-flex items-center justify-center rounded-full border border-amber-700 bg-accent px-6 py-3 font-semibold text-black shadow transition hover:bg-amber-200">Get a Quote</a>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-3 text-xs uppercase tracking-[0.25em] text-amber-700">
+          <span class="rounded-full border border-amber-700 bg-black/60 px-4 py-2 text-[0.65rem] font-semibold text-amber-200">Fully Insured</span>
+          <span class="rounded-full border border-amber-700 bg-black/60 px-4 py-2 text-[0.65rem] font-semibold text-amber-200">Satisfaction Guarantee</span>
+          <span class="rounded-full border border-amber-700 bg-black/60 px-4 py-2 text-[0.65rem] font-semibold text-amber-200">Trusted by North East Drivers</span>
+        </div>
+      </section>
 
-<section class="bg-amber-900/40 border-y border-amber-700">
-  <div class="max-w-5xl mx-auto px-6 py-20 space-y-6">
-    <div class="grid gap-8 md:grid-cols-2 md:items-center">
-      <figure class="space-y-3">
-        <div class="grid gap-4 md:grid-cols-2 md:gap-6">
-          <div class="relative overflow-hidden rounded-2xl h-64 sm:h-72">
-            <img src="{{ '/images/seat-clean-before.jpg' | relative_url }}" alt="Car seat before detailing with visible stains and dirt" loading="lazy" decoding="async" width="2000" height="1000" class="absolute inset-0 h-full w-full object-cover" />
-            <span class="absolute left-4 top-4 rounded-full bg-amber-900/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-amber-100">Before</span>
-          </div>
-          <div class="relative overflow-hidden rounded-2xl h-64 sm:h-72">
-            <img src="{{ '/images/seat-clean-after.jpg' | relative_url }}" alt="Car seat after detailing, restored to a spotless and even finish" loading="lazy" decoding="async" width="2000" height="1000" class="absolute inset-0 h-full w-full object-cover" />
-            <span class="absolute left-4 top-4 rounded-full bg-accent/90 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-white">After</span>
+      <section class="max-w-5xl mx-auto px-6 py-16">
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="bg-amber-900/40 border border-amber-700 rounded-2xl p-6 space-y-2">
+            <h2 class="text-xl font-semibold text-white">Ceramic Coating</h2>
+            <p class="text-amber-600 text-sm">Seal in gloss with 2–5 year protection against UV, grime, and the North East weather.</p>
+            <a href="/services.html#ceramic-coating" class="inline-flex items-center gap-2 text-accent text-sm font-semibold">Learn more<span aria-hidden="true">→</span></a>
+          </article>
+          <article class="bg-amber-900/40 border border-amber-700 rounded-2xl p-6 space-y-2">
+            <h2 class="text-xl font-semibold text-white">Interior Detailing</h2>
+            <p class="text-amber-600 text-sm">Deep clean, sanitise, and protect every surface for a cabin that feels factory-fresh.</p>
+            <a href="/services.html#deep-interior-detail" class="inline-flex items-center gap-2 text-accent text-sm font-semibold">Discover what's included<span aria-hidden="true">→</span></a>
+          </article>
+          <article class="bg-amber-900/40 border border-amber-700 rounded-2xl p-6 space-y-2">
+            <h2 class="text-xl font-semibold text-white">Paint Correction</h2>
+            <p class="text-amber-600 text-sm">Remove swirls, restore clarity, and prepare your paintwork for long-lasting protection.</p>
+            <a href="/services.html#paint-correction" class="inline-flex items-center gap-2 text-accent text-sm font-semibold">See the process<span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </section>
+
+      <section class="max-w-4xl mx-auto px-6 py-12">
+        <div class="rounded-3xl border border-amber-700 bg-amber-900/40 p-8 space-y-5 text-center">
+          <p class="text-amber-700 uppercase tracking-[0.3em] text-xs">Service Area</p>
+          <h2 class="text-2xl sm:text-3xl font-semibold">Darlington base, North East coverage</h2>
+          <p class="text-amber-600">We travel across County Durham, Teesside, and North Yorkshire with fully mobile equipment and flexible scheduling.</p>
+          <div class="flex flex-wrap justify-center gap-4 text-sm font-semibold">
+            <a href="/locations.html" class="inline-flex items-center gap-2 text-accent">See full coverage<span aria-hidden="true">→</span></a>
+            <a href="/about.html" class="inline-flex items-center gap-2 text-accent">Meet the team<span aria-hidden="true">→</span></a>
           </div>
         </div>
-        <figcaption class="text-center text-sm text-amber-600">Every inch rejuvenated—from embedded stains to showroom-ready seats.</figcaption>
-      </figure>
-      <div class="space-y-4">
-        <h2 class="text-3xl font-semibold">See the difference professional detailing makes</h2>
-        <ul class="space-y-2 text-amber-600">
-          <li class="flex items-start gap-2"><span aria-hidden="true">•</span><span>Stain removal and odour neutralising for a refreshed cabin.</span></li>
-          <li class="flex items-start gap-2"><span aria-hidden="true">•</span><span>Gentle techniques that protect leather, Alcantara, and fabric.</span></li>
-          <li class="flex items-start gap-2"><span aria-hidden="true">•</span><span>Tailored care plans for family cars, daily drivers, and cherished classics.</span></li>
-        </ul>
-        <a href="{{ '/services.html#deep-interior-detail' | relative_url }}" class="inline-flex items-center gap-2 text-accent font-semibold">Explore interior detailing<span aria-hidden="true">→</span></a>
+      </section>
+
+      <section id="reviews" class="max-w-5xl mx-auto px-6 py-20 space-y-10">
+        <header class="space-y-3 text-center">
+          <p class="text-amber-700 uppercase tracking-[0.3em] text-xs">Testimonials</p>
+          <h2 class="text-3xl sm:text-4xl font-bold">Verified five-star detailing reviews</h2>
+          <p class="text-amber-600 max-w-3xl mx-auto">Read what drivers across the North East share after trusting Polished &amp; Pristine Mobile with ceramic coatings, interior rejuvenation, and paint correction. Every story below is a genuine 5★ client review.</p>
+        </header>
+        <div class="grid gap-6 md:grid-cols-2">
+    <article class="rounded-2xl border border-amber-700 bg-amber-900/60 p-6 text-left space-y-4 text-white">
+      <div class="flex flex-wrap items-center gap-3">
+        <p class="text-sm font-semibold tracking-[0.3em]" aria-hidden="true">★★★★★</p>
+        <span class="sr-only">Rated 5 out of 5 stars</span>
+        <p class="text-xs uppercase tracking-[0.3em]">10 Sep 2025</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="bg-amber-900/40 border-y border-amber-700">
-  <div class="max-w-5xl mx-auto px-6 py-16 grid gap-12 md:grid-cols-2">
-    <div class="space-y-4 text-left">
-      <h2 class="text-3xl font-semibold">About {{ site.name }}</h2>
-      <p class="text-amber-600">Darlington-based detailers delivering insured, mobile services with premium products and proven techniques.</p>
-      <ul class="space-y-2 text-amber-600 text-sm">
-        <li class="flex items-start gap-2"><span aria-hidden="true">•</span><span>Prestige, daily, and family vehicles treated with the same care.</span></li>
-        <li class="flex items-start gap-2"><span aria-hidden="true">•</span><span>Flexible booking at your home, workplace, or secure drop-off.</span></li>
-      </ul>
-      <a href="{{ '/about.html' | relative_url }}" class="inline-flex items-center gap-2 text-accent font-semibold">Learn more<span aria-hidden="true">→</span></a>
-    </div>
-    <div class="space-y-4">
-      <h3 class="text-xl font-semibold text-white uppercase tracking-wider">Why drivers choose us</h3>
-      <div class="grid gap-3 text-amber-600 text-sm">
-        <p class="rounded-2xl border border-amber-700/60 bg-black/30 p-4"><strong class="text-amber-100">Pro results:</strong> Accredited coatings, machine polishing, and meticulous finishing.</p>
-        <p class="rounded-2xl border border-amber-700/60 bg-black/30 p-4"><strong class="text-amber-100">Clear guidance:</strong> Honest recommendations and aftercare support in plain English.</p>
-        <p class="rounded-2xl border border-amber-700/60 bg-black/30 p-4"><strong class="text-amber-100">Local knowledge:</strong> Packages tuned for North East weather, roads, and daily driving.</p>
+      <p class="italic leading-relaxed">“Amazing clean really pleased.”</p>
+      <p class="text-sm font-semibold">— Benjamin </p>
+    </article>
+    <article class="rounded-2xl border border-amber-700 bg-amber-900/60 p-6 text-left space-y-4 text-white">
+      <div class="flex flex-wrap items-center gap-3">
+        <p class="text-sm font-semibold tracking-[0.3em]" aria-hidden="true">★★★★★</p>
+        <span class="sr-only">Rated 5 out of 5 stars</span>
+        <p class="text-xs uppercase tracking-[0.3em]">09 Sep 2025</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="max-w-5xl mx-auto px-6 py-20 space-y-12">
-  <header class="space-y-4 text-center">
-    <h2 class="text-3xl sm:text-4xl font-bold">Detailing services tailored to your vehicle</h2>
-    <p class="text-amber-600 max-w-3xl mx-auto">Choose the level of transformation you need today, then dive deeper for full inclusions.</p>
-  </header>
-  <div class="grid gap-10 md:grid-cols-2">
-    <article class="bg-amber-900/40 border border-amber-700 rounded-xl p-8 space-y-3">
-      <h3 class="text-2xl font-semibold text-white">Express Detail</h3>
-      <p class="text-amber-600 text-sm">Maintenance wash, interior refresh, and quick protection for regular upkeep.</p>
-      <ul class="list-disc list-inside text-amber-700 space-y-1">
-        <li>Hand wash, wheels, and tyre dressing</li>
-        <li>Interior vacuum and wipe down</li>
-        <li>Crystal clear glass inside and out</li>
-      </ul>
-      <a href="{{ '/services.html#express-detail' | relative_url }}" class="inline-flex items-center gap-2 text-accent text-sm font-semibold">Read more<span aria-hidden="true">→</span></a>
+      <p class="italic leading-relaxed">“John did a great job on my car. It was like brand new inside—couldn’t recommend him enough. Great service.”</p>
+      <p class="text-sm font-semibold">— Iain </p>
     </article>
-    <article class="bg-amber-900/40 border border-amber-700 rounded-xl p-8 space-y-3">
-      <h3 class="text-2xl font-semibold text-white">Full Exterior Detail</h3>
-      <p class="text-amber-600 text-sm">Multi-stage wash, decontamination, and machine polishing for lasting gloss.</p>
-      <ul class="list-disc list-inside text-amber-700 space-y-1">
-        <li>Clay bar, swirl removal, and trim revival</li>
-        <li>Premium wax or sealant, plus wheel coating</li>
-        <li>Hydrophobic glass protection</li>
-      </ul>
-      <a href="{{ '/services.html#full-exterior-detail' | relative_url }}" class="inline-flex items-center gap-2 text-accent text-sm font-semibold">Read more<span aria-hidden="true">→</span></a>
-    </article>
-    <article class="bg-amber-900/40 border border-amber-700 rounded-xl p-8 space-y-3">
-      <h3 class="text-2xl font-semibold text-white">Deep Interior Detail</h3>
-      <p class="text-amber-600 text-sm">Odour removal, fabric rejuvenation, and UV protection across every surface.</p>
-      <ul class="list-disc list-inside text-amber-700 space-y-1">
-        <li>Carpets, upholstery, and leather rejuvenation</li>
-        <li>Dash, trim, and door shuts meticulously cleaned</li>
-        <li>Family-friendly, allergen-reducing process</li>
-      </ul>
-      <a href="{{ '/services.html#deep-interior-detail' | relative_url }}" class="inline-flex items-center gap-2 text-accent text-sm font-semibold">Read more<span aria-hidden="true">→</span></a>
-    </article>
-    <article class="bg-amber-900/40 border border-amber-700 rounded-xl p-8 space-y-3">
-      <h3 class="text-2xl font-semibold text-white">Specialist Upgrades</h3>
-      <p class="text-amber-600 text-sm">Enhance protection and clarity with ceramic coatings, paint correction, and more.</p>
-      <ul class="list-disc list-inside text-amber-700 space-y-1">
-        <li>2–5 year ceramic coating durability</li>
-        <li>Up to 95% paint defect removal</li>
-        <li>Showroom-ready engine bay presentation</li>
-      </ul>
-      <a href="{{ '/services.html#specialist-upgrades' | relative_url }}" class="inline-flex items-center gap-2 text-accent text-sm font-semibold">Read more<span aria-hidden="true">→</span></a>
-    </article>
-  </div>
-  <div class="text-center">
-    <a href="{{ '/services.html' | relative_url }}" class="inline-flex items-center gap-2 font-semibold text-accent">Explore the full service menu<span aria-hidden="true">→</span></a>
-  </div>
-</section>
-
-<section class="bg-amber-900/40 border-y border-amber-700">
-  <div class="max-w-5xl mx-auto px-6 py-20 space-y-8">
-    <header class="space-y-3 text-center">
-      <p class="text-amber-700 uppercase tracking-[0.3em] text-xs">15-mile radius from Darlington</p>
-      <h2 class="text-3xl font-bold">North East coverage you can rely on</h2>
-      <p class="text-amber-600 max-w-3xl mx-auto">Quick snapshots of where we work most. Tap through for the full itinerary.</p>
-    </header>
-    <div class="grid gap-6 md:grid-cols-3 text-sm text-amber-600">
-      <article class="space-y-2">
-        <h3 class="text-lg font-semibold text-amber-100">Darlington & County Durham</h3>
-        <ul class="space-y-1">
-          <li>City centre detailing with secure parking guidance.</li>
-          <li>Rural visits with on-board water and power.</li>
-        </ul>
-      </article>
-      <article class="space-y-2">
-        <h3 class="text-lg font-semibold text-amber-100">Teesside & coastal routes</h3>
-        <ul class="space-y-1">
-          <li>Fallout and salt spray removal for commuters.</li>
-          <li>Flexible slots for industrial estates and offices.</li>
-        </ul>
-      </article>
-      <article class="space-y-2">
-        <h3 class="text-lg font-semibold text-amber-100">North Yorkshire villages</h3>
-        <ul class="space-y-1">
-          <li>Maintenance plans for market towns and countryside homes.</li>
-          <li>Seasonal protection tailored to local roads.</li>
-        </ul>
-      </article>
-    </div>
-    <div class="text-center">
-      <a href="{{ '/locations.html' | relative_url }}" class="inline-flex items-center gap-2 text-accent font-semibold">View the full coverage map<span aria-hidden="true">→</span></a>
-    </div>
-  </div>
-</section>
-
-<section class="max-w-5xl mx-auto px-6 py-20 space-y-12">
-  <div class="grid gap-10 md:grid-cols-2">
-    <div class="space-y-4">
-      <h2 class="text-3xl font-semibold">Detailing that fits your goals</h2>
-      <ul class="space-y-3 text-amber-600">
-        <li><strong class="text-amber-100">Preserve daily drivers:</strong> Keep family cars hygienic and easy to maintain between visits.</li>
-        <li><strong class="text-amber-100">Elevate weekend toys:</strong> Showcase cherished classics with mirror gloss and hydrophobic protection.</li>
-        <li><strong class="text-amber-100">Support business fleets:</strong> Maintain professional vehicles that impress clients and employees.</li>
-        <li><strong class="text-amber-100">Refresh leased vehicles:</strong> Avoid end-of-contract charges with deep interior cleansing and paint refinement.</li>
-      </ul>
-    </div>
-    <div class="space-y-4">
-      <h2 class="text-3xl font-semibold">Why drivers choose {{ site.name }}</h2>
-      <ul class="space-y-3 text-amber-600">
-        <li><strong class="text-amber-100">Clear communication:</strong> We'll advise on the best package and send booking reminders.</li>
-        <li><strong class="text-amber-100">Trusted techniques:</strong> We use pH-neutral products, safe machine polishing, and meticulous drying.</li>
-        <li><strong class="text-amber-100">Respect for your time:</strong> Mobile appointments are arranged around your schedule and access requirements.</li>
-        <li><strong class="text-amber-100">Fully insured craftsmanship:</strong> Your vehicle is protected while we transform every surface.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="bg-amber-900/40 border-y border-amber-700">
-  <div class="max-w-5xl mx-auto px-6 py-20 space-y-12">
-    <header class="space-y-3 text-center">
-      <h2 class="text-3xl sm:text-4xl font-bold">How to book</h2>
-      <p class="text-amber-600 max-w-2xl mx-auto">We're transparent, friendly, and focused on results. Here's how easy it is to get your vehicle polished and pristine.</p>
-    </header>
-    <ol class="grid gap-6 md:grid-cols-2 lg:grid-cols-4 text-left text-amber-500">
-      <li class="bg-amber-900/60 border border-amber-700 rounded-xl p-6 space-y-3">
-        <span class="text-sm uppercase tracking-[0.3em] text-amber-700">Step 1</span>
-        <h3 class="text-xl font-semibold">Get in touch</h3>
-        <p class="text-amber-600">Call or message 07468 286651 with your vehicle details and preferred service.</p>
-      </li>
-      <li class="bg-amber-900/60 border border-amber-700 rounded-xl p-6 space-y-3">
-        <span class="text-sm uppercase tracking-[0.3em] text-amber-700">Step 2</span>
-        <h3 class="text-xl font-semibold">Receive a free quote</h3>
-        <p class="text-amber-600">Clear, honest pricing tailored to your vehicle's size, condition, and location.</p>
-      </li>
-      <li class="bg-amber-900/60 border border-amber-700 rounded-xl p-6 space-y-3">
-        <span class="text-sm uppercase tracking-[0.3em] text-amber-700">Step 3</span>
-        <h3 class="text-xl font-semibold">Book your slot</h3>
-        <p class="text-amber-600">Choose a mobile visit or drop-off time that suits your schedule.</p>
-      </li>
-      <li class="bg-amber-900/60 border border-amber-700 rounded-xl p-6 space-y-3">
-        <span class="text-sm uppercase tracking-[0.3em] text-amber-700">Step 4</span>
-        <h3 class="text-xl font-semibold">Enjoy the results</h3>
-        <p class="text-amber-600">We walk you through the transformation and share aftercare tips for long-lasting shine.</p>
-      </li>
-    </ol>
-  </div>
-</section>
-
-<section class="max-w-5xl mx-auto px-6 py-20 space-y-10">
-  <header class="space-y-3 text-center">
-    <h2 class="text-3xl sm:text-4xl font-bold">Trusted across the North East</h2>
-    <p class="text-amber-600 max-w-2xl mx-auto">Our reputation is built on passion, precision, and customer satisfaction.</p>
-  </header>
-  <div class="grid gap-8 md:grid-cols-2">
-    <blockquote class="bg-amber-900/40 border border-amber-700 rounded-2xl p-6 space-y-3">
-      <p class="text-amber-100 font-semibold">“Absolutely blown away by the results! My 10-year-old car looks better than it did when I bought it. Best detailer in Darlington.”</p>
-      <footer class="text-amber-700 text-sm">— Sarah, Darlington</footer>
-    </blockquote>
-    <blockquote class="bg-amber-900/40 border border-amber-700 rounded-2xl p-6 space-y-3">
-      <p class="text-amber-100 font-semibold">“Professional service from start to finish. The interior was in a state after the kids, now it's spotless. Highly recommend.”</p>
-      <footer class="text-amber-700 text-sm">— James, Newton Aycliffe</footer>
-    </blockquote>
-    <blockquote class="bg-amber-900/40 border border-amber-700 rounded-2xl p-6 space-y-3">
-      <p class="text-amber-100 font-semibold">“The ceramic coating is amazing – water just beads straight off. Worth every penny and brilliant coverage from Yarm to Darlington.”</p>
-      <footer class="text-amber-700 text-sm">— Priya, Yarm</footer>
-    </blockquote>
-    <blockquote class="bg-amber-900/40 border border-amber-700 rounded-2xl p-6 space-y-3">
-      <p class="text-amber-100 font-semibold">“Used them for our fleet across Newton Aycliffe. Reliable, professional, and consistent results every time.”</p>
-      <footer class="text-amber-700 text-sm">— Mark, Fleet Manager</footer>
-    </blockquote>
-  </div>
-</section>
-
-<section class="bg-amber-900/40 border-t border-amber-700">
-  <div class="max-w-5xl mx-auto px-6 py-20 space-y-10">
-    <div class="grid gap-10 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
-      <div class="space-y-4">
-        <h2 class="text-3xl font-semibold">Business & fleet detailing</h2>
-        <p class="text-amber-600">From company cars to dealership stock, {{ site.name }} keeps professional vehicles polished and ready. We service Aycliffe Business Park, Faverdale Industrial Estate, Morton Palms, Teesside Industrial Estate, Stockton Riverside, and business parks throughout the North East.</p>
-        <ul class="space-y-2 text-amber-600">
-          <li>Fleet maintenance plans</li>
-          <li>Executive vehicle presentation</li>
-          <li>Taxi & rental vehicle refreshes</li>
-          <li>Showroom preparation</li>
-        </ul>
+    <article class="rounded-2xl border border-amber-700 bg-amber-900/60 p-6 text-left space-y-4 text-white">
+      <div class="flex flex-wrap items-center gap-3">
+        <p class="text-sm font-semibold tracking-[0.3em]" aria-hidden="true">★★★★★</p>
+        <span class="sr-only">Rated 5 out of 5 stars</span>
+        <p class="text-xs uppercase tracking-[0.3em]">08 Sep 2025</p>
       </div>
-      <div class="bg-amber-900/60 border border-amber-700 rounded-2xl p-6 space-y-4">
-        <h3 class="text-xl font-semibold text-white">Ready to transform your vehicle?</h3>
-        <p class="text-amber-600">Call 07468 286651 or send us a message with your vehicle make, model, and service requirements.</p>
-        <a href="{{ '/contact.html' | relative_url }}" class="inline-flex items-center justify-center rounded-full bg-white px-5 py-3 font-semibold text-black transition hover:bg-amber-200">Book now</a>
+      <p class="italic leading-relaxed">“John made a fantastic job; the car is looking as the day I purchased. I will use John again and pass his number to friends looking for their car cleaned to a high standard.”</p>
+      <p class="text-sm font-semibold">— Geoff </p>
+    </article>
+    <article class="rounded-2xl border border-amber-700 bg-amber-900/60 p-6 text-left space-y-4 text-white">
+      <div class="flex flex-wrap items-center gap-3">
+        <p class="text-sm font-semibold tracking-[0.3em]" aria-hidden="true">★★★★★</p>
+        <span class="sr-only">Rated 5 out of 5 stars</span>
+        <p class="text-xs uppercase tracking-[0.3em]">04 Sep 2025</p>
       </div>
-    </div>
-  </div>
-</section>
+      <p class="italic leading-relaxed">“Excellent work from John, car looks brand new inside even though it’s an old boy. I mentioned to him what concerned me the most and he rectified it. Definitely will be paying for his services again and soon.”</p>
+      <p class="text-sm font-semibold">— Levani </p>
+    </article>
+    <article class="rounded-2xl border border-amber-700 bg-amber-900/60 p-6 text-left space-y-4 text-white">
+      <div class="flex flex-wrap items-center gap-3">
+        <p class="text-sm font-semibold tracking-[0.3em]" aria-hidden="true">★★★★★</p>
+        <span class="sr-only">Rated 5 out of 5 stars</span>
+        <p class="text-xs uppercase tracking-[0.3em]">18 Aug 2025</p>
+      </div>
+      <p class="italic leading-relaxed">“Helen left a verified five-star rating for John’s detailing service.”</p>
+      <p class="text-sm font-semibold">— Helen </p>
+    </article>
+    <article class="rounded-2xl border border-amber-700 bg-amber-900/60 p-6 text-left space-y-4 text-white">
+      <div class="flex flex-wrap items-center gap-3">
+        <p class="text-sm font-semibold tracking-[0.3em]" aria-hidden="true">★★★★★</p>
+        <span class="sr-only">Rated 5 out of 5 stars</span>
+        <p class="text-xs uppercase tracking-[0.3em]">14 Aug 2025</p>
+      </div>
+      <p class="italic leading-relaxed">“Thank you John! My car looks great and he spent a solid five hours on it—absolutely worth it!”</p>
+      <p class="text-sm font-semibold">— Philip </p>
+    </article>
+    <article class="rounded-2xl border border-amber-700 bg-amber-900/60 p-6 text-left space-y-4 text-white">
+      <div class="flex flex-wrap items-center gap-3">
+        <p class="text-sm font-semibold tracking-[0.3em]" aria-hidden="true">★★★★★</p>
+        <span class="sr-only">Rated 5 out of 5 stars</span>
+        <p class="text-xs uppercase tracking-[0.3em]">13 Aug 2025</p>
+      </div>
+      <p class="italic leading-relaxed">“John did an amazing job with my headlight restoration. Such a professional and friendly service, I cannot recommend him highly enough.”</p>
+      <p class="text-sm font-semibold">— Hannah </p>
+    </article>
+    <article class="rounded-2xl border border-amber-700 bg-amber-900/60 p-6 text-left space-y-4 text-white">
+      <div class="flex flex-wrap items-center gap-3">
+        <p class="text-sm font-semibold tracking-[0.3em]" aria-hidden="true">★★★★★</p>
+        <span class="sr-only">Rated 5 out of 5 stars</span>
+        <p class="text-xs uppercase tracking-[0.3em]">12 Aug 2025</p>
+      </div>
+      <p class="italic leading-relaxed">“Excellent service, my car was embarrassingly dirty but it's now absolutely immaculate. Booking was easy and communication was great. John is a lovely person who knows what he's doing and did an amazing job. I would definitely book with John again. Thank you.”</p>
+      <p class="text-sm font-semibold">— Sheila </p>
+    </article>
+    <article class="rounded-2xl border border-amber-700 bg-amber-900/60 p-6 text-left space-y-4 text-white">
+      <div class="flex flex-wrap items-center gap-3">
+        <p class="text-sm font-semibold tracking-[0.3em]" aria-hidden="true">★★★★★</p>
+        <span class="sr-only">Rated 5 out of 5 stars</span>
+        <p class="text-xs uppercase tracking-[0.3em]">06 Aug 2025</p>
+      </div>
+      <p class="italic leading-relaxed">“Great communication and service. Happy to be subscribed with John.”</p>
+      <p class="text-sm font-semibold">— Danny </p>
+    </article>
+    <article class="rounded-2xl border border-amber-700 bg-amber-900/60 p-6 text-left space-y-4 text-white">
+      <div class="flex flex-wrap items-center gap-3">
+        <p class="text-sm font-semibold tracking-[0.3em]" aria-hidden="true">★★★★★</p>
+        <span class="sr-only">Rated 5 out of 5 stars</span>
+        <p class="text-xs uppercase tracking-[0.3em]">25 Jul 2025</p>
+      </div>
+      <p class="italic leading-relaxed">“Absolute legend and a very nice, honest guy who knows what he's doing. One of the best services I've purchased—would highly recommend.”</p>
+      <p class="text-sm font-semibold">— Abraham </p>
+    </article>
+    <article class="rounded-2xl border border-amber-700 bg-amber-900/60 p-6 text-left space-y-4 text-white">
+      <div class="flex flex-wrap items-center gap-3">
+        <p class="text-sm font-semibold tracking-[0.3em]" aria-hidden="true">★★★★★</p>
+        <span class="sr-only">Rated 5 out of 5 stars</span>
+        <p class="text-xs uppercase tracking-[0.3em]">22 Jul 2025</p>
+      </div>
+      <p class="italic leading-relaxed">“John did an incredible job. So happy with the results and will absolutely be booking again. Great service and lovely lad.”</p>
+      <p class="text-sm font-semibold">— Ashleigh </p>
+    </article>
+    <article class="rounded-2xl border border-amber-700 bg-amber-900/60 p-6 text-left space-y-4 text-white">
+      <div class="flex flex-wrap items-center gap-3">
+        <p class="text-sm font-semibold tracking-[0.3em]" aria-hidden="true">★★★★★</p>
+        <span class="sr-only">Rated 5 out of 5 stars</span>
+        <p class="text-xs uppercase tracking-[0.3em]">12 Jul 2025</p>
+      </div>
+      <p class="italic leading-relaxed">“John really knows his stuff. Got marks off my paint that I didn’t think would come off. Brilliant service—will definitely be booking again.”</p>
+      <p class="text-sm font-semibold">— Max </p>
+    </article>
+    <article class="rounded-2xl border border-amber-700 bg-amber-900/60 p-6 text-left space-y-4 text-white">
+      <div class="flex flex-wrap items-center gap-3">
+        <p class="text-sm font-semibold tracking-[0.3em]" aria-hidden="true">★★★★★</p>
+        <span class="sr-only">Rated 5 out of 5 stars</span>
+        <p class="text-xs uppercase tracking-[0.3em]">25 Jun 2025</p>
+      </div>
+      <p class="italic leading-relaxed">“Came when he meant to and did a fantastic job. Will definitely use John again!”</p>
+      <p class="text-sm font-semibold">— Danny </p>
+    </article>
+    <article class="rounded-2xl border border-amber-700 bg-amber-900/60 p-6 text-left space-y-4 text-white">
+      <div class="flex flex-wrap items-center gap-3">
+        <p class="text-sm font-semibold tracking-[0.3em]" aria-hidden="true">★★★★★</p>
+        <span class="sr-only">Rated 5 out of 5 stars</span>
+        <p class="text-xs uppercase tracking-[0.3em]">20 Jun 2025</p>
+      </div>
+      <p class="italic leading-relaxed">“Would 100% recommend. Lovely guy, left the car absolutely spotless. Did things that didn’t even need doing just because it was included in the price anyway. 10/10.”</p>
+      <p class="text-sm font-semibold">— Jacob </p>
+    </article>
+    <article class="rounded-2xl border border-amber-700 bg-amber-900/60 p-6 text-left space-y-4 text-white">
+      <div class="flex flex-wrap items-center gap-3">
+        <p class="text-sm font-semibold tracking-[0.3em]" aria-hidden="true">★★★★★</p>
+        <span class="sr-only">Rated 5 out of 5 stars</span>
+        <p class="text-xs uppercase tracking-[0.3em]">10 Jun 2025</p>
+      </div>
+      <p class="italic leading-relaxed">“Exceptional work—the car looked stunning.”</p>
+      <p class="text-sm font-semibold">— M </p>
+    </article>
+    <article class="rounded-2xl border border-amber-700 bg-amber-900/60 p-6 text-left space-y-4 text-white">
+      <div class="flex flex-wrap items-center gap-3">
+        <p class="text-sm font-semibold tracking-[0.3em]" aria-hidden="true">★★★★★</p>
+        <span class="sr-only">Rated 5 out of 5 stars</span>
+        <p class="text-xs uppercase tracking-[0.3em]">08 Jun 2025</p>
+      </div>
+      <p class="italic leading-relaxed">“Really nice to meet John. Gave me some handy tips and the car looks and feels spotless.”</p>
+      <p class="text-sm font-semibold">— Darren </p>
+    </article>
+    <article class="rounded-2xl border border-amber-700 bg-amber-900/60 p-6 text-left space-y-4 text-white">
+      <div class="flex flex-wrap items-center gap-3">
+        <p class="text-sm font-semibold tracking-[0.3em]" aria-hidden="true">★★★★★</p>
+        <span class="sr-only">Rated 5 out of 5 stars</span>
+        <p class="text-xs uppercase tracking-[0.3em]">06 Jun 2025</p>
+      </div>
+      <p class="italic leading-relaxed">“Absolute legend, really nice lad. Very hard working—amazing job and I will definitely be returning. Extremely recommended! Thanks John, great to meet you and very much appreciate your hard work. Catch you soon!”</p>
+      <p class="text-sm font-semibold">— Liam </p>
+    </article>
+    <article class="rounded-2xl border border-amber-700 bg-amber-900/60 p-6 text-left space-y-4 text-white">
+      <div class="flex flex-wrap items-center gap-3">
+        <p class="text-sm font-semibold tracking-[0.3em]" aria-hidden="true">★★★★★</p>
+        <span class="sr-only">Rated 5 out of 5 stars</span>
+      </div>
+      <p class="italic leading-relaxed">“Excellent thorough service at the expected time.”</p>
+      <p class="text-sm font-semibold">— Monther </p>
+    </article>
+        </div>
+      </section>
 
-<section class="max-w-5xl mx-auto px-6 py-16">
-  <div class="grid gap-6 md:grid-cols-2">
-    <article class="rounded-2xl border border-amber-700 bg-amber-900/50 p-6 space-y-3">
-      <h2 class="text-lg font-semibold text-amber-200 uppercase tracking-[0.2em]">Plan your next detail</h2>
-      <p class="text-amber-600 text-sm">Compare detailing packages and discover what's included in every visit.</p>
-      <a href="{{ '/services.html' | relative_url }}" class="inline-flex items-center gap-2 text-accent text-sm font-semibold">Explore services<span aria-hidden="true">→</span></a>
-    </article>
-    <article class="rounded-2xl border border-amber-700 bg-amber-900/50 p-6 space-y-3">
-      <h2 class="text-lg font-semibold text-amber-200 uppercase tracking-[0.2em]">Find your nearest coverage</h2>
-      <p class="text-amber-600 text-sm">See how we adapt our approach for Darlington, Teesside, and North Yorkshire.</p>
-      <a href="{{ '/locations.html' | relative_url }}" class="inline-flex items-center gap-2 text-accent text-sm font-semibold">View locations<span aria-hidden="true">→</span></a>
-    </article>
-    <article class="rounded-2xl border border-amber-700 bg-amber-900/50 p-6 space-y-3">
-      <h2 class="text-lg font-semibold text-amber-200 uppercase tracking-[0.2em]">Transparent pricing</h2>
-      <p class="text-amber-600 text-sm">Review investment options for maintenance details, paint correction, and ceramic coatings.</p>
-      <a href="{{ '/pricing.html' | relative_url }}" class="inline-flex items-center gap-2 text-accent text-sm font-semibold">Check pricing<span aria-hidden="true">→</span></a>
-    </article>
-    <article class="rounded-2xl border border-amber-700 bg-amber-900/50 p-6 space-y-3">
-      <h2 class="text-lg font-semibold text-amber-200 uppercase tracking-[0.2em]">Ready to book?</h2>
-      <p class="text-amber-600 text-sm">Share your vehicle details and we'll confirm the perfect package within one business day.</p>
-      <a href="{{ '/contact.html' | relative_url }}" class="inline-flex items-center gap-2 text-accent text-sm font-semibold">Request a quote<span aria-hidden="true">→</span></a>
-    </article>
-  </div>
-</section>
+      <section class="bg-amber-900/40 border-y border-amber-700">
+        <div class="max-w-5xl mx-auto px-6 py-20 space-y-6">
+          <div class="grid gap-8 md:grid-cols-2 md:items-center">
+            <div class="grid gap-4 md:grid-cols-2 md:gap-6">
+              <div class="rounded-2xl border border-amber-700 bg-black/60 p-6 text-left space-y-2">
+                <span class="inline-block rounded-full bg-amber-900/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-amber-100">Before</span>
+                <p class="text-amber-200 font-semibold">Stains, odours, and dulled fabrics.</p>
+                <p class="text-amber-600 text-sm">We inspect every surface, lift embedded grime, and reset the interior to a hygienic baseline.</p>
+              </div>
+              <div class="rounded-2xl border border-amber-700 bg-black/60 p-6 text-left space-y-2">
+                <span class="inline-block rounded-full bg-accent/90 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-black">After</span>
+                <p class="text-amber-200 font-semibold">Even finish, refreshed materials.</p>
+                <p class="text-amber-600 text-sm">From fabric to leather, our careful techniques leave every seat and panel rejuvenated.</p>
+              </div>
+            </div>
+            <div class="space-y-4">
+              <h2 class="text-3xl font-semibold">See the difference professional detailing makes</h2>
+              <ul class="space-y-2 text-amber-600">
+                <li class="flex items-start gap-2"><span aria-hidden="true">•</span><span>Stain removal and odour neutralising for a refreshed cabin.</span></li>
+                <li class="flex items-start gap-2"><span aria-hidden="true">•</span><span>Gentle techniques that protect leather, Alcantara, and fabric.</span></li>
+                <li class="flex items-start gap-2"><span aria-hidden="true">•</span><span>Tailored care plans for family cars, daily drivers, and cherished classics.</span></li>
+              </ul>
+              <a href="/services.html#deep-interior-detail" class="inline-flex items-center gap-2 text-accent font-semibold">Explore interior detailing<span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Polished & Pristine Mobile",
-  "url": "https://polishedandpristine.co.uk",
-  "image": "https://polishedandpristine.co.uk/images/logo.png",
-  "telephone": "+44 7468 286651",
-  "email": "polishedpristinemobile@gmail.com",
-  "priceRange": "££",
-  "description": "Mobile car detailing, paint correction, and ceramic coatings for Darlington and the wider North East of England.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "3 Appleby Close",
-    "addressLocality": "Darlington",
-    "addressRegion": "County Durham",
-    "postalCode": "DL1 4AJ",
-    "addressCountry": "GB"
-  },
-  "areaServed": {
-    "@type": "AdministrativeArea",
-    "name": "North East England"
-  },
-  "openingHours": "Mo-Sa 08:00-18:00"
-}
-</script>
+      <section class="bg-amber-900/40 border-y border-amber-700">
+        <div class="max-w-5xl mx-auto px-6 py-16 grid gap-12 md:grid-cols-2">
+          <div class="space-y-4 text-left">
+            <h2 class="text-3xl font-semibold">About Polished &amp; Pristine Mobile</h2>
+            <p class="text-amber-600">Darlington-based detailers delivering insured, mobile services with premium products and proven techniques.</p>
+            <ul class="space-y-2 text-amber-600 text-sm">
+              <li class="flex items-start gap-2"><span aria-hidden="true">•</span><span>Prestige, daily, and family vehicles treated with the same care.</span></li>
+              <li class="flex items-start gap-2"><span aria-hidden="true">•</span><span>Flexible booking at your home, workplace, or secure drop-off.</span></li>
+            </ul>
+            <a href="/about.html" class="inline-flex items-center gap-2 text-accent font-semibold">Learn more<span aria-hidden="true">→</span></a>
+          </div>
+          <div class="space-y-4">
+            <h3 class="text-xl font-semibold text-white uppercase tracking-wider">Why drivers choose us</h3>
+            <div class="grid gap-3 text-amber-600 text-sm">
+              <p class="rounded-2xl border border-amber-700/60 bg-black/30 p-4"><strong class="text-amber-100">Pro results:</strong> Accredited coatings, machine polishing, and meticulous finishing.</p>
+              <p class="rounded-2xl border border-amber-700/60 bg-black/30 p-4"><strong class="text-amber-100">Clear guidance:</strong> Honest recommendations and aftercare support in plain English.</p>
+              <p class="rounded-2xl border border-amber-700/60 bg-black/30 p-4"><strong class="text-amber-100">Local knowledge:</strong> Packages tuned for North East weather, roads, and daily driving.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="max-w-5xl mx-auto px-6 py-20 space-y-12">
+        <header class="space-y-4 text-center">
+          <h2 class="text-3xl sm:text-4xl font-bold">Detailing services tailored to your vehicle</h2>
+          <p class="text-amber-600 max-w-3xl mx-auto">Choose the level of transformation you need today, then dive deeper for full inclusions.</p>
+        </header>
+        <div class="grid gap-10 md:grid-cols-2">
+          <article class="bg-amber-900/40 border border-amber-700 rounded-xl p-8 space-y-3">
+            <h3 class="text-2xl font-semibold text-white">Express Detail</h3>
+            <p class="text-amber-600 text-sm">Maintenance wash, interior refresh, and quick protection for regular upkeep.</p>
+            <ul class="list-disc list-inside text-amber-700 space-y-1">
+              <li>Hand wash, wheels, and tyre dressing</li>
+              <li>Interior vacuum and wipe down</li>
+              <li>Crystal clear glass inside and out</li>
+            </ul>
+            <a href="/services.html#express-detail" class="inline-flex items-center gap-2 text-accent text-sm font-semibold">Read more<span aria-hidden="true">→</span></a>
+          </article>
+          <article class="bg-amber-900/40 border border-amber-700 rounded-xl p-8 space-y-3">
+            <h3 class="text-2xl font-semibold text-white">Full Exterior Detail</h3>
+            <p class="text-amber-600 text-sm">Multi-stage wash, decontamination, and machine polishing for lasting gloss.</p>
+            <ul class="list-disc list-inside text-amber-700 space-y-1">
+              <li>Clay bar, swirl removal, and trim revival</li>
+              <li>Premium wax or sealant, plus wheel coating</li>
+              <li>Hydrophobic glass protection</li>
+            </ul>
+            <a href="/services.html#full-exterior-detail" class="inline-flex items-center gap-2 text-accent text-sm font-semibold">Read more<span aria-hidden="true">→</span></a>
+          </article>
+          <article class="bg-amber-900/40 border border-amber-700 rounded-xl p-8 space-y-3">
+            <h3 class="text-2xl font-semibold text-white">Deep Interior Detail</h3>
+            <p class="text-amber-600 text-sm">Odour removal, fabric rejuvenation, and UV protection across every surface.</p>
+            <ul class="list-disc list-inside text-amber-700 space-y-1">
+              <li>Carpets, upholstery, and leather rejuvenation</li>
+              <li>Dash, trim, and door shuts meticulously cleaned</li>
+              <li>Family-friendly, allergen-reducing process</li>
+            </ul>
+            <a href="/services.html#deep-interior-detail" class="inline-flex items-center gap-2 text-accent text-sm font-semibold">Read more<span aria-hidden="true">→</span></a>
+          </article>
+          <article class="bg-amber-900/40 border border-amber-700 rounded-xl p-8 space-y-3">
+            <h3 class="text-2xl font-semibold text-white">Specialist Upgrades</h3>
+            <p class="text-amber-600 text-sm">Enhance protection and clarity with ceramic coatings, paint correction, and more.</p>
+            <ul class="list-disc list-inside text-amber-700 space-y-1">
+              <li>2–5 year ceramic coating durability</li>
+              <li>Up to 95% paint defect removal</li>
+              <li>Showroom-ready engine bay presentation</li>
+            </ul>
+            <a href="/services.html#specialist-upgrades" class="inline-flex items-center gap-2 text-accent text-sm font-semibold">Read more<span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+        <div class="text-center">
+          <a href="/services.html" class="inline-flex items-center gap-2 font-semibold text-accent">Explore the full service menu<span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+
+      <section class="bg-amber-900/40 border-y border-amber-700">
+        <div class="max-w-5xl mx-auto px-6 py-20 space-y-8">
+          <header class="space-y-3 text-center">
+            <p class="text-amber-700 uppercase tracking-[0.3em] text-xs">15-mile radius from Darlington</p>
+            <h2 class="text-3xl font-bold">North East coverage you can rely on</h2>
+            <p class="text-amber-600 max-w-3xl mx-auto">Quick snapshots of where we work most. Tap through for the full itinerary.</p>
+          </header>
+          <div class="grid gap-6 md:grid-cols-3 text-sm text-amber-600">
+            <article class="space-y-2">
+              <h3 class="text-lg font-semibold text-amber-100">Darlington &amp; County Durham</h3>
+              <ul class="space-y-1">
+                <li>City centre detailing with secure parking guidance.</li>
+                <li>Rural visits with on-board water and power.</li>
+              </ul>
+            </article>
+            <article class="space-y-2">
+              <h3 class="text-lg font-semibold text-amber-100">Teesside &amp; coastal routes</h3>
+              <ul class="space-y-1">
+                <li>Fallout and salt spray removal for commuters.</li>
+                <li>Flexible slots for industrial estates and offices.</li>
+              </ul>
+            </article>
+            <article class="space-y-2">
+              <h3 class="text-lg font-semibold text-amber-100">North Yorkshire villages</h3>
+              <ul class="space-y-1">
+                <li>Maintenance plans for market towns and countryside homes.</li>
+                <li>Seasonal protection tailored to local roads.</li>
+              </ul>
+            </article>
+          </div>
+          <div class="text-center">
+            <a href="/locations.html" class="inline-flex items-center gap-2 text-accent font-semibold">View the full coverage map<span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="max-w-5xl mx-auto px-6 py-20 space-y-12">
+        <div class="grid gap-10 md:grid-cols-2">
+          <div class="space-y-4">
+            <h2 class="text-3xl font-semibold">Detailing that fits your goals</h2>
+            <ul class="space-y-3 text-amber-600">
+              <li><strong class="text-amber-100">Preserve daily drivers:</strong> Keep family cars hygienic and easy to maintain between visits.</li>
+              <li><strong class="text-amber-100">Elevate weekend toys:</strong> Showcase cherished classics with mirror gloss and hydrophobic protection.</li>
+              <li><strong class="text-amber-100">Support business fleets:</strong> Maintain professional vehicles that impress clients and employees.</li>
+              <li><strong class="text-amber-100">Refresh leased vehicles:</strong> Avoid end-of-contract charges with deep interior cleansing and paint refinement.</li>
+            </ul>
+          </div>
+          <div class="space-y-4">
+            <h2 class="text-3xl font-semibold">Why drivers choose Polished &amp; Pristine Mobile</h2>
+            <ul class="space-y-3 text-amber-600">
+              <li><strong class="text-amber-100">Clear communication:</strong> We'll advise on the best package and send booking reminders.</li>
+              <li><strong class="text-amber-100">Trusted techniques:</strong> We use pH-neutral products, safe machine polishing, and meticulous drying.</li>
+              <li><strong class="text-amber-100">Respect for your time:</strong> Mobile appointments are arranged around your schedule and access requirements.</li>
+              <li><strong class="text-amber-100">Fully insured craftsmanship:</strong> Your vehicle is protected while we transform every surface.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-amber-900/40 border-y border-amber-700">
+        <div class="max-w-5xl mx-auto px-6 py-20 space-y-12">
+          <header class="space-y-3 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold">How to book</h2>
+            <p class="text-amber-600 max-w-2xl mx-auto">We're transparent, friendly, and focused on results. Here's how easy it is to get your vehicle polished and pristine.</p>
+          </header>
+          <ol class="grid gap-6 md:grid-cols-2 lg:grid-cols-4 text-left text-amber-500">
+            <li class="bg-amber-900/60 border border-amber-700 rounded-xl p-6 space-y-3">
+              <span class="text-sm uppercase tracking-[0.3em] text-amber-700">Step 1</span>
+              <h3 class="text-xl font-semibold">Get in touch</h3>
+              <p class="text-amber-600">Call or message 07468 286651 with your vehicle details and preferred service.</p>
+            </li>
+            <li class="bg-amber-900/60 border border-amber-700 rounded-xl p-6 space-y-3">
+              <span class="text-sm uppercase tracking-[0.3em] text-amber-700">Step 2</span>
+              <h3 class="text-xl font-semibold">Receive a free quote</h3>
+              <p class="text-amber-600">Clear, honest pricing tailored to your vehicle's size, condition, and location.</p>
+            </li>
+            <li class="bg-amber-900/60 border border-amber-700 rounded-xl p-6 space-y-3">
+              <span class="text-sm uppercase tracking-[0.3em] text-amber-700">Step 3</span>
+              <h3 class="text-xl font-semibold">Book your slot</h3>
+              <p class="text-amber-600">Choose a mobile visit or drop-off time that suits your schedule.</p>
+            </li>
+            <li class="bg-amber-900/60 border border-amber-700 rounded-xl p-6 space-y-3">
+              <span class="text-sm uppercase tracking-[0.3em] text-amber-700">Step 4</span>
+              <h3 class="text-xl font-semibold">Enjoy the results</h3>
+              <p class="text-amber-600">We walk you through the transformation and share aftercare tips for long-lasting shine.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="max-w-5xl mx-auto px-6 py-20 space-y-10">
+        <header class="space-y-3 text-center">
+          <h2 class="text-3xl sm:text-4xl font-bold">Trusted across the North East</h2>
+          <p class="text-amber-600 max-w-2xl mx-auto">Our reputation is built on passion, precision, and customer satisfaction.</p>
+        </header>
+        <div class="grid gap-8 md:grid-cols-2">
+          <blockquote class="bg-amber-900/40 border border-amber-700 rounded-2xl p-6 space-y-3">
+            <p class="text-amber-100 font-semibold">“Absolutely blown away by the results! My 10-year-old car looks better than it did when I bought it. Best detailer in Darlington.”</p>
+            <footer class="text-amber-700 text-sm">— Sarah, Darlington</footer>
+          </blockquote>
+          <blockquote class="bg-amber-900/40 border border-amber-700 rounded-2xl p-6 space-y-3">
+            <p class="text-amber-100 font-semibold">“Professional service from start to finish. The interior was in a state after the kids, now it's spotless. Highly recommend.”</p>
+            <footer class="text-amber-700 text-sm">— James, Newton Aycliffe</footer>
+          </blockquote>
+          <blockquote class="bg-amber-900/40 border border-amber-700 rounded-2xl p-6 space-y-3">
+            <p class="text-amber-100 font-semibold">“The ceramic coating is amazing – water just beads straight off. Worth every penny and brilliant coverage from Yarm to Darlington.”</p>
+            <footer class="text-amber-700 text-sm">— Priya, Yarm</footer>
+          </blockquote>
+          <blockquote class="bg-amber-900/40 border border-amber-700 rounded-2xl p-6 space-y-3">
+            <p class="text-amber-100 font-semibold">“Used them for our fleet across Newton Aycliffe. Reliable, professional, and consistent results every time.”</p>
+            <footer class="text-amber-700 text-sm">— Mark, Fleet Manager</footer>
+          </blockquote>
+        </div>
+      </section>
+
+      <section class="bg-amber-900/40 border-t border-amber-700">
+        <div class="max-w-5xl mx-auto px-6 py-20 space-y-10">
+          <div class="grid gap-10 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
+            <div class="space-y-4">
+              <h2 class="text-3xl font-semibold">Business &amp; fleet detailing</h2>
+              <p class="text-amber-600">From company cars to dealership stock, Polished &amp; Pristine Mobile keeps professional vehicles polished and ready. We service Aycliffe Business Park, Faverdale Industrial Estate, Morton Palms, Teesside Industrial Estate, Stockton Riverside, and business parks throughout the North East.</p>
+              <ul class="space-y-2 text-amber-600">
+                <li>Fleet maintenance plans</li>
+                <li>Executive vehicle presentation</li>
+                <li>Taxi &amp; rental vehicle refreshes</li>
+                <li>Showroom preparation</li>
+              </ul>
+            </div>
+            <div class="bg-amber-900/60 border border-amber-700 rounded-2xl p-6 space-y-4">
+              <h3 class="text-xl font-semibold text-white">Ready to transform your vehicle?</h3>
+              <p class="text-amber-600">Call 07468 286651 or send us a message with your vehicle make, model, and service requirements.</p>
+              <a href="/contact.html" class="inline-flex items-center justify-center rounded-full bg-white px-5 py-3 font-semibold text-black transition hover:bg-amber-200">Book now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="max-w-5xl mx-auto px-6 py-16">
+        <div class="grid gap-6 md:grid-cols-2">
+          <article class="rounded-2xl border border-amber-700 bg-amber-900/50 p-6 space-y-3">
+            <h2 class="text-lg font-semibold text-amber-200 uppercase tracking-[0.2em]">Plan your next detail</h2>
+            <p class="text-amber-600 text-sm">Compare detailing packages and discover what's included in every visit.</p>
+            <a href="/services.html" class="inline-flex items-center gap-2 text-accent text-sm font-semibold">Explore services<span aria-hidden="true">→</span></a>
+          </article>
+          <article class="rounded-2xl border border-amber-700 bg-amber-900/50 p-6 space-y-3">
+            <h2 class="text-lg font-semibold text-amber-200 uppercase tracking-[0.2em]">Find your nearest coverage</h2>
+            <p class="text-amber-600 text-sm">See how we adapt our approach for Darlington, Teesside, and North Yorkshire.</p>
+            <a href="/locations.html" class="inline-flex items-center gap-2 text-accent text-sm font-semibold">View locations<span aria-hidden="true">→</span></a>
+          </article>
+          <article class="rounded-2xl border border-amber-700 bg-amber-900/50 p-6 space-y-3">
+            <h2 class="text-lg font-semibold text-amber-200 uppercase tracking-[0.2em]">Transparent pricing</h2>
+            <p class="text-amber-600 text-sm">Review investment options for maintenance details, paint correction, and ceramic coatings.</p>
+            <a href="/pricing.html" class="inline-flex items-center gap-2 text-accent text-sm font-semibold">Check pricing<span aria-hidden="true">→</span></a>
+          </article>
+          <article class="rounded-2xl border border-amber-700 bg-amber-900/50 p-6 space-y-3">
+            <h2 class="text-lg font-semibold text-amber-200 uppercase tracking-[0.2em]">Ready to book?</h2>
+            <p class="text-amber-600 text-sm">Share your vehicle details and we'll confirm the perfect package within one business day.</p>
+            <a href="/contact.html" class="inline-flex items-center gap-2 text-accent text-sm font-semibold">Request a quote<span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </section>
+
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Polished & Pristine Mobile",
+        "url": "https://polishedandpristine.co.uk",
+        "telephone": "+44 7468 286651",
+        "email": "polishedpristinemobile@gmail.com",
+        "priceRange": "££",
+        "description": "Mobile car detailing, paint correction, and ceramic coatings for Darlington and the wider North East of England.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "3 Appleby Close",
+          "addressLocality": "Darlington",
+          "addressRegion": "County Durham",
+          "postalCode": "DL1 4AJ",
+          "addressCountry": "GB"
+        },
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "North East England"
+        },
+        "openingHours": "Mo-Sa 08:00-18:00"
+      }
+      </script>
+    </main>
+    <footer class="border-t border-amber-700 bg-black/90 backdrop-blur">
+      <div class="max-w-6xl mx-auto px-6 py-10 text-sm text-amber-600 grid gap-8 md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
+        <div class="space-y-4">
+          <address class="not-italic space-y-1 text-amber-600">
+            <span class="block text-lg font-semibold text-white">Polished &amp; Pristine Mobile</span>
+            <span class="block">3 Appleby Close</span>
+            <span class="block">Darlington, County Durham DL1 4AJ</span>
+            <span class="block">United Kingdom</span>
+            <span class="block">Phone: <a href="tel:+447468286651" class="text-amber-200 transition hover:text-white">07468 286651</a></span>
+            <span class="block">Email: <a href="mailto:polishedpristinemobile@gmail.com" class="text-amber-200 transition hover:text-white">polishedpristinemobile@gmail.com</a></span>
+          </address>
+          <p class="text-amber-700 uppercase tracking-[0.3em] text-xs">Car detailing Darlington · North East England coverage</p>
+          <p class="text-xs text-amber-700">&copy; <span id="current-year"></span> Polished &amp; Pristine Mobile. All rights reserved.</p>
+        </div>
+        <div class="space-y-4 md:justify-self-end">
+          <p class="text-white font-semibold uppercase tracking-wide">Connect</p>
+          <ul class="space-y-2 text-amber-500">
+            <li><a href="https://polishedandpristine.co.uk" class="inline-flex items-center gap-2 text-amber-200 transition hover:text-white"><span aria-hidden="true" class="text-xs uppercase tracking-[0.3em] text-amber-700">Web</span>polishedandpristine.co.uk</a></li>
+            <li><a href="https://www.facebook.com/PolishedandPristine/" class="inline-flex items-center gap-2 text-amber-200 transition hover:text-white"><span aria-hidden="true" class="text-xs uppercase tracking-[0.3em] text-amber-700">Fb</span>Facebook</a></li>
+            <li><a href="https://www.tiktok.com/@polished_pristine" class="inline-flex items-center gap-2 text-amber-200 transition hover:text-white"><span aria-hidden="true" class="text-xs uppercase tracking-[0.3em] text-amber-700">Tt</span>TikTok</a></li>
+            <li><a href="https://www.instagram.com/polishedpristinemobile/" class="inline-flex items-center gap-2 text-amber-200 transition hover:text-white"><span aria-hidden="true" class="text-xs uppercase tracking-[0.3em] text-amber-700">Ig</span>Instagram</a></li>
+            <li><a href="https://www.yell.com/biz/polished-and-pristine-mobile-darlington-10931334/" class="inline-flex items-center gap-2 text-amber-200 transition hover:text-white"><span aria-hidden="true" class="text-xs uppercase tracking-[0.3em] text-amber-700">Ye</span>Yell Business Listing</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script defer src="/assets/js/header.upgrade.js"></script>
+    <script>
+      const yearEl = document.getElementById('current-year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+    </script>
+  </body>
+</html>
