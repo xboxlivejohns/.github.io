@@ -188,14 +188,14 @@
 
         reviews.forEach((review, index) => {
           const slide = document.createElement('article');
-          slide.className = 'min-w-full px-8 py-16 text-left text-white flex flex-col gap-4';
+          slide.className = 'min-w-full px-8 py-16 text-left text-white flex flex-col gap-4 md:px-24 md:py-20 md:text-center md:items-center';
           slide.innerHTML = `
-            <div class="flex flex-wrap items-center gap-3">
+            <div class="flex flex-wrap items-center gap-3 md:justify-center">
               <p class="text-sm font-semibold tracking-[0.3em]" aria-hidden="true">★★★★★</p>
               <span class="sr-only">Rated 5 out of 5 stars</span>
               <p class="text-xs uppercase tracking-[0.3em]">${review.date}</p>
             </div>
-            <p class="italic leading-relaxed">“${review.quote}”</p>
+            <p class="italic leading-relaxed md:max-w-2xl md:mx-auto">“${review.quote}”</p>
             <p class="text-sm font-semibold">— ${review.name}</p>
           `;
           track.appendChild(slide);
