@@ -259,6 +259,43 @@ header [class*="text-amber-"] {
   color: var(--brand-yellow-bright) !important;
 }
 
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  border: 1px solid rgba(250, 204, 21, 0.35);
+  background: linear-gradient(135deg, #0d0d11, #17171d);
+  padding: 0.75rem 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--brand-yellow-bright);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.35), 0 1px 0 rgba(250, 204, 21, 0.08) inset;
+}
+
+section[data-trust] {
+  position: relative;
+  padding-top: 3rem;
+  isolation: isolate;
+}
+
+section[data-trust]::before {
+  content: "";
+  position: absolute;
+  inset: 0 1.5rem;
+  border-radius: 9999px;
+  background: radial-gradient(120% 120% at 50% 0%, rgba(250, 204, 21, 0.15), rgba(5, 5, 5, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+section[data-trust] .trust-badge {
+  position: relative;
+  z-index: 1;
+}
+
+
 header a:hover,
 header a:focus {
   color: var(--brand-yellow-bright) !important;
