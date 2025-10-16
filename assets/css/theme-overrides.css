@@ -128,20 +128,20 @@ section[data-hero] .text-amber-400 {
   color: var(--brand-ink) !important;
 }
 
-.bg-amber-900\/40 a,
-.bg-amber-900\/50 a,
-.bg-amber-900\/60 a,
-.bg-amber-900\/80 a,
-.bg-amber-900\/90 a {
+.bg-amber-900\/40 a:not([class*="bg-accent"]):not([class*="bg-black"]),
+.bg-amber-900\/50 a:not([class*="bg-accent"]):not([class*="bg-black"]),
+.bg-amber-900\/60 a:not([class*="bg-accent"]):not([class*="bg-black"]),
+.bg-amber-900\/80 a:not([class*="bg-accent"]):not([class*="bg-black"]),
+.bg-amber-900\/90 a:not([class*="bg-accent"]):not([class*="bg-black"]) {
   color: var(--brand-yellow-bright) !important;
   text-decoration-color: rgba(250, 204, 21, 0.45);
 }
 
-.bg-amber-900\/40 a:hover,
-.bg-amber-900\/50 a:hover,
-.bg-amber-900\/60 a:hover,
-.bg-amber-900\/80 a:hover,
-.bg-amber-900\/90 a:hover {
+.bg-amber-900\/40 a:not([class*="bg-accent"]):not([class*="bg-black"]):hover,
+.bg-amber-900\/50 a:not([class*="bg-accent"]):not([class*="bg-black"]):hover,
+.bg-amber-900\/60 a:not([class*="bg-accent"]):not([class*="bg-black"]):hover,
+.bg-amber-900\/80 a:not([class*="bg-accent"]):not([class*="bg-black"]):hover,
+.bg-amber-900\/90 a:not([class*="bg-accent"]):not([class*="bg-black"]):hover {
   color: var(--brand-yellow-light) !important;
 }
 
