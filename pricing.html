@@ -228,11 +228,35 @@
 
         <style>
           .table-wrap { overflow-x: auto; }
-          .compare { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+          .compare {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            color: #f4f4f5;
+          }
           .compare th,
-          .compare td { border: 1px solid #e5e7eb; padding: 0.75rem 0.6rem; text-align: center; }
-          .compare th[scope="row"] { text-align: left; font-weight: 600; }
-          .compare thead th { background: #f8fafc; font-weight: 700; }
+          .compare td {
+            border: 1px solid rgba(217, 119, 6, 0.35);
+            padding: 0.75rem 0.6rem;
+            text-align: center;
+            background-color: rgba(15, 15, 19, 0.6);
+          }
+          .compare th[scope="row"] {
+            text-align: left;
+            font-weight: 600;
+            color: #fbbf24;
+          }
+          .compare thead th {
+            background: rgba(217, 119, 6, 0.35);
+            color: #fef9c3;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+          }
+          .compare tbody tr:nth-child(even) th,
+          .compare tbody tr:nth-child(even) td {
+            background-color: rgba(217, 119, 6, 0.12);
+          }
           .compare td { min-width: 8rem; }
         </style>
 
