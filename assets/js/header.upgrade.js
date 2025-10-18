@@ -7,6 +7,13 @@
 
   const hero = document.querySelector('[data-hero]');
   const setState = (state) => header.setAttribute('data-state', state);
+  let lastVisibility = 'visible';
+  const setVisibility = (visibility) => {
+    header.setAttribute('data-visibility', visibility);
+    lastVisibility = visibility;
+  };
+
+  setVisibility('visible');
 
   if (!hero) {
     setState('scrolled');
@@ -64,11 +71,22 @@
 
   const isDesktop = () => desktopQuery.matches;
 
+  let navLockedVisibility = false;
+  let requestTick = () => {};
+
+  const ensureVisibility = () => {
+    if (lastVisibility !== 'visible') {
+      setVisibility('visible');
+    }
+  };
+
   const openNav = () => {
     navToggle.setAttribute('aria-expanded', 'true');
     navToggle.classList.add('is-active');
     nav.classList.add(navVisibleClass, navActiveClass);
     nav.classList.remove(navHiddenClass);
+    navLockedVisibility = true;
+    ensureVisibility();
   };
 
   const closeNav = ({ focusToggle = false } = {}) => {
@@ -82,6 +100,8 @@
         navToggle.focus();
       }
     }
+    navLockedVisibility = false;
+    requestTick();
   };
 
   navToggle.addEventListener('click', () => {
@@ -127,5 +147,72 @@
     desktopQuery.addListener(handleViewportChange);
   }
 
+  const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let hideEnabled = !reducedMotionQuery.matches;
+  let lastKnownScrollY = window.scrollY;
+  let latestScrollY = lastKnownScrollY;
+  let scheduled = false;
+  const revealThreshold = 16;
+  const deltaThreshold = 6;
+
+  const updatePreference = (event) => {
+    hideEnabled = !event.matches;
+    if (!hideEnabled) {
+      ensureVisibility();
+    } else {
+      requestTick();
+    }
+  };
+
+  if (typeof reducedMotionQuery.addEventListener === 'function') {
+    reducedMotionQuery.addEventListener('change', updatePreference);
+  } else if (typeof reducedMotionQuery.addListener === 'function') {
+    reducedMotionQuery.addListener(updatePreference);
+  }
+
+  const applyVisibility = (nextVisibility) => {
+    if (lastVisibility === nextVisibility) return;
+    setVisibility(nextVisibility);
+  };
+
+  const updateVisibility = () => {
+    scheduled = false;
+    const currentScrollY = Math.max(latestScrollY, 0);
+    const delta = currentScrollY - lastKnownScrollY;
+    lastKnownScrollY = currentScrollY;
+
+    if (!hideEnabled || navLockedVisibility) {
+      ensureVisibility();
+      return;
+    }
+
+    const isAtTop = currentScrollY <= revealThreshold;
+    if (isAtTop) {
+      applyVisibility('visible');
+      return;
+    }
+
+    const absDelta = Math.abs(delta);
+
+    if (delta > 0 && absDelta > deltaThreshold) {
+      applyVisibility('hidden');
+    } else if (delta < 0 && absDelta > deltaThreshold) {
+      applyVisibility('visible');
+    }
+  };
+
+  requestTick = () => {
+    if (scheduled) return;
+    scheduled = true;
+    window.requestAnimationFrame(updateVisibility);
+  };
+
+  const handleScroll = () => {
+    latestScrollY = window.scrollY;
+    requestTick();
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
   handleViewportChange(desktopQuery);
+  requestTick();
 })();
