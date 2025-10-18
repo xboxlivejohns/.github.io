@@ -259,6 +259,9 @@
     padding:0;
     width:auto;
   }
+  .header-upgrade [data-nav-toggle]{
+    display:none;
+  }
 }
 
 @media (prefers-reduced-motion:reduce){
