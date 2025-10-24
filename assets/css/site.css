@@ -1,0 +1,21 @@
+:root { --bg:#0b0b0c; --card:#151517; --text:#e8e8ea; --muted:#b4b4b8; --brand:#6fe3a6; }
+*{ box-sizing:border-box }
+body{ margin:0; font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto; background:var(--bg); color:var(--text) }
+.container{ max-width:1100px; margin:0 auto; padding:24px }
+h1,h2,h3{ line-height:1.2 }
+.cards{ display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); margin:12px 0 24px }
+.card{ background:var(--card); border:1px solid #242428; border-radius:16px; padding:18px }
+.card h2{ margin:0 0 8px }
+.meta{ display:flex; gap:12px; align-items:center; margin-bottom:8px }
+.meta .time{ color:var(--muted) }
+.meta .price{ font-weight:700 }
+.includes{ margin:0 0 12px 18px }
+details summary{ cursor:pointer; color:var(--muted) }
+.btn{ display:inline-block; padding:10px 14px; border-radius:10px; background:var(--brand); color:#0a0a0a; text-decoration:none; font-weight:600; margin-right:8px }
+.btn.ghost{ background:transparent; border:1px solid #2b2b2f; color:var(--text) }
+.grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px }
+.addon{ background:#101014; padding:12px 14px; border-radius:12px; display:flex; justify-content:space-between }
+.note{ color:var(--muted); margin:.25rem 0 .75rem }
+.xlink{ margin-top:16px; color:var(--muted) }
+label select{ margin-left:.5rem }
+a{ color:var(--brand) }

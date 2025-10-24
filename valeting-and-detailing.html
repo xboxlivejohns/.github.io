@@ -1,0 +1,26 @@
+---
+layout: default
+title: Valeting & Detailing
+permalink: /valeting-and-detailing/
+---
+<link rel="stylesheet" href="/assets/css/site.css">
+<main class="container">
+  <h1>Valeting & Detailing</h1>
+
+  {% assign svc = site.data.services %}
+
+  <h2>Valeting tiers</h2>
+  {% include cards.html items=svc.valeting.tiers size_selector=true %}
+
+  <h2>Focused packages</h2>
+  {% include cards.html items=svc.valeting.focused size_selector=true %}
+
+  <h2>Add-ons</h2>
+  <ul class="grid">
+    {% for a in svc.add_ons %}
+      <li class="addon"><strong>{{ a.name }}</strong><span>{{ a.price }}</span></li>
+    {% endfor %}
+  </ul>
+
+  <p class="xlink">Planning paint work? See <a href="/machine-polish/">Machine Polish</a> and <a href="/ceramic/">Ceramic Coatings</a>.</p>
+</main>
