@@ -1,0 +1,65 @@
+<div class="cards">
+{% if include.size_selector %}
+  <label>Vehicle size:
+    <select id="vehicleSize">
+      {% for s in site.data.services.vehicle_sizes %}
+        <option value="{{ s.id }}">{{ s.label }}</option>
+      {% endfor %}
+    </select>
+  </label>
+{% endif %}
+  {% for it in include.items %}
+  <article class="card" id="{{ it.id }}" data-id="{{ it.id }}">
+    <h2>{{ it.name }}</h2>
+    <div class="meta">
+      {% if it.duration_min %}<span class="time" data-time="{{ it.duration_min }}">~{{ it.duration_min }} min</span>{% endif %}
+      {% if it.prices or it.prices_from %}
+      <span class="price" data-prices='{{ (it.prices or it.prices_from) | jsonify }}'>£{{ (it.prices or it.prices_from).car }}</span>
+      {% endif %}
+    </div>
+    {% if it.prep_required %}<p class="note">Prep: {{ it.prep_required }}</p>{% endif %}
+    {% if it.includes %}<ul class="includes">{% for x in it.includes %}<li>{{ x }}</li>{% endfor %}</ul>{% endif %}
+    {% if it.excludes %}<details><summary>What’s not included</summary><ul>{% for x in it.excludes %}<li>{{ x }}</li>{% endfor %}</ul></details>{% endif %}
+    <div class="cta">
+      <a class="btn" href="https://wa.me/447000000000?text=Booking%20{{ it.name }}">Book</a>
+      <a class="btn ghost" href="/contact/">Contact</a>
+    </div>
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"Service",
+      "name":"{{ it.name | escape }}",
+      "areaServed":"Darlington and 20-mile radius",
+      "provider":{"@type":"LocalBusiness","name":"{{ site.title | default: 'Car Valeting' | escape }}"}
+    }
+    </script>
+  </article>
+  {% endfor %}
+</div>
+
+{% if include.size_selector %}
+<script id="svcData" type="application/json">{{ site.data.services | jsonify }}</script>
+<script>
+(function(){
+  const sel=document.getElementById('vehicleSize');
+  if(!sel) return;
+  const data=JSON.parse(document.getElementById('svcData').textContent);
+  function fmt(m){return '~'+m+' min'}
+  function upd(){
+    const size=sel.value||'car';
+    document.querySelectorAll('.card .price').forEach(p=>{
+      const pricesAttr=p.getAttribute('data-prices');
+      if(!pricesAttr) return;
+      const prices=JSON.parse(pricesAttr);
+      p.textContent='£'+(prices[size]??prices.car);
+    });
+    document.querySelectorAll('.card .time').forEach(t=>{
+      const base=+t.getAttribute('data-time')||0;
+      const s=data.vehicle_sizes.find(v=>v.id===size)||{time_delta_min:0};
+      t.textContent=fmt(base+(s.time_delta_min||0));
+    });
+  }
+  sel.addEventListener('change',upd); upd();
+})();
+</script>
+{% endif %}
