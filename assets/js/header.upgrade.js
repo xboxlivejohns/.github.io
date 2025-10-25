@@ -15,47 +15,41 @@
 
   setVisibility('visible');
 
-  if (!hero) {
-    setState('scrolled');
-    return;
-  }
+  if (hero && 'IntersectionObserver' in window) {
+    const sentinel = document.createElement('div');
+    sentinel.setAttribute('aria-hidden', 'true');
+    sentinel.style.cssText = 'position:absolute;top:0;left:0;height:1px;width:1px;pointer-events:none;';
+    hero.before(sentinel);
 
-  if (!('IntersectionObserver' in window)) {
-    setState('scrolled');
-    return;
-  }
+    const computedRoot = getComputedStyle(root);
+    const desktopHeight = parseInt(computedRoot.getPropertyValue('--pp-h-desktop'), 10) || header.offsetHeight || 96;
+    const offset = Math.max(0, Math.round(desktopHeight * 0.65));
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (!entry) return;
+        if (entry.isIntersecting) {
+          setState('at-top');
+        } else {
+          setState('scrolled');
+        }
+      },
+      { rootMargin: `-${offset}px 0px 0px 0px`, threshold: 0 }
+    );
 
-  const sentinel = document.createElement('div');
-  sentinel.setAttribute('aria-hidden', 'true');
-  sentinel.style.cssText = 'position:absolute;top:0;left:0;height:1px;width:1px;pointer-events:none;';
-  hero.before(sentinel);
+    observer.observe(sentinel);
 
-  const computedRoot = getComputedStyle(root);
-  const desktopHeight = parseInt(computedRoot.getPropertyValue('--pp-h-desktop'), 10) || header.offsetHeight || 96;
-  const offset = Math.max(0, Math.round(desktopHeight * 0.65));
-  const observer = new IntersectionObserver(
-    (entries) => {
-      const entry = entries[0];
-      if (!entry) return;
-      if (entry.isIntersecting) {
-        setState('at-top');
-      } else {
-        setState('scrolled');
+    const cleanup = () => {
+      observer.disconnect();
+      if (sentinel.parentNode) {
+        sentinel.parentNode.removeChild(sentinel);
       }
-    },
-    { rootMargin: `-${offset}px 0px 0px 0px`, threshold: 0 }
-  );
+    };
 
-  observer.observe(sentinel);
-
-  const cleanup = () => {
-    observer.disconnect();
-    if (sentinel.parentNode) {
-      sentinel.parentNode.removeChild(sentinel);
-    }
-  };
-
-  window.addEventListener('pagehide', cleanup, { once: true });
+    window.addEventListener('pagehide', cleanup, { once: true });
+  } else {
+    setState('scrolled');
+  }
 
   const navToggle = header.querySelector('[data-nav-toggle]');
   const nav = header.querySelector('[data-nav]');
