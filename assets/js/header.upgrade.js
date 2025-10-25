@@ -186,6 +186,11 @@
       return;
     }
 
+    if (!isDesktop()) {
+      applyVisibility('visible');
+      return;
+    }
+
     const absDelta = Math.abs(delta);
 
     if (delta > 0 && absDelta > deltaThreshold) {
