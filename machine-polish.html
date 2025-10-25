@@ -101,111 +101,53 @@
     <main class="flex-1">
       <section class="max-w-5xl mx-auto px-6 py-20 space-y-16">
         <header class="space-y-5 text-center">
-          <p class="text-amber-700 uppercase tracking-[0.4em] text-xs">Machine Polishing</p>
-          <h1 class="text-3xl sm:text-4xl font-bold">Paint correction that restores clarity, depth, and gloss</h1>
-          <p class="text-amber-600 max-w-3xl mx-auto">
-            Whether your daily driver needs a gloss boost or your cherished project deserves a multi-stage correction, our mobile detailing studio brings proven machine polishing systems to your driveway or storage unit.
-          </p>
-          <div class="flex flex-wrap justify-center gap-3 text-xs uppercase tracking-[0.25em] text-amber-600">
-            <span class="rounded-full border border-amber-700 bg-amber-900/60 px-4 py-2 text-[0.65rem] font-semibold text-amber-200">Paint depth checked</span>
-            <span class="rounded-full border border-amber-700 bg-amber-900/60 px-4 py-2 text-[0.65rem] font-semibold text-amber-200">Safe correction</span>
-            <span class="rounded-full border border-amber-700 bg-amber-900/60 px-4 py-2 text-[0.65rem] font-semibold text-amber-200">Ceramic ready</span>
-          </div>
+          <p class="text-amber-700 uppercase tracking-[0.4em] text-xs">Machine Polish</p>
+          <h1 class="text-3xl sm:text-4xl font-bold">Machine Polish</h1>
+          <p class="text-amber-600 max-w-3xl mx-auto">Select vehicle size to update time and price.</p>
         </header>
 
-        <article class="grid gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)_minmax(0,2fr)] bg-amber-900/40 border border-amber-700 rounded-3xl p-10">
-          <div class="space-y-5">
-            <h2 class="text-3xl font-semibold text-white">Our correction process</h2>
-            <p class="text-amber-600">
-              Machine polishing is about precision. We inspect every panel, identify defect types, and build a correction plan that balances cutting power with clear-coat preservation.
-            </p>
-            <ul class="space-y-3 text-amber-600">
-              <li><strong class="text-amber-100">Assessment:</strong> Lighting checks, paint depth readings, and test spot to dial in pad and polish combinations.</li>
-              <li><strong class="text-amber-100">Correction:</strong> Targeted compounding to remove swirls, oxidation, and isolated scratches without compromising clear coat health.</li>
-              <li><strong class="text-amber-100">Refinement:</strong> Finishing polish to create mirror reflections, followed by protection with wax, sealant, or ceramic coating.</li>
-            </ul>
-          </div>
-          <div class="space-y-6">
-            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
-              <div class="rounded-2xl border border-amber-700 bg-black/60 p-6 space-y-2">
-                <p class="text-sm uppercase tracking-[0.25em] text-amber-500">Defect removal</p>
-                <p class="text-amber-200">Swirls, holograms, water spots, and light scratches corrected safely.</p>
-              </div>
-              <div class="rounded-2xl border border-amber-700 bg-black/60 p-6 space-y-2">
-                <p class="text-sm uppercase tracking-[0.25em] text-amber-500">Showroom finish</p>
-                <p class="text-amber-200">Gloss levels tailored to suit daily drivers, weekend toys, and show cars.</p>
-              </div>
+        <div class="space-y-12" data-size-root data-default-size="car">
+          <div class="bg-amber-900/40 border border-amber-700 rounded-3xl p-6 sm:p-8 lg:p-10 space-y-4 text-center">
+            <p class="text-sm uppercase tracking-[0.3em] text-amber-500">Vehicle size</p>
+            <p class="text-amber-300">Pick your vehicle size and the machine polishing times and prices will adjust automatically.</p>
+            <div class="flex flex-wrap justify-center gap-3" data-size-selector>
+              <button type="button" class="px-5 py-2 rounded-full border border-amber-700 bg-black/60 text-sm font-semibold uppercase tracking-[0.2em] transition hover:bg-amber-900" data-size-option="car">Car</button>
+              <button type="button" class="px-5 py-2 rounded-full border border-amber-700 bg-black/60 text-sm font-semibold uppercase tracking-[0.2em] transition hover:bg-amber-900" data-size-option="suv">SUV / MPV</button>
+              <button type="button" class="px-5 py-2 rounded-full border border-amber-700 bg-black/60 text-sm font-semibold uppercase tracking-[0.2em] transition hover:bg-amber-900" data-size-option="van">Van (SWB)</button>
             </div>
-            <a href="/contact.html" class="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 font-semibold text-black transition hover:bg-amber-200">Book correction</a>
           </div>
-          <div class="grid gap-4 lg:content-start">
-            <figure class="overflow-hidden rounded-3xl border border-amber-700 bg-black/70">
-              <img
-                src="/assets/images/paint-correction-before-after-combo.jpg"
-                alt="Composite of paint correction before and after results on a dark vehicle"
-                loading="lazy"
-                class="h-full w-full object-cover"
-              />
-            </figure>
-            <figure class="overflow-hidden rounded-3xl border border-amber-700 bg-black/70">
-              <img
-                src="/assets/images/ceramic-black-back.jpg"
-                alt="Finished paintwork with deep gloss following paint correction"
-                loading="lazy"
-                class="h-full w-full object-cover"
-              />
-            </figure>
-          </div>
-        </article>
 
-        <section class="bg-amber-900/40 border border-amber-700 rounded-3xl p-10 space-y-10">
-          <header class="space-y-3 text-center">
-            <h2 class="text-3xl font-semibold text-white">Machine polishing packages</h2>
-            <p class="text-amber-600 max-w-3xl mx-auto">Choose a correction level that matches your paint condition. Prices shown are typical for small / medium / large vehicles and may vary for heavily defected or specialist finishes.</p>
-          </header>
-          <div class="grid gap-6 md:grid-cols-3">
-            <article class="rounded-2xl border border-amber-700 bg-black/60 p-8 space-y-4">
-              <p class="text-xs uppercase tracking-[0.3em] text-amber-700">Gloss boost</p>
-              <h3 class="text-xl font-semibold text-white">Single-Stage Enhancement</h3>
-              <ul class="text-amber-600 text-sm space-y-2">
-                <li>Light defect removal &amp; gloss enhancement</li>
-                <li>Finishing polish with sealant protection</li>
-                <li>Interior tidy &amp; exterior glass</li>
-              </ul>
-              <p class="text-4xl font-bold">£220 / £260 / £320</p>
-            </article>
-            <article class="rounded-2xl border border-amber-600 bg-black/70 p-8 space-y-4 shadow-lg shadow-amber-800/30">
-              <p class="text-xs uppercase tracking-[0.3em] text-amber-500">Correction detail</p>
-              <h3 class="text-xl font-semibold text-white">Two-Stage Correction</h3>
-              <ul class="text-amber-600 text-sm space-y-2">
-                <li>Cutting stage to remove swirls &amp; defects</li>
-                <li>Refining polish for mirror finish</li>
-                <li>Ceramic-ready wipe down</li>
-              </ul>
-              <p class="text-4xl font-bold">£400 / £500 / £600</p>
-            </article>
-            <article class="rounded-2xl border border-accent bg-black/70 p-8 space-y-4">
-              <p class="text-xs uppercase tracking-[0.3em] text-accent">Signature correction</p>
-              <h3 class="text-xl font-semibold text-white">Multi-Stage Bespoke</h3>
-              <ul class="text-amber-600 text-sm space-y-2">
-                <li>Advanced wet sanding or spot sanding where required</li>
-                <li>Multi-machine, multi-pad tailored process</li>
-                <li>Includes ceramic coating or wax topper</li>
-              </ul>
-              <p class="text-4xl font-bold">£650 / £750 / £850</p>
-            </article>
-          </div>
-          <p class="text-center text-sm text-amber-600">
-            Unsure which package suits your paint? <a href="/contact.html" class="text-amber-300 underline-offset-4 hover:underline">Arrange an inspection call.</a>
-          </p>
-        </section>
+          <section class="bg-amber-900/40 border border-amber-700 rounded-3xl p-6 sm:p-8 lg:p-10 space-y-8">
+            <header class="space-y-3 text-center">
+              <h2 class="text-3xl font-semibold text-white">Stages</h2>
+            </header>
+            <div class="grid gap-6 md:grid-cols-2">
+              <article class="rounded-2xl border border-amber-700 bg-black/60 p-6 space-y-4 text-left">
+                <h3 class="text-xl font-semibold text-white">Single-Stage Enhancement</h3>
+                <p class="text-amber-400 text-sm leading-relaxed">Prep required: Exterior Enhancement or Deep Clean.</p>
+                <p class="text-amber-300" data-time-base="300">Time: ~300 min (car)</p>
+                <p class="text-amber-100 font-semibold" data-price-display="selected" data-price-prefix="Selected price: " data-price-car="180" data-price-suv="210" data-price-van="240" data-price-label-car="Car" data-price-label-suv="SUV / MPV" data-price-label-van="Van (SWB)">Selected price: £180 (Car)</p>
+                <p class="text-amber-500 text-xs">Price: £180 car · £210 SUV · £240 van</p>
+                <p class="text-amber-400 text-sm leading-relaxed">Includes: Paint decontamination (tar, iron, clay); single-stage machine polish (gloss focus); panel wipe and sealant.</p>
+                <p class="text-amber-500 text-sm leading-relaxed">Excludes: Heavy defect removal; wetsanding; ceramic coating.</p>
+              </article>
+              <article class="rounded-2xl border border-amber-700 bg-black/60 p-6 space-y-4 text-left">
+                <h3 class="text-xl font-semibold text-white">Two-Stage Correction</h3>
+                <p class="text-amber-400 text-sm leading-relaxed">Prep required: Exterior Enhancement or Deep Clean.</p>
+                <p class="text-amber-300" data-time-base="420">Time: ~420 min (car)</p>
+                <p class="text-amber-100 font-semibold" data-price-display="selected" data-price-prefix="Selected price: " data-price-car="320" data-price-suv="370" data-price-van="420" data-price-label-car="Car" data-price-label-suv="SUV / MPV" data-price-label-van="Van (SWB)">Selected price: £320 (Car)</p>
+                <p class="text-amber-500 text-xs">Price: £320 car · £370 SUV · £420 van</p>
+                <p class="text-amber-400 text-sm leading-relaxed">Includes: Cut + refine machine polish; panel wipe; high-grade sealant.</p>
+                <p class="text-amber-500 text-sm leading-relaxed">Excludes: Ceramic coating.</p>
+              </article>
+            </div>
+          </section>
 
-        <section class="bg-amber-900/40 border border-amber-700 rounded-3xl p-10 space-y-8">
-          <h2 class="text-2xl font-semibold text-white">Perfect partners</h2>
-          <p class="text-amber-600">
-            Machine polishing results pair perfectly with our ceramic coating upgrades. Add a coating within 14 days of correction for discounted rates and extended gloss retention.
-          </p>
-        </section>
+          <section class="bg-amber-900/40 border border-amber-700 rounded-3xl p-6 sm:p-8 lg:p-10 space-y-6">
+            <p class="text-amber-500">Need preparation first? Our <a href="/valeting-detailing.html" class="text-amber-300 underline-offset-4 hover:underline">Exterior Enhancement</a> and <a href="/valeting-detailing.html" class="text-amber-300 underline-offset-4 hover:underline">Deep Clean</a> packages provide the required groundwork for correction.</p>
+            <p class="text-amber-400">Ready to lock in the finish afterwards? Discover our <a href="/ceramic-coating.html" class="text-amber-300 underline-offset-4 hover:underline">Ceramic Coatings</a>.</p>
+          </section>
+        </div>
       </section>
     </main>
     <footer class="border-t border-amber-900/40 bg-black/80">
@@ -214,6 +156,62 @@
         <p>Fully insured mobile detailing covering County Durham, Teesside, and North Yorkshire.</p>
       </div>
     </footer>
+    <script>
+      ;(() => {
+        const timeDeltas = { car: 0, suv: 25, van: 40 }
+        const timeLabels = { car: 'car', suv: 'SUV / MPV', van: 'Van (SWB)' }
+        const priceLabels = { car: 'car', suv: 'SUV', van: 'van' }
+        document.querySelectorAll('[data-size-root]').forEach((root) => {
+          const buttons = root.querySelectorAll('[data-size-option]')
+          const timeElements = root.querySelectorAll('[data-time-base]')
+          const priceElements = root.querySelectorAll('[data-price-car]')
+          const applySize = (size) => {
+            buttons.forEach((btn) => {
+              const option = btn.getAttribute('data-size-option')
+              const isActive = option === size
+              btn.classList.toggle('bg-amber-300', isActive)
+              btn.classList.toggle('text-black', isActive)
+              btn.classList.toggle('border-amber-200', isActive)
+              btn.classList.toggle('bg-black/60', !isActive)
+              btn.classList.toggle('border-amber-700', !isActive)
+              btn.setAttribute('aria-pressed', isActive ? 'true' : 'false')
+            })
+            timeElements.forEach((el) => {
+              const base = Number(el.getAttribute('data-time-base'))
+              if (Number.isFinite(base)) {
+                const delta = timeDeltas[size] ?? 0
+                const prefix = el.getAttribute('data-time-prefix') || 'Time: '
+                const suffix = el.getAttribute('data-time-suffix') || ''
+                const label = el.getAttribute('data-time-label-' + size) || timeLabels[size] || size
+                el.textContent = `${prefix}~${base + delta} min (${label})${suffix}`
+              }
+            })
+            priceElements.forEach((el) => {
+              const value = el.getAttribute(`data-price-${size}`)
+              if (value) {
+                const prefix = el.getAttribute('data-price-prefix') || 'Selected price: '
+                const suffix = el.getAttribute('data-price-suffix') || ''
+                const displayMode = el.getAttribute('data-price-display')
+                const baseLabel = displayMode === 'selected' ? timeLabels : priceLabels
+                const label = el.getAttribute(`data-price-label-${size}`) || baseLabel[size] || size
+                if (displayMode === 'selected') {
+                  el.textContent = `${prefix}£${value} (${label})${suffix}`
+                } else {
+                  el.textContent = `${prefix}£${value} ${label}${suffix}`
+                }
+              }
+            })
+          }
+          const defaultSize = root.getAttribute('data-default-size') || 'car'
+          buttons.forEach((btn) => {
+            btn.addEventListener('click', () => {
+              applySize(btn.getAttribute('data-size-option'))
+            })
+          })
+          applySize(defaultSize)
+        })
+      })()
+    </script>
     <script src="/assets/js/header.upgrade.js" defer></script>
     <script>
       document.querySelectorAll('[data-year]').forEach((node) => {
