@@ -227,9 +227,10 @@
             buttons.forEach((btn) => {
               const option = btn.getAttribute('data-size-option')
               const isActive = option === size
-              btn.classList.toggle('bg-amber-300', isActive)
-              btn.classList.toggle('text-black', isActive)
-              btn.classList.toggle('border-amber-200', isActive)
+              btn.classList.toggle('size-option--active', isActive)
+              btn.classList.toggle('text-brand-black', isActive)
+              btn.classList.toggle('border-accent', isActive)
+              btn.classList.toggle('shadow-accent/30', isActive)
               btn.classList.toggle('bg-black/60', !isActive)
               btn.classList.toggle('border-amber-700', !isActive)
               btn.setAttribute('aria-pressed', isActive ? 'true' : 'false')

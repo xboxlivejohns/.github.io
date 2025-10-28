@@ -433,6 +433,22 @@ button:hover,
   box-shadow: 0 18px 40px rgba(250, 204, 21, 0.45);
 }
 
+[data-size-selector] [data-size-option] {
+  color: var(--brand-ink) !important;
+}
+
+[data-size-selector] [data-size-option].size-option--active {
+  background: var(--accent-bg) !important;
+  color: var(--accent-text) !important;
+  border-color: rgba(250, 204, 21, 0.75) !important;
+  box-shadow: 0 18px 45px rgba(250, 204, 21, 0.5) !important;
+}
+
+[data-size-selector] [data-size-option].size-option--active:hover {
+  background: var(--accent-bg-hover) !important;
+  color: var(--accent-text) !important;
+}
+
 [data-hero] .bg-black\/60 span,
 [data-hero] .bg-black\/80 span,
 [data-hero] .bg-black\/90 span {
