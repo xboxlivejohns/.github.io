@@ -111,9 +111,9 @@
             <p class="text-sm uppercase tracking-[0.3em] text-amber-500">Vehicle size</p>
             <p class="text-amber-300">Select the option that matches your vehicle to personalise the times and prices below.</p>
             <div class="flex flex-wrap justify-center gap-3" data-size-selector>
-              <button type="button" class="px-5 py-2 rounded-full border border-amber-700 bg-black/60 text-sm font-semibold uppercase tracking-[0.2em] transition hover:bg-amber-900" data-size-option="car">Car</button>
-              <button type="button" class="px-5 py-2 rounded-full border border-amber-700 bg-black/60 text-sm font-semibold uppercase tracking-[0.2em] transition hover:bg-amber-900" data-size-option="suv">SUV / MPV</button>
-              <button type="button" class="px-5 py-2 rounded-full border border-amber-700 bg-black/60 text-sm font-semibold uppercase tracking-[0.2em] transition hover:bg-amber-900" data-size-option="van">Van (SWB)</button>
+              <button type="button" class="px-5 py-2 rounded-full border border-amber-700 bg-black/60 text-sm font-semibold uppercase tracking-[0.2em] transition hover:bg-amber-900" data-size-option="car">Hatchback</button>
+              <button type="button" class="px-5 py-2 rounded-full border border-amber-700 bg-black/60 text-sm font-semibold uppercase tracking-[0.2em] transition hover:bg-amber-900" data-size-option="suv">Car saloon</button>
+              <button type="button" class="px-5 py-2 rounded-full border border-amber-700 bg-black/60 text-sm font-semibold uppercase tracking-[0.2em] transition hover:bg-amber-900" data-size-option="van">Large SUV / MPV</button>
             </div>
           </div>
 
@@ -164,29 +164,29 @@
           <section class="bg-amber-900/40 border border-amber-700 rounded-3xl p-6 sm:p-8 lg:p-10 space-y-8">
             <header class="space-y-3 text-center">
               <h2 class="text-3xl font-semibold text-white">Valeting tiers</h2>
-              <p class="text-amber-600">Times shown are for cars. Selecting SUV / MPV or Van (SWB) will apply the relevant time adjustment.</p>
+              <p class="text-amber-600">Times shown are for hatchbacks. Selecting car saloon or large SUV / MPV will apply the relevant time adjustment.</p>
             </header>
             <div class="grid gap-6 md:grid-cols-3">
               <article class="rounded-2xl border border-amber-700 bg-black/60 p-6 space-y-4 text-left">
                 <h3 class="text-xl font-semibold text-white">Mini Valet (maintenance)</h3>
-                <p class="text-amber-300" data-time-base="60">Time: ~60 min (car)</p>
-                <p class="text-amber-100 font-semibold" data-price-display="selected" data-price-prefix="Selected price: " data-price-car="35" data-price-suv="45" data-price-van="55" data-price-label-car="Car" data-price-label-suv="SUV / MPV" data-price-label-van="Van (SWB)">Selected price: £35 (Car)</p>
-                <p class="text-amber-500 text-xs">Price: £35 car · £45 SUV · £55 van</p>
+                <p class="text-amber-300" data-time-base="60">Time: ~60 min (Hatchback)</p>
+                <p class="text-amber-100 font-semibold" data-price-display="selected" data-price-prefix="Selected price: " data-price-car="35" data-price-suv="45" data-price-van="55" data-price-label-car="Hatchback" data-price-label-suv="Car saloon" data-price-label-van="Large SUV / MPV">Selected price: £35 (Hatchback)</p>
+                <p class="text-amber-500 text-xs">Price: £35 hatchback · £45 car saloon · £55 large SUV / MPV</p>
                 <p class="text-amber-400 text-sm leading-relaxed">Includes: Pre-wash + two-bucket hand wash; wheels cleaned; tyres dressed; dry &amp; door shuts; light interior vacuum (seats, mats, boot); wipe plastics; interior &amp; exterior glass.</p>
                 <p class="text-amber-500 text-sm leading-relaxed">Excludes: Shampoo/extraction; paint decontamination or polishing; leather treatment; engine bay detail.</p>
               </article>
               <article class="rounded-2xl border border-amber-700 bg-black/60 p-6 space-y-4 text-left">
                 <h3 class="text-xl font-semibold text-white">Full Valet (standard)</h3>
-                <p class="text-amber-300" data-time-base="150">Time: ~150 min (car)</p>
-                <p class="text-amber-100 font-semibold" data-price-display="selected" data-price-prefix="Selected price: " data-price-car="65" data-price-suv="80" data-price-van="95" data-price-label-car="Car" data-price-label-suv="SUV / MPV" data-price-label-van="Van (SWB)">Selected price: £65 (Car)</p>
-                <p class="text-amber-500 text-xs">Price: £65 car · £80 SUV · £95 van</p>
+                <p class="text-amber-300" data-time-base="150">Time: ~150 min (Hatchback)</p>
+                <p class="text-amber-100 font-semibold" data-price-display="selected" data-price-prefix="Selected price: " data-price-car="65" data-price-suv="80" data-price-van="95" data-price-label-car="Hatchback" data-price-label-suv="Car saloon" data-price-label-van="Large SUV / MPV">Selected price: £65 (Hatchback)</p>
+                <p class="text-amber-500 text-xs">Price: £65 hatchback · £80 car saloon · £95 large SUV / MPV</p>
                 <p class="text-amber-400 text-sm leading-relaxed">Includes: Everything in Mini; full interior vacuum incl. under mats &amp; boot; plastics cleaned &amp; dressed; deodorise; exterior tar-spot removal; door sills; entry-level wax/sealant.</p>
               </article>
               <article class="rounded-2xl border border-amber-700 bg-black/60 p-6 space-y-4 text-left">
                 <h3 class="text-xl font-semibold text-white">Deep Clean (premium)</h3>
-                <p class="text-amber-300" data-time-base="240">Time: ~240 min (car)</p>
-                <p class="text-amber-100 font-semibold" data-price-display="selected" data-price-prefix="Selected price: " data-price-car="120" data-price-suv="145" data-price-van="170" data-price-label-car="Car" data-price-label-suv="SUV / MPV" data-price-label-van="Van (SWB)">Selected price: £120 (Car)</p>
-                <p class="text-amber-500 text-xs">Price: £120 car · £145 SUV · £170 van</p>
+                <p class="text-amber-300" data-time-base="240">Time: ~240 min (Hatchback)</p>
+                <p class="text-amber-100 font-semibold" data-price-display="selected" data-price-prefix="Selected price: " data-price-car="120" data-price-suv="145" data-price-van="170" data-price-label-car="Hatchback" data-price-label-suv="Car saloon" data-price-label-van="Large SUV / MPV">Selected price: £120 (Hatchback)</p>
+                <p class="text-amber-500 text-xs">Price: £120 hatchback · £145 car saloon · £170 large SUV / MPV</p>
                 <p class="text-amber-400 text-sm leading-relaxed">Includes: Everything in Full; fabric shampoo/extraction (seats, carpets, mats); leather clean &amp; condition (if applicable); headliner spot clean; iron fallout removal + clay bar; single-stage gloss polish; high-grade wax/sealant; engine bay clean.</p>
               </article>
             </div>
@@ -199,16 +199,16 @@
             <div class="grid gap-6 md:grid-cols-2">
               <article class="rounded-2xl border border-amber-700 bg-black/60 p-6 space-y-4 text-left">
                 <h3 class="text-xl font-semibold text-white">Interior Reset</h3>
-                <p class="text-amber-300" data-time-base="165" data-time-suffix=".">Time: ~165 min (car).</p>
-                <p class="text-amber-100 font-semibold" data-price-display="selected" data-price-prefix="Selected price: " data-price-car="85" data-price-suv="100" data-price-van="115" data-price-label-car="Car" data-price-label-suv="SUV / MPV" data-price-label-van="Van (SWB)">Selected price: £85 (Car)</p>
-                <p class="text-amber-500 text-xs">Price: £85 car · £100 SUV · £115 van.</p>
+                <p class="text-amber-300" data-time-base="165" data-time-suffix=".">Time: ~165 min (Hatchback).</p>
+                <p class="text-amber-100 font-semibold" data-price-display="selected" data-price-prefix="Selected price: " data-price-car="85" data-price-suv="100" data-price-van="115" data-price-label-car="Hatchback" data-price-label-suv="Car saloon" data-price-label-van="Large SUV / MPV">Selected price: £85 (Hatchback)</p>
+                <p class="text-amber-500 text-xs">Price: £85 hatchback · £100 car saloon · £115 large SUV / MPV.</p>
                 <p class="text-amber-400 text-sm leading-relaxed">Includes: Full vac; plastics deep clean &amp; dress; fabric shampoo/extraction; leather care if applicable; glass; deodorise.</p>
               </article>
               <article class="rounded-2xl border border-amber-700 bg-black/60 p-6 space-y-4 text-left">
                 <h3 class="text-xl font-semibold text-white">Exterior Enhancement</h3>
-                <p class="text-amber-300" data-time-base="150" data-time-suffix=".">Time: ~150 min (car).</p>
-                <p class="text-amber-100 font-semibold" data-price-display="selected" data-price-prefix="Selected price: " data-price-car="95" data-price-suv="115" data-price-van="135" data-price-label-car="Car" data-price-label-suv="SUV / MPV" data-price-label-van="Van (SWB)">Selected price: £95 (Car)</p>
-                <p class="text-amber-500 text-xs">Price: £95 car · £115 SUV · £135 van.</p>
+                <p class="text-amber-300" data-time-base="150" data-time-suffix=".">Time: ~150 min (Hatchback).</p>
+                <p class="text-amber-100 font-semibold" data-price-display="selected" data-price-prefix="Selected price: " data-price-car="95" data-price-suv="115" data-price-van="135" data-price-label-car="Hatchback" data-price-label-suv="Car saloon" data-price-label-van="Large SUV / MPV">Selected price: £95 (Hatchback)</p>
+                <p class="text-amber-500 text-xs">Price: £95 hatchback · £115 car saloon · £135 large SUV / MPV.</p>
                 <p class="text-amber-400 text-sm leading-relaxed">Includes: Pre-wash, wash, wheels, tyres; tar + iron removal; clay bar; hand/DA gloss polish; paint sealant; exterior glass.</p>
               </article>
             </div>
@@ -216,7 +216,7 @@
 
           <section class="bg-amber-900/40 border border-amber-700 rounded-3xl p-6 sm:p-8 lg:p-10 space-y-6">
             <h2 class="text-2xl font-semibold text-white">Add-ons</h2>
-            <p class="text-amber-400 leading-relaxed">Pet hair removal £20–£40; Ozone odour treatment £25; Fabric protector (Scotchgard) £25 car / £35 SUV–van; Leather deep clean + condition £20–£30; Headlight restoration (pair) £30; Engine bay detail £20; Hard wax upgrade £15; Ceramic-lite sealant (~12 months) +£60; Wheel face sealant £20; Convertible roof clean + seal £40–£60.</p>
+            <p class="text-amber-400 leading-relaxed">Pet hair removal £20–£40; Ozone odour treatment £25; Fabric protector (Scotchgard) £25 hatchback / £35 car saloon–large SUV / MPV; Leather deep clean + condition £20–£30; Headlight restoration (pair) £30; Engine bay detail £20; Hard wax upgrade £15; Ceramic-lite sealant (~12 months) +£60; Wheel face sealant £20; Convertible roof clean + seal £40–£60.</p>
             <p class="text-amber-500">Ready for more gloss and protection? Explore our <a href="/machine-polish.html" class="text-amber-300 underline-offset-4 hover:underline">Machine Polish</a> and <a href="/ceramic-coating.html" class="text-amber-300 underline-offset-4 hover:underline">Ceramic Coatings</a>.</p>
           </section>
         </div>
@@ -261,8 +261,8 @@
     <script>
       ;(() => {
         const timeDeltas = { car: 0, suv: 25, van: 40 }
-        const timeLabels = { car: 'car', suv: 'SUV / MPV', van: 'Van (SWB)' }
-        const priceLabels = { car: 'car', suv: 'SUV', van: 'van' }
+        const timeLabels = { car: 'Hatchback', suv: 'Car saloon', van: 'Large SUV / MPV' }
+        const priceLabels = { car: 'hatchback', suv: 'car saloon', van: 'large SUV / MPV' }
         document.querySelectorAll('[data-size-root]').forEach((root) => {
           const buttons = root.querySelectorAll('[data-size-option]')
           const timeElements = root.querySelectorAll('[data-time-base]')

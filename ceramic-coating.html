@@ -111,9 +111,9 @@
             <p class="text-sm uppercase tracking-[0.3em] text-amber-500">Vehicle size</p>
             <p class="text-amber-300">Choose the size that matches your vehicle to adjust application times and starting prices.</p>
             <div class="flex flex-wrap justify-center gap-3" data-size-selector>
-              <button type="button" class="px-5 py-2 rounded-full border border-amber-700 bg-black/60 text-sm font-semibold uppercase tracking-[0.2em] transition hover:bg-amber-900" data-size-option="car">Car</button>
-              <button type="button" class="px-5 py-2 rounded-full border border-amber-700 bg-black/60 text-sm font-semibold uppercase tracking-[0.2em] transition hover:bg-amber-900" data-size-option="suv">SUV / MPV</button>
-              <button type="button" class="px-5 py-2 rounded-full border border-amber-700 bg-black/60 text-sm font-semibold uppercase tracking-[0.2em] transition hover:bg-amber-900" data-size-option="van">Van (SWB)</button>
+              <button type="button" class="px-5 py-2 rounded-full border border-amber-700 bg-black/60 text-sm font-semibold uppercase tracking-[0.2em] transition hover:bg-amber-900" data-size-option="car">Hatchback</button>
+              <button type="button" class="px-5 py-2 rounded-full border border-amber-700 bg-black/60 text-sm font-semibold uppercase tracking-[0.2em] transition hover:bg-amber-900" data-size-option="suv">Car saloon</button>
+              <button type="button" class="px-5 py-2 rounded-full border border-amber-700 bg-black/60 text-sm font-semibold uppercase tracking-[0.2em] transition hover:bg-amber-900" data-size-option="van">Large SUV / MPV</button>
             </div>
           </div>
 
@@ -162,18 +162,18 @@
               <article class="rounded-2xl border border-amber-700 bg-black/60 p-6 space-y-4 text-left">
                 <h3 class="text-xl font-semibold text-white">Ceramic Coating — 12 months</h3>
                 <p class="text-amber-400 text-sm leading-relaxed">Prep required: Single-Stage Enhancement minimum.</p>
-                <p class="text-amber-300" data-time-base="360">Time: ~360 min (car)</p>
-                <p class="text-amber-100 font-semibold" data-price-display="selected" data-price-prefix="Selected from price: " data-price-car="260" data-price-suv="300" data-price-van="340" data-price-label-car="Car" data-price-label-suv="SUV / MPV" data-price-label-van="Van (SWB)">Selected from price: £260 (Car)</p>
-                <p class="text-amber-500 text-xs">From price: £260 car · £300 SUV · £340 van</p>
+                <p class="text-amber-300" data-time-base="360">Time: ~360 min (Hatchback)</p>
+                <p class="text-amber-100 font-semibold" data-price-display="selected" data-price-prefix="Selected from price: " data-price-car="260" data-price-suv="300" data-price-van="340" data-price-label-car="Hatchback" data-price-label-suv="Car saloon" data-price-label-van="Large SUV / MPV">Selected from price: £260 (Hatchback)</p>
+                <p class="text-amber-500 text-xs">From price: £260 hatchback · £300 car saloon · £340 large SUV / MPV</p>
                 <p class="text-amber-400 text-sm leading-relaxed">Includes: Full decontamination + single-stage machine polish; ceramic coating on paintwork (~12 months); glass cleaned; tyres dressed; trims treated.</p>
                 <p class="text-amber-500 text-sm leading-relaxed">Note: Avoid washing for 7 days.</p>
               </article>
               <article class="rounded-2xl border border-amber-700 bg-black/60 p-6 space-y-4 text-left">
                 <h3 class="text-xl font-semibold text-white">Ceramic Coating — 24 months</h3>
                 <p class="text-amber-400 text-sm leading-relaxed">Prep required: Two-Stage Correction recommended.</p>
-                <p class="text-amber-300" data-time-base="420">Time: ~420 min (car)</p>
-                <p class="text-amber-100 font-semibold" data-price-display="selected" data-price-prefix="Selected from price: " data-price-car="420" data-price-suv="480" data-price-van="540" data-price-label-car="Car" data-price-label-suv="SUV / MPV" data-price-label-van="Van (SWB)">Selected from price: £420 (Car)</p>
-                <p class="text-amber-500 text-xs">From price: £420 car · £480 SUV · £540 van</p>
+                <p class="text-amber-300" data-time-base="420">Time: ~420 min (Hatchback)</p>
+                <p class="text-amber-100 font-semibold" data-price-display="selected" data-price-prefix="Selected from price: " data-price-car="420" data-price-suv="480" data-price-van="540" data-price-label-car="Hatchback" data-price-label-suv="Car saloon" data-price-label-van="Large SUV / MPV">Selected from price: £420 (Hatchback)</p>
+                <p class="text-amber-500 text-xs">From price: £420 hatchback · £480 car saloon · £540 large SUV / MPV</p>
                 <p class="text-amber-400 text-sm leading-relaxed">Includes: Full decon + two-stage correction; 2-year ceramic on paint; wheel faces sealed; glass rain repellent on windscreen.</p>
               </article>
             </div>
@@ -225,8 +225,8 @@
     <script>
       ;(() => {
         const timeDeltas = { car: 0, suv: 25, van: 40 }
-        const timeLabels = { car: 'car', suv: 'SUV / MPV', van: 'Van (SWB)' }
-        const priceLabels = { car: 'car', suv: 'SUV', van: 'van' }
+        const timeLabels = { car: 'Hatchback', suv: 'Car saloon', van: 'Large SUV / MPV' }
+        const priceLabels = { car: 'hatchback', suv: 'car saloon', van: 'large SUV / MPV' }
         document.querySelectorAll('[data-size-root]').forEach((root) => {
           const buttons = root.querySelectorAll('[data-size-option]')
           const timeElements = root.querySelectorAll('[data-time-base]')

@@ -111,9 +111,9 @@
             <p class="text-sm uppercase tracking-[0.3em] text-amber-500">Vehicle size</p>
             <p class="text-amber-300">Pick your vehicle size and the machine polishing times and prices will adjust automatically.</p>
             <div class="flex flex-wrap justify-center gap-3" data-size-selector>
-              <button type="button" class="px-5 py-2 rounded-full border border-amber-700 bg-black/60 text-sm font-semibold uppercase tracking-[0.2em] transition hover:bg-amber-900" data-size-option="car">Car</button>
-              <button type="button" class="px-5 py-2 rounded-full border border-amber-700 bg-black/60 text-sm font-semibold uppercase tracking-[0.2em] transition hover:bg-amber-900" data-size-option="suv">SUV / MPV</button>
-              <button type="button" class="px-5 py-2 rounded-full border border-amber-700 bg-black/60 text-sm font-semibold uppercase tracking-[0.2em] transition hover:bg-amber-900" data-size-option="van">Van (SWB)</button>
+              <button type="button" class="px-5 py-2 rounded-full border border-amber-700 bg-black/60 text-sm font-semibold uppercase tracking-[0.2em] transition hover:bg-amber-900" data-size-option="car">Hatchback</button>
+              <button type="button" class="px-5 py-2 rounded-full border border-amber-700 bg-black/60 text-sm font-semibold uppercase tracking-[0.2em] transition hover:bg-amber-900" data-size-option="suv">Car saloon</button>
+              <button type="button" class="px-5 py-2 rounded-full border border-amber-700 bg-black/60 text-sm font-semibold uppercase tracking-[0.2em] transition hover:bg-amber-900" data-size-option="van">Large SUV / MPV</button>
             </div>
           </div>
 
@@ -162,18 +162,18 @@
               <article class="rounded-2xl border border-amber-700 bg-black/60 p-6 space-y-4 text-left">
                 <h3 class="text-xl font-semibold text-white">Single-Stage Enhancement</h3>
                 <p class="text-amber-400 text-sm leading-relaxed">Prep required: Exterior Enhancement or Deep Clean.</p>
-                <p class="text-amber-300" data-time-base="300">Time: ~300 min (car)</p>
-                <p class="text-amber-100 font-semibold" data-price-display="selected" data-price-prefix="Selected price: " data-price-car="180" data-price-suv="210" data-price-van="240" data-price-label-car="Car" data-price-label-suv="SUV / MPV" data-price-label-van="Van (SWB)">Selected price: £180 (Car)</p>
-                <p class="text-amber-500 text-xs">Price: £180 car · £210 SUV · £240 van</p>
+                <p class="text-amber-300" data-time-base="300">Time: ~300 min (Hatchback)</p>
+                <p class="text-amber-100 font-semibold" data-price-display="selected" data-price-prefix="Selected price: " data-price-car="180" data-price-suv="210" data-price-van="240" data-price-label-car="Hatchback" data-price-label-suv="Car saloon" data-price-label-van="Large SUV / MPV">Selected price: £180 (Hatchback)</p>
+                <p class="text-amber-500 text-xs">Price: £180 hatchback · £210 car saloon · £240 large SUV / MPV</p>
                 <p class="text-amber-400 text-sm leading-relaxed">Includes: Paint decontamination (tar, iron, clay); single-stage machine polish (gloss focus); panel wipe and sealant.</p>
                 <p class="text-amber-500 text-sm leading-relaxed">Excludes: Heavy defect removal; wetsanding; ceramic coating.</p>
               </article>
               <article class="rounded-2xl border border-amber-700 bg-black/60 p-6 space-y-4 text-left">
                 <h3 class="text-xl font-semibold text-white">Two-Stage Correction</h3>
                 <p class="text-amber-400 text-sm leading-relaxed">Prep required: Exterior Enhancement or Deep Clean.</p>
-                <p class="text-amber-300" data-time-base="420">Time: ~420 min (car)</p>
-                <p class="text-amber-100 font-semibold" data-price-display="selected" data-price-prefix="Selected price: " data-price-car="320" data-price-suv="370" data-price-van="420" data-price-label-car="Car" data-price-label-suv="SUV / MPV" data-price-label-van="Van (SWB)">Selected price: £320 (Car)</p>
-                <p class="text-amber-500 text-xs">Price: £320 car · £370 SUV · £420 van</p>
+                <p class="text-amber-300" data-time-base="420">Time: ~420 min (Hatchback)</p>
+                <p class="text-amber-100 font-semibold" data-price-display="selected" data-price-prefix="Selected price: " data-price-car="320" data-price-suv="370" data-price-van="420" data-price-label-car="Hatchback" data-price-label-suv="Car saloon" data-price-label-van="Large SUV / MPV">Selected price: £320 (Hatchback)</p>
+                <p class="text-amber-500 text-xs">Price: £320 hatchback · £370 car saloon · £420 large SUV / MPV</p>
                 <p class="text-amber-400 text-sm leading-relaxed">Includes: Cut + refine machine polish; panel wipe; high-grade sealant.</p>
                 <p class="text-amber-500 text-sm leading-relaxed">Excludes: Ceramic coating.</p>
               </article>
@@ -226,8 +226,8 @@
     <script>
       ;(() => {
         const timeDeltas = { car: 0, suv: 25, van: 40 }
-        const timeLabels = { car: 'car', suv: 'SUV / MPV', van: 'Van (SWB)' }
-        const priceLabels = { car: 'car', suv: 'SUV', van: 'van' }
+        const timeLabels = { car: 'Hatchback', suv: 'Car saloon', van: 'Large SUV / MPV' }
+        const priceLabels = { car: 'hatchback', suv: 'car saloon', van: 'large SUV / MPV' }
         document.querySelectorAll('[data-size-root]').forEach((root) => {
           const buttons = root.querySelectorAll('[data-size-option]')
           const timeElements = root.querySelectorAll('[data-time-base]')
